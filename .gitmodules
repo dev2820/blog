@@ -1,0 +1,4 @@
+[submodule "public"]
+	path = public
+	url = https://github.com/dev2820/dev2820.github.io.git
+	branch = master
