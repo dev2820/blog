@@ -1,4 +1,16 @@
-baseURL = "http://dev2820.github.io/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+baseurl = "http://dev2820.github.io/"
+title = "dev2820 개발일지"
+
+languageCode = "ko-KR"
+DefaultContentLanguage = "kr"
 theme = "hugo-hello-programmer-theme"
+disqusShortname = "XXXX"
+googleAnalytics = "UA-XXXXXXXX-X"
+paginate = 7
+
+[author]
+    name = "양기조"
+    email = "second28200@naver.com"
+
+[params]
+    description = "기조의 개발일지 저장소"
