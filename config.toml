@@ -9,8 +9,8 @@ googleAnalytics = "UA-XXXXXXXX-X"
 paginate = 7
 
 [author]
-    name = "양기조"
+    name = "dev2820"
     email = "second28200@naver.com"
 
 [params]
-    description = "기조의 개발일지 저장소"
+    description = "dev2820의 개발일지 저장소"
