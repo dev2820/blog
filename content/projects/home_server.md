@@ -1,7 +1,7 @@
 ---
 title: "NAS 용 SPA만들기 (0)"
 date: 2020-08-08T18:20:55+09:00
-categories: ["프로젝트"]
+categories: ["projects"]
 tags: ["projects","DIY"]
 cover: ""
 draft: false

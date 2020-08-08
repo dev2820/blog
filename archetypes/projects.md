@@ -1,7 +1,7 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-categories: ["프로젝트"]
+categories: ["projects"]
 tags: ["project","DIY"]
 cover: ""
 draft: true
