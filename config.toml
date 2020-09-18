@@ -3,7 +3,7 @@ title = "dev2820 개발일지"
 
 languageCode = "ko-KR"
 DefaultContentLanguage = "kr"
-theme = "hugo-hello-programmer-theme"
+theme = "hugo-mania"
 disqusShortname = "XXXX"
 googleAnalytics = "UA-XXXXXXXX-X"
 paginate = 7
