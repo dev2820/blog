@@ -1,5 +1,5 @@
 ---
-title: "Hugo_new_theme"
+title: "Hugo_new_theme_2"
 date: 2020-09-18T16:10:55+09:00
 categories: ["projects"]
 series: ['휴고 테마 만들기']

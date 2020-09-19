@@ -117,3 +117,10 @@ button {
 #footer button.scroll-to-top:hover {
     background-color:red;
 }
+/* Section, List, Taxonomy */
+ul.contents {
+    padding-left: 0;
+}
+ul.contents li {
+    list-style: none;
+}

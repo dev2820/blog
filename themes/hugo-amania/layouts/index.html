@@ -1,12 +1,19 @@
-{{ partial "header.html" . }}
-{{ partial "aside.html" . }}
-{{.Title}}
-{{.Content}}
+{{ define "main" }}
+{{ if .Params.cover }}
+<div class="home-head" style="background-image:url({{.Params.cover}});">
+  <h1>{{.Title}}</h1>
+  <h3>{{.Content}}</h3>
+</div>
+{{ else }}
+<div class="home-head" style="background-image:url('images/ocean.jpg');">
+  <h1>{{.Title}}</h1>
+  <h3>{{.Content}}</h3>
+</div>
+{{ end }}
 {{ range .Paginator.Pages }}
-  {{ .Render "summary"}}
+  {{ .Render "summary" }}
   <hr class="summary-sep" />
 {{ end }}
 
 {{ partial "pagination.html" . }}
-
-{{ partial "footer.html" . }}
+{{ end }}

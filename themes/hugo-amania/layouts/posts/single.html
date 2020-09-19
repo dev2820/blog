@@ -1,8 +1,7 @@
-{{ define "title" }}
-    define title{{ .Title }} &ndash; {{ .Site.Title }}
-{{ end }}
+
 {{ define "main" }}
 <section id="main">
+    123123123
   <h1 id="title">{{ .Title }}</h1>
   <div>
         <article id="content">
@@ -23,7 +22,13 @@
       {{ end }}
     </ul>
     {{ end }}
-    {{ partial "taxonomy.html" .}}
+    {{ with .Params.tags }}
+    <ul id="tags">
+      {{ range . }}
+        <li> <a href="{{ "tags" | absURL }}{{ . | urlize }}">{{ . }}</a> </li>
+      {{ end }}
+    </ul>
+    {{ end }}
     </div>
     <div>
         {{ with .PrevInSection }}

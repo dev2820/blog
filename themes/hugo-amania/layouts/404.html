@@ -1,14 +1,9 @@
-{{ partial "header.html" . }}
-{{ partial "aside.html" . }}
-<div class="post">
-    <h1 style="font-size: 5em; color: #eeeeee; line-height: 1em;">{{ i18n "notFoundTitle" }}</h1>
-    <h2>
-      {{ i18n "notFoundSubTitle" }}
-      <a href="{{ "/" | relURL }}">"{{ .Site.Title }}"</a>
-    </h2>
-    <p>{{ i18n "notFoundDescription" }}</p>
-    <div style="text-align: center;">
-      <h1><a href="{{ "/" | relURL }}">{{ i18n "notFoundGoToHome" }}</a></h1>
-    </div>
+{{ define "main"}}
+<main id="main">
+  <div>
+    <span>404 NOT FOUND...</span>
+    <h1 id="title"><a href="{{ "/" | relURL }}">Go Home</a></h1>
+    <a href="javascript:history.back();">Go Back</a>
   </div>
-{{ partial "footer.html" . }}
+</main>
+{{ end }}

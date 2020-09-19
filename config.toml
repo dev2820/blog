@@ -7,6 +7,7 @@ theme = "hugo-amania"
 disqusShortname = "XXXX"
 googleAnalytics = "UA-XXXXXXXX-X"
 paginate = 7
+paginatePath = "page"
 
 [author]
     name = "dev2820"
