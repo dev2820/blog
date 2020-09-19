@@ -1,0 +1,119 @@
+/*
+Hugo-mania Theme CSS
+*/
+* {
+    box-sizing:border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: #505050;
+  font-family: 'Noto Sans KR', sans-serif;
+  line-height: 1.83em;
+  overflow-x:hidden;
+}
+body {
+    padding:50px 0 0 0;
+    scroll-behavior: smooth;
+    transition:0.8s;
+}
+img {
+    max-width: 100%;
+}
+button {
+    outline:none;
+    border: none;
+    cursor:pointer;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+/* Topbar */
+#topbar {
+    height: 50px;
+    width:100%;
+    padding:0 10px;
+    position:fixed;
+    top:0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#topbar .logo a img {
+    margin:9px 0;
+}
+#topbar .burger {
+    display:flex;
+}
+#topbar .burger button {
+    margin: auto 0;
+    background:none;
+}
+/* Aside */
+#aside {
+    height:100%;
+    width:300px;
+    overflow:hidden;
+    position:fixed;
+    right:0;
+    top:0;
+    transform:translateX(0px);
+    transition:0.2s ease-out;
+    background-color:white;
+}
+#aside.hidden {
+    transform:translateX(300px);
+    transition:0.2s ease-out;
+}
+#aside .top {
+    height:50px;
+    display:flex;
+    padding:0 10px;
+    justify-content: flex-end;
+}
+#aside .top button {
+    margin:auto 0;
+    background:none;
+}
+/* Content*/
+#content {
+    width:70vw;
+    position:relative;
+    left:50%;
+    margin-left:-35vw;
+}
+/* Footer*/
+#footer {
+    height:150px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    text-align:center;
+}
+#footer span {
+    font-size:0.7rem;
+    color: #999999;
+}
+/* Scroll To Top*/ 
+#footer button.scroll-to-top {
+    border-radius:50%;
+    background-color:#cccccc;
+    font-size:1.3rem;
+    width:70px;
+    height:70px;
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+}
+#footer button.scroll-to-top * {
+    color:#505050;
+    margin:0 auto;
+}
+#footer button.scroll-to-top:hover {
+    background-color:red;
+}
