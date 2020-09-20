@@ -4,6 +4,9 @@
     <body id="body">
         {{- partial "header.html" . -}}
         {{- partial "aside.html" . -}}
+        {{ if .IsHome }}
+            {{- block "title" . }}{{- end }}
+        {{ end }}
         <div id="content">
         {{- block "main" . }}{{- end }}
         </div>

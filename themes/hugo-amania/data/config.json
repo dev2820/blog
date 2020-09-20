@@ -1,0 +1,16 @@
+{
+    "HomeMenu":[
+        {
+            "title": "About me",
+            "link": "/about"
+        },
+        {
+            "title": "Category",
+            "link": "/categories"
+        },
+        {
+            "title": "Tags",
+            "link": "/tags"
+        }
+    ]
+}

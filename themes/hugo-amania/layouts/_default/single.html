@@ -1,11 +1,11 @@
 {{ define "title" }}
-    define title{{ .Title }} &ndash; {{ .Site.Title }}
+   title{{ .Title }} &ndash; {{ .Site.Title }}
 {{ end }}
 {{ define "main" }}
 <section id="main">
   <h1 id="title">{{ .Title }}</h1>
   <div>
-        <article id="content">
+        <article class="content">
            {{ .Content }}
         </article>
   </div>
@@ -23,14 +23,14 @@
       {{ end }}
     </ul>
     {{ end }}
-    {{ partial "taxonomy.html" .}}
+    {{ partial "tag_list.html" . }}
     </div>
     <div>
         {{ with .PrevInSection }}
-          <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+          이전글<a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
         {{ end }}
         {{ with .NextInSection }}
-          <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
+          다음글<a class="next" href="{{.Permalink}}"> {{.Title}}</a>
         {{ end }}
     </div>
 </aside>

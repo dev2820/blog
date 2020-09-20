@@ -1,0 +1,19 @@
+{{ define "main" }}
+<main>
+    <div>
+        section page for "projects"
+        <h1>{{ .Title }}</h1>
+        <ul class="contents">
+            {{ range .Paginator.Pages }}
+            <li>
+                <div>
+                    {{ .Render "summary" }}
+                </div>
+            </li>
+            <hr class="summary-sep" />
+            {{ end }}
+        </ul>
+        {{ partial "pagination.html" . }}
+    </div>
+</main>
+{{ end }}

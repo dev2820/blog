@@ -1,19 +1,47 @@
-{{ define "main" }}
+{{ define "title" }}
 {{ if .Params.cover }}
-<div class="home-head" style="background-image:url({{.Params.cover}});">
-  <h1>{{.Title}}</h1>
-  <h3>{{.Content}}</h3>
+<div id="home-head" style="background-image:url({{.Params.cover}});">
+  <div class="container">
+    <h1 class="title">{{.Title}}</h1>
+    <h3 class="content">{{.Content}}</h3>
+  </div>
 </div>
 {{ else }}
-<div class="home-head" style="background-image:url('images/ocean.jpg');">
-  <h1>{{.Title}}</h1>
-  <h3>{{.Content}}</h3>
+<div id="home-head" style="background-image:url('images/ocean.jpg');">
+  <div class="container">
+    <h1 class="title">{{.Title}}</h1>
+    <h3 class="content">{{.Content}}</h3>
+  </div>
 </div>
 {{ end }}
-{{ range .Paginator.Pages }}
-  {{ .Render "summary" }}
-  <hr class="summary-sep" />
+<div id="home-menu">
+  <ul>
+    {{ range .Site.Data.config.HomeMenu}}
+    <li><a href="{{ .link | relURL }}">{{ .title }}</a></li>
+    {{ end }}   
+  </ul>
+</div>
 {{ end }}
-
+{{ define "main" }}
+<script>
+  document.getElementById('topbar').classList.remove('card')
+  window.addEventListener('scroll', (event) => {
+    let e = document.getElementById('topbar');
+    if (this.scrollY > 400) {
+      if (!e.classList.contains('card')) {
+        e.classList.add('card');
+      }
+    }
+    else {
+      if (e.classList.contains('card')) {
+        e.classList.remove('card');
+      }
+    }
+  });
+</script>
+{{ range .Paginator.Pages }}
+{{ .Render "summary" }}
+<hr class="summary-sep" />
+{{ end }}
 {{ partial "pagination.html" . }}
 {{ end }}

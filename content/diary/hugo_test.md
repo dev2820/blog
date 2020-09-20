@@ -5,7 +5,7 @@ title: "휴고에서 컨텐츠 지정하고 글 생성해보기"
 date: 2020-08-08T15:25:11+09:00
 categories: ["일상"]
 tags: ["hugo","blog","test","휴고","블로그"]
-cover: "images/ocean.jpg"
+cover: "/images/ocean.jpg"
 ---
 
 ## hugo로 build 하는 법

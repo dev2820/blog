@@ -1,13 +1,5 @@
-<div class="post">
-  <div class="post-title">
-    <a href="{{ .Permalink }}" title="{{ .Title }}">
-      <img src="{{ "/images/cover-icon.png" | relURL }}" />
-      <div class="post-meta">
-        <time>{{ i18n "postDatetime" .Date }}</time>
-        <h1>{{ .Title }}</h1>
-      </div>
-    </a>
-  </div>
+<article class="post">
+  <img src="{{ "/images/cover-icon.png" | relURL }}" />
   {{ if .Params.cover }}
   <div class="cover-image">
     <a href="{{ .Permalink }}" title="{{ .Title }}">
@@ -15,10 +7,12 @@
     </a>
   </div>
   {{ end }}
-  <div>
-    {{ .Summary }}
-    {{ if .Truncated }}
-    <a href="{{ .RelPermalink }}" class="summary-more">{{ i18n "postReadMore" }}</a>
-    {{ end }}
-  </div>
-</div>
+  <header>
+    <h2><a href='{{ .Permalink }}'> {{ .Title }}</a> </h2>
+    <div class="post-meta">{{ .Date.Format "Mon, Jan 2, 2006" }} - {{ .FuzzyWordCount }} Words </div>
+  </header>
+  {{ .Summary }}
+  <footer>
+  <a href='{{ .Permalink }}'><nobr>Read more →</nobr></a>
+  </footer>
+</article>

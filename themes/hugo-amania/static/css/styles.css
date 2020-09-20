@@ -14,7 +14,6 @@ body {
   overflow-x:hidden;
 }
 body {
-    padding:50px 0 0 0;
     scroll-behavior: smooth;
     transition:0.8s;
 }
@@ -34,12 +33,13 @@ button {
 #topbar {
     height: 50px;
     width:100%;
-    padding:0 10px;
+    padding:0 20px 0 10px;
     position:fixed;
     top:0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background:none;
 }
 #topbar .logo a img {
     margin:9px 0;
@@ -54,7 +54,7 @@ button {
 /* Aside */
 #aside {
     height:100%;
-    width:300px;
+    width:350px;
     overflow:hidden;
     position:fixed;
     right:0;
@@ -62,15 +62,16 @@ button {
     transform:translateX(0px);
     transition:0.2s ease-out;
     background-color:white;
+    z-index:10;
 }
 #aside.hidden {
-    transform:translateX(300px);
+    transform:translateX(350px);
     transition:0.2s ease-out;
 }
 #aside .top {
     height:50px;
     display:flex;
-    padding:0 10px;
+    padding:0 20px;
     justify-content: flex-end;
 }
 #aside .top button {
@@ -79,10 +80,57 @@ button {
 }
 /* Content*/
 #content {
+    padding:0;
+    padding-top:50px;
     width:70vw;
     position:relative;
     left:50%;
     margin-left:-35vw;
+}
+/* Home Page Css */
+#home-head {
+  min-height: 400px; 
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+
+}
+#home-head .container {
+    box-sizing:content-box;
+}
+#home-head .title {
+    font-size:3rem;
+    text-align:center;
+}
+#home-head .content {
+    font-size:1rem;
+    text-align:center;
+}
+#home-menu {
+    position: relative;
+    width:70vw;
+    left:50%;
+    margin-left:-35vw;
+}
+#home-menu ul{
+    padding:0;
+    display:flex;
+    flex-direction:row;
+}
+#home-menu ul li {
+    list-style: none;
+    width:100px;
+    text-align:center;
+    font-weight:bold;
+}
+#home-menu ul li:hover {
+    background-color:#fed8b1;
 }
 /* Footer*/
 #footer {

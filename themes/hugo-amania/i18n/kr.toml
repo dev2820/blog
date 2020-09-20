@@ -1,6 +1,9 @@
 ###################
 # Menu
 ###################
+[menuAbout]
+other = "About"
+
 [menuCategories]
 other = "카테고리"
 

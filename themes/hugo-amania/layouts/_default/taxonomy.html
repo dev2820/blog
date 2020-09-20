@@ -1,0 +1,12 @@
+{{ define "main" }}
+<main>
+    tax
+    <div>
+        <h1>{{ .Title }}</h1>
+        {{ range .Pages }}
+            {{ .Render "summary"}}
+            <hr class="summary-sep" />
+        {{ end }}
+    </div>
+</main>
+{{ end }}
