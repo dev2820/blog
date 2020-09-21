@@ -1,0 +1,13 @@
+<div id="aside-menu">
+    <ul>
+        {{ range .Site.Data.config.HomeMenu}}
+        <li><a href="{{ .link | relURL }}">{{ .title }}</a></li>
+        {{ end }}
+    </ul>
+    <hr>
+    <ul>
+        {{ range .Site.Sections }}
+        <li><a href="{{.Permalink}}">{{.Title}} ({{ len (where .Site.RegularPages "Section" "==" .Title)}})</a></li>
+        {{ end }}
+    </ul>
+</div>

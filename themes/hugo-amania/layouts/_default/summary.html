@@ -1,18 +1,23 @@
-<article class="post">
-  <img src="{{ "/images/cover-icon.png" | relURL }}" />
+<article class="summary card" onclick="goToUrl({{ .Permalink }})">
   {{ if .Params.cover }}
-  <div class="cover-image">
-    <a href="{{ .Permalink }}" title="{{ .Title }}">
-      <img src="{{ .Params.cover }}" />
-    </a>
-  </div>
+  <div class="cover-image" style="background-image: linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 250px),url('{{.Params.cover}}');"></div>
+  {{ else }}
+  <div class="cover-image" style="background-image: linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 250px),url('/images/ocean.jpg');"></div>
   {{ end }}
-  <header>
-    <h2><a href='{{ .Permalink }}'> {{ .Title }}</a> </h2>
-    <div class="post-meta">{{ .Date.Format "Mon, Jan 2, 2006" }} - {{ .FuzzyWordCount }} Words </div>
-  </header>
-  {{ .Summary }}
-  <footer>
-  <a href='{{ .Permalink }}'><nobr>Read more →</nobr></a>
-  </footer>
+  <div class="cover-content">
+    <header>
+      {{ if .Params.icon }}
+      <img class="icon" src="{{ .Params.icon | relURL }}" />
+      {{ else }}
+      <img class="icon" src="{{ "/images/cover-icon.png" | relURL }}" />
+      {{ end }}
+      <div class="title">
+        <div class="post-meta">{{ .Date.Format "Mon, Jan 2, 2006" }}</div> 
+        <h2>{{ .Title }}</h2>
+      </div>
+  
+    </header>
+    {{ .Summary | truncate 150}}
+  </div>
+
 </article>

@@ -1,10 +1,12 @@
 <div id="aside" class="card hidden">
     <div class="top">
-        <button onclick="toggleAside(false)">
+        <button onclick="event.stopPropagation(); toggleAside(false)">
             <i class="fa fa-times fa-3x"></i>
         </button>
     </div>
     <div class="profile"></div>
     <div class="menu"></div>
-
+    {{ partial "profile.html" .}}
+    <hr>
+    {{ partial "aside-menu.html" .}}
 </div>

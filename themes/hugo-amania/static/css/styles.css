@@ -11,11 +11,12 @@ body {
   color: #505050;
   font-family: 'Noto Sans KR', sans-serif;
   line-height: 1.83em;
-  overflow-x:hidden;
+  min-width:800px;
 }
 body {
     scroll-behavior: smooth;
     transition:0.8s;
+    background-color:#ffffff;
 }
 img {
     max-width: 100%;
@@ -25,6 +26,11 @@ button {
     border: none;
     cursor:pointer;
 }
+hr.summary-sep {
+    width:90%;
+    border-top:3px dashed #bbb;
+    margin:20px auto;
+}
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
@@ -33,13 +39,16 @@ button {
 #topbar {
     height: 50px;
     width:100%;
-    padding:0 20px 0 10px;
+    padding:0 10px 0 10px;
     position:fixed;
     top:0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background:none;
+    z-index:5;
+}
+#topbar.card {
+    background-color:rgba(255,255,255,0.8);
 }
 #topbar .logo a img {
     margin:9px 0;
@@ -71,7 +80,7 @@ button {
 #aside .top {
     height:50px;
     display:flex;
-    padding:0 20px;
+    padding:0 10px;
     justify-content: flex-end;
 }
 #aside .top button {
@@ -82,14 +91,79 @@ button {
 #content {
     padding:0;
     padding-top:50px;
-    width:70vw;
-    position:relative;
-    left:50%;
-    margin-left:-35vw;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+}
+/* Summary */
+article.summary {
+    margin:0 auto;
+    height:250px;
+    width:90%;
+    overflow:hidden;
+    display:flex;
+    flex-direction:row;
+    cursor:pointer;
+    background-color:white;
+}
+article.summary .cover-image {
+    width:250px;
+    height:250px;
+    background-position:left;
+    background-size:250px 250px;
+    background-repeat:no-repeat;
+    margin:auto 0;
+}
+article.summary .cover-image img{
+    width:250px;
+    height:250px;
+}
+article.summary .cover-content {
+    box-sizing:content-box;
+    flex:1;
+    margin:20px;
+    overflow:hidden;
+}
+article.summary .cover-content header{
+    display: flex;
+    flex-direction: row;
+    height:60px;
+    cursor: pointer;
+    margin-bottom:30px;
+}
+article.summary .cover-content header * {
+    margin:auto 0;
+}
+article.summary .cover-content header img.icon {
+    height:50px;
+    width:50px;
+}
+article.summary .cover-content header .title {
+    display:flex;
+    height:60px;
+    flex-direction:column;
+    flex:1;
+    margin-left:15px;
+}
+article.summary .cover-content header .title h2 {
+    font-size:27px;
+    font-weight:300;
+    margin:0;
+    padding:0;
+}
+article.summary:hover .cover-content header .title h2 {
+    text-decoration: underline;
+}
+article.summary .cover-content header .title .post-meta {
+    font-size:15px;
+    font-weight:200;
+    height:20px;
+    margin:0;
+    margin-bottom:3px;
 }
 /* Home Page Css */
 #home-head {
-  min-height: 400px; 
+  height: 400px;
 
   background-attachment: fixed;
   background-position: center;
@@ -113,24 +187,56 @@ button {
     text-align:center;
 }
 #home-menu {
-    position: relative;
-    width:70vw;
-    left:50%;
-    margin-left:-35vw;
+    width:100%;
+    height:50px;
+    display:flex;
+    background-color:white;
 }
 #home-menu ul{
     padding:0;
+    width:90%;
+    height:100%;
+    margin:0 auto;
     display:flex;
     flex-direction:row;
 }
 #home-menu ul li {
+    height:100%;
     list-style: none;
     width:100px;
     text-align:center;
     font-weight:bold;
+    display:flex;
+    justify-content: center;
+    cursor:pointer;
+}
+#home-menu ul li a {
+    margin:auto 0;
+    text-decoration: none;
+    color: #505050;
+}
+#home-menu ul li a:visited {
+    color:#505050;
+    background-color:transparent;
 }
 #home-menu ul li:hover {
-    background-color:#fed8b1;
+    background-color:#cccccc;
+}
+#home-menu ul li:hover a{
+    text-decoration: underline;
+}
+/* Profile */
+.profile {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+.profile img {
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profile h5 {
+    margin:5px;
 }
 /* Footer*/
 #footer {
@@ -171,4 +277,12 @@ ul.contents {
 }
 ul.contents li {
     list-style: none;
+}
+/* Pagination */
+.paging {
+    display:flex;
+    justify-content: center;
+}
+.paging .page {
+    margin:0 10px;
 }

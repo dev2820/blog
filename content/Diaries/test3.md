@@ -1,7 +1,7 @@
 ---
 title: "test 글 작성 중"
 date: 2020-07-25T02:23:43+09:00
-categories: ["diary"]
+categories: ["일상"]
 tags: ["test","diary"]
 cover: ""
 draft: false

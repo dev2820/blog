@@ -48,7 +48,7 @@
     <script type="text/javascript">
         function toggleAside(bool) {
             let e = document.getElementById('aside');
-            if (e.classList.contains('hidden'))
+            if (e.classList.contains('hidden') && bool)
                 e.classList.remove('hidden');
             else
                 e.classList.add('hidden');
@@ -61,6 +61,17 @@
                 window.scrollBy(0, -Math.max(1, Math.floor(position / 10)));
                 scrollAnimation = setTimeout("scrollToTop()", 10);
             } else clearTimeout(scrollAnimation);
+        }
+        function goToUrl(url) {
+            window.location.href = url;
+        }
+        window.onload = function () {
+            document.addEventListener('click', (event) => {
+                toggleAside(false);
+            });
+            document.getElementById('aside').addEventListener('click', (event) => {
+                event.stopPropagation();
+            })
         }
 
     </script>

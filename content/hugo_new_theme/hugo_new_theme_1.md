@@ -1,7 +1,7 @@
 ---
-title: "Hugo_new_theme_1"
+title: "Hugo new theme 1"
 date: 2020-09-18T16:10:55+09:00
-categories: ["projects"]
+categories: ["hugo_new_theme"]
 series: ['휴고 테마 만들기']
 tags: ["project","DIY"]
 cover: ""

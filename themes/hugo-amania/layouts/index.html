@@ -1,13 +1,13 @@
 {{ define "title" }}
-{{ if .Params.cover }}
-<div id="home-head" style="background-image:url({{.Params.cover}});">
+{{ if .Site.Params.cover }}
+<div id="home-head" class="card" style="background-image:url({{.Site.Params.cover}});">
   <div class="container">
     <h1 class="title">{{.Title}}</h1>
     <h3 class="content">{{.Content}}</h3>
   </div>
 </div>
 {{ else }}
-<div id="home-head" style="background-image:url('images/ocean.jpg');">
+<div id="home-head" class="card" style="background-image:url('/images/default_background.jpg');">
   <div class="container">
     <h1 class="title">{{.Title}}</h1>
     <h3 class="content">{{.Content}}</h3>

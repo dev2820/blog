@@ -14,11 +14,7 @@
         },
         {
             "title": "일상",
-            "link": "/diary"
-        },
-        {
-            "title": "Projects",
-            "link": "/projects"
+            "link": "/diaries"
         }
     ]
 }
