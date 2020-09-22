@@ -12,8 +12,8 @@
     <div class="error-message">{{ i18n "notFoundTitle" }}</div>
     <div class="error-description">{{ i18n "notFoundDescription"}}</div>
     <div class="go-other-page">
-      <button id="title"><a href="{{ "/" | relURL }}">Go Home</a></button>
-      <button><a href="javascript:history.back();">Go Back</a></button>
+      <button id="title" onclick='goToUrl("{{ "/" | relURL }}");'><a href="{{ "/" | relURL }}">Go Home</a></button>
+      <button onclick="javascript:history.back();"><a href="javascript:history.back();">Go Back</a></button>
     </div>
   </div>
 </main>

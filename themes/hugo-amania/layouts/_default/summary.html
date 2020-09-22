@@ -17,8 +17,8 @@
           {{ range first 3 (.GetTerms "tags") }}
             <li><a href="{{ .Permalink }}">#{{ .LinkTitle }}</a></li>
           {{ end }}
-          {{ if gt (len (.GetTerms "tags")) 3}} 외 {{(len (.GetTerms "tags")) -3}}{{ i18n "tagsCount"}} {{ end }}
         </ul>
+        {{ if gt (len (.GetTerms "tags")) 3}} <small class="etc">외 {{(len (.GetTerms "tags")) -3}}{{ i18n "tagsCount"}}</small> {{ end }}
       </div>
     </div>
   </div>

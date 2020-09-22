@@ -178,6 +178,10 @@ article.summary .cover-image .classification .tags ul.tag{
 article.summary .cover-image .classification .tags ul.tag * {
     color:white;
 }
+article.summary .cover-image .classification .tags .etc {
+    margin:auto 0;
+    text-align: center;
+}
 article.summary .cover-content {
     box-sizing:content-box;
     flex:1;
@@ -356,11 +360,15 @@ ul.contents li {
 .categories ul li .summary.card:hover .title a div{
     text-decoration: underline;
 }
+/* Sections */
+.sections h1 {
+    margin:2rem 0;
+}
 /* Taxonomy */
 .taxonomy {
     display:flex;
     flex-direction:column;
 }
 .taxonomy h1{
-    margin:2rem auto;
+    margin:2rem 0;
 }
