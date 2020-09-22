@@ -12,7 +12,9 @@
 <div id="home-menu" class="card">
   <ul>
     {{ range .Site.Data.config.HomeMenu}}
-    <li><a href="{{ .link | relURL }}">{{ .title }}</a></li>
+    <li onclick="goToUrl({{ .link | relURL }});">
+      <a href="{{ .link | relURL }}">{{ .title }}</a>
+    </li>
     {{ end }}   
   </ul>
 </div>

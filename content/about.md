@@ -4,6 +4,7 @@ date: 2020-09-20T12:19:54+09:00
 categories: []
 tags: []
 cover: ""
+layout: "about"
 draft: true
 ---
 양기조(GI JO YANG)  

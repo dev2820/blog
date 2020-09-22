@@ -8,10 +8,11 @@
             {{ end }}
             {{ .Title }}
         </h1>
-        {{ range .Pages }}
-            {{ .Render "summary"}}
-            <hr class="summary-sep" />
-        {{ end }}
+    </div>
+    {{ range .Pages}}
+    {{ .Render "summary"}}
+    <hr class="summary-sep" />
+    {{ end }}
     </div>
     {{ partial "pagination.html" . }}
 </main>

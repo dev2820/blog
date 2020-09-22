@@ -1,11 +1,30 @@
-<article class="summary card" onclick="goToUrl({{ .Permalink }})">
+<article class="summary card">
   {{ if .Params.cover }}
-  <div class="cover-image" style="background-image: linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 250px),url('{{.Params.cover}}');"></div>
+  <div class="cover-image" style="background-image: linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 270px),url('{{.Params.cover}}');">
   {{ else }}
-  <div class="cover-image" style="background-image: linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 250px),url('/images/ocean.jpg');"></div>
+  <div class="cover-image" style="background-image: linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 270px),url('/images/ocean.jpg');">
   {{ end }}
+    <div class="classification">
+      <div class="category">
+        {{$baseurl := .Site.BaseURL}}
+        <h4>categories</h4>
+        {{ range $category:=.Params.categories}}
+           <a href="{{$baseurl}}categories/{{ $category }}">{{$category}}</a>
+        {{ end }}
+      </div>
+      <div class="tags">
+        <h4>tags</h4>
+        <ul class="tag">
+          {{ range first 3 (.GetTerms "tags") }}
+            <li><a href="{{ .Permalink }}">#{{ .LinkTitle }}</a></li>
+          {{ end }}
+          {{ if gt (len (.GetTerms "tags")) 3}} 외 {{(len (.GetTerms "tags")) -3}}{{ i18n "tagsCount"}} {{ end }}
+        </ul>
+      </div>
+    </div>
+  </div>
   <div class="cover-content">
-    <header>
+    <header onclick="goToUrl({{ .Permalink }})">
       {{ if .Params.icon }}
       <img class="icon" src="{{ .Params.icon | relURL }}" />
       {{ else }}
@@ -15,9 +34,9 @@
         <div class="post-meta">{{ .Date.Format "Mon, Jan 2, 2006" }}</div> 
         <h2>{{ .Title | truncate 30 }}</h2>
       </div>
-  
     </header>
-    {{ .Summary | truncate 140}}
+    <div class="content">{{ .Summary | truncate 130}}</div>
+    <div class="read-more"><a href="{{ .Permalink }}">{{ i18n "readMore" }}</a></div>
   </div>
 
 </article>

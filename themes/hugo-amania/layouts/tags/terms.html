@@ -5,15 +5,17 @@
     <p>{{len .Data.Terms}} {{ i18n "tagsCount" }}</p>
     <div class="tag-list">
         <ul class="tag">
-        {{ $baseurl := .Site.BaseURL }}
-        {{ $data := .Data }}
-        {{ range $key,$value := .Data.Terms.Alphabetical }}
+            {{ $baseurl := .Site.BaseURL }}
+            {{ $data := .Data }}
+            {{ range $key,$value := .Data.Terms.Alphabetical }}
             <li>
-                <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
-                    {{ $value.Name }} <small>({{ $value.Count }})</small>
-                </a>
+                <span>
+                    <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
+                        <span>{{ $value.Name }}</span> <small>({{ $value.Count }})</small>
+                    </a>
+                </span>
             </li>
-        {{ end }}
+            {{ end }}
         </ul>
     </div>
 </div>

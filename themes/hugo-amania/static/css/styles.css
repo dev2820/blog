@@ -11,12 +11,14 @@ body {
   color: #505050;
   font-family: 'Noto Sans KR', sans-serif;
   line-height: 1.83em;
-  min-width:800px;
 }
 body {
+    min-width:800px;
     scroll-behavior: smooth;
     transition:0.8s;
     background-color:#ffffff;
+    display:flex;
+    flex-direction:column;
 }
 img {
     max-width: 100%;
@@ -30,11 +32,14 @@ a {
     color:#505050;
     text-decoration: none;;
 }
+a:hover {
+    text-decoration: underline;
+}
 a:visited {
     color:#505050;
 }
 hr.summary-sep {
-    width:90%;
+    min-width:100%;
     border-top:3px dashed #bbb;
     margin:20px auto;
 }
@@ -44,13 +49,13 @@ hr.summary-sep {
 }
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
+}
 /* Topbar */
 #topbar {
-    height: 50px;
     width:100%;
+    height: 50px;
     padding:0 10px 0 10px;
-    position:fixed;
+    position: fixed;
     top:0;
     display: flex;
     flex-direction: row;
@@ -74,6 +79,7 @@ hr.summary-sep {
 #aside {
     height:100%;
     width:350px;
+    max-width:50%;
     overflow:hidden;
     position:fixed;
     right:0;
@@ -99,6 +105,8 @@ hr.summary-sep {
 }
 /* Content*/
 #content {
+    margin:0 auto;
+    max-width:1200px;
     padding:50px;
     display:flex;
     flex-direction:column;
@@ -108,38 +116,82 @@ hr.summary-sep {
 article.summary {
     border-radius:4px;
     margin:0 auto;
-    height:250px;
+    height:270px;
     min-width:100%;
     overflow:hidden;
     display:flex;
     flex-direction:row;
-    cursor:pointer;
     background-color:white;
 }
 article.summary .cover-image {
-    width:250px;
-    height:250px;
+    width:270px;
+    height:270px;
     background-position:left;
-    background-size:250px 250px;
+    background-size:270px 270px;
     background-repeat:no-repeat;
     margin:auto 0;
 }
-article.summary .cover-image img{
-    width:250px;
-    height:250px;
+article.summary .cover-image .classification {
+    opacity:0;
+    background:rgba(0,0,0,0.5);
+    color:white;
+    height:100%;
+    transition:0.3s;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+article.summary:hover .cover-image .classification {
+    opacity:1;
+    transition:0.3s;
+}
+article.summary .cover-image .classification  {
+    margin:0 auto;
+}
+article.summary .cover-image .classification .category {
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+}
+article.summary .cover-image .classification .category * {
+    color:white;
+    margin:0 auto;
+}
+article.summary .cover-image .classification .tags {
+    margin:0 auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:10px 20px;
+}
+article.summary .cover-image .classification .tags h4 {
+    text-align: center;
+}
+
+article.summary .cover-image .classification .tags ul.tag{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+article.summary .cover-image .classification .tags ul.tag * {
+    color:white;
 }
 article.summary .cover-content {
     box-sizing:content-box;
     flex:1;
     margin:20px;
     overflow:hidden;
+    display:flex;
+    flex-direction:column;
 }
 article.summary .cover-content header{
     display: flex;
     flex-direction: row;
     height:60px;
     cursor: pointer;
-    margin-bottom:30px;
+    margin-bottom:25px;
 }
 article.summary .cover-content header * {
     margin:auto 0;
@@ -161,7 +213,7 @@ article.summary .cover-content header .title h2 {
     margin:0;
     padding:0;
 }
-article.summary:hover .cover-content header .title h2 {
+article.summary .cover-content header:hover .title h2 {
     text-decoration: underline;
 }
 article.summary .cover-content header .title .post-meta {
@@ -170,6 +222,15 @@ article.summary .cover-content header .title .post-meta {
     height:20px;
     margin:0;
     margin-bottom:3px;
+}
+article.summary .content {
+    flex:1;
+    overflow: hidden;
+}
+article.summary .read-more {
+    display:flex;
+    flex-direction:row;
+    justify-content: flex-end;
 }
 /* Profile */
 .profile {
