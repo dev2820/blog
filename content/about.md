@@ -5,7 +5,7 @@ categories: []
 tags: []
 cover: ""
 layout: "about"
-draft: true
+draft: false
 ---
 양기조(GI JO YANG)  
 nickname: Dev2820
