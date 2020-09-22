@@ -1,7 +1,11 @@
 <div id="topbar" class="card">
   <div class="logo">
     <a href="{{ "/" | relURL }}">
+      {{ if .Site.Params.logo }}
+      <img src="{{ .Site.Params.logo | relURL }}" height="32px" />
+      {{ else }}
       <img src="{{ "/images/logo.png" | relURL }}" height="32px" />
+      {{ end }}
     </a>
   </div>
   <div class="burger">

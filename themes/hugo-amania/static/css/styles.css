@@ -26,6 +26,13 @@ button {
     border: none;
     cursor:pointer;
 }
+a {
+    color:#505050;
+    text-decoration: none;;
+}
+a:visited {
+    color:#505050;
+}
 hr.summary-sep {
     width:90%;
     border-top:3px dashed #bbb;
@@ -35,6 +42,9 @@ hr.summary-sep {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
 }
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
 /* Topbar */
 #topbar {
     height: 50px;
@@ -89,17 +99,17 @@ hr.summary-sep {
 }
 /* Content*/
 #content {
-    padding:0;
-    padding-top:50px;
+    padding:50px;
     display:flex;
     flex-direction:column;
     justify-content: center;
 }
 /* Summary */
 article.summary {
+    border-radius:4px;
     margin:0 auto;
     height:250px;
-    width:90%;
+    min-width:100%;
     overflow:hidden;
     display:flex;
     flex-direction:row;
@@ -161,70 +171,6 @@ article.summary .cover-content header .title .post-meta {
     margin:0;
     margin-bottom:3px;
 }
-/* Home Page Css */
-#home-head {
-  height: 400px;
-
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  display:flex;
-  flex-direction:column;
-  justify-content: center;
-
-}
-#home-head .container {
-    box-sizing:content-box;
-}
-#home-head .title {
-    font-size:3rem;
-    text-align:center;
-}
-#home-head .content {
-    font-size:1rem;
-    text-align:center;
-}
-#home-menu {
-    width:100%;
-    height:50px;
-    display:flex;
-    background-color:white;
-}
-#home-menu ul{
-    padding:0;
-    width:90%;
-    height:100%;
-    margin:0 auto;
-    display:flex;
-    flex-direction:row;
-}
-#home-menu ul li {
-    height:100%;
-    list-style: none;
-    width:100px;
-    text-align:center;
-    font-weight:bold;
-    display:flex;
-    justify-content: center;
-    cursor:pointer;
-}
-#home-menu ul li a {
-    margin:auto 0;
-    text-decoration: none;
-    color: #505050;
-}
-#home-menu ul li a:visited {
-    color:#505050;
-    background-color:transparent;
-}
-#home-menu ul li:hover {
-    background-color:#cccccc;
-}
-#home-menu ul li:hover a{
-    text-decoration: underline;
-}
 /* Profile */
 .profile {
     display:flex;
@@ -285,4 +231,75 @@ ul.contents li {
 }
 .paging .page {
     margin:0 10px;
+}
+/* Cateories */
+.categories ul{
+    margin: 0;
+    padding: 0;
+    display:inline-block;
+}
+.categories ul li{
+    display:inline-block;
+
+    border-radius: 4px;
+    list-style: none;
+    cursor: pointer;
+}
+.categories ul li .summary.card {
+    background-color:black;
+    overflow: hidden;
+    border-radius: 4px;
+    display:inline-block;
+    width:250px;
+    height:250px;
+    margin:10px;
+}
+.categories ul li .summary.card div.recent-image{
+    width:250px;
+    height:150px;
+    background-position:left;
+    background-size:250px 150px;
+    background-repeat:no-repeat;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    text-align: center;
+}
+.categories ul li .summary.card div.recent-image span{
+    background-color:rgba(255,255,255,0.6);
+    font-weight:300;
+}
+.categories ul li .summary.card .title{
+    background-color:white;
+    width:250px;
+    height:100px;
+    display:flex;
+    flex-direction:column;
+}
+.categories ul li .summary.card .title a{
+    text-decoration: none;
+}
+.categories ul li .summary.card .title a h3{
+    margin:0;
+    font-size:1.5rem;
+    font-weight:300;
+    text-align: center;
+    padding:10px 0;
+}
+.categories ul li .summary.card:hover .title a h3{
+    text-decoration: underline;
+}
+.categories ul li .summary.card .title a div{
+    text-align: center;
+}
+.categories ul li .summary.card:hover .title a div{
+    text-decoration: underline;
+}
+/* Taxonomy */
+.taxonomy {
+    display:flex;
+    flex-direction:column;
+}
+.taxonomy h1{
+    margin:2rem auto;
 }

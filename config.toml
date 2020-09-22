@@ -19,3 +19,5 @@ summaryLength = 70
 [params]
     description = "dev2820의 개발일지 저장소"
     cover = "/images/space.jpg"
+    notFound = "/images/not_found.png"
+    logo = "/images/logo.png"

@@ -1,9 +1,20 @@
 {{ define "main"}}
-<main id="main">
-  <div>
-    <span>404 NOT FOUND...</span>
-    <h1 id="title"><a href="{{ "/" | relURL }}">Go Home</a></h1>
-    <a href="javascript:history.back();">Go Back</a>
+<main id="notFound">
+  <div class="error-cover">
+    {{ if .Site.Params.notFound }}
+    <img src="{{.Site.Params.notFound | relURL }}"/>
+    {{ else }}
+    <img src="{{"/images/not_found.png" | relURL }}"/>
+    {{ end }}
+  </div>
+  <div class="error-content">
+    <div class="error-code">{{ i18n "notFoundCode" }}</div>
+    <div class="error-message">{{ i18n "notFoundTitle" }}</div>
+    <div class="error-description">{{ i18n "notFoundDescription"}}</div>
+    <div class="go-other-page">
+      <button id="title"><a href="{{ "/" | relURL }}">Go Home</a></button>
+      <button><a href="javascript:history.back();">Go Back</a></button>
+    </div>
   </div>
 </main>
 {{ end }}

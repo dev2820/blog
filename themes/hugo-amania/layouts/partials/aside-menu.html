@@ -7,7 +7,7 @@
     <hr>
     <ul>
         {{ range .Site.Sections }}
-        <li><a href="{{.Permalink}}">{{.Title}} ({{ len (where .Site.RegularPages "Section" "==" .Title)}})</a></li>
+        <li><a href="{{.Permalink}}">{{.Title}} ({{ len (where .Site.RegularPages "Section" "==" .Title )}})</a></li>
         {{ end }}
     </ul>
 </div>

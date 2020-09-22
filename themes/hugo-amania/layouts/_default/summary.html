@@ -13,11 +13,11 @@
       {{ end }}
       <div class="title">
         <div class="post-meta">{{ .Date.Format "Mon, Jan 2, 2006" }}</div> 
-        <h2>{{ .Title }}</h2>
+        <h2>{{ .Title | truncate 30 }}</h2>
       </div>
   
     </header>
-    {{ .Summary | truncate 150}}
+    {{ .Summary | truncate 140}}
   </div>
 
 </article>

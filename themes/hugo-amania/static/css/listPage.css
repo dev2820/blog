@@ -1,0 +1,9 @@
+#list {
+    width:100%;
+    display:flex;
+    flex-direction:column;
+}
+#list article,#list ul {
+    width:90%;
+    margin:0 auto;
+}

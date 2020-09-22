@@ -1,12 +1,18 @@
 {{ define "main" }}
 <main>
-    tax
-    <div>
-        <h1>{{ .Title }}</h1>
+    <div class="taxonomy">
+        <h1>
+            {{if eq .Data.Plural "categories"}}{{ i18n "categoriesTitle" }}:
+            {{ else if eq .Data.Plural "tags"}}{{ i18n "tagsTitle" }}:
+            {{ else }}
+            {{ end }}
+            {{ .Title }}
+        </h1>
         {{ range .Pages }}
             {{ .Render "summary"}}
             <hr class="summary-sep" />
         {{ end }}
     </div>
+    {{ partial "pagination.html" . }}
 </main>
 {{ end }}

@@ -1,0 +1,33 @@
+{{ define "main" }}
+<div class="categories">
+  <h1>{{ i18n "categoriesTitle" }}</h1>
+  <p>{{ i18n "categoriesDescription" }}</p>
+  <ul>
+    {{ $baseurl := .Site.BaseURL }}
+    {{ $data := .Data }}
+    {{ range $key,$value := .Data.Terms.Alphabetical }}
+    <li onclick="goToUrl('{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}')">
+      <span class="summary card">
+        {{ range first 1 $value.WeightedPages }}
+          {{ if .Params.cover }}
+          <div class="recent-image" style='background-image:url({{.Params.cover | relURL }})'>
+          {{ else }}
+          <div class="recent-image" style="background-image:url({{"/images/ocean.jpg" | relURL}})">
+          {{ end }}
+          <a href="{{ .Permalink }}">
+            <span>{{ .Date.Format "2006-01-02" }}</span>
+          </a>
+          </div>
+        {{ end }}
+        <div class="title">
+          <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
+            <h3>{{ $value.Name }}</h3> 
+            <div>{{ $value.Count }} {{ i18n "categoriesCount" }}</div>
+          </a>
+        </div>
+      </span>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}

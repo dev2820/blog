@@ -73,29 +73,43 @@ other = "더보기"
 ###################
 # Category
 ###################
+[lastestDate]
+other = "마지막 업데이트 날짜"
+
+[categoriesTitle]
+other = "카테고리"
+
 [categoriesDescription]
-other = "카테고리 별 글을 볼 수 있습니다. 최근 글은 제목을 클릭하여 바로 읽을 수 있습니다."
+other = "카테고리 별 글을 볼 수 있습니다. 최신 글은 날짜를 클릭하여 바로 읽을 수 있습니다."
 
 [categoriesCount]
-other = "개"
+other = "posts"
 
 ###################
 # Tag
 ###################
+[tagsTitle]
+other = "태그"
+
 [tagsDescription]
 other = "태그 별 글을 볼 수 있습니다."
 
+[tagsCount]
+other = "개의 태그"
 ###################
 # Not found 404
 ###################
+[notFoundCode]
+other = "404"
+
 [notFoundTitle]
-other = "잘못된 공간입니다__404"
+other = "페이지를 찾을 수 없습니다."
 
 [notFoundSubTitle]
 other = "이왕 오신 김에 사이트를 다시 한 번 확인해보세요."
 
 [notFoundDescription]
-other = "링크가 변경되었을 수 있습니다. 태그를 한 번 확인해보세요!! 그 곳에 원하던 내용이 있을 수 있습니다 :)"
+other = "링크가 변경되었을 수 있습니다."
 
 [notFoundGoToHome]
 other = "첫 화면으로"

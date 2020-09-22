@@ -1,0 +1,64 @@
+/* Home Page Css */
+#home-head {
+    height: 400px;
+  
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+  
+  }
+  #home-head .container {
+      box-sizing:content-box;
+  }
+  #home-head .title {
+      font-size:3rem;
+      text-align:center;
+  }
+  #home-head .content {
+      font-size:1rem;
+      text-align:center;
+  }
+  #home-menu {
+      width:100%;
+      height:50px;
+      display:flex;
+      background-color:white;
+  }
+  #home-menu ul{
+      padding:0;
+      width:90%;
+      height:100%;
+      margin:0 auto;
+      display:flex;
+      flex-direction:row;
+  }
+  #home-menu ul li {
+      height:100%;
+      list-style: none;
+      width:100px;
+      text-align:center;
+      font-weight:bold;
+      display:flex;
+      justify-content: center;
+      cursor:pointer;
+  }
+  #home-menu ul li a {
+      margin:auto 0;
+      text-decoration: none;
+      color: #505050;
+  }
+  #home-menu ul li a:visited {
+      color:#505050;
+      background-color:transparent;
+  }
+  #home-menu ul li:hover {
+      background-color:#95cb44;
+  }
+  #home-menu ul li:hover a{
+      color:#111111;
+  }

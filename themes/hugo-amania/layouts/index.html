@@ -1,20 +1,15 @@
 {{ define "title" }}
 {{ if .Site.Params.cover }}
 <div id="home-head" class="card" style="background-image:url({{.Site.Params.cover}});">
-  <div class="container">
-    <h1 class="title">{{.Title}}</h1>
-    <h3 class="content">{{.Content}}</h3>
-  </div>
-</div>
 {{ else }}
 <div id="home-head" class="card" style="background-image:url('/images/default_background.jpg');">
+{{ end }}
   <div class="container">
     <h1 class="title">{{.Title}}</h1>
     <h3 class="content">{{.Content}}</h3>
   </div>
 </div>
-{{ end }}
-<div id="home-menu">
+<div id="home-menu" class="card">
   <ul>
     {{ range .Site.Data.config.HomeMenu}}
     <li><a href="{{ .link | relURL }}">{{ .title }}</a></li>

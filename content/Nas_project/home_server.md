@@ -4,7 +4,6 @@ date: 2020-09-18T18:20:55+09:00
 categories: ["Nas_project"]
 tags: ["projects","DIY"]
 cover: ""
-icon: "/images/project-icon.png"
 draft: false
 ---
 

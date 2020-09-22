@@ -1,0 +1,62 @@
+/* Error Page */
+#notFound {
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    padding:30px;
+}
+#notFound .error-image {
+    width:300px;
+    height:500px;
+}
+#notFound .error-content {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    padding:0 20px;
+}
+#notFound .error-content .error-code {
+    height:7rem;
+    box-sizing:border-box;
+    text-align:baseline;
+    font-size:7rem;
+    font-weight:bold;
+    text-align: center;
+}
+#notFound .error-content .error-message {
+    font-size:2.5rem;
+    line-height:2.7rem;
+    height:5rem;
+    font-weight:300;
+    text-align: center;
+}
+#notFound .error-content .error-description {
+    font-size:1rem;
+    font-weight:300;
+    text-align: center;
+}
+#notFound .error-content .go-other-page {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding:30px;
+}
+#notFound .error-content .go-other-page button {
+    height:40px;
+    width:150px;
+    border-radius: 20px;
+    border:1px solid black;
+}
+#notFound .error-content .go-other-page button {
+    background-color:white;
+}
+#notFound .error-content .go-other-page button a{
+    color:#333333;
+}
+#notFound .error-content .go-other-page button:first-child {
+    background-color:#333333;
+}
+#notFound .error-content .go-other-page button:first-child a{
+    color:white;
+}
