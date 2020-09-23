@@ -4,7 +4,7 @@ date: 2020-09-23T12:19:54+09:00
 categories: ["일상"]
 tags: ["code-server","웹에서 코딩","신기함"]
 cover: ""
-draft: true
+draft: false
 ---
 
 어차어차하다 지인으로부터 웹에서 vscode를 돌아가게 하는 'code-server' 라는게 있는 것을 알아서 지금 도커로 'code-server'를 설치하고 돌려보는 중입니다. 지금 이 글도 'code-server'로 쓰는 중...
