@@ -52,4 +52,4 @@ static - 이것 저것 정적인 파일을 저장하는 곳입니다.
 ## 페이지 변수들
 페이지의 상태를 알기위한 여러가지 변수를 가져다 쓸 수 있는데 자세한 내용은 hugo 공식 홈페이지에 나와있습니다.
 
-h<ttps://gohugo.io/variables/page/>
+<ttps://gohugo.io/variables/page/>
