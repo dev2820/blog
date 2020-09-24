@@ -1,11 +1,8 @@
 <div id="aside-menu">
     <ul>
-        {{ range .Site.Data.config.HomeMenu}}
-        <li><a href="{{ .link | relURL }}">{{ .title }}</a></li>
-        {{ end }}
-    </ul>
-    <hr>
-    <ul>
+        <li><a href="{{.Site.BaseURL}}/categories">{{i18n "menuCategories"}}{{ i18n "menuSet"}}</a></li>
+        <li><a href="{{.Site.BaseURL}}/tags">{{i18n "menuTags"}}{{ i18n "menuSet"}}</a></li>
+        <li><a href="{{.Site.BaseURL}}">{{ i18n "menuAllPages" }}{{ i18n "menuSet"}}<small>({{len .Site.AllPages}})</small></a></li>
         {{ range .Site.Sections }}
         <li><a href="{{.Permalink}}">{{.Title}} ({{ len (where .Site.RegularPages "Section" "==" .Title )}})</a></li>
         {{ end }}

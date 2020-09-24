@@ -22,6 +22,12 @@ other = "검색어"
 [menuOgDescPostfix]
 other = "을 한 번 살펴보세요."
 
+[menuSet]
+other = "모아보기"
+
+[menuAllPages]
+other = "전체글"
+
 ###################
 # Summary
 ###################

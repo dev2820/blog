@@ -1,10 +1,13 @@
 <div class="profile">
-    {{ if .Site.Author.cover }}
-    <img src="{{.Site.Author.cover | relURL }}" height="150px" width="150px">
-    {{ else }}
-    <img src="{{"/images/ocean.jpg" | relURL }}" height="150px" width="150px">
-    {{ end }}
-    <h2>{{.Site.Author.name}}</h2>
-    <h5>{{.Site.Author.introduce}}</h5>
-    <h5>{{.Site.Author.email}}</h5>
+    <div class="cover">
+        {{ if .Site.Author.cover }}
+        <img src="{{.Site.Author.cover | relURL }}" height="150px" width="150px">
+        {{ else }}
+        <img src="{{"/images/ocean.jpg" | relURL }}" height="150px" width="150px">
+        {{ end }}
+        <h2>{{.Site.Author.name}}</h2>
+    </div>
+    <div class="description">
+        <h5>{{.Site.Author.introduce}}</h5>
+    </div>
 </div>

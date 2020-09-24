@@ -127,12 +127,13 @@ article.summary .cover-image {
     width:270px;
     height:270px;
     background-position:left;
-    background-size:275px 275px;
+    background-size:270px 270px;
     background-repeat:no-repeat;
     margin:auto 0;
 }
 article.summary .cover-image .classification {
     opacity:0;
+    visibility:hidden;
     background:rgba(0,0,0,0.5);
     color:white;
     height:100%;
@@ -143,6 +144,7 @@ article.summary .cover-image .classification {
 }
 article.summary:hover .cover-image .classification {
     opacity:1;
+    visibility:visible;
     transition:0.3s;
 }
 article.summary .cover-image .classification  {
@@ -242,12 +244,17 @@ article.summary .read-more {
     flex-direction:column;
     align-items: center;
 }
-.profile img {
+.profile .cover img {
+    height:30px;
+    weight:30px;
     border-radius: 50%;
-    overflow: hidden;
 }
-.profile h5 {
+.profile .cover h2 {
+    margin:0;
+}
+.profile .description h5 {
     margin:5px;
+    text-align:center;
 }
 /* Footer*/
 #footer {
