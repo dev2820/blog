@@ -256,6 +256,7 @@ article.summary .read-more {
 }
 .profile .cover h2 {
     margin:0;
+    flex:1;
 }
 .profile .description h5 {
     margin:5px 10px;
