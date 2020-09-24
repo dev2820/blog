@@ -27,26 +27,26 @@ draft: false
 
 ### HUGO의 특징
 
-1) Blistering Speed
+1.Blistering Speed
 휴고는 비슷한 종류의 툴 중에선 가장 빠르다고 합니다. 각 페이지를 생성하는데 1ms가 안걸리고 전체 페이지를 생성하는데 평균적으로 1초가 안걸린다고 합니다.
 
 휴고의 베이스가 되는 언어가 Golang 이고 Golang의 속도에 대해선 너무 유명하니 납득이 되긴 합니다.
 
-2) Robust Content Management
+2.Robust Content Management
 휴고는 무한한 컨텐츠 타입, 분류는 메뉴, 컨텐츠를 다루는 동적 API 등등을 플러그인 없이 제공한다고 하네요.
 
-3) Shortcodes 
+3.Shortcodes 
 휴고의 Shortcode는 markdown 문법만큼 간단한 동시에 markdown 문법보다 유연하다고 합니다. 
 
-4) Built-in Templates
+4.Built-in Templates
 휴고는 검색엔진최적화(SEO),댓글, 분석 및 기타 기능들을 빠르게 달 수 있는 템플릿을 제공합니다.
 
-5) Multilingual and i18n
+5.Multilingual and i18n
 휴고는 단일 언어 사이트에서 휴고 사용자들이 좋아하는 개발 경험과 동일한 직접적인 개발 경험을 가지고 다국어 사이트에 대한 완전한 i18n 지원을 제공한다. 
 
 음... 이 부분은 잘 모르겠지만 어쨌든 i18n을 제공한다는 뜻인 것 같습니다.
 
-6) Custom Outputs
+6.Custom Outputs
 휴고는 JSON, AMP 그리고 개인적으로 만든 양식을 포함해 다양한 포멧을 통해 컨텐츠를 보여주는 것이 가능합니다. 즉 단순 HTML 이상의 화면을 제공할 수 있다는 뜻입니다.
 
 ## What is Hugo

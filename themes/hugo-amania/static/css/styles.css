@@ -244,21 +244,15 @@ article.summary .read-more {
     flex-direction:column;
     align-items: center;
 }
-.profile .cover {
-    display:flex;
-    flex-direction:row;
-    justify-content:center;
-}
-.profile .cover img {
-    height:30px;
-    weight:30px;
+.profile img {
+    height:40px;
+    weight:40px;
     border-radius: 50%;
 }
-.profile .cover h2 {
+.profile h2 {
     margin:0;
-    flex:1;
 }
-.profile .description h5 {
+.profile h5 {
     margin:5px 10px;
     text-align:center;
 }
