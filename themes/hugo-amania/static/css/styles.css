@@ -244,6 +244,11 @@ article.summary .read-more {
     flex-direction:column;
     align-items: center;
 }
+.profile .cover {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+}
 .profile .cover img {
     height:30px;
     weight:30px;
@@ -253,7 +258,7 @@ article.summary .read-more {
     margin:0;
 }
 .profile .description h5 {
-    margin:5px;
+    margin:5px 10px;
     text-align:center;
 }
 /* Footer*/
