@@ -35,7 +35,7 @@
       </div>
     </header>
     <div class="content">{{ .Summary | truncate 130}}</div>
-    <div class="read-more"><a href="{{ .Permalink }}">{{ i18n "readMore" }}</a></div>
+    <div class="read-more"><span>{{ .WordCount }}words, {{.ReadingTime}}mins for read</span><a href="{{ .Permalink }}">{{ i18n "readMore" }}</a></div>
   </div>
 
 </article>

@@ -9,6 +9,7 @@ googleAnalytics = "UA-XXXXXXXX-X"
 paginate = 7
 paginatePath = "page"
 summaryLength = 70
+hasCJKLanguage = true
 
 [author]
     name = "dev2820"
