@@ -102,9 +102,15 @@ hr.summary-sep {
     margin:auto 0;
     background:none;
 }
+#aside .aside-sep {
+    width:80%;
+    height:2px;
+    margin:3px 0;
+}
 /* Content*/
 #content {
     margin:0 auto;
+    width: 90%;
     max-width:1200px;
     padding:50px;
     display:flex;
@@ -291,7 +297,7 @@ article.summary .read-more {
     color:#505050;
     margin:0 auto;
 }
-#footer button.scroll-to-top:hover {
+#footer button.scroll-to-top:active {
     background-color:red;
 }
 /* Section, List, Taxonomy */
