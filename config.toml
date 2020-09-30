@@ -12,6 +12,7 @@ summaryLength = 70
 hasCJKLanguage = true
 pygmentsCodefences = true
 pygmentsStyle = "dracula"
+pygmentsOptions = "linenos=table,anchorlinenos=true,lineanchors=prefix"
 
 [author]
     name = "dev2820"

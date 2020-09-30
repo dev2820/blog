@@ -7,7 +7,7 @@ cover: ""
 draft: false
 ---
 
-```js {lineos=table,hl_lines=[8],lineostart=1}
+```js {linenos=table,hl_lines=[8],linenostart=1}
 const a = 1;
 const b = 2;
 const c = 3;
@@ -19,6 +19,7 @@ for(let i =0; i<10; i++)
 }
 console.log('end')
 ```
+next code fence
 
 ```js
 const a = 1;

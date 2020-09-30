@@ -6,16 +6,16 @@
   {{ end }}
     <div class="classification">
       <div class="category">
-        <h4>categories</h4>
+        <h4>Category</h4>
         {{ range (.GetTerms "categories") }}
            <a href="{{.Permalink}}">{{.Title}}</a>
         {{ end }}
       </div>
       <div class="tags">
-        <h4>tags</h4>
+        <h4>Tags</h4>
         <ul class="tag">
           {{ range first 3 (.GetTerms "tags") }}
-            <li><a href="{{ .Permalink }}">#{{ .LinkTitle }}</a></li>
+            <li><a href="{{ .Permalink }}">#{{ .LinkTitle | truncate 7 }}</a></li>
           {{ end }}
         </ul>
         {{ if gt (len (.GetTerms "tags")) 3}} <small class="etc">외 {{(len (.GetTerms "tags")) -3}}{{ i18n "tagsCount"}}</small> {{ end }}
@@ -35,7 +35,7 @@
       </div>
     </header>
     <div class="content">{{ .Summary | truncate 130}}</div>
-    <div class="read-more"><span>{{ .WordCount }}words, {{.ReadingTime}}mins for read</span><a href="{{ .Permalink }}">{{ i18n "readMore" }}</a></div>
+    <div class="read-more"><span>{{ .WordCount }} words, {{.ReadingTime}} mins</span><a href="{{ .Permalink }}">{{ i18n "readMore" }}</a></div>
   </div>
 
 </article>

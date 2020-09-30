@@ -1,4 +1,5 @@
 ---
+title: "일상"
 date: 2020-09-19
 cover: "/images/ocean.jpg"
 ---
