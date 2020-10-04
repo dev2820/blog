@@ -3,8 +3,5 @@
         <li><a href="{{.Site.BaseURL}}/categories">{{i18n "menuCategories"}} {{ i18n "menuSet"}}</a></li>
         <li><a href="{{.Site.BaseURL}}/tags">{{i18n "menuTags"}} {{ i18n "menuSet"}}</a></li>
         <li><a href="{{.Site.BaseURL}}">{{ i18n "menuAllPages" }} {{ i18n "menuSet"}} <small>({{(len .Site.RegularPages)}})</small></a></li>
-        {{ range .Site.Sections }}
-        <li><a href="{{.Permalink}}">{{.Title}} <small>({{ len .Pages}})</small></a></li>
-        {{ end }}
     </ul>
 </div>

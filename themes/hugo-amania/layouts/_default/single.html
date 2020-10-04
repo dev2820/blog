@@ -4,6 +4,10 @@
 {{ define "main" }}
 <section id="main">
   <h1 id="title">{{ .Title }}</h1>
+  <small>
+    {{ partial "breadcrumb.html" .}}
+  </small>
+  {{ partial "table_of_content.html" .}}
   <div>
         <article class="content">
            {{ .Content }}
@@ -33,6 +37,7 @@
           다음글<a class="next" href="{{.Permalink}}"> {{.Title}}</a>
         {{ end }}
     </div>
+    {{ template "_internal/disqus.html" . }}
     <div>
       {{ partial "relate.html" . }}
     </div>

@@ -1,6 +1,6 @@
 {{ define "main" }}
 about?
-{{ partials "breadcrumb.html" .}}
+{{ partial "breadcrumb.html" .}}
 {{ with .Site.GetPage "about"}}
     <h1>{{ .Title }}</h1>
     {{ .Content }}

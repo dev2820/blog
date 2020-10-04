@@ -4,7 +4,7 @@ title = "dev2820 개발일지"
 languageCode = "ko-KR"
 DefaultContentLanguage = "kr"
 theme = "hugo-amania"
-disqusShortname = "XXXX"
+disqusShortname = "disqus_INRYoTikoC"
 googleAnalytics = "UA-XXXXXXXX-X"
 paginate = 7
 paginatePath = "page"
@@ -13,6 +13,7 @@ hasCJKLanguage = true
 pygmentsCodefences = true
 pygmentsStyle = "dracula"
 pygmentsOptions = "linenos=table,anchorlinenos=true,lineanchors=prefix"
+sectionPagesMenu = "main"
 
 [author]
     name = "dev2820"

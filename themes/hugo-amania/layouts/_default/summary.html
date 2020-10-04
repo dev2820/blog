@@ -30,7 +30,7 @@
       <img class="icon" src="{{ "/images/cover-icon.png" | relURL }}" />
       {{ end }}
       <div class="title">
-        <div class="post-meta">{{ .Date.Format "Mon, Jan 2, 2006" }}</div> 
+        <div class="post-meta">{{ i18n "postDatetime" .Date }}</div> 
         <h2>{{ .Title | truncate 30 }}</h2>
       </div>
     </header>
