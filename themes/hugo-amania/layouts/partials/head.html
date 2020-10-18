@@ -29,11 +29,11 @@
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    {{- if .Site.Params.useHLJS }}
+    <!-- {{- if .Site.Params.useHLJS }}
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/agate.min.css">
     {{- else -}}
     <link rel="stylesheet" href="{{ "css/syntax.css" | absURL }}" />
-    {{- end -}}
+    {{- end -}} -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap">
     <link rel="stylesheet" href="{{ "/css/styles.css" | relURL }}">
     <link rel="stylesheet" href="{{ "/css/homePage.css" | relURL }}">

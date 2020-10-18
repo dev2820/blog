@@ -4,7 +4,7 @@ title = "dev2820 개발일지"
 languageCode = "ko-KR"
 DefaultContentLanguage = "kr"
 theme = "hugo-amania"
-disqusShortname = "disqus_INRYoTikoC"
+disqusShortname = "disqus_cm11U3cVnF"
 googleAnalytics = "UA-XXXXXXXX-X"
 paginate = 7
 paginatePath = "page"
@@ -20,7 +20,7 @@ sectionPagesMenu = "main"
     email = "second28200@naver.com"
     cover = "/images/ocean.jpg"
     introduce = "풀스텍 웹개발을 지향합니다"
-
+ 
 [params]
     description = "dev2820의 개발일지 저장소"
     cover = "/images/space.jpg"
