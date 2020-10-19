@@ -10,7 +10,7 @@
       <span class="summary card">
         {{ range first 1 $value.WeightedPages }}
           {{ if .Params.cover }}
-          <div class="recent-image" style='background-image:url({{.Params.cover | relURL }})'>
+          <div class="recent-image" style="background-image:url({{.Params.cover | relURL }})">
           {{ else }}
           <div class="recent-image" style="background-image:url({{"/images/ocean.jpg" | relURL}})">
           {{ end }}

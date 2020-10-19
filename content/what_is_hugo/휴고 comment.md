@@ -1,40 +1,35 @@
 +++
-title = "휴고 Comment"
-date = 2020-10-02T20:01:13+09:00
+title = "휴고 Comment 추가하기"
+date = 2020-10-18T21:17:54+09:00
 categories = ["what_is_hugo"]
-tags = ["hugo","휴고","comment","댓글창 만들기"]
+tags = ["hugo","휴고","disqus","코멘트 추가하기"]
 banner = ""
 draft = false
 +++
 
-이번글은 휴고에서 지원하는 댓글창 시스템과 기본적으로 내장된 Disqus template에 대해 다루겠습니다.
+## Comments
+
+휴고는 Disqus 템플릿을 기본적으로 제공합니다. 물론 disqus 말고도 다른 코멘트 시스템을 이용할 수도 있습니다. 
+하지만 여기선 Disqus 다는 방법에 대해서만 설명하겠습니다.
 
 https://gohugo.io/content-management/comments/
 
-Disqus는 서드파티 서비스로 코멘트와 커뮤니티를 자바스크립트를 통해 웹사이트에 제공합니다.
+### Add Disqus
 
-그 다음 `config` 파일에 다음을 추가합니다.
+먼저 disqus 계정이 필요하니 아래 링크에서 disqus에 가입합니다.
+
+https://disqus.com/
+
+가입하고 'I want to install Disqus on my site' 를 클릭하면 사이트를 만들 수 있는 창이 뜹니다. 대충 뚜따뚜따 만들고나면 사이트의 admin 페이지에 들어갈 수 있게 되는데, 여기서 settings->general 에 들어가면 Shortname이 무엇인지 알려줍니다. 이를 config 파일 안에 넣어줍니다.
 
 ```toml
 disqusShortname = "yourdiscussshortname"
 ```
 
-글마다 front matter를 추가해줄 수 도 있습니다.
+그리고 comment 창이 나올 (대부분 single.html 아래) 부분에 다음 줄을 추가합니다.
 
-* disqus_identifier
-* disqus_title
-* disqus_url
-
-## Render Hugo's Built-in Disqus Partial Template
-
-필요한 layout에 다음을 추가합니다.
-
-```
-{{ template "_internal/disqus.html" . }}
+```html
+{{ template "_internal/disqus.html" .}}
 ```
 
-## Comments Alternatives
-
-대체 가능한 코멘트 서비스는 다음을 참고하십시오
-
-https://gohugo.io/content-management/comments/#comments-alternatives
+이렇게 하면 Disqus 코멘트창이 뜨게됩니다. 

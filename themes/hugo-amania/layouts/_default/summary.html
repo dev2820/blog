@@ -23,7 +23,7 @@
     </div>
   </div>
   <div class="cover-content">
-    <header onclick="goToUrl({{ .Permalink }})">
+    <a href="{{ .Permalink }}">
       {{ if .Params.icon }}
       <img class="icon" src="{{ .Params.icon | relURL }}" />
       {{ else }}
@@ -33,7 +33,7 @@
         <div class="post-meta">{{ i18n "postDatetime" .Date }}</div> 
         <h2>{{ .Title | truncate 30 }}</h2>
       </div>
-    </header>
+    </a>
     <div class="content">{{ .Summary | truncate 130}}</div>
     <div class="read-more"><span>{{ .WordCount }} words, {{.ReadingTime}} mins</span><a href="{{ .Permalink }}">{{ i18n "readMore" }}</a></div>
   </div>

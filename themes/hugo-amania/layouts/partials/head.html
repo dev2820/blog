@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="{{ "/css/listPage.css" | relURL }}">
     <link rel="stylesheet" href="{{ "/css/notFound.css" | relURL }}">
     <link rel="stylesheet" href="{{ "/css/tags.css" | relURL }}">
-   <!-- <link rel="stylesheet" href="{{ "/css/markdown.css" | relURL }}">-->
+    <link rel="stylesheet" href="{{ "/css/markdown.css" | relURL }}">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     {{ if not .Site.BuildDrafts }}
@@ -90,6 +90,14 @@
                     });
                 });
             });
+            document.addEventListener('scroll',(event)=>{
+                const scroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const progressbar = document.querySelector('#topbar.card .progress-bar .progress');
+                if(progressbar){
+                    progressbar.style.width = (scroll/height)*100+'%';
+                }
+            })
         }
         
     </script>

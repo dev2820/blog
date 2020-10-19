@@ -1,6 +1,7 @@
-<ul>
-    tags
-    {{ range (.GetTerms "tags") }}
-        <li><a href="{{ .Permalink }}">#{{ .LinkTitle }}</a></li>
-   {{ end }}
-</ul>
+<div class="tags">
+    <ul class="tag">
+        {{ range (.GetTerms "tags") }}
+            <li><a href="{{ .Permalink }}">#{{ .LinkTitle }}</a></li>
+        {{ end }}
+    </ul>
+</div>

@@ -2,24 +2,62 @@
    title{{ .Title }} &ndash; {{ .Site.Title }}
 {{ end }}
 {{ define "main" }}
+<script>
+  document.getElementById('topbar').classList.remove('card')
+  window.addEventListener('scroll', (event) => {
+    let e = document.getElementById('topbar');
+    if (this.scrollY > 400) {
+      if (!e.classList.contains('card')) {
+        e.classList.add('card');
+      }
+    }
+    else {
+      if (e.classList.contains('card')) {
+        e.classList.remove('card');
+      }
+    }
+  });
+</script>
+{{ if .Params.cover }}
+<header id="banner" style="background-image:url({{.Params.cover | relURL }});">
+{{ else }}
+<header id="banner" style="background-image:url({{"/images/ocean.jpg" | relURL}}); backdrop-filter:brightness(50%);">
+{{ end }}
+  <div class="title" style="backdrop-filter:brightness(50%)">
+    <h1 id="title">{{ .Title }}</h1>
+    <section>
+      <h4 id="date"> {{ i18n "postDatetime" .Date }} </h4>
+      <h5 id="wordcount"> {{ .WordCount }} Words </h5>
+      <h5 id="timetoread"> {{ .ReadingTime }} mins </h5>
+    </section>
+    <small>
+      {{ partial "breadcrumb.html" .}}
+    </small>
+    <small>by {{ .Site.Author.name }}</small>
+  </div>
+</header>
 <section id="main">
-  <h1 id="title">{{ .Title }}</h1>
-  <small>
-    {{ partial "breadcrumb.html" .}}
-  </small>
-  {{ partial "table_of_content.html" .}}
-  <div>
-        <article class="content">
-           {{ .Content }}
-        </article>
+  <div class="center">
+    {{ partial "table_of_content.html" .}}
+    <div>
+          <article class="content">
+            {{ .Content }}
+          </article>
+    </div>
   </div>
 </section>
 <aside id="meta">
-    <div>
-    <section>
-      <h4 id="date"> {{ .Date.Format "Mon Jan 2, 2006" }} </h4>
-      <h5 id="wordcount"> {{ .WordCount }} Words </h5>
-    </section>
+  <div class="center">
+  <nav class="section-move">
+    {{ with .PrevInSection }}
+      <a class="previous" href="{{.Permalink}}"><i class="fa fa-arrow-circle-left"></i> {{.Title}}</a>
+    {{ end }}
+    {{ with .NextInSection }}
+      <a class="next" href="{{.Permalink}}"> {{.Title}}<i class="fa fa-arrow-circle-right"></i></a>
+    {{ end }}
+  </nav>
+  <hr>
+    {{ partial "profile-in-article.html" . }}
     {{ with .Params.topics }}
     <ul id="topics">
       {{ range . }}
@@ -28,18 +66,11 @@
     </ul>
     {{ end }}
     {{ partial "tag_list.html" . }}
-    </div>
-    <div>
-        {{ with .PrevInSection }}
-          이전글<a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
-        {{ end }}
-        {{ with .NextInSection }}
-          다음글<a class="next" href="{{.Permalink}}"> {{.Title}}</a>
-        {{ end }}
-    </div>
+    
     {{ template "_internal/disqus.html" . }}
     <div>
-      {{ partial "relate.html" . }}
+      {{ partial "relate-content.html" . }}
     </div>
+  </div>
 </aside>
 {{ end }}

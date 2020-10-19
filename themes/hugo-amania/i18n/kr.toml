@@ -52,6 +52,11 @@ other = "이전"
 [paginationNext]
 other = "다음"
 
+[paginationFirst]
+other = "처음 페이지"
+
+[paginationLast]
+other = "마지막 페이지"
 ###################
 # Post
 ###################

@@ -1,4 +1,29 @@
+<script>
+    let toggle = true;
+    function toggleTable(){
+        console.log(toggle)
+        if(toggle){
+            document.getElementById('table').classList.add('hidden')
+            document.querySelector('.post-toc .title').classList.add('toggle-off')
+            document.querySelector('.post-toc .fa-angle-down').classList.remove('hidden')
+            document.querySelector('.post-toc .fa-angle-up').classList.add('hidden')
+        }
+        else {
+            document.getElementById('table').classList.remove('hidden')
+            document.querySelector('.post-toc .title').classList.remove('toggle-off')
+            document.querySelector('.post-toc .fa-angle-down').classList.add('hidden')
+            document.querySelector('.post-toc .fa-angle-up').classList.remove('hidden')
+        }
+        toggle = !toggle;
+    }
+</script>
 <div class="post-toc">
-    <span class="title">{{ i18n "postToc" }}</span>
+    <div class="title" onclick="toggleTable()">
+        {{ i18n "postToc" }}
+        <i class="fa fa-angle-down hidden"></i>
+        <i class="fa fa-angle-up"></i>
+    </div>
+    <div id="table">
     {{ .TableOfContents }}
+    </div>
 </div>

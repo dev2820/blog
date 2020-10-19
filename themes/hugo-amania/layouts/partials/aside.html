@@ -6,6 +6,26 @@
     </div>
     {{ partial "profile.html" .}}
     <hr class="aside-sep">
-    {{ partial "aside-menu.html" .}}
-    {{ partial "sidebar.html" .}}
+    <div class="aside-menu">
+        <ul>
+            <li><a href="{{.Site.BaseURL}}/categories">{{i18n "menuCategories"}} {{ i18n "menuSet"}}</a></li>
+            <li><a href="{{.Site.BaseURL}}/tags">{{i18n "menuTags"}} {{ i18n "menuSet"}}</a></li>
+            <li><a href="{{.Site.BaseURL}}">{{ i18n "menuAllPages" }} {{ i18n "menuSet"}} <small>({{(len .Site.RegularPages)}})</small></a>
+                {{ range first 1 .Site.RegularPages }}<small>{{ .Date.Format "- 2006/01/02" }}</small>{{end}}</li>
+        </ul>
+    </div>
+    <nav class="sidebar-nav">
+        {{ $currentPage := . }}
+        {{ $allPages := .Site.RegularPages }}
+        <ul>
+            {{ range .Site.Menus.main }}
+            <li>
+                {{ $posts := (where $allPages "Section" "==" .Name) }}
+                {{ $postCount := len $posts }}
+                <a class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}<small>({{$postCount}})</small></a>
+                {{ range first 1 $posts }}<small>{{ .Date.Format "- 2006/01/02" }}</small>{{end}}
+            </li>
+            {{ end }}
+        </ul>
+    </nav>
 </div>  

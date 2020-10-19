@@ -1,0 +1,15 @@
+{{ $baseurl := .Site.BaseURL }}
+<div class="summary-card card" onclick="goToUrl('{{.Permalink}}')">
+    {{ if .Params.cover }}
+    <div class="banner" style="background-image:url({{.Params.cover | relURL }})">
+    {{ else }}
+    <div class="banner" style="background-image:url({{"/images/ocean.jpg" | relURL}})">
+    {{ end }}
+    </div>
+    <div class="title">
+      <a href="{{ .Permalink }}">
+        <h3>{{ .Name | truncate 40 }}</h3> 
+        <span>{{ .Date.Format "2006-01-02" }}</span>
+      </a>
+    </div>
+  </div>

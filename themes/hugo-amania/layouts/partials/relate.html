@@ -1,9 +1,0 @@
-{{ $related := .Site.RegularPages.Related . | first 5 }}
-{{ with $related }}
-<h3>비슷한 컨텐츠 더보기</h3>
-<ul>
-	{{ range . }}
-	<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-	{{ end }}
-</ul>
-{{ end }}

@@ -1,5 +1,5 @@
 ---
-title: hugo_new_theme
+title: "hugo_new_theme"
 date: 2020-09-19
 publishdate: 2020-09-19
 ---

@@ -1,0 +1,13 @@
+<div class="related-content">
+{{ $related := .Site.RegularPages.Related . | first 6 }}
+{{ with $related }}
+<h3>비슷한 컨텐츠 더보기</h3>
+<ul>
+	{{ range . }}
+	<li>
+		{{ partial "summary-card.html" . }}
+	</li>
+	{{ end }}
+</ul>
+{{ end }}
+</div>
