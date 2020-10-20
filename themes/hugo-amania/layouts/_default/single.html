@@ -21,19 +21,18 @@
 {{ if .Params.cover }}
 <header id="banner" style="background-image:url({{.Params.cover | relURL }});">
 {{ else }}
-<header id="banner" style="background-image:url({{"/images/ocean.jpg" | relURL}}); backdrop-filter:brightness(50%);">
+<header id="banner" style="background-image:url({{"/images/ocean.jpg" | relURL}});">
 {{ end }}
-  <div class="title" style="backdrop-filter:brightness(50%)">
+  <div class="title">
     <h1 id="title">{{ .Title }}</h1>
     <section>
       <h4 id="date"> {{ i18n "postDatetime" .Date }} </h4>
-      <h5 id="wordcount"> {{ .WordCount }} Words </h5>
-      <h5 id="timetoread"> {{ .ReadingTime }} mins </h5>
+      <h5 id="wordcount"> {{ .WordCount }} Words, {{ .ReadingTime }} mins  </h5>
     </section>
-    <small>
+    <small class="breadcrumb">
       {{ partial "breadcrumb.html" .}}
     </small>
-    <small>by {{ .Site.Author.name }}</small>
+    <small class="author">by {{ .Site.Author.name }}</small>
   </div>
 </header>
 <section id="main">
@@ -53,7 +52,7 @@
       <a class="previous" href="{{.Permalink}}"><i class="fa fa-arrow-circle-left"></i> {{.Title}}</a>
     {{ end }}
     {{ with .NextInSection }}
-      <a class="next" href="{{.Permalink}}"> {{.Title}}<i class="fa fa-arrow-circle-right"></i></a>
+      <a class="next" href="{{.Permalink}}">{{.Title}} <i class="fa fa-arrow-circle-right"></i></a>
     {{ end }}
   </nav>
   <hr>
@@ -65,6 +64,8 @@
       {{ end }}
     </ul>
     {{ end }}
+    {{ $baseurl := .Site.BaseURL }}
+    category: <a href="{{ $baseurl }}{{ .Section}}">{{.Section}}</a>
     {{ partial "tag_list.html" . }}
     
     {{ template "_internal/disqus.html" . }}

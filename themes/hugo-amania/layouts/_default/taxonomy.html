@@ -1,5 +1,5 @@
 {{ define "main" }}
-<main>
+<main id="taxonomies">
     <div class="taxonomy">
         <h1>
             {{if eq .Data.Plural "categories"}}{{ i18n "categoriesTitle" }}:
@@ -13,7 +13,8 @@
     {{ .Render "summary"}}
     <hr class="summary-sep" />
     {{ end }}
-    </div>
     {{ partial "pagination.html" . }}
+    </div>
+
 </main>
 {{ end }}

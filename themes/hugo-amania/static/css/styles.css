@@ -15,7 +15,6 @@ body {
   line-height: 1.83em;
 }
 body {
-    /* min-width:800px; */
     scroll-behavior: smooth;
     transition:0.8s;
     background-color:#ffffff;
@@ -93,6 +92,10 @@ hr.summary-sep {
 #topbar .burger button {
     margin: auto 0;
     background:none;
+    color:#cccccc;
+}
+#topbar.card .burger button {
+    color:#333333;
 }
 /* Aside */
 #aside {
@@ -163,11 +166,7 @@ hr.summary-sep {
     background-size: cover;
 }
 #content #banner .title {
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    position: -webkit-sticky;
-    position: absolute;
+    background-color:rgba(0,0,0,0.5);
     width: 100%;
     height:400px;
     text-align:center;
@@ -175,6 +174,33 @@ hr.summary-sep {
     color:white;
     z-index:0;
     /* background-color:green; */
+}
+#content #banner .title  #title {
+    font-weight:100;
+    font-size:3rem;
+    padding:10px;
+    position: relative;
+    line-height:3rem;
+    top:40%;
+    margin:0 auto;
+}
+#content #banner .title section {
+    position:relative;
+    top:45%;
+}
+#content #banner .title .breadcrumb {
+    position:absolute;
+    top:10%;
+    display:block;
+    width:100%;
+}
+#content #banner .title .author {
+    display:block;
+    width:100%;
+    text-align: center;
+    position: absolute;
+    top:350px;
+    margin:0 auto;
 }
 #content #main {
     background-color:white;
@@ -396,6 +422,7 @@ article.summary .cover-content .read-more {
     display:flex;
     flex-direction:column;
     justify-content: center;
+    overflow:hidden;
 }
 #footer button.scroll-to-top * {
     color:#505050;
@@ -403,6 +430,9 @@ article.summary .cover-content .read-more {
 }
 #footer button.scroll-to-top:active {
     background-color:red;
+}
+#footer.relative-small {
+    top:70px;
 }
 /* Section, List, Taxonomy */
 ul.contents {
@@ -442,29 +472,30 @@ ul.contents li {
     margin:0 auto;
 }
 .categories ul{
-    display:inline-block;
+    display:inline-flex;
+    flex-wrap:wrap;
+    flex-direction:row;
 }
 .categories ul li{
-    display:inline-block;
-
+    display:inline-flex;
     border-radius: 4px;
     list-style: none;
     cursor: pointer;
+    margin-right:20px;
+    margin-bottom:20px;
 }
 .categories ul li .summary.card {
     background-color:black;
     overflow: hidden;
     border-radius: 4px;
-    display:inline-block;
-    width:250px;
-    height:250px;
-    margin:10px;
+    width:310px;
+    height:310px;
 }
 .categories ul li .summary.card div.recent-image{
-    width:250px;
-    height:150px;
+    width:310px;
+    height:60%;
     background-position:left;
-    background-size:250px 150px;
+    background-size:100% 100%;
     background-repeat:no-repeat;
     display:flex;
     flex-direction:column;
@@ -474,11 +505,12 @@ ul.contents li {
 .categories ul li .summary.card div.recent-image span{
     background-color:rgba(255,255,255,0.6);
     font-weight:300;
+    font-size:1.2rem;
 }
 .categories ul li .summary.card .title{
     background-color:white;
-    width:250px;
-    height:100px;
+    width:310px;
+    height:40%;
     display:flex;
     flex-direction:column;
 }
@@ -514,9 +546,18 @@ ul.contents li {
     margin:0 0 2rem 0;
 }
 /* Taxonomy */
+#taxonomies {
+    position:relative;
+    top:70px;
+    width:90%;
+    min-width:800px;
+    max-width:1000px;
+    margin:0 auto;
+}
 .taxonomy {
     display:flex;
     flex-direction:column;
+
 }
 .taxonomy h1{
     margin:2rem 0;
@@ -526,10 +567,10 @@ ul.contents li {
     color: #cccccc;
 }
 .breadcrumbnav a {
-    color: #505050;
+    color: #cccccc;
 }
 .breadcrumbnav a.visited {
-    color: #505050;
+    color: #cccccc;
 }
 .breadcrumbnav .active{
     color:#3EB489;
@@ -588,10 +629,10 @@ ul.contents li {
     display:flex;
     flex-direction:row;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 .related-content ul li {
     list-style: none;
+    margin-right:20px;
 }
 /* summary-small */
 .summary-small {
@@ -616,11 +657,31 @@ ul.contents li {
 }
 .summary-small .title {
     height:50%;
-    text-align: center;
-    padding:5px;
+    padding:10px;
 }
-.summary-small h3 {
-    padding:10px 10px;
+.summary-small .title a{
+    height:100%;
+}
+.summary-small .title .name {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:40%;
+    vertical-align: center;
+    text-align:center;
+    width:100%;
+}
+.summary-small .title .summary {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    height:40%;
+}
+.summary-small .title .date {
+    display:flex;
+    justify-content: center;
+    height:20%;
 }
 /* section-move */
 .section-move {

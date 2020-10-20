@@ -1,4 +1,10 @@
+{{ if .IsHome }}
   <footer id="footer">
+{{ else if .IsPage }}
+    <footer id="footer">
+{{ else }}
+    <footer id="footer" class="relative-small">
+{{ end }}
     <button onclick="scrollToTop()" class="scroll-to-top card">
       <i class="fa fa-angle-double-up"></i>
       <span>{{ i18n "footerToTheTop" }}</span>
