@@ -6,11 +6,11 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  
+    position:fixed;
     display:flex;
     flex-direction:column;
     justify-content: center;
-  
+    z-index:1;
   }
   #home-head .container {
       box-sizing:content-box;
@@ -28,6 +28,9 @@
       height:50px;
       display:flex;
       background-color:white;
+      position:relative;
+      z-index:10;
+      top:400px;
   }
   #home-menu ul{
       padding:0;
@@ -61,4 +64,18 @@
   }
   #home-menu ul li:hover a{
       color:#111111;
+  }
+  #home-summary {
+      width:100%;
+      z-index:10;
+      background-color:white;
+      position:relative;
+      top:400px;
+      padding-top:50px;
+  }
+  #home-summary .center {
+    max-width:1000px;
+    min-width:800px;
+    width:90%;
+    margin:0 auto;
   }

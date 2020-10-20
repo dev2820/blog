@@ -150,6 +150,7 @@ hr.summary-sep {
     display:flex;
     flex-direction:column;
     justify-content: center;
+    z-index:5;
 }
 #content #banner {
     height:400px;
@@ -205,8 +206,12 @@ hr.summary-sep {
     z-index:10;
 }
 #content #meta .center {
-    width:1000px;
+    width:100%;
+    max-width:1000px;
     margin:0 auto;
+}
+#content #meta .center .more-content {
+    overflow-x:scroll;
 }
 /* Summary */
 article.summary {
@@ -245,18 +250,17 @@ article.summary:hover .cover-image .classification {
     visibility:visible;
     transition:0.3s;
 }
-article.summary .cover-image .classification .category {
-    margin:0 auto;
+article.summary .cover-image .classification .summary-category {
     display:flex;
     flex-direction:column;
     height:40%;
 }
-article.summary .cover-image .classification .category * {
+article.summary .cover-image .classification .summary-category * {
     color:white;
     margin:0 auto;
     text-align:center;
 }
-article.summary .cover-image .classification .tags {
+article.summary .cover-image .classification .summary-tags {
     height:60%;
     margin:0 auto;
     display:flex;
@@ -264,22 +268,23 @@ article.summary .cover-image .classification .tags {
     justify-content: center;
     padding:10px 20px;
 }
-article.summary .cover-image .classification .tags h4 {
-    margin:0;
+article.summary .cover-image .classification .summary-tags h4 {
+    height:30%;
     text-align: center;
 }
 
-article.summary .cover-image .classification .tags ul.tag{
+article.summary .cover-image .classification .summary-tags ul.tag{
+    height:55%;
     display:flex;
     flex-direction:row;
     justify-content: center;
     flex-wrap: wrap;
 }
-article.summary .cover-image .classification .tags ul.tag * {
+article.summary .cover-image .classification .summary-tags ul.tag li a{
     color:white;
 }
-article.summary .cover-image .classification .tags .etc {
-    margin:auto 0;
+article.summary .cover-image .classification .summary-tags .etc {
+    height:15%;
     text-align: center;
 }
 article.summary .cover-content {
@@ -408,6 +413,7 @@ ul.contents li {
 }
 /* Pagination */
 .paging {
+    padding:10px 0 50px 0;
     display:flex;
     justify-content: center;
 }
@@ -427,9 +433,15 @@ ul.contents li {
     padding:0 0 0 10px;
 }
 /* Cateories */
+.categories {
+    position:relative;
+    top:70px;
+    width:90%;
+    min-width:800px;
+    max-width:1000px;
+    margin:0 auto;
+}
 .categories ul{
-    margin: 0;
-    padding: 0;
     display:inline-block;
 }
 .categories ul li{
@@ -490,8 +502,16 @@ ul.contents li {
     text-decoration: underline;
 }
 /* Sections */
+.sections {
+    position:relative;
+    top:70px;
+    width:90%;
+    min-width:800px;
+    max-width:1000px;
+    margin:0 auto;
+}
 .sections h1 {
-    margin:2rem 0;
+    margin:0 0 2rem 0;
 }
 /* Taxonomy */
 .taxonomy {
@@ -523,14 +543,12 @@ ul.contents li {
     overflow: hidden;
 }
 .post-toc .title {
-    background-color:#3EB489;
-    border-radius:4px;
-    border:2px solid black;
-    padding:3px;
+    background-color:#cccccc;
+    padding:10px;
     transition: 0.3s;
 }
 .post-toc .title.toggle-off {
-    background-color:transparent;
+    background-color:#cccccc;
     transition: 0.3s;
 }
 /* profile-in-article */
@@ -560,27 +578,35 @@ ul.contents li {
     color:#272727;
 }
 /* related-content */
+.related-content {
+    width:1000px;
+    padding:5px;
+    margin:0 auto;
+    overflow-x:scroll;
+}
 .related-content ul {
     display:flex;
     flex-direction:row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .related-content ul li {
     list-style: none;
 }
-/* summary-card */
-.summary-card {
-    height:270px;
-    width:280px;
-    display:inline-block;
+/* summary-small */
+.summary-small {
+    height:310px;
+    width:310px;
+    margin-bottom:20px;
+    display:inline-flex;
+    flex-direction: column;
     border-radius:4px;
     overflow: hidden;
-    margin:5px 10px;
+    /* margin:5px 10px; */
     cursor:pointer;
     background-color:white;
 }
-.summary-card .banner{
+.summary-small .banner{
     height:50%;
     width:100%;
     display:inline-block;
@@ -588,10 +614,12 @@ ul.contents li {
     background-size:100% 100%;
     background-repeat:no-repeat;
 }
-.summary-card .title {
+.summary-small .title {
+    height:50%;
     text-align: center;
+    padding:5px;
 }
-.summary-card h3 {
+.summary-small h3 {
     padding:10px 10px;
 }
 /* section-move */

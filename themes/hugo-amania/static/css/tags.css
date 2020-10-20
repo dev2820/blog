@@ -1,33 +1,41 @@
-.tags {
+.tag-term {
+    position:relative;
+    top:70px;
     display:flex;
     flex-direction:column;
     justify-content: center;
+    width:90%;
+    min-width:800px;
+    max-width:1000px;
+    margin:0 auto;
 }
-.tags ul.tag {
+ul.tag {
     margin:0;
     padding:0;
 }
-.tags ul.tag li{
-    box-sizing:content-box;
-    display:inline-block;
-    vertical-align: middle;
+ul.tag li{
+    display:inline-flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self:center;
     list-style: none;
     text-align:center;
-    margin-right:3px;
+    margin-right:5px;
     margin-bottom:7px;
-    height:30px;
+    height:34px;
     border:2px solid #cccccc;
-    border-radius: 15px;
+    border-radius: 17px;
 }
-.tags ul.tag li a {
+ul.tag li a {
     height:100%;
     width:100%;
     text-decoration: none;
-    padding:3px 12px 3px 12px;
+    padding:7px 12px 3px 12px;
     font-weight:300;
     font-size:14px;
     line-height:1;
 }
-.tags ul.tag li:hover {
+ul.tag li:hover {
     background-color:#cccccc;
 }

@@ -1,7 +1,9 @@
 {{ define "main" }}
-{{ partial "breadcrumb.html" .}}
-{{ with .Site.GetPage "about"}}
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
-{{ end }}
+<div id="about">
+    {{ partial "breadcrumb.html" .}}
+    {{ with .Site.GetPage "about"}}
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+    {{ end }}
+</div>
 {{ end }}

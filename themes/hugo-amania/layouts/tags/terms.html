@@ -1,5 +1,5 @@
 {{ define "main" }}
-<div class="tags">
+<div class="tag-term">
     <h1>Tags</h1>
     <p>{{ i18n "tagsDescription" }}</p>
     <p>{{len .Data.Terms}} {{ i18n "tagsCount" }}</p>
@@ -9,11 +9,9 @@
             {{ $data := .Data }}
             {{ range $key,$value := .Data.Terms.Alphabetical }}
             <li>
-                <span>
-                    <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
-                        <span>{{ $value.Name }}</span> <small>({{ $value.Count }})</small>
-                    </a>
-                </span>
+                <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
+                    <span>{{ $value.Name }}</span> <small>({{ $value.Count }})</small>
+                </a>
             </li>
             {{ end }}
         </ul>

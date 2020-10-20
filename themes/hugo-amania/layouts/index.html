@@ -1,14 +1,14 @@
 {{ define "title" }}
 {{ if .Site.Params.cover }}
-<div id="home-head" class="card" style="background-image:url({{.Site.Params.cover}});">
+<header id="home-head" class="card" style="background-image:url({{.Site.Params.cover}});">
 {{ else }}
-<div id="home-head" class="card" style="background-image:url('/images/default_background.jpg');">
+<header id="home-head" class="card" style="background-image:url('/images/default_background.jpg');">
 {{ end }}
   <div class="container">
     <h1 class="title">{{.Title}}</h1>
     <h3 class="content">{{.Content}}</h3>
   </div>
-</div>
+</header>
 <div id="home-menu" class="card">
   <ul>
     {{ range .Site.Data.config.HomeMenu}}
@@ -36,9 +36,13 @@
     }
   });
 </script>
-{{ range .Paginator.Pages }}
-{{ .Render "summary" }}
-<hr class="summary-sep" />
-{{ end }}
-{{ partial "pagination.html" . }}
+<div id="home-summary">
+  <div class="center">
+    {{ range .Paginator.Pages }}
+    {{ .Render "summary" }}
+    <hr class="summary-sep" />
+    {{ end }}
+    {{ partial "pagination.html" . }}
+  </div>
+</div>
 {{ end }}
