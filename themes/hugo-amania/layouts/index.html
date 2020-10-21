@@ -5,8 +5,9 @@
 <header id="home-head" class="card" style="background-image:url('/images/default_background.jpg');">
 {{ end }}
   <div class="container">
+  {{ partial "clock.html" . }}
     <h1 class="title">{{.Title}}</h1>
-    <h3 class="content">{{.Content}}</h3>
+    <div class="content">{{.Content}}</div>
   </div>
 </header>
 <div id="home-menu" class="card">
@@ -24,7 +25,7 @@
   document.getElementById('topbar').classList.remove('card')
   window.addEventListener('scroll', (event) => {
     let e = document.getElementById('topbar');
-    if (this.scrollY > 400) {
+    if (this.scrollY > 450) {
       if (!e.classList.contains('card')) {
         e.classList.add('card');
       }

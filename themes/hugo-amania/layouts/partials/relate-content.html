@@ -1,13 +1,19 @@
 <div class="related-content">
-{{ $related := .Site.RegularPages.Related . | first 6 }}
-{{ with $related }}
-<h3>비슷한 컨텐츠 더보기</h3>
-<ul>
-	{{ range . }}
-	<li>
-		{{ partial "summary-small.html" . }}
-	</li>
+	<div class="title">
+		<p>{{ i18n "relatedReadMore" .Section}}</p>
+		{{ $baseurl := .Site.BaseURL }}
+		<a href="{{ $baseurl }}{{ .Section}}">more</a>
+	</div>
+	{{ $related := .Site.RegularPages.Related . | first 6 }}
+	{{ with $related }}
+	<div class="container">
+		<ul>
+			{{ range . }}
+			<li>
+				{{ partial "summary-small.html" . }}
+			</li>
+			{{ end }}
+		</ul>
+	</div>
 	{{ end }}
-</ul>
-{{ end }}
 </div>

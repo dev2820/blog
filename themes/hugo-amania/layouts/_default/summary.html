@@ -18,7 +18,7 @@
             <li><a href="{{ .Permalink }}">#{{ .LinkTitle | truncate 7 }}</a></li>
           {{ end }}
         </ul>
-        {{ if gt (len (.GetTerms "tags")) 3}} <small class="etc">외 {{(len (.GetTerms "tags")) -3}}{{ i18n "tagsCount"}}</small> {{ end }}
+        {{ if gt (len (.GetTerms "tags")) 3}} <small class="etc">+ {{ i18n "tagsCount" ((len (.GetTerms "tags")) -3)}}</small> {{ end }}
       </div>
     </div>
   </div>
@@ -29,13 +29,15 @@
       {{ else }}
       <img class="icon" src="{{ "/images/cover-icon.png" | relURL }}" />
       {{ end }}
-      <div class="title">
-        <div class="post-meta">{{ i18n "postDatetime" .Date }}</div> 
-        <h2>{{ .Title | truncate 30 }}</h2>
-      </div>
+      <h2 class="title">{{ .Title | truncate 80 }}</h2>
     </a>
-    <div class="content">{{ .Summary | truncate 130}}</div>
-    <div class="read-more"><span>{{ .WordCount }} words, {{.ReadingTime}} mins</span><a href="{{ .Permalink }}">{{ i18n "readMore" }}</a></div>
+    {{$aboutPage := .Site.GetPage "/about" }}
+    <div class="post-meta">
+      <button class="author" onclick="goToUrl({{$aboutPage.Permalink}})">{{.Site.Author.name}}</button>
+      | {{ i18n "postDatetime" .Date }}
+    </div>
+    <div class="content">{{ .Summary | truncate 160}}</div>
+    <div class="read-more"><span>{{ .WordCount }} words · {{.ReadingTime}} mins</span><a class="go-to-read" href="{{ .Permalink }}"><span>{{ i18n "readMore" }}</span><i class="fa fa-angle-right"></i></a></div>
   </div>
 
 </article>

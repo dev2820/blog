@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="categories">
-  <h1>{{ i18n "categoriesTitle" }}</h1>
-  <p>{{ i18n "categoriesDescription" }}</p>
+  <h1 class="title">{{ i18n "categoriesTitle" }}</h1>
+  <p class="description">{{ i18n "categoriesDescription" }}</p>
   <ul>
     {{ $baseurl := .Site.BaseURL }}
     {{ $data := .Data }}

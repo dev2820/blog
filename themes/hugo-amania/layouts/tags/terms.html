@@ -1,8 +1,8 @@
 {{ define "main" }}
 <div class="tag-term">
-    <h1>Tags</h1>
-    <p>{{ i18n "tagsDescription" }}</p>
-    <p>{{len .Data.Terms}} {{ i18n "tagsCount" }}</p>
+    <h1 class="title">Tags</h1>
+    <p class="description">{{ i18n "tagsDescription" }}</p>
+    <p class="counter">총 {{ i18n "tagsCount" (len .Data.Terms) }}</p>
     <div class="tag-list">
         <ul class="tag">
             {{ $baseurl := .Site.BaseURL }}

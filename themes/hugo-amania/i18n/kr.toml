@@ -32,7 +32,7 @@ other = "전체글"
 # Summary
 ###################
 [readMore]
-other = "더 보기 →"
+other = "더 보기"
 
 ###################
 # Footer
@@ -80,7 +80,11 @@ other = "다음으로 읽을만한 글입니다."
 
 [postReadMore]
 other = "더보기"
-
+###################
+# Related
+###################
+[relatedReadMore]
+other = "\"{{.Count}}\" 와 비슷한 컨텐츠 더보기"
 ###################
 # Category
 ###################
@@ -106,7 +110,7 @@ other = "태그"
 other = "태그 별 글을 볼 수 있습니다."
 
 [tagsCount]
-other = "개의 태그"
+other = "{{.Count}}개의 태그"
 ###################
 # Not found 404
 ###################

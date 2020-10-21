@@ -1,7 +1,7 @@
 {{ define "main" }}
 <main class="sections">
-    <h1>Section: {{.Title}}</h1>
-    {{ .Content }}
+    <h1 class="title">Section: {{.Title}}</h1>
+    <div class="description">{{ .Content }}</div>
     <ul class="contents">
         {{ range .Paginator.Pages }}
         <li>

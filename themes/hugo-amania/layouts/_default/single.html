@@ -6,7 +6,7 @@
   document.getElementById('topbar').classList.remove('card')
   window.addEventListener('scroll', (event) => {
     let e = document.getElementById('topbar');
-    if (this.scrollY > 400) {
+    if (this.scrollY > 450) {
       if (!e.classList.contains('card')) {
         e.classList.add('card');
       }
@@ -27,12 +27,15 @@
     <h1 id="title">{{ .Title }}</h1>
     <section>
       <h4 id="date"> {{ i18n "postDatetime" .Date }} </h4>
-      <h5 id="wordcount"> {{ .WordCount }} Words, {{ .ReadingTime }} mins  </h5>
+      <h5 id="wordcount"> {{ .WordCount }} Words · {{ .ReadingTime }} mins  </h5>
     </section>
     <small class="breadcrumb">
       {{ partial "breadcrumb.html" .}}
     </small>
-    <small class="author">by {{ .Site.Author.name }}</small>
+    {{ $author := .Site.Author.name }}
+    {{with .Site.GetPage "/about"}}
+    <small class="author">by <a href="{{.Permalink}}">{{ $author }}</a></small>
+    {{end}}
   </div>
 </header>
 <section id="main">
@@ -49,14 +52,12 @@
   <div class="center">
   <nav class="section-move">
     {{ with .PrevInSection }}
-      <a class="previous" href="{{.Permalink}}"><i class="fa fa-arrow-circle-left"></i> {{.Title}}</a>
+      <a class="previous" href="{{.Permalink}}"><i class="fa fa-arrow-circle-left"></i> {{.Title | truncate 30}}</a>
     {{ end }}
     {{ with .NextInSection }}
-      <a class="next" href="{{.Permalink}}">{{.Title}} <i class="fa fa-arrow-circle-right"></i></a>
+      <a class="next" href="{{.Permalink}}">{{.Title | truncate 30}} <i class="fa fa-arrow-circle-right"></i></a>
     {{ end }}
   </nav>
-  <hr>
-    {{ partial "profile-in-article.html" . }}
     {{ with .Params.topics }}
     <ul id="topics">
       {{ range . }}
@@ -64,10 +65,8 @@
       {{ end }}
     </ul>
     {{ end }}
-    {{ $baseurl := .Site.BaseURL }}
-    category: <a href="{{ $baseurl }}{{ .Section}}">{{.Section}}</a>
     {{ partial "tag_list.html" . }}
-    
+    {{ partial "profile-in-article.html" . }}
     {{ template "_internal/disqus.html" . }}
     <div class="more-content">
       {{ partial "relate-content.html" . }}
