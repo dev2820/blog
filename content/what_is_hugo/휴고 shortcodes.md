@@ -201,22 +201,7 @@ https://gohugo.io/content-management/syntax-highlighting/
 
 
 ### `instagram`
-<!-- 인스타그램도 불러올 수 있습니다.
 
-만약 인스타그램 사진 URL이 다음과 같다면
-
-```
-https://www.instagram.com/p/BWNjjyYFxVx/
-```
-
-다음과 같이 입력하고
-```md
-{ {< instagram BWNjjyYFxVx >} }
-```
-
-결과는 다음과 같이 됩니다.
-
-{{< instagram BWNjjyYFxVx>}} -->
 현재 instagram api 버그가 있어서 인스타그램이 나오지 않아 블록처리했습니다.
 ### param
 
