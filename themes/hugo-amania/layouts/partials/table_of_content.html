@@ -1,8 +1,7 @@
 <script>
     let toggle = true;
-    function toggleTable(){
-        console.log(toggle)
-        if(toggle){
+    function toggleTable() {
+        if (toggle) {
             document.getElementById('table').classList.add('hidden')
             document.querySelector('.post-toc .title').classList.add('toggle-off')
             document.querySelector('.post-toc .fa-angle-down').classList.remove('hidden')
@@ -20,10 +19,10 @@
 <div class="post-toc">
     <div class="title" onclick="toggleTable()">
         {{ i18n "postToc" }}
-        <i class="fa fa-angle-down hidden"></i>
-        <i class="fa fa-angle-up"></i>
+        <i class="fa fa-angle-down hidden icon"></i>
+        <i class="fa fa-angle-up icon"></i>
     </div>
     <div id="table">
-    {{ .TableOfContents }}
+        {{ .TableOfContents }}
     </div>
 </div>

@@ -26,8 +26,8 @@
   <div class="title">
     <h1 id="title">{{ .Title }}</h1>
     <section>
-      <h4 id="date"> {{ i18n "postDatetime" .Date }} </h4>
-      <h5 id="wordcount"> {{ .WordCount }} Words · {{ .ReadingTime }} mins  </h5>
+      <p id="date"> {{ i18n "postDatetime" .Date }} </p>
+      <p id="wordcount"> {{ .ReadingTime }} mins  </p>
     </section>
     <small class="breadcrumb">
       {{ partial "breadcrumb.html" .}}
@@ -51,11 +51,11 @@
 <aside id="meta">
   <div class="center">
   <nav class="section-move">
-    {{ with .PrevInSection }}
-      <a class="previous" href="{{.Permalink}}"><i class="fa fa-arrow-circle-left"></i> {{.Title | truncate 30}}</a>
-    {{ end }}
     {{ with .NextInSection }}
-      <a class="next" href="{{.Permalink}}">{{.Title | truncate 30}} <i class="fa fa-arrow-circle-right"></i></a>
+      <a class="next" href="{{.Permalink}}">{{.Title | truncate 30}} <i class="fa fa-arrow-circle-right icon"></i></a>
+    {{ end }}
+    {{ with .PrevInSection }}
+      <a class="previous" href="{{.Permalink}}"><i class="fa fa-arrow-circle-left icon"></i> {{.Title | truncate 30}}</a>
     {{ end }}
   </nav>
     {{ with .Params.topics }}

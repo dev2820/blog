@@ -67,7 +67,7 @@ other = "친절한"
 other = "님이"
 
 [postDatetime]
-other = "{{ .Format \"2006년 01월 02일 15시 04분\" }}"
+other = "{{ .Format \"2006년 01월 02일\" }}"
 
 [postDatetimePostfix]
 other = "에 작성한 글입니다."
