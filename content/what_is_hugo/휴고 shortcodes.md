@@ -172,7 +172,7 @@ https://gist.github.com/spf13/7896402
 
 ```md
 
-{{< highlight html >}}
+{ {< highlight html >} }
 <section id="main">
   <div>
    <h1 id="title">{{ .Title }}</h1>
@@ -181,7 +181,7 @@ https://gist.github.com/spf13/7896402
     {{ end }}
   </div>
 </section>
-{{< /highlight >}}
+{ {< /highlight >} }
 ```
 
 결과는 다음과 같이 렌더링 됩니다.
@@ -201,7 +201,7 @@ https://gohugo.io/content-management/syntax-highlighting/
 
 
 ### `instagram`
-인스타그램도 불러올 수 있습니다.
+<!-- 인스타그램도 불러올 수 있습니다.
 
 만약 인스타그램 사진 URL이 다음과 같다면
 
@@ -216,8 +216,8 @@ https://www.instagram.com/p/BWNjjyYFxVx/
 
 결과는 다음과 같이 됩니다.
 
-{{< instagram BWNjjyYFxVx >}}
-
+{{< instagram BWNjjyYFxVx>}} -->
+현재 instagram api 버그가 있어서 인스타그램이 나오지 않아 블록처리했습니다.
 ### param
 
 현재 페이지에 정의된 front matter로부터 값을 가져오는 `param` shortcode를 사용할 수도 있습니다.

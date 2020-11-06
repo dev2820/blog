@@ -146,6 +146,7 @@ title = "Application"
 ```
 
 이제 리소스의 `Name`과 `Title`은 다음과 같이 매치됩니다.
+
 | Resource file | `Name` | `Title` |
 |---|:---:|---:|
 | checklist.pdf | `"pdf-file-1.pdf"` | `"checklist.pdf"` |
