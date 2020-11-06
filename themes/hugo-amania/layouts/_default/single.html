@@ -51,12 +51,13 @@
 <aside id="meta">
   <div class="center">
   <nav class="section-move">
-    {{ with .NextInSection }}
-      <a class="next" href="{{.Permalink}}">{{.Title | truncate 30}} <i class="fa fa-arrow-circle-right icon"></i></a>
-    {{ end }}
     {{ with .PrevInSection }}
-      <a class="previous" href="{{.Permalink}}"><i class="fa fa-arrow-circle-left icon"></i> {{.Title | truncate 30}}</a>
+      <div class="previous"> <a href="{{.Permalink}}"><i class="fa fa-arrow-circle-left icon"></i>{{.Title | truncate 30}}</a></div>
     {{ end }}
+    {{ with .NextInSection }}
+      <div class="next"><a href="{{.Permalink}}">{{.Title | truncate 30}}<i class="fa fa-arrow-circle-right icon"></i></a></div>
+    {{ end }}
+    
   </nav>
     {{ with .Params.topics }}
     <ul id="topics">

@@ -795,28 +795,31 @@ ul.contents li {
 .section-move {
     width:100%;
     display:flex;
-    flex-direction:column;
+    flex-direction:row;
+    justify-content: space-between;
     margin-bottom:10px;
 }
 .section-move *{
     display:flex;
     align-items:center;
-    font-size:1.5rem;
+    font-size:1.1rem;
 }
 .section-move .previous {
-    width:100%;
-    text-align:left;
+    width:50%;
+    display:flex;
+    flex-direction:row;
+    justify-content: flex-start;
     height:50px;
-    padding-left:10px;
 }
 .section-move .previous .icon {
     margin:auto 10px auto 0;
 }
 .section-move .next {
-    width:100%;
-    text-align:right;
+    width:50%;
+    display:flex;
+    flex-direction:row;
+    justify-content: flex-end;
     height:50px;
-    padding-right:10px;
 }
 .section-move .next .icon {
     margin:auto 0 auto 10px;
