@@ -15,7 +15,7 @@
         <h4>Tags</h4>
         <ul class="tag">
           {{ range first 3 (.GetTerms "tags") }}
-            <li><a href="{{ .Permalink }}">#{{ .LinkTitle | truncate 7 }}</a></li>
+            <li><a href="{{ .Permalink }}"># {{ .LinkTitle | truncate 7 }}</a></li>
           {{ end }}
         </ul>
         {{ if gt (len (.GetTerms "tags")) 3}} <small class="etc">+ {{ i18n "tagsCount" ((len (.GetTerms "tags")) -3)}}</small> {{ end }}
