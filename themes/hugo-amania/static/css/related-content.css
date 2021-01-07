@@ -1,0 +1,23 @@
+/* related-content */
+.related-content {
+    margin:0 auto;
+}
+.related-content .container {
+    overflow-x:scroll;
+}
+.related-content .title {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+.related-content ul {
+    width:1000px;
+    /* padding-left:10px; */
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+.related-content ul li {
+    list-style: none;
+    margin-right:20px;
+}
