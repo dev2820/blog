@@ -1,0 +1,22 @@
+/* post-toc */
+.post-toc {
+    background-color:#eeeeee;
+    border-radius:25px;
+    padding:0 20px;
+    overflow:hidden;
+}
+.post-toc #table {
+    overflow: hidden;
+}
+.post-toc #table li {
+    list-style:decimal;
+}
+.post-toc .title {
+    display:flex;
+    align-items:center;
+    height:50px;
+}
+.post-toc .title .icon {
+    margin-right:5px;
+    width:11px;
+}
