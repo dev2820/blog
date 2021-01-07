@@ -1,10 +1,11 @@
+<link rel="stylesheet" href="{{ "/css/notFound.css" | relURL }}">
 {{ define "main"}}
 <main id="notFound">
   <div class="error-cover">
     {{ if .Site.Params.notFound }}
     <img src="{{.Site.Params.notFound | relURL }}"/>
     {{ else }}
-    <img src="{{"/images/not_found.png" | relURL }}"/>
+    <img src="{{"/images/404NotFound.png" | relURL }}"/>
     {{ end }}
   </div>
   <div class="error-content">

@@ -1,12 +1,11 @@
-<link rel="stylesheet" href="{{ "/css/summary-small.css" | relURL }}">
 {{ $baseurl := .Site.BaseURL }}
+<link rel="stylesheet" href="{{ "/css/summary-small.css" | relURL }}">
 <div class="summary-small card" onclick="goToUrl('{{.Permalink}}')">
     {{ if .Params.cover }}
-    <div class="banner" style="background-image:url({{.Params.cover | relURL }})">
+    <div class="banner" style="background-image:url( {{.Params.cover | relURL }} )"></div>
     {{ else }}
-    <div class="banner" style="background-image:url({{"/images/ocean.jpg" | relURL}})">
+    <div class="banner" style="background-image:url({{"/images/ocean.jpg" | relURL}})"></div>
     {{ end }}
-    </div>
     <div class="title">
       <a href="{{ .Permalink }}">
         <h3 class="name">{{ .Name | truncate 25 }}</h3> 

@@ -33,7 +33,7 @@
     </a>
     {{$aboutPage := .Site.GetPage "/about" }}
     <div class="post-meta">
-      <button class="author" onclick="goToUrl({{$aboutPage.Permalink}})">{{.Site.Author.name}}</button>
+      <button class="author" onclick="goToUrl( {{ $aboutPage.Permalink }} )">{{.Site.Author.name}}</button>
       | {{ i18n "postDatetime" .Date }}
     </div>
     <div class="content">{{ .Summary | truncate 160}}</div>

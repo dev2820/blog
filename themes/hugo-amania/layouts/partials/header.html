@@ -2,8 +2,8 @@
   <div class="menus">
     <div class="logo">
       <a href="{{ "/" | relURL }}">
-        {{ if .Site.Params.logo }}
-        <img src="{{ .Site.Params.logo | relURL }}" height="32px" />
+        {{ if .Site.Params.siteLogo }}
+        <img src="{{ .Site.Params.siteLogo | relURL }}" height="32px" />
         {{ else }}
         <img src="{{ "/images/logo.png" | relURL }}" height="32px" />
         {{ end }}
