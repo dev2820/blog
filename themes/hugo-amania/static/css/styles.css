@@ -374,6 +374,9 @@ article.summary .cover-image .classification .summary-tags ul.tag{
 article.summary .cover-image .classification .summary-tags ul.tag li a{
     color:white;
 }
+article.summary .cover-image .classification .summary-tags ul.tag li:hover a{
+    color:#3EB489;
+}
 article.summary .cover-image .classification .summary-tags .etc {
     height:15%;
     text-align: center;
@@ -726,4 +729,39 @@ ul.contents li {
 }
 .section-move .next .icon {
     margin:auto 0 auto 10px;
+}
+
+ul.tag {
+    margin:0;
+    padding:0;
+}
+ul.tag li{
+    display:inline-flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self:center;
+    list-style: none;
+    text-align:center;
+    margin-right:5px;
+    margin-bottom:9px;
+    height:34px;
+    border:1px solid #999999;
+    border-radius: 17px;
+}
+ul.tag li a {
+    height:100%;
+    width:100%;
+    text-decoration: none;
+    padding:7px 12px 3px 12px;
+    font-weight:100;
+    font-size:14px;
+    line-height:1rem;
+    color:#999999;
+}
+ul.tag li:hover {
+    border:1px solid #3EB489;
+}
+ul.tag li:hover a {
+    color:#3EB489;
 }
