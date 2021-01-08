@@ -22,12 +22,41 @@ function toggleSearch(bool) {
     }
 }
 function scrollToTop() {
-    let position =
-        document.body.scrollTop || document.documentElement.scrollTop;
+    let position = document.body.scrollTop || document.documentElement.scrollTop;
+    let scrollAnimation = null;
+    
+    if(position) {
+        window.scrollBy({
+            top:-window.innerHeight,
+            left: 0,
+            behavior: 'smooth'
+        })
+    }
+    /*
+    if (position) {
+        window.scrollBy(0, -Math.max(1, Math.floor(position / 10)));
+        let scrollAnimation = setTimeout("scrollToTop()", 10);
+    } else clearTimeout(scrollAnimation);
+    */
+}
+function scrollToBottom() {
+    let position = document.body.scrollTop || document.documentElement.scrollTop;
+    let scrollAnimation = null;
+    
+    if(position) {
+        window.scrollBy({
+            top:window.innerHeight,
+            left: 0,
+            behavior: 'smooth'
+        })
+    }
+
+    /*
     if (position) {
         window.scrollBy(0, -Math.max(1, Math.floor(position / 10)));
         scrollAnimation = setTimeout("scrollToTop()", 10);
     } else clearTimeout(scrollAnimation);
+    */
 }
 function goToUrl(url) {
     window.location.href = url;
@@ -48,6 +77,7 @@ window.onload = function () {
             });
         });
     });
+    // when scroll changed, progressbar in header active
     document.addEventListener('scroll',(event)=>{
         const scroll = document.body.scrollTop || document.documentElement.scrollTop;
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
