@@ -24,6 +24,7 @@
     <meta property="og:tags" content="{{ . }}">
     {{ end }}
     <link rel="icon" href="{{ "/favicon.ico" | relURL }}" type="image/x-icon">
+    <!--    <link rel="icon" href="{{ "/favicon_32.png" | relURL }}" type="image/png" sizes="32x32"> -->
     <link rel="canonical" href="{{ .Permalink }}">
     {{ range .AlternativeOutputFormats -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
