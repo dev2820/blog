@@ -26,11 +26,7 @@ function scrollToTop() {
     let scrollAnimation = null;
     
     if(position) {
-        window.scrollBy({
-            top:-window.innerHeight,
-            left: 0,
-            behavior: 'smooth'
-        })
+        window.scrollTo(0,0);
     }
     /*
     if (position) {
@@ -44,19 +40,8 @@ function scrollToBottom() {
     let scrollAnimation = null;
     
     if(position) {
-        window.scrollBy({
-            top:window.innerHeight,
-            left: 0,
-            behavior: 'smooth'
-        })
+        window.scrollTo(0,document.body.scrollHeight);
     }
-
-    /*
-    if (position) {
-        window.scrollBy(0, -Math.max(1, Math.floor(position / 10)));
-        scrollAnimation = setTimeout("scrollToTop()", 10);
-    } else clearTimeout(scrollAnimation);
-    */
 }
 function goToUrl(url) {
     window.location.href = url;
