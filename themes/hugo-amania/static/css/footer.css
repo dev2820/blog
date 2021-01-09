@@ -1,0 +1,44 @@
+/* Footer*/
+#footer {
+    position:relative;
+    height:500px;
+    background-color:#cccccc;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    text-align:center;
+    z-index:10;
+    top:450px;
+}
+#footer span {
+    font-size:0.7rem;
+    color: #999999;
+}
+#footer div.banner-bottom img {
+    width:800px;
+}
+/* Scroll To Top*/ 
+#footer button.scroll-to-top {
+    border-radius:50%;
+    background-color:#cccccc;
+    font-size:1.3rem;
+    width:70px;
+    height:70px;
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    overflow:hidden;
+}
+#footer button.scroll-to-top * {
+    color:#505050;
+    margin:0 auto;
+}
+#footer button.scroll-to-top:active {
+    background-color:red;
+}
+#footer.relative-small {
+    top:70px;
+}

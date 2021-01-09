@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="{{ "/css/footer.css" | relURL }}">
 {{ if .IsHome }}
   <footer id="footer">
 {{ else if .IsPage }}
@@ -34,6 +35,9 @@
     <!-- {{.Site.Copyright}} -->
     <span>COPYRIGHT (C) <a href="https://dev2820.github.io"> GIJO YANG (DEV2820).</a></span>
     <span>ALL RIGHTS RESERVED.</span>
+    <div class="banner-bottom">
+      <img src="{{.Site.Params.bannerBottom | relURL }}">
+    </div>
   </footer>
 </body>
 </html>
