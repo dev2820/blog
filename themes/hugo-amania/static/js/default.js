@@ -45,6 +45,21 @@ function scrollToBottom() {
 function goToUrl(url) {
     window.location.href = url;
 }
+function makeClockWork() {
+    const deg = 6;
+    const hr = document.querySelector('.clock #hr');
+    const mn = document.querySelector('.clock #mn');
+    const sc = document.querySelector('.clock #sc');
+    setInterval(()=> {
+        let day = new Date();
+        let hh = day.getHours() * 30;
+        let mm = day.getMinutes() * deg;
+        let ss = day.getSeconds() * deg;
+        if(hr) hr.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`;
+        if(mn) mn.style.transform = `rotateZ(${mm}deg)`;
+        if(sc) sc.style.transform = `rotateZ(${ss}deg)`;
+    },1000)
+}
 window.onload = function () {
     document.addEventListener('click', (event) => {
         toggleAside(false);
@@ -70,4 +85,8 @@ window.onload = function () {
             progressbar.style.width = (scroll/height)*100+'%';
         }
     });
+
+    //clock script
+    makeClockWork();   
+    
 }

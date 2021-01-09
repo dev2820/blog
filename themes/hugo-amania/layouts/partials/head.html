@@ -23,8 +23,8 @@
     {{ range .Params.tags }}
     <meta property="og:tags" content="{{ . }}">
     {{ end }}
-    <link rel="icon" href="{{ "/favicon.ico" | relURL }}" type="image/x-icon">
-    <!--    <link rel="icon" href="{{ "/favicon_32.png" | relURL }}" type="image/png" sizes="32x32"> -->
+    <!-- <link rel="icon" href="{{ "/favicon.ico" | relURL }}" type="image/x-icon"> -->
+    <link rel="icon" href="{{ "images/favicon_32.png" | absURL }}" type="image/png" sizes="32x32">
     <link rel="canonical" href="{{ .Permalink }}">
     {{ range .AlternativeOutputFormats -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
@@ -38,7 +38,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap">
     <link rel="stylesheet" href="{{ "/css/styles.css" | relURL }}">
     <link rel="stylesheet" href="{{ "/css/markdown.css" | relURL }}">
-
+    <link rel="stylesheet" href="{{ "/css/font.css" | relURL }} ">
+    
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     {{ if not .Site.BuildDrafts }}
