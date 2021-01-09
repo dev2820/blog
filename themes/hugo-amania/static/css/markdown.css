@@ -277,7 +277,7 @@ section#main dd {
 section#main code,
 section#main pre {
   font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-  font-size: 12px;
+  font-size: 16px;/*test*/
 }
 
 section#main pre {
