@@ -51,6 +51,8 @@ hr.summary-sep {
 }
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.float:hover {
     animation: float 1s infinite;
 }
 .hidden {
@@ -574,12 +576,12 @@ ul.tag li:hover a {
 }
 @keyframes float {
     0% {
-        transform:translateY(-5px);
+        transform:translateY(0px);
     }
     50% {
-        transform:translateY(-15px);
+        transform:translateY(-5px);
     }
     100% {
-        transform:translateY(-5px);
+        transform:translateY(0px);
     }
 }
