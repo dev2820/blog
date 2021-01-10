@@ -58,11 +58,10 @@ section#main h6:hover .anchor .octicon-link:before {
 }section#main {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  line-height: 1.5;
   color: #24292e;
-  font-family: 'Noto Sans KR' -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
-  font-size: 16px;
-  line-height: 1.5;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,'Noto Sans KR';
+  font-size: 18px;
+  line-height: 1.83;
   word-wrap: break-word;
 }
 
