@@ -2,7 +2,7 @@
 .summary-small {
     height:270px;
     width:250px;
-    margin-bottom:20px;
+    margin-bottom:10px;
     display:inline-flex;
     flex-direction: column;
     overflow: hidden;

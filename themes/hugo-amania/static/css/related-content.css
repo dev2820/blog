@@ -1,19 +1,25 @@
 /* related-content */
 .related-content {
     margin:0 auto;
+    width:120%;
+    margin-left:-10%;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
 }
 .related-content div.title {
+    margin:0 auto;
     display:flex;
+    width:90%;
     flex-direction:row;
     justify-content: space-between;
 }
 .related-content ul.container {
     width:100%;
-    padding-left:10px;
     display:flex;
     flex-direction:row;
+    justify-content: space-around;
 }
 .related-content ul li {
     list-style: none;
-    margin-right:15px;
 }
