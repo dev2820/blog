@@ -147,7 +147,7 @@ article.summary .cover-content .read-more .go-to-read:before {
     transition:transform 0.3s;
 }
 article.summary .cover-content .read-more .go-to-read:hover:before {
-    transform:translateX(190px);
+    transform:translateX(200px);
 }
 article.summary .cover-content .read-more .go-to-read * {
     margin:auto 0;
