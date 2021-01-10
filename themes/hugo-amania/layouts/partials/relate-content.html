@@ -7,14 +7,12 @@
 	</div>
 	{{ $related := .Site.RegularPages.Related . | first 6 }}
 	{{ with $related }}
-	<div class="container">
-		<ul>
-			{{ range . }}
-			<li>
-				{{ partial "summary-small.html" . }}
-			</li>
-			{{ end }}
-		</ul>
-	</div>
+	<ul class="container">
+		{{ range . }}
+		<li>
+			{{ partial "summary-small.html" . }}
+		</li>
+		{{ end }}
+	</ul>
 	{{ end }}
 </div>

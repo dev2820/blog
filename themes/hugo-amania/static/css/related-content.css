@@ -7,10 +7,8 @@
     flex-direction:row;
     justify-content: space-between;
 }
-.related-content div.container ul {
-    max-width:800px;
-    min-width:600px;
-    width:60%;
+.related-content ul.container {
+    width:100%;
     overflow-x:scroll;
     /* padding-left:10px; */
     display:flex;
