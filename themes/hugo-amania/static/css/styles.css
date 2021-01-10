@@ -53,7 +53,8 @@ hr.summary-sep {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 .float:hover {
-    animation: float 1s infinite;
+    /* animation: float 1s infinite; */
+    transform:translateY(-5px);
 }
 .hidden {
     display:none;
@@ -574,6 +575,7 @@ ul.tag li:hover {
 ul.tag li:hover a {
     color:#3EB489;
 }
+/*
 @keyframes float {
     0% {
         transform:translateY(0px);
@@ -585,3 +587,4 @@ ul.tag li:hover a {
         transform:translateY(0px);
     }
 }
+*/
