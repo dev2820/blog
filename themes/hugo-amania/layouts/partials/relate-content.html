@@ -5,7 +5,7 @@
 		{{ $baseurl := .Site.BaseURL }}
 		<a href="{{ $baseurl }}{{ .Section}}">more</a>
 	</div>
-	{{ $related := .Site.RegularPages.Related . | first 6 }}
+	{{ $related := .Site.RegularPages.Related . | first 3 }}
 	{{ with $related }}
 	<ul class="container">
 		{{ range . }}

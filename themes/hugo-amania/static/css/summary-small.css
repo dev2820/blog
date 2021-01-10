@@ -1,7 +1,7 @@
 /* summary-small */
 .summary-small {
-    height:310px;
-    width:310px;
+    height:270px;
+    width:250px;
     margin-bottom:20px;
     display:inline-flex;
     flex-direction: column;
@@ -27,24 +27,13 @@
     width:100%;
 }
 .summary-small .title .name {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    height:40%;
-    vertical-align: center;
-    text-align:center;
+    margin-bottom:10px;
     width:100%;
 }
 .summary-small .title .summary {
-    display:flex;
-    justify-content: center;
-    align-items: center;
     overflow:hidden;
-    text-align:center;
-    height:40%;
+    height:50%;
 }
 .summary-small .title .date {
-    display:flex;
-    justify-content: center;
     height:20%;
 }
