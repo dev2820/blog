@@ -556,6 +556,7 @@ nav.section-move .title a {
 nav.section-move .previous:hover .title a,
 nav.section-move .next:hover .title a {
     text-decoration: none;
+    transition:0.3s;
     color:#3EB489;
 }
 nav.section-move .previous {
@@ -615,16 +616,3 @@ ul.tag li:hover {
 ul.tag li:hover a {
     color:#3EB489;
 }
-/*
-@keyframes float {
-    0% {
-        transform:translateY(0px);
-    }
-    50% {
-        transform:translateY(-5px);
-    }
-    100% {
-        transform:translateY(0px);
-    }
-}
-*/
