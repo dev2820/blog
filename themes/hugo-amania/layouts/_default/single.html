@@ -39,13 +39,17 @@
   </div>
 </header>
 <section id="main">
-  {{ partial "table_of_content.html" .}}
+  <div class="left">
+  </div>
   <div class="center">
     <div>
           <article class="content">
             {{ .Content }}
           </article>
     </div>
+  </div>
+  <div class="right">
+    {{ partial "table_of_content.html" .}}    
   </div>
 </section>
 <aside id="meta">

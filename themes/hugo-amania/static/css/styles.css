@@ -282,10 +282,15 @@ hr.summary-sep {
     padding:30px 20px;
     margin:0 auto;
     position:relative;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
     top:450px;
     z-index:10;
 }
 #content section#main .center {
+    position:relative;
+    top:10px;
     width:60%;
     max-width:800px;
     min-width:600px;
@@ -293,6 +298,10 @@ hr.summary-sep {
     overflow:hidden;
     display:flex;
     flex-direction:column;
+}
+#content section#main .right,
+#content section#main .left {
+    width:400px;
 }
 #content #meta {
     background-color:white;

@@ -2,12 +2,11 @@
 .post-toc {
     position:sticky;
     width:350px;
-    top:50px;
-    left:77%;
-    background-color:#eeeeee;
-    border-radius:25px;
+    max-height:500px;
+    top:70px;
     padding:0 20px;
-    overflow:hidden;
+    overflow:auto;
+    margin:0 auto;
 }
 .post-toc #table {
     overflow: hidden;

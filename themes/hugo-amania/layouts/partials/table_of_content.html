@@ -16,8 +16,16 @@
         }
         toggle = !toggle;
     }
+    /*
+    document.addEventListener('scroll',(event)=>{
+        const scroll = document.body.scrollTop || document.documentElement.scrollTop;
+        if(scroll>450){
+            document.querySelector('#post-toc').style.top = (scroll-450+70)+'px'; 
+        }
+    })
+    */
 </script>
-<div class="post-toc">
+<div class="post-toc" id="post-toc">
     <div class="title" onclick="toggleTable()">
         <i class="fa fa-angle-right hidden right-angle icon"></i>
         <i class="fa fa-angle-down down-angle icon"></i>
