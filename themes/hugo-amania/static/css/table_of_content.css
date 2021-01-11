@@ -1,19 +1,24 @@
 /* post-toc */
 .post-toc {
     position:sticky;
-    width:350px;
+    width:300px;
     max-height:500px;
     top:70px;
     padding:0 20px;
     overflow:auto;
     margin:0 auto;
+    font-size:1.1rem;
 }
 .post-toc #table {
     overflow: hidden;
 }
+.post-toc #table > ul {
+    padding-left:0;
+}
 .post-toc #table ul {
     counter-reset: post-toc;
     list-style-type:none;
+    padding-left: 20px;
 }
 .post-toc #table ul li:before {
     counter-increment: post-toc;
