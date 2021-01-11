@@ -39,8 +39,8 @@
   </div>
 </header>
 <section id="main">
+  {{ partial "table_of_content.html" .}}
   <div class="center">
-    {{ partial "table_of_content.html" .}}
     <div>
           <article class="content">
             {{ .Content }}

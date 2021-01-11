@@ -276,19 +276,16 @@ hr.summary-sep {
 #content #banner .title .author a {
     color:#3EB489;
 }
-#content #main {
+#content section#main {
     background-color:white;
     width:100%;
     padding:30px 20px;
     margin:0 auto;
-    display:flex;
-    flex-direction:column;
-    justify-content: center;
     position:relative;
     top:450px;
     z-index:10;
 }
-#content #main .center {
+#content section#main .center {
     width:60%;
     max-width:800px;
     min-width:600px;
