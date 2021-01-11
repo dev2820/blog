@@ -529,7 +529,8 @@ nav.section-move .next {
     padding:0 5px;
     height:80px;
     width:40%;
-    font-size:1.3rem;
+    font-size:1.2rem;
+    font-weight:bold;
     display:flex;
     flex-direction:row;
 }
@@ -543,12 +544,19 @@ nav.section-move .next .title {
     position:relative;
     display:flex;
 }
-nav.section-move small {
+nav.section-move .title small {
     position:absolute;
+    color:#cccccc;
     top:0px;
 }
-nav.section-move a {
+nav.section-move .title a {
     margin:auto 0;
+    color:#cccccc;
+}
+nav.section-move .previous:hover .title a,
+nav.section-move .next:hover .title a {
+    text-decoration: none;
+    color:#3EB489;
 }
 nav.section-move .previous {
     justify-content: flex-start;
