@@ -523,13 +523,13 @@ nav.section-move {
 }
 nav.section-move .previous,
 nav.section-move .next {
-    background-color:#eeeeee;
+    background-color:#efefef;
     border-radius:4px;
     border:2px solid #cccccc;
     padding:0 5px;
     height:80px;
     width:40%;
-    font-size:1.2rem;
+    font-size:1rem;
     font-weight:bold;
     display:flex;
     flex-direction:row;
@@ -551,7 +551,7 @@ nav.section-move .title small {
 }
 nav.section-move .title a {
     margin:auto 0;
-    color:#cccccc;
+    color:black;
 }
 nav.section-move .previous:hover .title a,
 nav.section-move .next:hover .title a {
@@ -578,7 +578,7 @@ nav.section-move .next small {
 }
 nav.section-move .next .icon {
     margin:auto 10px auto 20px;
-    font-size:2rem;
+    font-size:1.7rem;
 }
 
 ul.tag {
