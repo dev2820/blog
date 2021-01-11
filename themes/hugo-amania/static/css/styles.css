@@ -1,6 +1,9 @@
 /*
 Hugo-mania Theme CSS
 */
+@import './summary.css';
+@import './summary-small.css';
+
 * {
     box-sizing:border-box;
     margin:0;
