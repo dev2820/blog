@@ -3,6 +3,7 @@ Hugo-mania Theme CSS
 */
 @import './summary.css';
 @import './summary-small.css';
+@import './notFound.css';
 
 * {
     box-sizing:border-box;

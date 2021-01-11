@@ -1,5 +1,4 @@
 {{ $baseurl := .Site.BaseURL }}
-<!-- <link rel="stylesheet" href="{{ "/css/summary-small.css" | relURL }}"> -->
 <div class="summary-small card float" onclick="goToUrl('{{.Permalink}}')">
     {{ if .Params.cover }}
     <div class="banner" style="background-image:url( {{.Params.cover | relURL }} )"></div>
