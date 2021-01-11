@@ -50,15 +50,7 @@
 </section>
 <aside id="meta">
   <div class="center">
-  <nav class="section-move">
-    {{ with .PrevInSection }}
-      <div class="previous"> <a href="{{.Permalink}}"><i class="fa fa-arrow-circle-left icon"></i>{{.Title | truncate 30}}</a></div>
-    {{ end }}
-    {{ with .NextInSection }}
-      <div class="next"><a href="{{.Permalink}}">{{.Title | truncate 30}}<i class="fa fa-arrow-circle-right icon"></i></a></div>
-    {{ end }}
-    
-  </nav>
+    {{ partial "section-move.html" . }}
     {{ with .Params.topics }}
     <ul id="topics">
       {{ range . }}
