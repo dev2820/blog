@@ -85,7 +85,14 @@ hr.summary-sep {
 .hidden {
     display:none;
 }
-
+.appear-1s {
+    animation: appear 1s linear 1s 1;
+    animation-fill-mode: forwards;
+}
+.appear-2s {
+    animation: appear 1s linear 2s 1;
+    animation-fill-mode: forwards;
+}
 /* Section, List, Taxonomy */
 ul.contents {
     padding-left: 0;
@@ -120,4 +127,12 @@ ul.contents li {
 }
 .profile-in-article .profile-introduce a{
     color:#272727;
+}
+@keyframes appear {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
 }
