@@ -1,7 +1,7 @@
 /* Summary */
 article.summary {
     margin:0 auto;
-    height:270px;
+    height:250px;
     min-width:100%;
     overflow:hidden;
     display:flex;
@@ -9,8 +9,8 @@ article.summary {
     background-color:white;
 }
 article.summary .cover-image {
-    width:270px;
-    height:270px;
+    widows:250px;
+    height:250px;
     background-position:left;
     background-size:100% 100%;
     background-repeat:no-repeat;
