@@ -9,6 +9,7 @@
     /* margin:5px 10px; */
     cursor:pointer;
     background-color:white;
+    border-radius: 4px;
 }
 .summary-small .banner{
     height:50%;

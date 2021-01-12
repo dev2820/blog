@@ -4,7 +4,7 @@
     <p class="description">{{ i18n "tagsDescription" }}</p>
     <p class="counter">총 {{ i18n "tagsCount" (len .Data.Terms) }}</p>
     <div class="tag-list">
-        <ul class="tag">
+        <ul class="tags">
             {{ $baseurl := .Site.BaseURL }}
             {{ $data := .Data }}
             {{ range $key,$value := .Data.Terms.Alphabetical }}
