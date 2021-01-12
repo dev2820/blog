@@ -1,0 +1,21 @@
+/* Pagination */
+.paging {
+    padding:10px 0 50px 0;
+    display:flex;
+    justify-content: center;
+}
+.paging a.page {
+    margin:0 10px;
+}
+.paging a.first {
+    padding:0 10px 0 0;
+}
+.paging a.prev {
+    padding:0 10px 0 0;
+}
+.paging a.next {
+    padding:0 0 0 10px;
+}
+.paging a.last {
+    padding:0 0 0 10px;
+}

@@ -1,0 +1,72 @@
+/* section-move */
+nav.section-move {
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    margin-bottom:50px;
+}
+nav.section-move .previous,
+nav.section-move .next {
+    background-color:#efefef;
+    border-radius:4px;
+    border:2px solid #cccccc;
+    padding:0 5px;
+    height:80px;
+    width:40%;
+    font-size:1rem;
+    font-weight:bold;
+    display:flex;
+    flex-direction:row;
+    transition:0.3s;
+}
+nav.section-move .previous:hover,
+nav.section-move .next:hover {
+    border:2px solid #3EB489;
+    color:#3EB489;
+    transition:0.3s;
+}
+nav.section-move .previous .title,
+nav.section-move .next .title {
+    position:relative;
+    display:flex;
+}
+nav.section-move .title small {
+    position:absolute;
+    color:#cccccc;
+    top:0px;
+}
+nav.section-move .title a {
+    margin:auto 0;
+    color:black;
+    transition:0.3s;
+}
+nav.section-move .previous:hover .title a,
+nav.section-move .next:hover .title a {
+    text-decoration: none;
+    color:#3EB489;
+    transition:0.3s;
+
+}
+nav.section-move .previous {
+    justify-content: flex-start;
+    text-align:left;
+}
+nav.section-move .previous small {
+    left:0px;
+}
+nav.section-move .previous .icon {
+    margin:auto 20px auto 10px;
+    font-size:2rem;
+}
+nav.section-move .next {
+    justify-content: flex-end;
+    text-align:right;
+}
+nav.section-move .next small {
+    right:0px;
+}
+nav.section-move .next .icon {
+    margin:auto 10px auto 20px;
+    font-size:1.7rem;
+}

@@ -1,0 +1,17 @@
+/* Taxonomy */
+#taxonomies {
+    position:relative;
+    top:70px;
+    width:90%;
+    min-width:600px;
+    max-width:800px;
+    margin:0 auto;
+}
+.taxonomy {
+    display:flex;
+    flex-direction:column;
+
+}
+.taxonomy h1{
+    margin:2rem 0;
+}
