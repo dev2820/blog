@@ -3,6 +3,7 @@
 {{ end }}
 {{ define "main" }}
 <script>
+  // 상단바에 card 적절히 추가해주는 script
   document.getElementById('topbar').classList.remove('card')
   window.addEventListener('scroll', (event) => {
     let e = document.getElementById('topbar');

@@ -307,7 +307,7 @@ hr.summary-sep {
 #content section#main .center {
     position:relative;
     top:10px;
-    width:60%;
+    width:100%;
     max-width:800px;
     min-width:600px;
     margin:0 auto;
@@ -317,9 +317,9 @@ hr.summary-sep {
 }
 #content section#main .right,
 #content section#main .left {
-    width:300px;
+    width:20%;
 }
-#content #meta {
+#content aside#meta {
     background-color:white;
     position:relative;
     top:450px;
@@ -328,8 +328,8 @@ hr.summary-sep {
     margin:0 auto;
     z-index:10;
 }
-#content #meta .center {
-    width:60%;
+#content aside#meta .center {
+    width:100%;
     max-width:800px;
     min-width:600px;
     margin:0 auto;
