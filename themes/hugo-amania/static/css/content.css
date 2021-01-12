@@ -6,7 +6,7 @@
     justify-content: center;
     z-index:5;
 }
-#content #banner {
+#content header#banner {
     height:450px;
     position:fixed;
     top:0;
@@ -16,7 +16,7 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-#content #banner .title {
+#content header#banner .title {
     background-color:rgba(0,0,0,0.5);
     width: 100%;
     height:450px;
@@ -27,7 +27,7 @@
     position:relative;
     /* background-color:green; */
 }
-#content #banner .title  #title {
+#content header#banner .title  #title {
     height:25%;
     width:100%;
     font-weight:100;
@@ -39,20 +39,20 @@
     text-align:center;
     overflow:hidden;
 }
-#content #banner .title section {
+#content header#banner .title section {
     position:absolute;
     text-align:center;
     width:100%;
     top:65%;
     margin:0 auto;
 }
-#content #banner .title .breadcrumb {
+#content header#banner .title .breadcrumb {
     position:absolute;
     top:10%;
     display:block;
     width:100%;
 }
-#content #banner .title .author {
+#content header#banner .title .author {
     display:block;
     width:100%;
     text-align: center;
@@ -61,7 +61,7 @@
     margin:0 auto;
     color: #eeeeee;
 }
-#content #banner .title .author a {
+#content header#banner .title .author a {
     color:#3EB489;
 }
 #content section#main {
@@ -79,7 +79,7 @@
 #content section#main .center {
     position:relative;
     top:10px;
-    width:100%;
+    /* width:100%; */
     max-width:800px;
     min-width:600px;
     margin:0 auto;
@@ -89,7 +89,7 @@
 }
 #content section#main .right,
 #content section#main .left {
-    width:20%;
+    min-width:350px;
 }
 #content aside#meta {
     background-color:white;
