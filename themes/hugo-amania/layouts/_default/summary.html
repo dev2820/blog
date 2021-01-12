@@ -11,15 +11,7 @@
            <a href="{{.Permalink}}">{{.Title}}</a>
         {{ end }}
       </div>
-      <div class="summary-tags">
-        <h4>Tags</h4>
-        <ul class="tags">
-          {{ range first 3 (.GetTerms "tags") }}
-            <li><a href="{{ .Permalink }}"># {{ .LinkTitle | truncate 7 }}</a></li>
-          {{ end }}
-        </ul>
-        {{ if gt (len (.GetTerms "tags")) 3}} <small class="etc">+ {{ i18n "tagsCount" ((len (.GetTerms "tags")) -3)}}</small> {{ end }}
-      </div>
+      <a href="{{.Permalink}}#disqus_thread">comments</a>
     </div>
   </div>
   <div class="cover-content">

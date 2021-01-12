@@ -38,42 +38,13 @@ article.summary:hover .cover-image .classification {
 article.summary .cover-image .classification .summary-category {
     display:flex;
     flex-direction:column;
-    height:40%;
+    justify-content: center;
+    height:100%;
 }
 article.summary .cover-image .classification .summary-category * {
     color:white;
     margin:0 auto;
     text-align:center;
-}
-article.summary .cover-image .classification .summary-tags {
-    height:60%;
-    margin:0 auto;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    padding:10px 20px;
-}
-article.summary .cover-image .classification .summary-tags h4 {
-    height:30%;
-    text-align: center;
-}
-
-article.summary .cover-image .classification .summary-tags ul.tag{
-    height:55%;
-    display:flex;
-    flex-direction:row;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-article.summary .cover-image .classification .summary-tags ul.tag li a{
-    color:white;
-}
-article.summary .cover-image .classification .summary-tags ul.tag li:hover a{
-    color:#3EB489;
-}
-article.summary .cover-image .classification .summary-tags .etc {
-    height:15%;
-    text-align: center;
 }
 article.summary .cover-content {
     box-sizing:content-box;
