@@ -57,8 +57,9 @@ ul.tags li a {
     cursor: pointer;
 }
 ul.tags li:hover {
-    border:1px solid #3EB489;
+    border:1px solid #333333;
+    background-color: #333333;
 }
 ul.tags li:hover a {
-    color:#3EB489;
+    color:white;
 }
