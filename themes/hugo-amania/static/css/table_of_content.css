@@ -1,13 +1,13 @@
 /* post-toc */
 .post-toc {
     position:sticky;
-    width:300px;
+    min-width:250px;
     max-height:700px;
     top:70px;
     padding:0 20px;
     overflow:auto;
     margin:0 auto;
-    font-size:1rem;
+    font-size:0.9rem;
 }
 .post-toc #table {
     overflow: hidden;
