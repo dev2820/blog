@@ -20,8 +20,8 @@ Hugo-mania Theme CSS
 @import './summary-small.css';
 @import './syntax.css';
 @import './table_of_content.css';
+@import './tag-terms.css';
 @import './taxonomy.css';
-@import './terms.css';
 @import './topbar.css';
 
 @import './clock.css';
@@ -134,11 +134,11 @@ ul.tag li{
     align-self:center;
     list-style: none;
     text-align:center;
-    margin-right:5px;
-    margin-bottom:9px;
     height:34px;
     border:1px solid #999999;
-    border-radius: 17px;
+    margin-right:4px;
+    margin-bottom:4px;
+    border-radius: 4px;
 }
 ul.tag li a {
     height:100%;

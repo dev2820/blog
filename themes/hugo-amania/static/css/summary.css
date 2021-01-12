@@ -9,7 +9,8 @@ article.summary {
     background-color:white;
 }
 article.summary .cover-image {
-    widows:250px;
+    flex-grow:0;
+    width:250px;
     height:250px;
     background-position:left;
     background-size:100% 100%;

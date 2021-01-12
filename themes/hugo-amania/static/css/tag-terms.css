@@ -1,24 +1,27 @@
-.tag-term {
+#tag-term {
     position:relative;
     top:70px;
     display:flex;
     flex-direction:column;
     justify-content: center;
-    width:90%;
-    min-width:800px;
-    max-width:1000px;
+    min-width:600px;
+    max-width:800px;
     margin:0 auto;
     padding-bottom:70px;
 }
-.tag-term .title {
+#tag-term .title {
     font-weight:100;
     font-size:3rem;
     line-height:3rem;
     margin:30px 0;
 }
-.tag-term .description {
+#tag-term .description {
     margin-bottom:30px;
 }
-.tag-term .counter {
+#tag-term .counter {
     margin-bottom:10px;
+}
+#tag-term .tag-list ul li{
+    margin-right:8px;
+    margin-bottom:12px;
 }
