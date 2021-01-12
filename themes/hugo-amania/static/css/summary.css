@@ -39,11 +39,18 @@ article.summary .cover-image .classification .summary-category {
     display:flex;
     flex-direction:column;
     justify-content: center;
-    height:100%;
+    height:50%;
 }
 article.summary .cover-image .classification .summary-category * {
     color:white;
     margin:0 auto;
+    text-align:center;
+}
+article.summary .cover-image .classification .summary-comments {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    height:50%;
     text-align:center;
 }
 article.summary .cover-content {
