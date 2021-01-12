@@ -88,8 +88,7 @@
 }
 #content section#main .right,
 #content section#main .left {
-    width:200px;
-    background-color:green;
+    width:250px;
     display:flex;
 }
 #content aside#meta {

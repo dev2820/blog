@@ -1,7 +1,7 @@
 /* post-toc */
 .post-toc {
     position:sticky;
-    width:200px;
+    width:250px;
     max-height:500px;
     top:70px;
     padding:0 20px;
