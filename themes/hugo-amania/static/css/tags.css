@@ -44,6 +44,7 @@ ul.tags li{
     margin-right:4px;
     margin-bottom:4px;
     border-radius: 4px;
+    transition:0.5s;
 }
 ul.tags li a {
     height:100%;
@@ -55,11 +56,14 @@ ul.tags li a {
     font-size:1rem;
     color:#333333;
     cursor: pointer;
+    transition:0.5s;
 }
 ul.tags li:hover {
     border:1px solid #333333;
     background-color: #333333;
+    transition:0.5s;
 }
 ul.tags li:hover a {
-    color:white;
+    color:#cccccc;
+    transition:0.5s;
 }
