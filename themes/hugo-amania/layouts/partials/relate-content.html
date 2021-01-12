@@ -9,7 +9,7 @@
 	<ul class="container">
 		{{ range . }}
 		<li>
-			{{ partial "summary-small.html" . }}
+			<a href="{{.Permalink}}">{{.Title}}</a>
 		</li>
 		{{ end }}
 	</ul>
