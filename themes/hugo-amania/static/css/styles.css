@@ -86,10 +86,12 @@ hr.summary-sep {
     display:none;
 }
 .appear-1s {
+    opacity:0;
     animation: appear 1s linear 1s 1;
     animation-fill-mode: forwards;
 }
 .appear-2s {
+    opacity:0;
     animation: appear 1s linear 2s 1;
     animation-fill-mode: forwards;
 }
