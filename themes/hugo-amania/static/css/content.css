@@ -88,7 +88,7 @@
 }
 #content section#main .right,
 #content section#main .left {
-    width:250px;
+    width:230px;
     display:flex;
 }
 #content aside#meta {

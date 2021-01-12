@@ -94,8 +94,8 @@ article.summary .cover-content a img.icon {
 }
 article.summary .cover-content a .title {
     font-size:1.7rem;
-    line-height:1.7rem;
-    font-weight:400;
+    line-height:120%;
+    font-weight:500;
     margin-left:15px;
     padding:0;
 }
