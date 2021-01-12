@@ -4,6 +4,7 @@ Hugo-mania Theme CSS
 @import './summary.css';
 @import './summary-small.css';
 @import './notFound.css';
+@import './table_of_content.css';
 
 * {
     box-sizing:border-box;
@@ -537,11 +538,13 @@ nav.section-move .next {
     font-weight:bold;
     display:flex;
     flex-direction:row;
+    transition:0.3s;
 }
 nav.section-move .previous:hover,
 nav.section-move .next:hover {
     border:2px solid #3EB489;
     color:#3EB489;
+    transition:0.3s;
 }
 nav.section-move .previous .title,
 nav.section-move .next .title {
@@ -556,12 +559,14 @@ nav.section-move .title small {
 nav.section-move .title a {
     margin:auto 0;
     color:black;
+    transition:0.3s;
 }
 nav.section-move .previous:hover .title a,
 nav.section-move .next:hover .title a {
     text-decoration: none;
-    transition:0.3s;
     color:#3EB489;
+    transition:0.3s;
+
 }
 nav.section-move .previous {
     justify-content: flex-start;
