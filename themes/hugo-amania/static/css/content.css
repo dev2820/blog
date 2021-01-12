@@ -88,7 +88,7 @@
 }
 #content section#main .right,
 #content section#main .left {
-    min-width:200px;
+    width:200px;
     background-color:green;
     display:flex;
 }
