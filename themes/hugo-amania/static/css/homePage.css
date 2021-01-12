@@ -45,8 +45,8 @@
   #home-menu ul{
       padding:0;
       width:90%;
-      min-width:800px;
-      max-width:1000px;
+      min-width:600px;
+      max-width:800px;
       height:100%;
       margin:0 auto;
       display:flex;
@@ -86,8 +86,8 @@
       padding-top:50px;
   }
   #home-summary .center {
-    max-width:1000px;
-    min-width:800px;
-    width:90%;
+    max-width:800px;
+    min-width:600px;
+    width:100%;
     margin:0 auto;
   }
