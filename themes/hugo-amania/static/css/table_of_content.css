@@ -2,17 +2,17 @@
 .post-toc {
     position:sticky;
     width:300px;
-    max-height:500px;
+    max-height:700px;
     top:70px;
     padding:0 20px;
     overflow:auto;
     margin:0 auto;
-    font-size:1.1rem;
+    font-size:1rem;
 }
 .post-toc #table {
     overflow: hidden;
 }
-.post-toc #table > ul {
+.post-toc #table ul:first-child {
     padding-left:0;
 }
 .post-toc #table ul {

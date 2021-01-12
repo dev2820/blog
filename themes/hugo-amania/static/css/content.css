@@ -81,7 +81,7 @@
     top:10px;
     /* width:100%; */
     max-width:800px;
-    min-width:600px;
+    min-width:550px;
     margin:0 auto;
     overflow:hidden;
     display:flex;
@@ -89,7 +89,7 @@
 }
 #content section#main .right,
 #content section#main .left {
-    min-width:350px;
+    min-width:300px;
 }
 #content aside#meta {
     background-color:white;
