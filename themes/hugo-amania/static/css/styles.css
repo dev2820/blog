@@ -1,10 +1,21 @@
 /*
 Hugo-mania Theme CSS
 */
+@import './about.css';
+@import './footer.css';
+@import './homePage.css';
+@import './list.css';
+@import './markdown.css';
+@import './notFound.css';
+@import './related-content.css';
 @import './summary.css';
 @import './summary-small.css';
-@import './notFound.css';
+@import './syntax.css';
 @import './table_of_content.css';
+@import './terms.css';
+
+@import './clock.css';
+
 
 * {
     box-sizing:border-box;
