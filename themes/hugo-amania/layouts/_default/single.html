@@ -65,10 +65,9 @@
     {{ end }}
     {{ partial "tag_list.html" . }}
     {{ partial "profile-in-article.html" . }}
+    {{ partial "relate-content.html" . }}
     {{ template "_internal/disqus.html" . }}
-    <div class="more-content">
-      {{ partial "relate-content.html" . }}
-    </div>
+
   </div>
 </aside>
 {{ end }}
