@@ -9,7 +9,7 @@
 #content header#banner {
     position:fixed;
     top:0;
-    height:450px;
+    height:60vh;
     width:100%;
     background-attachment: fixed;
     background-position: center;
@@ -73,7 +73,7 @@
     flex-direction:row;
     justify-content: center;
     z-index:10;
-    top:450px;
+    top:60vh;
 }
 #content section#main .center {
     position:relative;
@@ -93,8 +93,8 @@
 #content aside#meta {
     background-color:white;
     position:relative;
-    top:450px;
-    padding:0 20px;
+    top:60vh;
+    padding:100px 20px;
     width:100%;
     margin:0 auto;
     z-index:10;

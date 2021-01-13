@@ -37,14 +37,14 @@
     <h1 id="title">{{ .Title }}</h1>
     <section>
       <p id="date"> {{ i18n "postDatetime" .Date }} </p>
-      <p id="wordcount"> {{ .ReadingTime }} mins  </p>
+      <p id="wordcount"> {{ .ReadingTime }} <i class="far fa-clock"></i>  </p>
     </section>
     <small class="breadcrumb">
       {{ partial "breadcrumb.html" .}}
     </small>
     {{ $author := .Site.Author.name }}
     {{with .Site.GetPage "/about"}}
-    <small class="author">by <a href="{{.Permalink}}">{{ $author }}</a></small>
+    <p class="author">by <a href="{{.Permalink}}">{{ $author }}</a></p>
     {{end}}
   </div>
 </header>
@@ -78,8 +78,4 @@
     {{ template "_internal/disqus.html" . }}
   </div>
 </aside>
-<script>
-  const topHeight = document.querySelector('#content header#banner').offsetHeight;
-  document.querySelector('#content section#main').style.top = topHeight+'px'; 
-</script>
 {{ end }}
