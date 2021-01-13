@@ -87,12 +87,12 @@ hr.summary-sep {
 }
 .appear-1s {
     opacity:0;
-    animation: appear 1s linear 1s 1;
+    animation: appear-top 1s linear 1s 1;
     animation-fill-mode: forwards;
 }
 .appear-2s {
     opacity:0;
-    animation: appear 1s linear 2s 1;
+    animation: appear-top 1s linear 2s 1;
     animation-fill-mode: forwards;
 }
 /* Section, List, Taxonomy */
@@ -130,11 +130,13 @@ ul.contents li {
 .profile-in-article .profile-introduce a{
     color:#272727;
 }
-@keyframes appear {
+@keyframes appear-top {
     0% {
         opacity:0;
+        transform:translateY(10px);
     }
     100% {
         opacity:1;
+        transform:translateY(0px);
     }
 }
