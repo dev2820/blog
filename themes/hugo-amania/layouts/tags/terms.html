@@ -1,13 +1,58 @@
 {{ define "main" }}
+<script>
+    function toggleViewOption(option){
+        const ALPHABET = 0;
+        const COUNT = 1;
+        const elAlphabetical = document.querySelector('#tag-term .tags.alphabetical');
+        const elCount = document.querySelector('#tag-term .tags.count');
+        const elAlphabeticalOption = document.querySelector('#tag-term .option.alphabetical');
+        const elCountOption = document.querySelector('#tag-term .option.count');
+        if(option===ALPHABET){
+            if(elAlphabetical.classList.contains('hidden')) {
+                elAlphabetical.classList.remove('hidden');
+                elAlphabeticalOption.classList.add('toggle-on');
+            }
+            if(!elCount.classList.contains('hidden')) {
+                elCount.classList.add('hidden');
+                elCountOption.classList.remove('toggle-on');
+            }
+        }
+        else if(option===COUNT){
+            if(elCount.classList.contains('hidden')) {
+                elCount.classList.remove('hidden');
+                elCountOption.classList.add('toggle-on');
+            }
+            if(!elAlphabetical.classList.contains('hidden')) {
+                elAlphabetical.classList.add('hidden');
+                elAlphabeticalOption.classList.remove('toggle-on');
+            }
+        }
+    }
+</script>
 <div id="tag-term">
     <h1 class="title">Tags</h1>
     <p class="description">{{ i18n "tagsDescription" }}</p>
-    <p class="counter">총 {{ i18n "tagsCount" (len .Data.Terms) }}</p>
+    <div class="tag-list-head">
+        <p class="counter">{{ i18n "tagsCount" (len .Data.Terms) }}</p>
+        <div class="view-options">
+            <button class="option alphabetical toggle-on" onclick="toggleViewOption(0)">Alphabetical</button>
+            <button class="option count" onclick="toggleViewOption(1)">Count</button>
+        </div>
+    </div>
     <div class="tag-list">
-        <ul class="tags">
-            {{ $baseurl := .Site.BaseURL }}
-            {{ $data := .Data }}
+        {{ $baseurl := .Site.BaseURL }}
+        {{ $data := .Data }}
+        <ul class="tags alphabetical">
             {{ range $key,$value := .Data.Terms.Alphabetical }}
+            <li>
+                <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
+                    {{ $value.Name }} <small>({{ $value.Count }})</small>
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+        <ul class="tags count hidden">
+            {{ range $key,$value := .Data.Terms.ByCount }}
             <li>
                 <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
                     {{ $value.Name }} <small>({{ $value.Count }})</small>

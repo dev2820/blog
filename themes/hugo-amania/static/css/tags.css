@@ -19,14 +19,31 @@
 #tag-term .description {
     margin-bottom:30px;
 }
-#tag-term .counter {
-    margin-bottom:10px;
+#tag-term .tag-list-head {
+    margin-bottom:20px;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+#tag-term .tag-list-head .counter {
+    
+}
+#tag-term .tag-list-head .view-options {
+    display:flex;
+    flex-direction:row;
 }
 #tag-term .tag-list ul li{
     margin-right:8px;
     margin-bottom:12px;
 }
-
+button.toggle-on {
+    background-color:#333333;
+    color:#fafafa;
+}
+#tag-term .view-options button.option {
+    width:100px;
+    padding:2px 5px;
+}
 /* tag */
 ul.tags {
     margin:0;
