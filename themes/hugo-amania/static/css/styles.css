@@ -87,12 +87,12 @@ hr.summary-sep {
 }
 .appear-1s {
     opacity:0;
-    animation: appear-top 1s linear 1s 1;
+    animation: appear-top 0.5s linear 1s 1;
     animation-fill-mode: forwards;
 }
 .appear-2s {
     opacity:0;
-    animation: appear-top 1s linear 2s 1;
+    animation: appear-top 0.5s linear 2s 1;
     animation-fill-mode: forwards;
 }
 /* Section, List, Taxonomy */
