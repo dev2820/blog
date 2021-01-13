@@ -42,7 +42,7 @@ body {
 }
 body {
     scroll-behavior: smooth;
-    transition:0.8s;
+    transition:0.3s;
     background-color:#ffffff;
     display:flex;
     flex-direction:column;
@@ -135,6 +135,7 @@ ul.contents li {
     width:100vw;
     height:100vw;
     text-align:center;
+    font-size:3rem;
     background-color:green;
 }
 @keyframes appear-top {
