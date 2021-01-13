@@ -1,6 +1,10 @@
 <article class="summary card float">
   {{ if .Params.cover }}
-  <div class="cover-image" style="background-image: linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 251px),url('{{.Params.cover}}');"></div>
+    {{ with .Resources.GetMatch (string .Params.cover) }}
+    {{ $image := . }}
+    {{ $image := $image.Fill "250x250 smart" }}
+  <div class="cover-image" style="background-image: linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 251px),url({{ $image.RelPermalink }});"></div>
+  {{ end }}
   {{ else }}
   <div class="cover-image" style="background-image: linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 251px),url('/images/ocean.jpg');"></div>
   {{ end }}
