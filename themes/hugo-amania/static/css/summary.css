@@ -17,42 +17,6 @@ article.summary .cover-image {
     background-repeat:no-repeat;
     margin:auto 0;
 }
-article.summary .cover-image .classification {
-    opacity:0;
-    visibility:hidden;
-    background:rgba(0,0,0,0.5);
-    color:white;
-    height:100%;
-    transition:0.3s;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin:0 auto;
-    padding:5px;
-}
-article.summary:hover .cover-image .classification {
-    opacity:1;
-    visibility:visible;
-    transition:0.3s;
-}
-article.summary .cover-image .classification .summary-category {
-    display:flex;
-    flex-direction:column;
-    justify-content: center;
-    height:50%;
-}
-article.summary .cover-image .classification .summary-category * {
-    color:white;
-    margin:0 auto;
-    text-align:center;
-}
-article.summary .cover-image .classification .summary-comments {
-    display:flex;
-    flex-direction:column;
-    justify-content: center;
-    height:50%;
-    text-align:center;
-}
 article.summary .cover-content {
     box-sizing:content-box;
     flex:1;
@@ -83,6 +47,7 @@ article.summary .cover-content .post-meta {
     font-weight:200;
     height:20px;
     margin:0;
+    margin-top:3px;
     margin-bottom:20px;
     color:#cccccc;
 }
