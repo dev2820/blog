@@ -24,7 +24,7 @@
 {{ else }}
 <header id="banner" style="background-image:url({{"/images/ocean.jpg" | relURL}});">
 {{ end }}
-  <div class="title">
+  <div class="title appear-500ms">
     <h1 id="title">{{ .Title }}</h1>
     <section>
       <p id="date"> {{ i18n "postDatetime" .Date }} </p>
@@ -42,7 +42,7 @@
 <section id="main">
   <div class="left">
   </div>
-  <div class="center appear-1s">
+  <div class="center appear-1000ms">
     <div>
           <article class="content">
             {{ .Content }}

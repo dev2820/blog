@@ -85,14 +85,14 @@ hr.summary-sep {
 .hidden {
     display:none;
 }
-.appear-1s {
+.appear-500ms {
     opacity:0;
-    animation: appear-top 0.5s linear 1s 1;
+    animation: appear-top 0.5s linear 0.5s 1;
     animation-fill-mode: forwards;
 }
-.appear-2s {
+.appear-1000ms {
     opacity:0;
-    animation: appear-top 0.5s linear 2s 1;
+    animation: appear-top 0.5s linear 1s 1;
     animation-fill-mode: forwards;
 }
 /* Section, List, Taxonomy */
