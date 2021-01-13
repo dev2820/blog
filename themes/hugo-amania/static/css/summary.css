@@ -48,12 +48,12 @@ article.summary .cover-content .post-meta {
     height:20px;
     margin:0;
     margin-top:3px;
-    margin-bottom:20px;
+    margin-bottom:17px;
+    display:flex;
+    flex-direction:row;
     color:#cccccc;
 }
-article.summary .cover-content .post-meta .author {
-    background-color:transparent;
-    font-size:1rem;
+article.summary .cover-content .post-meta a {
     color:#3EB489;
 }
 article.summary .cover-content .content {

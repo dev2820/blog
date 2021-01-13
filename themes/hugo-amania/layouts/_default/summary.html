@@ -15,7 +15,7 @@
     </a>
     {{$aboutPage := .Site.GetPage "/about" }}
     <div class="post-meta">
-      {{ i18n "postDatetime" .Date }}
+      {{ i18n "postDatetime" .Date }} |
       <a href="{{.Permalink}}#disqus_thread">Comments</a>
     </div>
     <div class="content">{{ .Summary | truncate 160}}</div>
