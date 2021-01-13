@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
     {{- partial "head.html" . -}}
+    <div id="loader">
+        loading...
+    </div>
     <body id="body">
         {{- partial "header.html" . -}}
         {{- partial "aside.html" . -}}
@@ -13,7 +16,5 @@
         {{- partial "footer.html" . -}}
         <script id="dsq-count-scr" src="//dev2820-github-io.disqus.com/count.js" async></script>
     </body>
-    <div id="loader">
-        loading...
-    </div>
+
 </html>

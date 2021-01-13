@@ -130,6 +130,13 @@ ul.contents li {
 .profile-in-article .profile-introduce a{
     color:#272727;
 }
+/* loader */
+#loader {
+    width:100vw;
+    height:100vw;
+    text-align:center;
+    background-color:green;
+}
 @keyframes appear-top {
     0% {
         opacity:0;

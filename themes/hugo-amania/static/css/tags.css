@@ -40,7 +40,10 @@ button.toggle-on {
     background-color:#333333;
     color:#fafafa;
 }
-#tag-term .view-options button.option {
+#tag-term .tag-list-head .view-options span {
+    margin-right:7px;
+}
+#tag-term .tag-list-head .view-options button.option {
     width:100px;
     padding:2px 5px;
 }
