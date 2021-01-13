@@ -72,7 +72,7 @@ article.summary .cover-content .content {
 article.summary .cover-content .read-more {
     display:flex;
     flex-direction:row;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 article.summary .cover-content .read-more .go-to-read {
     border:1px solid #3EB489;

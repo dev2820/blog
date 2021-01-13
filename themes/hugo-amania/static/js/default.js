@@ -91,13 +91,10 @@ window.onload = function () {
     
 }
 document.onreadystatechange = function() { 
-    console.log("?")
     if (document.readyState !== "complete") { 
-        console.log('ready')
-        document.querySelector("body").style.visibility = "hidden"; 
-        document.querySelector("#loader").style.visibility = "visible"; 
+        document.querySelector("#loader").style.visibility = "visible";
+        document.querySelector("body").style.visibility = "hidden";  
     } else { 
-        console.log('complete')
         document.querySelector("#loader").style.display = "none"; 
         document.querySelector("body").style.visibility = "visible"; 
     } 

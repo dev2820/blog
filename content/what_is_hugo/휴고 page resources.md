@@ -7,7 +7,7 @@ banner = ""
 draft = false
 +++
 
-이미지, 다른 페이지, 문서 등등 모든 페이지 리소스는 relative URL과 메타데이터를 가집니다. 페이지 리소스는 페이지 리소스가 포함된 페이지 번들에서만 사용가능합니다. 
+이미지, 다른 페이지, 문서 등등 모든 페이지 리소스는 relative URL과 메타데이터를 가집니다. 페이지 리소스는 페이지 리소스가 포함된 페이지 번들에서만 사용가능합니다. 예를 들어
 
 https://gohugo.io/content-management/page-resources/
 

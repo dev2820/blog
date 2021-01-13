@@ -20,9 +20,18 @@
   });
 </script>
 {{ if .Params.cover }}
-<header id="banner" style="background-image:url({{.Params.cover | relURL }});">
+  {{ with .Resources.GetMatch (string .Params.cover) }}
+    {{ $image := . }}
+    {{ $width := (div (mul 450 $image.Width) $image.Height) }}
+    {{ $ts := slice $width "450" }}
+    {{ $ts := string (delimit $ts "x") }}
+    {{ $ts := slice $ts "smart" }}
+    {{ $ts := string (delimit $ts " ") }}
+    {{ $image := $image.Fill $ts }}
+    <header id="banner" style="background-image:url({{ $image.RelPermalink }});">
+  {{ end }}
 {{ else }}
-<header id="banner" style="background-image:url({{"/images/ocean.jpg" | relURL}});">
+<header id="banner" style="background-image:url({{"/images/ocean.jpg"}});">
 {{ end }}
   <div class="title appear-500ms">
     <h1 id="title">{{ .Title }}</h1>
@@ -69,4 +78,8 @@
     {{ template "_internal/disqus.html" . }}
   </div>
 </aside>
+<script>
+  const topHeight = document.querySelector('#content header#banner').offsetHeight;
+  document.querySelector('#content section#main').style.top = topHeight+'px'; 
+</script>
 {{ end }}
