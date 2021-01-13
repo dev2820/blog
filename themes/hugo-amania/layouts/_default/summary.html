@@ -15,9 +15,10 @@
     </a>
     {{$aboutPage := .Site.GetPage "/about" }}
     <div class="post-meta">
+      <i class="far fa-calendar" aria-hidden="true"></i>
       {{ i18n "postDatetime" .Date }} |
-      <i class="fas fa-comments"></i>
-      <a href="{{.Permalink}}#disqus_thread">Comments</a>
+      <i class="fas fa-comments" aria-hidden="true"></i>
+      <a href="{{.Permalink}}#disqus_thread"></a>
     </div>
     <div class="content">{{ .Summary | truncate 160}}</div>
     <div class="read-more"><span>{{.ReadingTime}} mins read</span><a class="go-to-read" href="{{ .Permalink }}"><span>{{ i18n "readMore" }}</span><i class="fa fa-angle-right"></i></a></div>
