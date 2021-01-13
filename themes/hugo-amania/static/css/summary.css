@@ -53,6 +53,15 @@ article.summary .cover-content .post-meta {
     flex-direction:row;
     color:#cccccc;
 }
+article.summary .cover-content .post-meta i{
+    font-size:1rem;
+    line-height:1.2rem;
+    margin-top:5px;
+    margin-right:5px;
+}
+article.summary .cover-content .post-meta span.date {
+    margin-right:5px;
+}
 article.summary .cover-content .post-meta a {
     color:#3EB489;
 }

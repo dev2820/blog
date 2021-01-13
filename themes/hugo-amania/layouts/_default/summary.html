@@ -16,7 +16,7 @@
     {{$aboutPage := .Site.GetPage "/about" }}
     <div class="post-meta">
       <i class="far fa-calendar" aria-hidden="true"></i>
-      {{ i18n "postDatetime" .Date }} |
+      <span class="date">{{ i18n "postDatetime" .Date }} | </span>
       <i class="fas fa-comments" aria-hidden="true"></i>
       <a href="{{.Permalink}}#disqus_thread"></a>
     </div>
