@@ -6,9 +6,6 @@ tags = []
 cover = "images/crop_test.jpg"
 draft = false
 
-[[resources]]
-  name = "header"
-  src = "favicon_32.png"
 +++
 
 test4
