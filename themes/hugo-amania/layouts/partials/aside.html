@@ -13,8 +13,8 @@
                 <li><a href="{{.Site.BaseURL}}/tags">{{i18n "menuTags"}} {{ i18n "menuSet"}}</a></li>
                 <li><a class="aside-menu-item" href="{{.Site.BaseURL}}">{{ i18n "menuAllPages" }} {{ i18n "menuSet"}}
                         <small>({{(len .Site.RegularPages)}})</small></a>
-                    {{ range first 1 .Site.RegularPages }}<small
-                        class="date">{{ .Date.Format "- 2006/01/02" }}</small>{{end}}</li>
+                    {{ range first 1 .Site.RegularPages }}
+                    <small class="date">{{ .Date.Format "- 2006/01/02" }}</small>{{end}}</li>
             </ul>
         </div>
         <hr class="aside-sep">
