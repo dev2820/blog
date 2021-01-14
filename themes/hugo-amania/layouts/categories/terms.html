@@ -5,6 +5,7 @@
   <ul>
     {{ $baseurl := .Site.BaseURL }}
     {{ $data := .Data }}
+    {{ $site := .Site }}
     {{ range $key,$value := .Data.Terms.Alphabetical }}
     <li onclick="goToUrl('{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}')">
       <span class="summary card">
@@ -27,6 +28,22 @@
         </div>
       </span>
     </li>
+    <div class="subcategories">
+      {{ $list := ( index $site.Data.config.subCategoryList $value.Name ) }}
+      <ul>
+      {{ range $key, $value := $site.Taxonomies.subcategories.Alphabetical }}
+      {{ if in $list $value.Name }}
+        <li>
+          <a href="{{ $baseurl }}subcategories/{{ $value.Name | urlize }}">
+            <i class="fa fa-angle-right icon" aria-hidden="true"></i>
+            {{ humanize $value.Name }}
+            <div class="count">{{ $value.Count }} posts</div>
+          </a>
+        </li>
+      {{ end }}
+      {{ end }}
+      </ul>
+    </div>
     {{ end }}
   </ul>
 </div>

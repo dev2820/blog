@@ -1,5 +1,8 @@
 {{ define "main" }}
 <main id="taxonomies">
+    {{ range $key,$value := .Data.Terms.Alphabetical }}
+        {{ .Title }}
+    {{end}}
     <div class="taxonomy">
         <h1>
             {{if eq .Data.Plural "categories"}}{{ i18n "categoriesTitle" }}:
@@ -8,6 +11,7 @@
             {{ end }}
             {{ .Title }}
         </h1>
+        <p>{{ i18n "postCount" (len .Pages) }}</p>
     </div>
     {{ range .Pages}}
     {{ .Render "summary"}}

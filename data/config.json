@@ -11,10 +11,9 @@
         {
             "title": "Tags",
             "link": "/tags"
-        },
-        {
-            "title": "일상",
-            "link": "/diaries"
         }
-    ]
+    ],   
+    "subCategoryList": {
+        "일상":["test"]
+    }
 }
