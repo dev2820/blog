@@ -1,12 +1,12 @@
----
-draft: false
++++
+title = "휴고에서 컨텐츠 지정하고 글 생성해보기"
+date = 2020-08-08T15:25:11+09:00
+categories = ["일상"]
+tags = ["longtesttagtest","hugo","blog","test","휴고","블로그"]
+cover = "/images/ocean.jpg"
 
-title: "휴고에서 컨텐츠 지정하고 글 생성해보기"
-date: 2020-08-08T15:25:11+09:00
-categories: ["일상"]
-tags: ["longtesttagtest","hugo","blog","test","휴고","블로그"]
-cover: "/images/ocean.jpg"
----
+draft = false
++++
 
 ## hugo로 build 하는 법
 hugo의 최상위 폴더로 가서 `hugo` 만 입력하면 됩니다.

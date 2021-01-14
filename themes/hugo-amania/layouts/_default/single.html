@@ -2,23 +2,6 @@
    title{{ .Title }} &ndash; {{ .Site.Title }}
 {{ end }}
 {{ define "main" }}
-<script>
-  // 상단바에 card 적절히 추가해주는 script
-  document.getElementById('topbar').classList.remove('card')
-  window.addEventListener('scroll', (event) => {
-    let e = document.getElementById('topbar');
-    if (this.scrollY > 450) {
-      if (!e.classList.contains('card')) {
-        e.classList.add('card');
-      }
-    }
-    else {
-      if (e.classList.contains('card')) {
-        e.classList.remove('card');
-      }
-    }
-  });
-</script>
 {{ if .Params.cover }}
   {{ with .Resources.GetMatch (string .Params.cover) }}
     {{ $image := . }}
