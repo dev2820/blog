@@ -4,6 +4,7 @@ date = 2020-10-01T21:25:59+09:00
 categories = ["what_is_hugo"]
 tags = ["hugo","휴고","ref and relref"]
 banner = ""
+subcategories= ["hugo"]
 draft = false
 +++
 

@@ -4,6 +4,7 @@ date = 2020-10-03T17:46:56+09:00
 categories = ["what_is_hugo"]
 tags = ["hugo","휴고","multilingual mode","다중언어지원"]
 banner = ""
+subcategories= ["hugo"]
 draft = false
 +++
 

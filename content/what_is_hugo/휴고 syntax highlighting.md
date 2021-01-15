@@ -1,11 +1,12 @@
----
-title: "휴고 Syntax Highlighting"
-date: 2020-09-27T15:09:40+09:00
-categories: ["what_is_hugo"]
-tags: ["hugo","휴고","highlight","code fence"]
-cover: ""
-draft: false
----
++++
+title= "휴고 Syntax Highlighting"
+date= 2020-09-27T15:09:40+09:00
+categories= ["what_is_hugo"]
+tags= ["hugo","휴고","highlight","code fence"]
+cover= ""
+subcategories= ["hugo"]
+draft= false
++++
 
 이번글엔 컨텐츠에 들어가는 code fences에 테마 및 highlight 적용하는 방법이 들어갑니다. hightlight를 적용하는 방법은 여러가지가 있지만, 그 중에서도 딱 한가지 code fence에서 highlighting 적용하는 방법만 다루겠습니다. 
 

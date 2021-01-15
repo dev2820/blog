@@ -1,5 +1,5 @@
 {{ define "main" }}
-<div class="categories">
+<div id="category-term">
   <h1 class="title">{{ i18n "categoriesTitle" }}</h1>
   <p class="description">{{ i18n "categoriesDescription" }}</p>
   <ul>
@@ -7,43 +7,49 @@
     {{ $data := .Data }}
     {{ $site := .Site }}
     {{ range $key,$value := .Data.Terms.Alphabetical }}
-    <li onclick="goToUrl('{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}')">
-      <span class="summary card">
-        {{ range first 1 $value.WeightedPages }}
-          {{ if .Params.cover }}
-          <div class="recent-image" style="background-image:url({{.Params.cover | relURL }})">
-          {{ else }}
-          <div class="recent-image" style="background-image:url({{"/images/ocean.jpg" | relURL}})">
-          {{ end }}
-          <a href="{{ .Permalink }}">
-            <span>{{ .Date.Format "2006-01-02" }}</span>
-          </a>
-          </div>
-        {{ end }}
+    <li class="term">
+      <div class="content">
         <div class="title">
           <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
-            <h3>{{ $value.Name }}</h3> 
-            <div>{{ $value.Count }} {{ i18n "categoriesCount" }}</div>
+            {{ with $site.GetPage ($value.Name | relURL | string ) }}
+              {{if .Params.icon }}
+                {{ with .Resources.GetMatch (string .Params.icon) }}
+                  <div class="cover" style="background-image:url({{ .RelPermalink }});"></div>
+                {{ else }}
+                  <div class="cover" style="background-image:url('/static/images/ocean.jpg');"></div>
+                {{ end }}
+              {{ else }}
+                <div class="cover"></div>
+              {{ end }}
+            {{ end }}
+            <p class="name">{{ humanize $value.Name }}</p> 
+            <div class="count">
+              <span class="num">{{ $value.Count }}</span><span class="unit">{{ i18n "categoriesCount" }}</span>
+            </div>
           </a>
+          <hr/>
+          <hr/>
         </div>
-      </span>
+        <div class="subcategories">
+          {{ $list := ( index $site.Data.config.subCategoryList $value.Name ) }}
+          <ul>
+          {{ range $key, $value := $site.Taxonomies.subcategories.Alphabetical }}
+            {{ if in $list $value.Name }}
+              <li class="term">
+                <a href="{{ $baseurl }}subcategories/{{ $value.Name | urlize }}">
+                  <div class="cover"></div>
+                  <p class="name">{{ humanize $value.Name }}</p>
+                  <div class="count">
+                    <span class="num">{{ $value.Count }}</span><span class="unit">{{ i18n "categoriesCount" }}</span>
+                  </div>
+                </a>
+              </li>
+            {{ end }}
+          {{ end }}
+          </ul>
+        </div>
+      </div>
     </li>
-    <div class="subcategories">
-      {{ $list := ( index $site.Data.config.subCategoryList $value.Name ) }}
-      <ul>
-      {{ range $key, $value := $site.Taxonomies.subcategories.Alphabetical }}
-      {{ if in $list $value.Name }}
-        <li>
-          <a href="{{ $baseurl }}subcategories/{{ $value.Name | urlize }}">
-            <i class="fa fa-angle-right icon" aria-hidden="true"></i>
-            {{ humanize $value.Name }}
-            <div class="count">{{ $value.Count }} posts</div>
-          </a>
-        </li>
-      {{ end }}
-      {{ end }}
-      </ul>
-    </div>
     {{ end }}
   </ul>
 </div>

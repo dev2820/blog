@@ -4,6 +4,7 @@ date: 2020-09-23T21:30:23+09:00
 categories: ["what_is_hugo"]
 tags: ["hugo","info","휴고"]
 cover: ""
+subcategories: ["hugo"]
 draft: false 
 ---
 

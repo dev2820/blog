@@ -4,6 +4,7 @@ date = 2020-09-30T19:06:31+09:00
 categories = ["what_is_hugo"]
 tags = ["hugo","휴고","taxonomy",]
 banner = ""
+subcategories= ["hugo"]
 draft = false
 +++
 

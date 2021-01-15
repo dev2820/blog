@@ -4,6 +4,7 @@ date = 2020-10-18T21:17:54+09:00
 categories = ["what_is_hugo"]
 tags = ["hugo","휴고","disqus","코멘트 추가하기"]
 banner = ""
+subcategories = ["hugo"]
 draft = false
 +++
 

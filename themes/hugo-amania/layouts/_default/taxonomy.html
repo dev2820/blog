@@ -1,4 +1,34 @@
 {{ define "main" }}
+<script>
+    function byDate() {
+        const elByDate = document.querySelector('main#taxonomies div.by-date');
+        const elByDateReverse = document.querySelector('main#taxonomies div.by-date-reverse');
+        const elByDateOption = document.querySelector('main#taxonomies button.by-date');
+        const elByDateReverseOption = document.querySelector('main#taxonomies button.by-date-reverse');
+        if(elByDate.classList.contains('hidden')) {
+            elByDate.classList.remove('hidden');
+            elByDateOption.classList.add('toggle-on');
+        }
+        if(!elByDateReverse.classList.contains('hidden')) {
+            elByDateReverse.classList.add('hidden');
+            elByDateReverseOption.classList.remove('toggle-on');
+        }
+    }
+    function byDateReverse() {
+        const elByDate = document.querySelector('main#taxonomies div.by-date');
+        const elByDateReverse = document.querySelector('main#taxonomies div.by-date-reverse');
+        const elByDateOption = document.querySelector('main#taxonomies button.by-date');
+        const elByDateReverseOption = document.querySelector('main#taxonomies button.by-date-reverse');
+        if(elByDateReverse.classList.contains('hidden')) {
+            elByDateReverse.classList.remove('hidden');
+            elByDateReverseOption.classList.add('toggle-on');
+        }
+        if(!elByDate.classList.contains('hidden')) {
+            elByDate.classList.add('hidden');
+            elByDateOption.classList.remove('toggle-on');
+        }
+    }
+</script>
 <main id="taxonomies">
     {{ range $key,$value := .Data.Terms.Alphabetical }}
         {{ .Title }}
@@ -13,10 +43,14 @@
         </h1>
         <p>{{ i18n "postCount" (len .Pages) }}</p>
     </div>
-    {{ range .Pages}}
-    {{ .Render "summary"}}
-    <hr class="summary-sep" />
-    {{ end }}
+    <button class="by-date option" onclick="byDate()">오래된글부터</button>
+    <button class="by-date-reverse option toggle-on" onclick="byDateReverse()">최신글부터</button>
+    <div class="by-date hidden">
+        {{ partial "by-date.html" . }}
+    </div>
+    <div class="by-date-reverse">
+        {{ partial "by-date-reverse.html" . }}
+    </div>
     {{ partial "pagination.html" . }}
     </div>
 

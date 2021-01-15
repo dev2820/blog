@@ -4,6 +4,7 @@ date = 2020-09-30T15:45:34+09:00
 categories = ["what_is_hugo"]
 tags = ["hugo","휴고","shortcodes"]
 cover = ""
+subcategories= ["hugo"]
 testparam = "Hugo Rocks!"
 draft = false
 +++

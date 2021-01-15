@@ -1,5 +1,5 @@
-/* Cateories */
-.categories {
+/* category-term */
+#category-term {
     position:relative;
     top:70px;
     width:90%;
@@ -7,65 +7,91 @@
     max-width:800px;
     margin:0 auto;
 }
-.categories ul{
-    display:inline-flex;
-    flex-wrap:wrap;
-    flex-direction:row;
+#category-term ul li hr {
+    margin:0;
+    margin-bottom:3px;
+    height:0px;
+    border:2px solid gainsboro;
 }
-.categories ul li{
+#category-term ul{
     display:inline-flex;
-    border-radius: 4px;
+    flex-direction:column;
+    width:100%;
+}
+#category-term ul li.term{
+    display:flex;
+    flex-direction:row;
     list-style: none;
     cursor: pointer;
-    margin-right:20px;
     margin-bottom:20px;
 }
-.categories ul li .summary.card {
-    background-color:black;
-    overflow: hidden;
-    border-radius: 4px;
-    width:310px;
-    height:310px;
-}
-.categories ul li .summary.card div.recent-image{
-    width:310px;
-    height:60%;
-    background-position:left;
-    background-size:100% 100%;
-    background-repeat:no-repeat;
-    display:flex;
-    flex-direction:column;
-    justify-content: center;
-    text-align: center;
-}
-.categories ul li .summary.card div.recent-image span{
-    background-color:rgba(255,255,255,0.6);
-    font-weight:300;
-    font-size:1.2rem;
-}
-.categories ul li .summary.card .title{
-    background-color:white;
-    width:310px;
-    height:40%;
-    display:flex;
-    flex-direction:column;
-}
-.categories ul li .summary.card .title a{
+#category-term ul li.term a:hover{
+    background-color:#cccccc;
     text-decoration: none;
 }
-.categories ul li .summary.card .title a h3{
-    margin:0;
-    font-size:1.5rem;
-    font-weight:300;
-    text-align: center;
-    padding:10px 0;
+#category-term ul li.term div.content {
+    flex-grow:1;
+    padding-right:10px;
 }
-.categories ul li .summary.card:hover .title a h3{
-    text-decoration: underline;
+#category-term ul li.term div.content div.title a{
+    display:flex;
+    flex-direction:row;
+    font-size:1.8rem;
+    line-height:200%;
 }
-.categories ul li .summary.card .title a div{
-    text-align: center;
+#category-term ul li.term div.content div.title a div.cover {
+    height:3.0rem;
+    width:3.0rem;
+    flex-shrink:0;
+    background-size: 3.0rem 3.0rem;
+    background-repeat: no-repeat;
+    background-position:center;
+    margin:auto 0;
+    margin-right:10px;
 }
-.categories ul li .summary.card:hover .title a div{
-    text-decoration: underline;
+#category-term ul li.term div.content div.title a p.name{
+    flex-grow:1;
+}
+#category-term ul li.term div.content div.title a div.count{
+    width:20%;
+    display:flex;
+    flex-direction:row;
+}
+#category-term ul li.term div.content div.title a div.count span.num{
+    text-align:right;    
+    width:50%;
+}
+#category-term ul li.term div.content div.title a div.count span.unit{
+    text-align:left;
+    padding-left:10px;    
+    width:50%;
+}
+#category-term li.term div.content div.subcategories li.term a {
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    font-size:1.4rem;
+    line-height:200%;
+}
+#category-term li.term div.content div.subcategories li.term a div.cover {
+    width:3.0rem;
+    margin-right:10px;
+}
+#category-term li.term div.content div.subcategories li.term a p.name {
+    flex-grow:1;
+}
+#category-term li.term div.content div.subcategories li.term a div.count{
+    width:20%;
+    display:flex;
+    flex-direction:row;
+}
+#category-term li.term div.content div.subcategories li.term a div.count span.num{
+    text-align:right;
+    width:50%;
+}
+#category-term li.term div.content div.subcategories li.term a div.count span.unit{
+    text-align:left;
+    padding-left:10px;
+    width:50%;
 }

@@ -4,6 +4,7 @@ date = 2020-10-03T17:47:33+09:00
 categories = ["what_is_hugo"]
 tags = ["hugo","휴고","이미지 처리"]
 banner = ""
+subcategories= ["hugo"]
 draft = false
 +++
 

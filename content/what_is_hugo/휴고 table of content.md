@@ -4,6 +4,7 @@ date = 2020-10-02T20:00:12+09:00
 categories = ["what_is_hugo"]
 tags = ["hugo","휴고","Table of Contents","문서에 목차 달기","목차"]
 banner = ""
+subcategories= ["hugo"]
 draft = false
 +++
 

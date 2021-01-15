@@ -4,6 +4,7 @@ date: 2020-09-29T21:54:15+09:00
 categories: ["what_is_hugo"]
 tags: ["hugo","휴고","front matter"]
 cover: ""
+subcategories: ["hugo"]
 draft: false
 ---
 
