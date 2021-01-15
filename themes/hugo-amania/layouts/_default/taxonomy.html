@@ -35,8 +35,9 @@
     {{end}}
     <div class="taxonomy">
         <h1>
-            {{if eq .Data.Plural "categories"}}{{ i18n "categoriesTitle" }}:
-            {{ else if eq .Data.Plural "tags"}}{{ i18n "tagsTitle" }}:
+            {{if eq .Data.Plural "categories"}}{{ i18n "categoriesTitle" }} -
+            {{ else if eq .Data.Plural "subcategories"}}{{ i18n "subcategoriesTitle" }} -
+            {{ else if eq .Data.Plural "tags"}}{{ i18n "tagsTitle" }} -
             {{ else }}
             {{ end }}
             {{ .Title }}

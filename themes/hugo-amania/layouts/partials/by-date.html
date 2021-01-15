@@ -1,5 +1,5 @@
 <ul class="contents">
-    {{ range .Pages.ByDate }}
+    {{ range .Paginator.Pages.ByDate }}
         <li>
             <div>  
                 {{ .Render "summary" }}

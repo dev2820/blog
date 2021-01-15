@@ -114,6 +114,12 @@ other = "태그 별 글을 볼 수 있습니다."
 [tagsCount]
 other = "{{.Count}}개의 태그"
 ###################
+# Subcategory
+###################
+[subcategoriesTitle]
+other = "카테고리"
+
+###################
 # Not found 404
 ###################
 [notFoundCode]
