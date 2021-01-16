@@ -1,7 +1,7 @@
 +++
 title = "hugo_new_theme"
-date = 2020-09-19
-publishdate = 2020-09-19
+date = 2020-09-19T12:19:54+09:00
+publishdate = 2020-09-19T12:19:54+09:00
 cover = "images/ocean.jpg"
 +++
 
