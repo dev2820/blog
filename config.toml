@@ -14,6 +14,14 @@ pygmentsCodefences = true
 pygmentsStyle = "dracula"
 pygmentsOptions = "linenos=table,anchorlinenos=true,lineanchors=prefix"
 sectionPagesMenu = "main"
+enableRobotsTXT = true
+
+[outputs]
+    home = ["HTML", "RSS", "JSON"]
+
+[sitemap]
+    changefreq = "weekly"
+    filename = "sitemap.xml"
 
 [author]
     name = "dev2820"
