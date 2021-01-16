@@ -1,11 +1,11 @@
----
-title: "Hugo new theme 3"
-date: 2020-09-19T23:12:23+09:00
-categories: ["hugo_new_theme"]
-tags: ["project","DIY"]
-cover: ""
-draft: true
----
++++
+title= "Hugo new theme 3"
+date= 2020-09-19T23:12:23+09:00
+categories= ["hugo_new_theme"]
+tags= ["project","DIY"]
+cover= ""
+draft= true
++++
 
 ## index.html
 

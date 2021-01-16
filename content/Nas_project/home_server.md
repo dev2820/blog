@@ -1,11 +1,11 @@
----
-title: "NAS 용 SPA만들기 (0)"
-date: 2020-09-18T18:20:55+09:00
-categories: ["Nas_project"]
-tags: ["projects","DIY"]
-cover: ""
-draft: false
----
++++
+title= "NAS 용 SPA만들기 (0)"
+date= 2020-09-18T18:20:55+09:00
+categories= ["Nas_project"]
+tags= ["projects","DIY"]
+cover= ""
+draft= false
++++
 
 ## 글머리
 본디 이 글은 자작NAS를 만드는 전반적인 내용을 모두 담으려고 했으나  이 블로그를 자작NAS 설정을 마치고서야 집밖에서 SSH로 연결해 글을 쓰는 중이라 사진도 못넣고 양질의 글을 쓰지도 못하기 때문에 적당히 NAS를 만드는 과정은 생략하고 SPA를 만드는 과정만 담았습니다.

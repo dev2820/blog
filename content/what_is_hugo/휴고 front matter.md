@@ -1,12 +1,12 @@
----
-title: "휴고 Front Matter"
-date: 2020-09-29T21:54:15+09:00
-categories: ["what_is_hugo"]
-tags: ["hugo","휴고","front matter"]
-cover: ""
-subcategories: ["hugo"]
-draft: false
----
++++
+title= "휴고 Front Matter"
+date= 2020-09-29T21:54:15+09:00
+categories= ["what_is_hugo"]
+tags= ["hugo","휴고","front matter"]
+cover= ""
+subcategories= ["hugo"]
+draft= false
++++
 
 이번 글은 휴고 컨텐츠의 'front matter' 에 대해 설명하는 글입니다. front matter는 말하자면 컨텐츠의 메타데이터, 컨텐츠의 설정값입니다. 컨텐츠의 타이틀, 생성날짜, 만기일 등등을 정해주고 심지어는 어떤 화면으로 컨텐츠를 표출시킬지 레이아웃을 정해주거나 컨텐츠로가는 주소를 바꿔주는등 여러가지를 할 수 있습니다.  
 

@@ -1,12 +1,12 @@
----
-title: "휴고 Content Section,content Type 그리고 Archetypes"
-date: 2020-09-29T23:48:55+09:00
-categories: ["what_is_hugo"]
-tags: ["hugo","휴고","content section","content type","archetypes"]
-cover: ""
-subcategories: ["hugo"]
-draft: false
----
++++
+title= "휴고 Content Section,content Type 그리고 Archetypes"
+date= 2020-09-29T23:48:55+09:00
+categories= ["what_is_hugo"]
+tags= ["hugo","휴고","content section","content type","archetypes"]
+cover= ""
+subcategories= ["hugo"]
+draft= false
++++
 
 이번 글에서는 section, type 그리고 archetypes에 대해 각각 다뤄보겠습니다.
 

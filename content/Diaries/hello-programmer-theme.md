@@ -1,12 +1,12 @@
----
++++
 
-title: "Hello Programmer Theme"
-date: 2020-08-08T19:53:55+09:00
-categories: ["일상"]
-tags: []
-cover: "/images/space.jpg"
-draft: true
----
+title= "Hello Programmer Theme"
+date= 2020-08-08T19:53:55+09:00
+categories= ["일상"]
+tags= []
+cover= "/images/space.jpg"
+draft= true
++++
 
 ## 이 테마를 쓰면서 알게된 점 정리
 

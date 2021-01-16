@@ -1,12 +1,12 @@
----
-title: "[hugo] 휴고에 대해 알아보자 (1)"
-date: 2020-09-23T21:30:23+09:00
-categories: ["what_is_hugo"]
-tags: ["hugo","info","휴고"]
-cover: ""
-subcategories: ["hugo"]
-draft: false 
----
++++
+title= "[hugo] 휴고에 대해 알아보자 (1)"
+date= 2020-09-23T21:30:23+09:00
+categories= ["what_is_hugo"]
+tags= ["hugo","info","휴고"]
+cover= ""
+subcategories= ["hugo"]
+draft= false 
++++
 
 ## 글머리
 
