@@ -24,8 +24,10 @@
     readTextFile("/lunr.json", function(docs){
         let documents = JSON.parse(docs);
         idx = lunr(function () {
-            this.ref('title')
+            this.ref('uri')
+            this.field('title')
             this.field('content')
+            this.field('tags')
             
             documents.forEach(function (doc) {
                 this.add(doc)
@@ -35,9 +37,7 @@
     document.getElementById('search-input').addEventListener('change',function (event){
         if(idx){
             const result = idx.search(event.target.value);
-            const resultCount = document.createElement('p');
-            resultCount.innerHTML = result.length;
-            document.getElementById('search-result').appendChild(resultCount);
+            document.getElementById('search-result').innerHTML(result);
         }
     })
 </script>
