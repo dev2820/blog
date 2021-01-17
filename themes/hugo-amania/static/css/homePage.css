@@ -1,8 +1,6 @@
 /* Home Page Css */
 header#home-header {
-    margin:0;
     height: 450px;
-    width:100%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -12,6 +10,7 @@ header#home-header {
     flex-direction:column;
     justify-content: center;
     z-index:1;
+    margin-top:0;
 }
 header#home-header .container {
     height:100%;

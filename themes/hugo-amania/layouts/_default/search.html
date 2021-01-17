@@ -1,10 +1,29 @@
 {{ define "header" }}
+{{ with .Site.GetPage "search"}}
+<header id="search-header">
+    <div class="center">
+        <h1>{{ .Title }}</h1>
+    </div>
+</header>
+{{ end }}
 {{ end }}
 {{ define "main" }}
+<main id="search-main">
+    <div class="center">
+        <div class="search-bar">
+            <input id="search-input" type="text" placeholder="search..." name="search">
+            <i class="fas fa-search icon"></i>
+            <i class="fas fa-times icon hidden"></i>
+        </div>
+        <div id="search-result">
+        </div>
+    </div>
+</main>
 <script>
+    let idx = null;
     readTextFile("/lunr.json", function(docs){
         let documents = JSON.parse(docs);
-        var idx = lunr(function () {
+        idx = lunr(function () {
             this.ref('title')
             this.field('content')
             
@@ -12,19 +31,14 @@
                 this.add(doc)
             }, this)
         })
-
-        const result = idx.search("hugo")
-        console.log(result);
     });
+    document.getElementById('search-input').addEventListener('change',function (event){
+        if(idx){
+            const result = idx.search(event.target.value);
+            const resultCount = document.createElement('p');
+            resultCount.innerHTML = result.length;
+            document.getElementById('search-result').appendChild(resultCount);
+        }
+    })
 </script>
-<main id="search">
-    {{ with .Site.GetPage "search"}}
-        <h1>{{ .Title }}</h1>
-        {{ .Content }}
-    {{ end }}
-    <button onclick="toggleSearch(false)">
-        <i class="fa fa-times fa-3x"></i>
-    </button>
-    <input id="search-input" type="text" placeholder="search..." name="search">
-</main>
 {{ end }}

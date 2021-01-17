@@ -1,60 +1,64 @@
 {{ define "header" }}
 <header id="category-header">
-  <h1 class="title">{{ i18n "categoriesTitle" }}</h1>
-  <p class="description">{{ i18n "categoriesDescription" }}</p>
+  <div class="center">
+    <h1 class="title">{{ i18n "categoriesTitle" }}</h1>
+    <p class="description">{{ i18n "categoriesDescription" }}</p>
+  </div>
 </header>
 {{ end }}
 {{ define "main" }}
 <main id="category-term">
-  <ul>
-    {{ $baseurl := .Site.BaseURL }}
-    {{ $data := .Data }}
-    {{ $site := .Site }}
-    {{ range $key,$value := .Data.Terms.Alphabetical }}
-    <li class="term">
-      <div class="content">
-        <div class="title">
-          <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
-            {{ with $site.GetPage ($value.Name | relURL | string ) }}
-              {{if .Params.icon }}
-                {{ with .Resources.GetMatch (string .Params.icon) }}
-                  <div class="cover" style="background-image:url({{ .RelPermalink }});"></div>
+  <div class="center">
+    <ul>
+      {{ $baseurl := .Site.BaseURL }}
+      {{ $data := .Data }}
+      {{ $site := .Site }}
+      {{ range $key,$value := .Data.Terms.Alphabetical }}
+      <li class="term">
+        <div class="content">
+          <div class="title">
+            <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
+              {{ with $site.GetPage ($value.Name | relURL | string ) }}
+                {{if .Params.icon }}
+                  {{ with .Resources.GetMatch (string .Params.icon) }}
+                    <div class="cover" style="background-image:url({{ .RelPermalink }});"></div>
+                  {{ else }}
+                    <div class="cover" style="background-image:url('/static/images/ocean.jpg');"></div>
+                  {{ end }}
                 {{ else }}
-                  <div class="cover" style="background-image:url('/static/images/ocean.jpg');"></div>
+                  <div class="cover"></div>
                 {{ end }}
-              {{ else }}
-                <div class="cover"></div>
+              {{ end }}
+              <p class="name">{{ humanize $value.Name }}</p> 
+              <div class="count">
+                <span class="num">{{ $value.Count }}</span><span class="unit">{{ i18n "categoriesCount" }}</span>
+              </div>
+            </a>
+            <hr/>
+            <hr/>
+          </div>
+          <div class="subcategories">
+            {{ $list := ( index $site.Data.config.subCategoryList $value.Name ) }}
+            <ul>
+            {{ range $key, $value := $site.Taxonomies.subcategories.Alphabetical }}
+              {{ if in $list $value.Name }}
+                <li class="term">
+                  <a href="{{ $baseurl }}subcategories/{{ $value.Name | urlize }}">
+                    <div class="cover"></div>
+                    <p class="name">{{ humanize $value.Name }}</p>
+                    <div class="count">
+                      <span class="num">{{ $value.Count }}</span><span class="unit">{{ i18n "categoriesCount" }}</span>
+                    </div>
+                  </a>
+                </li>
               {{ end }}
             {{ end }}
-            <p class="name">{{ humanize $value.Name }}</p> 
-            <div class="count">
-              <span class="num">{{ $value.Count }}</span><span class="unit">{{ i18n "categoriesCount" }}</span>
-            </div>
-          </a>
-          <hr/>
-          <hr/>
+            </ul>
+          </div>
         </div>
-        <div class="subcategories">
-          {{ $list := ( index $site.Data.config.subCategoryList $value.Name ) }}
-          <ul>
-          {{ range $key, $value := $site.Taxonomies.subcategories.Alphabetical }}
-            {{ if in $list $value.Name }}
-              <li class="term">
-                <a href="{{ $baseurl }}subcategories/{{ $value.Name | urlize }}">
-                  <div class="cover"></div>
-                  <p class="name">{{ humanize $value.Name }}</p>
-                  <div class="count">
-                    <span class="num">{{ $value.Count }}</span><span class="unit">{{ i18n "categoriesCount" }}</span>
-                  </div>
-                </a>
-              </li>
-            {{ end }}
-          {{ end }}
-          </ul>
-        </div>
-      </div>
-    </li>
-    {{ end }}
-  </ul>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
 </main>
 {{ end }}

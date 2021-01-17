@@ -72,7 +72,17 @@ a:visited {
     color:#999999;
 }
 header {
+    width:100%;
     margin-top:70px;
+}
+main {
+    width:100%;
+}
+div.center {
+    margin:0 auto;
+    width:100%;
+    min-width:600px;
+    max-width:800px;
 }
 hr.summary-sep {
     width:100%;
@@ -142,13 +152,19 @@ ul.contents li {
 /* loader */
 #loader {
     width:100vw;
-    height:100vw;
+    height:100vh;
     text-align:center;
     font-size:3rem;
     background-color:green;
     z-index:1000;
 }
-
+#loader .description {
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top:-50%;
+    margin-left:-50%;
+}
 @keyframes appear-top {
     0% {
         opacity:0;

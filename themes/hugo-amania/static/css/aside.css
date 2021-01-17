@@ -1,5 +1,5 @@
 /* Aside */
-#aside {
+aside#aside {
     height:100%;
     width:350px;
     position:fixed;
@@ -12,57 +12,57 @@
     display:flex;
     flex-direction:column;
 }
-#aside.hidden {
+aside#aside.hidden {
     transform:translateX(350px);
     transition:0.3s ease-out;
 }
-#aside .top {
+aside#aside .top {
     background-color:#528aae;
     height:50px;
     flex-shrink:0;
     display:flex;
     justify-content: flex-end;
 }
-#aside .top button {
+aside#aside .top button {
     height:100%;
     width:50px;
     background:#ff5349;
 }
-#aside .container {
+aside#aside .container {
     overflow:auto;
     flex-grow:1;
 }
-#aside .aside-sep {
+aside#aside .aside-sep {
     height:1px;
     width:85%;
     margin:0 auto;
     color:#fefefe;
 }
-#aside .aside-menu ul li {
+aside#aside .aside-menu ul li {
     display:flex;
     flex-direction:row;
     justify-content: space-between;
     padding:7px 10%;
 }
-#aside .aside-menu ul li .aside-menu-item {
+aside#aside .aside-menu ul li .aside-menu-item {
     width:60%;
 }
-#aside .aside-menu ul li .date {
+aside#aside .aside-menu ul li .date {
     width:40%;
     margin:auto 0;
     text-align:right;
     color:#cccccc;
 }
-#aside .sidebar-nav ul li {
+aside#aside .sidebar-nav ul li {
     display:flex;
     flex-direction:row;
     justify-content: space-between;
     padding:7px 10%;
 }
-#aside .sidebar-nav ul li a.sidebar-nav-item {
+aside#aside .sidebar-nav ul li a.sidebar-nav-item {
     width:60%;
 } 
-#aside .sidebar-nav ul li small.date {
+aside#aside .sidebar-nav ul li small.date {
     width:40%;
     margin:auto 0;
     text-align:right;

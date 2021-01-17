@@ -1,9 +1,11 @@
 {{ define "header" }}
 <header id="tag-header">
-    <h1 class="title">Tags</h1>
-    <p class="description">{{ i18n "tagsDescription" }}</p>
-    <div class="tag-list-head">
-        <p class="counter">{{ i18n "tagsCount" (len .Data.Terms) }}</p>
+    <div class="center">
+        <h1 class="title">Tags</h1>
+        <p class="description">{{ i18n "tagsDescription" }}</p>
+        <div class="tag-list-head">
+            <p class="counter">{{ i18n "tagsCount" (len .Data.Terms) }}</p>
+        </div>
     </div>
 </header>
 {{ end }}
@@ -38,31 +40,33 @@
         }
     }
 </script>
-<main id="tag-term" class="appear-500ms">
-    <div class="sort-options">
-        <span>sort by</span> 
-        <button class="option alphabetical toggle-on" onclick="toggleViewOption(0)">Alphabetical</button>
-        <button class="option count" onclick="toggleViewOption(1)">Count</button>
+<main id="tag-term">
+    <div class="center appear-500ms">
+        <div class="sort-options">
+            <span>sort by</span> 
+            <button class="option alphabetical toggle-on" onclick="toggleViewOption(0)">Alphabetical</button>
+            <button class="option count" onclick="toggleViewOption(1)">Count</button>
+        </div>
+        {{ $baseurl := .Site.BaseURL }}
+        {{ $data := .Data }}
+        <ul class="tags alphabetical">
+            {{ range $key,$value := .Data.Terms.Alphabetical }}
+            <li>
+                <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
+                    {{ $value.Name }} <small>({{ $value.Count }})</small>
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+        <ul class="tags count hidden">
+            {{ range $key,$value := .Data.Terms.ByCount }}
+            <li>
+                <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
+                    {{ $value.Name }} <small>({{ $value.Count }})</small>
+                </a>
+            </li>
+            {{ end }}
+        </ul>
     </div>
-    {{ $baseurl := .Site.BaseURL }}
-    {{ $data := .Data }}
-    <ul class="tags alphabetical">
-        {{ range $key,$value := .Data.Terms.Alphabetical }}
-        <li>
-            <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
-                {{ $value.Name }} <small>({{ $value.Count }})</small>
-            </a>
-        </li>
-        {{ end }}
-    </ul>
-    <ul class="tags count hidden">
-        {{ range $key,$value := .Data.Terms.ByCount }}
-        <li>
-            <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
-                {{ $value.Name }} <small>({{ $value.Count }})</small>
-            </a>
-        </li>
-        {{ end }}
-    </ul>
 </main>
 {{ end }}

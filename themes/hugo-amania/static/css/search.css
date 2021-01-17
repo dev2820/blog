@@ -1,4 +1,25 @@
-#search {
-    width:100%;
-    height:100%;
+/* search page css */
+header#search-header {
+    
+}
+main#search-main {
+
+}
+main#search-main div.search-bar {
+    position:relative;
+}
+main#search-main div.search-bar input#search-input {
+    border: 5px solid black;
+    width: 100%;
+    height:70px;
+    font-size:2rem;
+    padding:10px 40px;
+    border-radius:40px;
+}
+main#search-main div.search-bar .icon {
+    position:absolute;
+    right:40px;
+    font-size:2rem;
+    top:50%;
+    margin-top:-1rem;
 }

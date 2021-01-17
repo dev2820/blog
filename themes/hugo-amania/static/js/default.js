@@ -5,13 +5,6 @@ function toggleAside(bool) {
     else
         e.classList.add('hidden');
 }
-function toggleSearch(bool) {
-    const e = document.getElementById('search');
-    if (e.classList.contains('hidden') && bool)
-        e.classList.remove('hidden');
-    else
-        e.classList.add('hidden');
-}
 //read json file
 function readTextFile(file, callback) {
     var rawFile = new XMLHttpRequest();

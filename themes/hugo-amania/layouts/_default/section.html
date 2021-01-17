@@ -1,3 +1,11 @@
+{{ define "header" }}
+<header>
+    <div class="center">
+        <h1 class="title">Section: {{.Title}}</h1>
+        <div class="description">{{ .Content }}</div>
+    </div>
+</header>
+{{ end }}
 {{ define "main" }}
 <script>
     function byDate() {
@@ -30,16 +38,16 @@
     }
 </script>
 <main id="sections">
-    <h1 class="title">Section: {{.Title}}</h1>
-    <div class="description">{{ .Content }}</div>
-    <button class="by-date option" onclick="byDate()">오래된글부터</button>
-    <button class="by-date-reverse option toggle-on" onclick="byDateReverse()">최신글부터</button>
-    <div class="by-date hidden">
-        {{ partial "by-date.html" . }}
+    <div class="center">
+        <button class="by-date option" onclick="byDate()">오래된글부터</button>
+        <button class="by-date-reverse option toggle-on" onclick="byDateReverse()">최신글부터</button>
+        <div class="by-date hidden">
+            {{ partial "by-date.html" . }}
+        </div>
+        <div class="by-date-reverse">
+            {{ partial "by-date-reverse.html" . }}
+        </div>
+        {{ partial "pagination.html" . }}
     </div>
-    <div class="by-date-reverse">
-        {{ partial "by-date-reverse.html" . }}
-    </div>
-    {{ partial "pagination.html" . }}
 </main>
 {{ end }}

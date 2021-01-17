@@ -12,5 +12,3 @@ draft = false
 [_build]
     list = false
 +++
-
-SEARCH

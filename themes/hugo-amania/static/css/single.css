@@ -78,10 +78,7 @@ main#single-main section#content {
 }
 main#single-main section#content .center {
     position:relative;
-    top:10px;
-    max-width:800px;
-    min-width:600px;
-    width:100%;
+    margin:0;
     overflow:hidden;
     display:flex;
     flex-direction:column;
