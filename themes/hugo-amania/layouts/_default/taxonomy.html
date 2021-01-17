@@ -1,3 +1,16 @@
+{{ define "header" }}
+<header class="taxonomy">
+    <h1>
+        {{if eq .Data.Plural "categories"}}{{ i18n "categoriesTitle" }} -
+        {{ else if eq .Data.Plural "subcategories"}}{{ i18n "subcategoriesTitle" }} -
+        {{ else if eq .Data.Plural "tags"}}{{ i18n "tagsTitle" }} -
+        {{ else }}
+        {{ end }}
+        {{ .Title }}
+    </h1>
+    <p>{{ i18n "postCount" (len .Pages) }}</p>
+</header>
+{{ end }}
 {{ define "main" }}
 <script>
     function byDate() {
@@ -30,20 +43,6 @@
     }
 </script>
 <main id="taxonomies">
-    {{ range $key,$value := .Data.Terms.Alphabetical }}
-        {{ .Title }}
-    {{end}}
-    <div class="taxonomy">
-        <h1>
-            {{if eq .Data.Plural "categories"}}{{ i18n "categoriesTitle" }} -
-            {{ else if eq .Data.Plural "subcategories"}}{{ i18n "subcategoriesTitle" }} -
-            {{ else if eq .Data.Plural "tags"}}{{ i18n "tagsTitle" }} -
-            {{ else }}
-            {{ end }}
-            {{ .Title }}
-        </h1>
-        <p>{{ i18n "postCount" (len .Pages) }}</p>
-    </div>
     <button class="by-date option" onclick="byDate()">오래된글부터</button>
     <button class="by-date-reverse option toggle-on" onclick="byDateReverse()">최신글부터</button>
     <div class="by-date hidden">
@@ -54,6 +53,5 @@
     </div>
     {{ partial "pagination.html" . }}
     </div>
-
 </main>
 {{ end }}

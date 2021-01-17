@@ -37,9 +37,9 @@ article.summary .cover-content a img.icon {
 }
 article.summary .cover-content a .title {
     font-size:1.7rem;
-    line-height:120%;
+    line-height:110%;
     font-weight:500;
-    margin-left:15px;
+    margin-left:10px;
     padding:0;
 }
 article.summary .cover-content .post-meta {

@@ -7,13 +7,8 @@
     <body id="body">
         {{- partial "topbar.html" . -}}
         {{- partial "aside.html" . -}}
-        {{- partial "search.html" . -}}
-        {{ if .IsHome }}
-            {{- block "title" . }}{{- end }}
-        {{ end }}
-        <div id="content">
+        {{- block "header" . }}{{- end }}
         {{- block "main" . }}{{- end }}
-        </div>
         {{- partial "footer.html" . -}}
         <script id="dsq-count-scr" src="//dev2820-github-io.disqus.com/count.js" async></script>
     </body>

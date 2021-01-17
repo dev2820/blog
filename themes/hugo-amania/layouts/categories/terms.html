@@ -1,7 +1,11 @@
-{{ define "main" }}
-<div id="category-term">
+{{ define "header" }}
+<header id="category-header">
   <h1 class="title">{{ i18n "categoriesTitle" }}</h1>
   <p class="description">{{ i18n "categoriesDescription" }}</p>
+</header>
+{{ end }}
+{{ define "main" }}
+<main id="category-term">
   <ul>
     {{ $baseurl := .Site.BaseURL }}
     {{ $data := .Data }}
@@ -52,5 +56,5 @@
     </li>
     {{ end }}
   </ul>
-</div>
+</main>
 {{ end }}

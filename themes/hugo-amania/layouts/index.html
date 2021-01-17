@@ -1,28 +1,28 @@
-{{ define "title" }}
-{{ if .Site.Params.cover }}
-<header id="home-head" class="card" style="background-image:url({{.Site.Params.cover}});">
-{{ else }}
-<header id="home-head" class="card" style="background-image:url('/images/default_background.jpg');">
-{{ end }}
-  <div class="container">
-  {{ partial "clock.html" . }}
-    <h1 class="title">{{.Title}}</h1>
-    <div class="content">{{.Content}}</div>
-  </div>
-</header>
-<div id="home-menu" class="card">
-  <ul>
-    {{ range .Site.Data.config.HomeMenu}}
-    <li onclick="goToUrl({{ .link | relURL }});">
-      <a href="{{ .link | relURL }}">{{ .title }}</a>
-    </li>
-    {{ end }}   
-  </ul>
-</div>
+{{ define "header" }}
+  {{ if .Site.Params.cover }}
+  <header id="home-header" class="card" style="background-image:url({{.Site.Params.cover}});">
+  {{ else }}
+  <header id="home-header" class="card" style="background-image:url('/images/default_background.jpg');">
+  {{ end }}
+    <div class="container">
+    {{ partial "clock.html" . }}
+      <h1 class="title">{{.Title}}</h1>
+      <div class="content">{{.Content}}</div>
+    </div>
+  </header>
 {{ end }}
 {{ define "main" }}
 <script src="/js/cardClassControl.js"></script>
-<div id="home-summary">
+<main id="home-main">
+  <div class="menu card">
+    <ul>
+      {{ range .Site.Data.config.HomeMenu}}
+      <li onclick="goToUrl({{ .link | relURL }});">
+        <a href="{{ .link | relURL }}">{{ .title }}</a>
+      </li>
+      {{ end }}   
+    </ul>
+  </div>
   <div class="center">
     {{ range .Paginator.Pages }}
     {{ .Render "summary" }}
@@ -30,5 +30,5 @@
     {{ end }}
     {{ partial "pagination.html" . }}
   </div>
-</div>
+</main>
 {{ end }}

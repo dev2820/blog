@@ -1,20 +1,17 @@
-{{ define "title" }}
-   title{{ .Title }} &ndash; {{ .Site.Title }}
-{{ end }}
-{{ define "main" }}
+{{ define "header" }}
 {{ if .Params.cover }}
-  {{ with .Resources.GetMatch (string .Params.cover) }}
-    {{ $image := . }}
-    {{ $width := (div (mul 450 $image.Width) $image.Height) }}
-    {{ $ts := slice $width "450" }}
-    {{ $ts := string (delimit $ts "x") }}
-    {{ $ts := slice $ts "smart" }}
-    {{ $ts := string (delimit $ts " ") }}
-    {{ $image := $image.Fill $ts }}
-    <header id="banner" style="background-image:url({{ $image.RelPermalink }});">
-  {{ end }}
+{{ with .Resources.GetMatch (string .Params.cover) }}
+  {{ $image := . }}
+  {{ $width := (div (mul 450 $image.Width) $image.Height) }}
+  {{ $ts := slice $width "450" }}
+  {{ $ts := string (delimit $ts "x") }}
+  {{ $ts := slice $ts "smart" }}
+  {{ $ts := string (delimit $ts " ") }}
+  {{ $image := $image.Fill $ts }}
+  <header id="single-header" style="background-image:url({{ $image.RelPermalink }});">
+{{ end }}
 {{ else }}
-<header id="banner" style="background-image:url({{"/images/ocean.jpg"}});">
+<header id="single-header" style="background-image:url({{"/images/ocean.jpg"}});">
 {{ end }}
   <div class="title appear-500ms">
     <h1 id="title">{{ .Title }}</h1>
@@ -31,35 +28,40 @@
     {{end}}
   </div>
 </header>
-<section id="main">
-  <div class="left">
-  </div>
-  <div class="center appear-1000ms">
-    <div>
-          <article class="content">
-            {{ .Content }}
-          </article>
+{{ end }}
+{{ define "main" }}
+<main id="single-main">
+  <section id="content">
+    <div class="left">
+      <!--좌측 공간 만들기용 div-->
     </div>
-  </div>
-  <div class="right">
-    {{ partial "table_of_content.html" .}}    
-  </div>
-</section>
-<aside id="meta">
-  <div class="center">
-    {{ partial "section-move.html" . }}
-    {{ with .Params.topics }}
-    <ul id="topics">
-      {{ range . }}
-        <li><a href="{{ "topics" | absURL}}{{ . | urlize }}">{{ . }}</a> </li>
+    <div class="center appear-1000ms">
+      <div>
+            <article class="content">
+              {{ .Content }}
+            </article>
+      </div>
+    </div>
+    <div class="right">
+      {{ partial "table_of_content.html" .}}    
+    </div>
+  </section>
+  <aside id="meta">
+    <div class="center">
+      {{ partial "section-move.html" . }}
+      {{ with .Params.topics }}
+      <ul id="topics">
+        {{ range . }}
+          <li><a href="{{ "topics" | absURL}}{{ . | urlize }}">{{ . }}</a> </li>
+        {{ end }}
+      </ul>
       {{ end }}
-    </ul>
-    {{ end }}
-    {{ partial "tag_list.html" . }}
-    {{ partial "profile-in-article.html" . }}
-    {{ partial "relate-content.html" . }}
-    {{ template "_internal/disqus.html" . }}
-  </div>
-</aside>
+      {{ partial "tag_list.html" . }}
+      {{ partial "profile-in-article.html" . }}
+      {{ partial "relate-content.html" . }}
+      {{ template "_internal/disqus.html" . }}
+    </div>
+  </aside>
+</main>
 <script src="/js/cardClassControl.js"></script>
 {{ end }}

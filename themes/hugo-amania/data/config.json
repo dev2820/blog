@@ -11,6 +11,10 @@
         {
             "title": "Tags",
             "link": "/tags"
+        },
+        {
+            "title": "Search",
+            "link": "/search"
         }
     ]
 }
