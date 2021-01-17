@@ -12,12 +12,16 @@ header#tag-header .title {
     line-height:3rem;
     margin:30px 0;
 }
+header#tag-header .description {
+    margin-bottom:30px;
+}
 header#tag-header .tag-list-head {
     margin-bottom:20px;
     display:flex;
     flex-direction:row;
     justify-content: space-between;
 }
+
 main#tag-term {
     position:relative;
     display:flex;
@@ -28,17 +32,10 @@ main#tag-term {
     margin:0 auto;
     padding-bottom:70px;
 }
-main#tag-term .description {
-    margin-bottom:30px;
-}
 main#tag-term .sort-options {
     display:flex;
     flex-direction:row;
     margin-bottom:10px;
-}
-main#tag-term .tag-list ul li{
-    margin-right:8px;
-    margin-bottom:12px;
 }
 main#tag-term .sort-options span {
     margin-right:7px;
@@ -62,8 +59,8 @@ ul.tags li{
     text-align:center;
     background-color:#eeeeee;
     border:1px solid #eeeeee;
-    margin-right:4px;
-    margin-bottom:4px;
+    margin-right:8px;
+    margin-bottom:8px;
     border-radius: 4px;
     transition:3s;
 }

@@ -46,9 +46,6 @@
     </div>
     {{ $baseurl := .Site.BaseURL }}
     {{ $data := .Data }}
-    <div class="tags alphabetical">
-
-    </div>
     <ul class="tags alphabetical">
         {{ range $key,$value := .Data.Terms.Alphabetical }}
         <li>
