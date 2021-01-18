@@ -18,24 +18,10 @@ function readTextFile(file, callback) {
     rawFile.send(null);
 }
 function scrollToTop() {
-    let position = document.body.scrollTop || document.documentElement.scrollTop;
-    let scrollAnimation = null;
-
-    if (position) {
-        window.scrollBy(0, -Math.max(1, Math.floor(position / 10)));
-        scrollAnimation = setTimeout("scrollToTop()", 10);
-    } else clearTimeout(scrollAnimation);
-    
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function scrollToBottom() {
-    let position = document.body.scrollTop || document.documentElement.scrollTop;
-    let scrollAnimation = null;
-    
-    if (position) {
-        window.scrollBy(0, Math.max(1, Math.floor(position / 10)));
-        scrollAnimation = setTimeout("scrollToBottom()", 10);
-    } else clearTimeout(scrollAnimation);
-    
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
 }
 function goToUrl(url) {
     window.location.href = url;
