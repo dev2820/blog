@@ -103,6 +103,7 @@ hr.summary-sep {
 }
 .hidden {
     display:none;
+    z-index:-1;
 }
 .appear-500ms {
     opacity:0;

@@ -37,6 +37,7 @@ enableRobotsTXT = true
     siteLogo = "/images/site_logo_dark.png"
     bannerBottom = "/images/banner_bottom.png"
     defaultSummaryImage = "/images/default_summary.png"
+    asideBackgroundImage = "/images/space.jpg"
 
 [taxonomies]
     category = "categories"

@@ -1,13 +1,13 @@
 <aside id="aside" class="hidden">
-    <div class="right-container card">
-        <div class="top">
-            <button onclick="event.stopPropagation(); toggleAside(false)">
-                <i class="fa fa-times fa-3x"></i>
-            </button>
+    <div class="profile-container">
+        <div class="aside-image" style="background-image:url('{{ .Site.Params.asideBackgroundImage | relURL}}')">
         </div>
+        <button class="hide-aside" onclick="event.stopPropagation(); toggleAside(false)">
+            <i class="fa fa-times fa-3x"></i>
+        </button>
         {{ partial "profile.html" .}}
     </div>
-    <div class="center-container card">
+    <div class="navigation-container card">
         <div class="aside-menu">
             <ul>
                 <li>
@@ -29,22 +29,34 @@
             </ul>
         </div>
         <nav class="sidebar-nav">
-            {{ $currentPage := . }}
-            {{ $allPages := .Site.RegularPages }}
-            <ul>
-                {{ range .Site.Menus.main }}
+            {{ $site := .Site }}
+            {{ $baseurl := .Site.BaseURL }}
+            {{ $data := .Data }}
+            <ul class="categories">
+                {{ range $key,$value := $site.Taxonomies.categories.Alphabetical }}
                 <li>
-                    {{ $posts := (where $allPages "Section" "==" .Name) }}
-                    {{ $postCount := len $posts }}
-                    <a class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}"
-                        href="{{ .URL }}" title="{{ .Title }}">{{ .Name }} <small>({{$postCount}})</small></a>
-                    {{ range first 1 $posts }}<small class="date">{{ .Date.Format "- 2006/01/02" }}</small>{{end}}
+                    <i class="fas fa-folder icon"></i>
+                    <a href="{{ $baseurl }}categories/{{ $value.Name | urlize }}">
+                        <p class="name">{{ humanize $value.Name }}<small class="num">({{ $value.Count }})</small></p> 
+                    </a>
                 </li>
+                {{ $list := ( index $site.Data.config.subCategoryList $value.Name ) }}
+                <ul class="subcategories">
+                    {{ range $key, $value := $site.Taxonomies.subcategories.Alphabetical }}
+                    {{ if in $list $value.Name }}
+                    <li>
+                        <i class="fas fa-folder icon"></i>
+                        <a href="{{ $baseurl }}subcategories/{{ $value.Name | urlize }}">
+                            <p class="name">{{ humanize $value.Name }}<small class="num">({{ $value.Count }})</small></p>     
+                        </a>
+                    </li>
+                    {{ end }}
+                    {{ end }}
+                </ul>
                 {{ end }}
             </ul>
         </nav>
     </div>
-    <div class="left-container" onclick="event.stopPropagation(); toggleAside(false)">
-        empty space
+    <div class="empty-container" onclick="event.stopPropagation(); toggleAside(false)">
     </div>
 </aside>

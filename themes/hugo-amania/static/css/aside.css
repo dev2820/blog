@@ -5,39 +5,57 @@ aside#aside {
     position:fixed;
     right:0;
     top:0;
-    transform:translateX(0);
-    transition:0.3s ease-out;
     z-index:60;
     display:flex;
     flex-direction:row-reverse;
+    opacity:1;
+    transition:opacity 0.3s;
 }
 aside#aside.hidden {
-    transform:translateX(100%);
-    transition:0.3s ease-out;
+    z-index:-1;
+    opacity:0;
+    transition:opacity 0.3s;
+    display:none;
 }
-aside#aside div.right-container {
+aside#aside div.profile-container {
     width:20%;
     background-color:#152238;
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    transform:translateX(0);
 }
-aside#aside div.center-container {
+aside#aside div.profile-container button.hide-aside {
+    height:50px;
+    width:50px;
+    position:absolute;
+    top:0;
+    right:0;
+}
+aside#aside div.profile-container div.aside-image {
+    height:100%;
+    width:100%;
+    filter:blur(4px);
+    position:absolute;
+    top:0;
+}
+aside#aside div.profile-container div.profile {
+    position: absolute;
+    width:100%;
+    top:25%;
+}
+aside#aside div.navigation-container {
     width:20%;
-    padding-top:50px;
+    padding:50px 30px;
     background-color:#152238;
     overflow:auto;
 }
-aside#aside div.left-container {
+aside#aside div.navigation-container ul.categories ul.subcategories li{
+    padding-left:20px;
+}
+aside#aside div.empty-container {
     width:60%;
     background-color:rgba(0,0,0,0.5);
-}
-aside#aside .top {
-    height:50px;
-    flex-shrink:0;
-    display:flex;
-    justify-content: flex-end;
-}
-aside#aside .top button {
-    height:100%;
-    width:50px;
 }
 aside#aside .container {
     overflow:auto;
@@ -52,7 +70,7 @@ aside#aside .aside-sep {
 aside#aside .aside-menu ul li {
     display:flex;
     flex-direction:row;
-    padding:7px 10%;
+    margin-bottom:10px;
 }
 aside#aside .aside-menu ul li .icon {
     margin:auto 0;
@@ -61,15 +79,9 @@ aside#aside .aside-menu ul li .icon {
 aside#aside .sidebar-nav ul li {
     display:flex;
     flex-direction:row;
-    justify-content: space-between;
-    padding:7px 10%;
+    margin-bottom:10px;
 }
-aside#aside .sidebar-nav ul li a.sidebar-nav-item {
-    width:60%;
-} 
-aside#aside .sidebar-nav ul li small.date {
-    width:40%;
+aside#aside .sidebar-nav ul li .icon {
     margin:auto 0;
-    text-align:right;
-    color:#cccccc;
+    width:30px;
 }
