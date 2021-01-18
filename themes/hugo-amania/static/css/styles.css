@@ -105,6 +105,11 @@ hr.summary-sep {
     display:none;
     z-index:-1;
 }
+.appear-300ms {
+    opacity:0;
+    animation: appear-top 0.5s linear 0.3s 1;
+    animation-fill-mode: forwards;
+}
 .appear-500ms {
     opacity:0;
     animation: appear-top 0.5s linear 0.5s 1;

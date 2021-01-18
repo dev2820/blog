@@ -8,54 +8,61 @@ aside#aside {
     z-index:60;
     display:flex;
     flex-direction:row-reverse;
+    background-color:rgba(0,0,0,0.5);
     opacity:1;
-    transition:opacity 0.3s;
+    transition:all 0.3s;
 }
 aside#aside.hidden {
     z-index:-1;
     opacity:0;
-    transition:opacity 0.3s;
-    display:none;
 }
-aside#aside div.profile-container {
-    width:20%;
+aside#aside.hidden div.right-container {
+    transform:translateX(100%);
+}
+aside#aside div.right-container {
+    width:40%;
+    display:flex;
+    flex-direction:row-reverse;
+    transform:translateX(0%);
+    transition:all 1s;
+}
+aside#aside div.right-container div.profile-container {
+    width:50%;
     background-color:#152238;
     display:flex;
     flex-direction:column;
     position:relative;
-    transform:translateX(0);
 }
-aside#aside div.profile-container button.hide-aside {
+aside#aside div.right-container div.profile-container button.hide-aside {
     height:50px;
     width:50px;
     position:absolute;
     top:0;
     right:0;
 }
-aside#aside div.profile-container div.aside-image {
+aside#aside div.right-container div.profile-container div.aside-image {
     height:100%;
     width:100%;
     filter:blur(4px);
     position:absolute;
     top:0;
 }
-aside#aside div.profile-container div.profile {
+aside#aside div.right-container div.profile-container div.profile {
     position: absolute;
     width:100%;
     top:25%;
 }
-aside#aside div.navigation-container {
-    width:20%;
+aside#aside div.right-container div.navigation-container {
+    width:50%;
     padding:50px 30px;
     background-color:#152238;
     overflow:auto;
 }
-aside#aside div.navigation-container ul.categories ul.subcategories li{
+aside#aside div.right-container div.navigation-container ul.categories ul.subcategories li{
     padding-left:20px;
 }
-aside#aside div.empty-container {
+aside#aside div.left-container {
     width:60%;
-    background-color:rgba(0,0,0,0.5);
 }
 aside#aside .container {
     overflow:auto;
