@@ -1,23 +1,35 @@
 /* Aside */
 aside#aside {
     height:100%;
-    width:350px;
+    width:100%;
     position:fixed;
     right:0;
     top:0;
-    transform:translateX(0px);
+    transform:translateX(0);
     transition:0.3s ease-out;
-    background-color:#152238;
     z-index:60;
     display:flex;
-    flex-direction:column;
+    flex-direction:row-reverse;
 }
 aside#aside.hidden {
-    transform:translateX(350px);
+    transform:translateX(100%);
     transition:0.3s ease-out;
 }
+aside#aside div.right-container {
+    width:20%;
+    background-color:#152238;
+}
+aside#aside div.center-container {
+    width:20%;
+    padding-top:50px;
+    background-color:#152238;
+    overflow:auto;
+}
+aside#aside div.left-container {
+    width:60%;
+    background-color:rgba(0,0,0,0.5);
+}
 aside#aside .top {
-    background-color:#528aae;
     height:50px;
     flex-shrink:0;
     display:flex;
@@ -26,7 +38,6 @@ aside#aside .top {
 aside#aside .top button {
     height:100%;
     width:50px;
-    background:#ff5349;
 }
 aside#aside .container {
     overflow:auto;
@@ -41,17 +52,11 @@ aside#aside .aside-sep {
 aside#aside .aside-menu ul li {
     display:flex;
     flex-direction:row;
-    justify-content: space-between;
     padding:7px 10%;
 }
-aside#aside .aside-menu ul li .aside-menu-item {
-    width:60%;
-}
-aside#aside .aside-menu ul li .date {
-    width:40%;
+aside#aside .aside-menu ul li .icon {
     margin:auto 0;
-    text-align:right;
-    color:#cccccc;
+    width:30px;
 }
 aside#aside .sidebar-nav ul li {
     display:flex;

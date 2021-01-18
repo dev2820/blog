@@ -1,23 +1,33 @@
-<aside id="aside" class="card hidden">
-    <div class="top">
-        <button onclick="event.stopPropagation(); toggleAside(false)">
-            <i class="fa fa-times fa-3x"></i>
-        </button>
-    </div>
-    <div class="container">
+<aside id="aside" class="hidden">
+    <div class="right-container card">
+        <div class="top">
+            <button onclick="event.stopPropagation(); toggleAside(false)">
+                <i class="fa fa-times fa-3x"></i>
+            </button>
+        </div>
         {{ partial "profile.html" .}}
-        <hr class="aside-sep">
+    </div>
+    <div class="center-container card">
         <div class="aside-menu">
             <ul>
-                <li><a href="{{.Site.BaseURL}}/categories">{{i18n "menuCategories"}} {{ i18n "menuSet"}}</a></li>
-                <li><a href="{{.Site.BaseURL}}/tags">{{i18n "menuTags"}} {{ i18n "menuSet"}}</a></li>
-                <li><a class="aside-menu-item" href="{{.Site.BaseURL}}">{{ i18n "menuAllPages" }} {{ i18n "menuSet"}}
-                        <small>({{(len .Site.RegularPages)}})</small></a>
-                    {{ range first 1 .Site.RegularPages }}
-                    <small class="date">{{ .Date.Format "- 2006/01/02" }}</small>{{end}}</li>
+                <li>
+                    <i class="fas fa-home icon"></i>
+                    <a href="{{.Site.BaseURL}}">{{ i18n "menuHome" }}</a>
+                </li>
+                <li>
+                    <i class="fas fa-list icon"></i>
+                    <a href="{{.Site.BaseURL}}/categories">{{i18n "menuCategories"}}</a>
+                </li>
+                <li>
+                    <i class="fas fa-tags icon"></i>
+                    <a href="{{.Site.BaseURL}}/tags">{{i18n "menuTags"}}</a>
+                </li>
+                <li>
+                    <i class="fas fa-search icon"></i>
+                    <a href="{{.Site.BaseURL}}/search">{{i18n "menuSearch"}}</a>
+                </li>
             </ul>
         </div>
-        <hr class="aside-sep">
         <nav class="sidebar-nav">
             {{ $currentPage := . }}
             {{ $allPages := .Site.RegularPages }}
@@ -30,9 +40,11 @@
                         href="{{ .URL }}" title="{{ .Title }}">{{ .Name }} <small>({{$postCount}})</small></a>
                     {{ range first 1 $posts }}<small class="date">{{ .Date.Format "- 2006/01/02" }}</small>{{end}}
                 </li>
-                <hr class="aside-sep">
                 {{ end }}
             </ul>
         </nav>
+    </div>
+    <div class="left-container" onclick="event.stopPropagation(); toggleAside(false)">
+        empty space
     </div>
 </aside>

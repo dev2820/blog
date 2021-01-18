@@ -4,11 +4,17 @@
 [menuAbout]
 other = "About"
 
+[menuHome]
+other = "홈"
+
 [menuCategories]
 other = "카테고리"
 
 [menuTags]
 other = "태그"
+
+[menuSearch]
+other = "검색"
 
 [menuProjects]
 other = "프로젝트"
