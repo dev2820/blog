@@ -38,7 +38,7 @@
                     <li>
                         <i class="fas fa-folder icon"></i>
                         <a href="{{ $baseurl }}categories/{{ $value.Name | urlize }}">
-                            <p class="name">{{ humanize $value.Name }}<small class="num">({{ $value.Count }})</small></p> 
+                            <p class="name">{{ humanize $value.Name }}<small class="num"> ({{ $value.Count }})</small></p> 
                         </a>
                     </li>
                     {{ $list := ( index $site.Data.config.subCategoryList $value.Name ) }}

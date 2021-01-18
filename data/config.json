@@ -1,11 +1,11 @@
 {
     "HomeMenu":[
         {
-            "title": "About me",
+            "title": "About",
             "link": "/about"
         },
         {
-            "title": "Category",
+            "title": "Categories",
             "link": "/categories"
         },
         {

@@ -7,30 +7,10 @@
 {{ end }}
     <button onclick="scrollToTop()" class="scroll-to-top card">
       <i class="fa fa-angle-double-up"></i>
-      <span>{{ i18n "footerToTheTop" }}</span>
     </button>
-    <!-- <div class="share">    
-      <a
-        href="//www.facebook.com/sharer.php?src=bm&u={{ .Permalink }}&t={{ .Title }}"
-        onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
-        ><i class="fa fa-facebook"></i
-      ></a>
-      <a
-        href="//twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}&tw_p=tweetbutton"
-        onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
-        ><i class="fa fa-twitter"></i
-      ></a>
-      <a
-        href="//getpocket.com/edit?url={{ .Permalink }}&title={{ .Title }}"
-        onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
-        ><i class="fa fa-get-pocket"></i
-      ></a>
-      <a
-        href="//plus.google.com/share?url={{ .Permalink }}"
-        onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
-        ><i class="fa fa-google-plus"></i
-      ></a>
-    </div> -->
+    <button onclick="scrollToBottom()" class="scroll-to-bottom card">
+      <i class="fa fa-angle-double-down"></i>
+    </button>
     <!-- {{.Site.Copyright}} -->
     {{- partial "share.html" . -}}
     <span>COPYRIGHT (C) <a href="https://dev2820.github.io"> GIJO YANG (DEV2820).</a></span>

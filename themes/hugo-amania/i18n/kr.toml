@@ -43,8 +43,11 @@ other = "더 보기"
 ###################
 # Footer
 ###################
-[footerToTheTop]
+[toTop]
 other = "위로"
+
+[toBottom]
+other = "아래로"
 
 ###################
 # Pagination
