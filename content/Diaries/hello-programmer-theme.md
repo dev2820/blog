@@ -4,6 +4,7 @@ title= "Hello Programmer Theme"
 date= 2020-08-08T19:53:55+09:00
 categories= ["일상"]
 tags= []
+subcategories= ["일상"]
 cover= "/images/space.jpg"
 draft= true
 +++

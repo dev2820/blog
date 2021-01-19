@@ -1,8 +1,10 @@
 +++
 title= "NAS 용 SPA만들기 (0)"
 date= 2020-09-18T18:20:55+09:00
-categories= ["Nas_project"]
+categories= ["Projects"]
 tags= ["projects","DIY"]
+subcategories= ["Nas_project"]
+
 cover= ""
 draft= false
 +++
@@ -22,4 +24,4 @@ Front - Vue.js(vue-cli4)
 Back - Node.js(express)
 DB - db는 사용되지 않는다.
 
-언어는 전부 JavaScript(ES6)로 짤 예정이고 서버는 Docker 를 이용해 컨테이너화 하여 관리할 생각이다. 
+언어는 전부 JavaScript(ES6)로 짤 예정이고 서버는 Docker를 이용해 컨테이너화 하여 관리할 생각이다. 

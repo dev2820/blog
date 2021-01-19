@@ -2,8 +2,8 @@
 title= "웹으로 즐기는 코딩 code-server"
 date= 2020-09-23T12:19:54+09:00
 categories= ["일상"]
-tags= ["code-server","웹에서 코딩","신기함"]
-subcategories = ["test"]
+tags= ["code-server","웹에서 코딩","추천"]
+subcategories = ["추천"]
 cover= ""
 draft = false
 +++
