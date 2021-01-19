@@ -31,7 +31,6 @@ enableRobotsTXT = true
  
 [params]
     description = "dev2820의 개발일지 저장소"
-    cover = "/images/home_banner.png"
     notFound = "/images/404NotFound.png"
     logo = "/images/logo.png"
     siteLogo = "/images/site_logo_dark.png"

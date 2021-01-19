@@ -1,6 +1,6 @@
 {{ define "header" }}
-  {{ if .Site.Params.cover }}
-  <header id="home-header" class="card" style="background-image:url({{.Site.Params.cover}});">
+  {{ if .Params.cover }}
+  <header id="home-header" class="card" style="background-image:url({{.Params.cover}});">
   {{ else }}
   <header id="home-header" class="card" style="background-image:url('/images/default_background.jpg');">
   {{ end }}
