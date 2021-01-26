@@ -20,7 +20,7 @@ aside#aside.hidden div.right-container {
     transform:translateX(100%);
 }
 aside#aside div.right-container {
-    width:40%;
+    width:800px;
     display:flex;
     flex-direction:row-reverse;
     transform:translateX(0%);
