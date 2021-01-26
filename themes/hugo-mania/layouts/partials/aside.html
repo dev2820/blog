@@ -48,7 +48,7 @@
                         <li>
                             <i class="fas fa-folder icon"></i>
                             <a href="{{ $baseurl }}subcategories/{{ $value.Name | urlize }}">
-                                <p class="name">{{ humanize $value.Name }}<small class="num">({{ $value.Count }})</small></p>     
+                                <p class="name">{{ humanize $value.Name }}<small class="num"> ({{ $value.Count }})</small></p>     
                             </a>
                         </li>
                         {{ end }}
@@ -59,6 +59,6 @@
             </nav>
         </div>
     </div>
-    <div class="empty-container" onclick="event.stopPropagation(); toggleAside(false)">
+    <div class="left-container" onclick="event.stopPropagation(); toggleAside(false);">
     </div>
 </aside>

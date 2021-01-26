@@ -36,11 +36,11 @@ Hugo-mania Theme CSS
 }
 html,
 body {
-  margin: 0;
-  padding: 0;
-  color: #505050;
-  font-family: 'Noto Sans KR', sans-serif;
-  line-height: 1.73em;
+    margin: 0;
+    padding: 0;
+    color: #505050;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.73em;
 }
 body {
     scroll-behavior: smooth;
@@ -161,7 +161,7 @@ ul.contents li {
     height:100vh;
     text-align:center;
     font-size:3rem;
-    background-color:green;
+    background-color:white;
     z-index:1000;
 }
 #loader .description {
@@ -170,6 +170,7 @@ ul.contents li {
     left:50%;
     margin-top:-50%;
     margin-left:-50%;
+    color:black;
 }
 @keyframes appear-top {
     0% {

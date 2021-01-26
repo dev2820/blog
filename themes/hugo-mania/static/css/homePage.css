@@ -2,9 +2,8 @@
 header#home-header {
     height: 450px;
     background-attachment: fixed;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
-    background-size: cover;
     position:fixed;
     display:flex;
     flex-direction:column;
@@ -18,8 +17,7 @@ header#home-header .container {
     flex-direction:column;
     justify-content: center;
     box-sizing:content-box;
-    background-color:rgba(0,0,0,0.5);
-    /* backdrop-filter:brightness(50%); */
+    backdrop-filter:brightness(30%);
 }
 header#home-header .container .title {
     color:#cccccc;
@@ -38,8 +36,7 @@ main#home-main {
   z-index:10;
   background-color:white;
   position:relative;
-  top:450px;
-  margin-top:0;
+  margin-top:450px;
 }
 main#home-main .menu {
     width:100%;

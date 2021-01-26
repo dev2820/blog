@@ -6,6 +6,9 @@ nav.section-move {
     justify-content: space-between;
     margin-bottom:50px;
 }
+nav.section-move a {
+    color:#999999;
+}
 nav.section-move .previous,
 nav.section-move .next {
     background-color:#efefef;
@@ -19,6 +22,7 @@ nav.section-move .next {
     display:flex;
     flex-direction:row;
     transition:0.3s;
+    text-decoration: none;
 }
 nav.section-move .previous:hover,
 nav.section-move .next:hover {
@@ -30,19 +34,26 @@ nav.section-move .previous .title,
 nav.section-move .next .title {
     position:relative;
     display:flex;
+    flex-grow:1;
+}
+nav.section-move .previous .title {
+    justify-content: flex-start;
+}
+nav.section-move .next .title {
+    justify-content: flex-end;
 }
 nav.section-move .title small {
     position:absolute;
     color:#999999;
     top:0px;
 }
-nav.section-move .title a {
+nav.section-move .title span {
     margin:auto 0;
-    color:black;
+    color:#999999;
     transition:0.3s;
 }
-nav.section-move .previous:hover .title a,
-nav.section-move .next:hover .title a {
+nav.section-move .previous:hover .title span,
+nav.section-move .next:hover .title span {
     text-decoration: none;
     color:#3EB489;
     transition:0.3s;
@@ -57,7 +68,7 @@ nav.section-move .previous small {
 }
 nav.section-move .previous .icon {
     margin:auto 20px auto 10px;
-    font-size:2rem;
+    font-size:1.7rem;
 }
 nav.section-move .next {
     justify-content: flex-end;

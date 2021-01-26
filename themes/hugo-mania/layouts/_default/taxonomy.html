@@ -45,9 +45,11 @@
     }
 </script>
 <main id="taxonomies">
-    <div class="center">    
-        <button class="by-date option" onclick="byDate()">오래된글부터</button>
-        <button class="by-date-reverse option toggle-on" onclick="byDateReverse()">최신글부터</button>
+    <div class="center">   
+        <div class="sort-options">
+            <button class="by-date option" onclick="byDate()">오래된글부터</button>
+            <button class="by-date-reverse option toggle-on" onclick="byDateReverse()">최신글부터</button>        
+        </div> 
         <div class="by-date hidden">
             {{ partial "by-date.html" . }}
         </div>

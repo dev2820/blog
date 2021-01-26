@@ -19,6 +19,7 @@
     ],   
     "subCategoryList": {
         "what_is_hugo":["hugo"],
-        "일상":["test","추천","일상"]
+        "일상":["test","추천","일상"],
+        "projects":["nas_project"]
     }   
 }

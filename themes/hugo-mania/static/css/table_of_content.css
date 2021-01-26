@@ -1,8 +1,8 @@
 /* post-toc */
 .post-toc {
     position:sticky;
-    width:230px;
-    max-height:500px;
+    width:250px;
+    max-height:60vh;
     top:70px;
     padding-left:30px;
     overflow:auto;

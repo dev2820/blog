@@ -11,17 +11,15 @@
   <header id="single-header" style="background-image:url({{ $image.RelPermalink }});">
 {{ end }}
 {{ else }}
-<header id="single-header" style="background-image:url({{"/images/ocean.jpg"}});">
+<header id="single-header" style="background-image:url({{"/images/default_banner.jpg"}});">
 {{ end }}
-  <div class="title appear-500ms">
+  <div class="title appear-300ms">
     <h1 id="title">{{ .Title }}</h1>
     <section>
       <p id="date"> {{ i18n "postDatetime" .Date }} </p>
       <p id="wordcount"> {{ .ReadingTime }} <i class="far fa-clock"></i>  </p>
     </section>
-    <small class="breadcrumb">
-      {{ partial "breadcrumb.html" .}}
-    </small>
+    {{ partial "breadcrumb.html" .}}
     {{ $author := .Site.Author.name }}
     {{with .Site.GetPage "/about"}}
     <p class="author">by <a href="{{.Permalink}}">{{ $author }}</a></p>
@@ -35,7 +33,7 @@
     <div class="left">
       <!--좌측 공간 만들기용 div-->
     </div>
-    <div class="center appear-1000ms">
+    <div class="center appear-500ms">
       <div>
             <article class="content">
               {{ .Content }}

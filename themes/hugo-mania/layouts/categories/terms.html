@@ -23,7 +23,7 @@
                   {{ with .Resources.GetMatch (string .Params.icon) }}
                     <div class="cover" style="background-image:url({{ .RelPermalink }});"></div>
                   {{ else }}
-                    <div class="cover" style="background-image:url('/static/images/ocean.jpg');"></div>
+                    <div class="cover" style="background-image:url('/static/cover-icon.png');"></div>
                   {{ end }}
                 {{ else }}
                   <div class="cover"></div>

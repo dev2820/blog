@@ -8,7 +8,6 @@
     justify-content: center;
     text-align:center;
     z-index:10;
-    top:450px;
 }
 #footer span {
     font-size:0.7rem;
@@ -23,10 +22,10 @@
     border-radius:50%;
     background-color:#cccccc;
     font-size:1.2rem;
-    width:70px;
-    height:70px;
+    width:60px;
+    height:60px;
     position:fixed;
-    bottom:30px;
+    bottom:100px;
     right:30px;
     display:flex;
     flex-direction:column;
@@ -44,11 +43,11 @@
     border-radius:50%;
     background-color:#cccccc;
     font-size:1.2rem;
-    width:70px;
-    height:70px;
+    width:60px;
+    height:60px;
     position:fixed;
     bottom:30px;
-    right:110px;
+    right:30px;
     display:flex;
     flex-direction:column;
     justify-content: center;

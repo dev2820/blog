@@ -1,21 +1,21 @@
 <nav class="section-move">
     {{ with .PrevInSection }}
-      <div class="previous card float"> 
+      <a href="{{.Permalink}}" class="previous card float"> 
         <i class="fas fa-angle-double-left icon"></i>
         <div class="title">
           <small>prev</small>
-          <a href="{{.Permalink}}">{{.Title | truncate 15}}</a>
+          <span>{{.Title | truncate 20}}</span>
         </div>
-      </div>
+      </a>
     {{ end }}
     {{ with .NextInSection }}
-      <div class="next card float">
+      <a href="{{.Permalink}}" class="next card float">
         <div class="title">
           <small>next</small>  
-          <a href="{{.Permalink}}">{{.Title | truncate 15}}</a>
+          <span>{{.Title | truncate 20}}</span>
         </div>
         <i class="fas fa-angle-double-right icon"></i>
-      </div>
+      </a>
     {{ end }}
 </nav>
   

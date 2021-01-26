@@ -5,6 +5,7 @@ header#single-header {
     top:0;
     height:450px;
     width:100%;
+    z-index:4;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -39,7 +40,7 @@ header#single-header .title section {
     top:65%;
     margin:0 auto;
 }
-header#single-header .title .breadcrumb {
+header#single-header .title .breadcrumbnav {
     position:absolute;
     top:10%;
     display:block;
@@ -63,6 +64,7 @@ main#single-main {
     flex-direction:column;
     justify-content: center;
     z-index:5;
+    margin-top:450px;
 }
 main#single-main section#content {
     background-color:white;
@@ -74,7 +76,6 @@ main#single-main section#content {
     flex-direction:row;
     justify-content: center;
     z-index:10;
-    top:450px;
 }
 main#single-main section#content .center {
     position:relative;
@@ -85,13 +86,12 @@ main#single-main section#content .center {
 }
 main#single-main section#content .right,
 main#single-main section#content .left {
-    width:230px;
+    width:250px;
     display:flex;
 }
 main#single-main aside#meta {
     background-color:white;
     position:relative;
-    top:450px;
     padding:100px 20px;
     width:100%;
     margin:0 auto;
