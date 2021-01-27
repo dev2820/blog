@@ -1,6 +1,6 @@
 <nav class="section-move">
     {{ with .PrevInSection }}
-      <a href="{{.Permalink}}" class="previous card float"> 
+      <a href="{{.Permalink}}" class="previous slide-left"> 
         <i class="fas fa-angle-double-left icon"></i>
         <div class="title">
           <small>prev</small>
@@ -9,7 +9,7 @@
       </a>
     {{ end }}
     {{ with .NextInSection }}
-      <a href="{{.Permalink}}" class="next card float">
+      <a href="{{.Permalink}}" class="next slide-right">
         <div class="title">
           <small>next</small>  
           <span>{{.Title | truncate 20}}</span>

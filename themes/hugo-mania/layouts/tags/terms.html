@@ -1,7 +1,7 @@
 {{ define "header" }}
 <header id="tag-header">
-    <div class="center">
-        <h1 class="title">Tags</h1>
+    <div class="center" style="background-image:url('/images/tag_banner.png')">
+        <h1 class="title"><i class="fas fa-tags icon"></i>TAGS</h1>
         <p class="description">{{ i18n "tagsDescription" }}</p>
         <div class="tag-list-head">
             <p class="counter">{{ i18n "tagsCount" (len .Data.Terms) }}</p>
@@ -44,14 +44,14 @@
     <div class="center appear-300ms">
         <div class="sort-options">
             <span>sort by</span> 
-            <button class="option alphabetical toggle-on" onclick="toggleViewOption(0)">Alphabetical</button>
-            <button class="option count" onclick="toggleViewOption(1)">Count</button>
+            <button class="option alphabetical toggle-on" onclick="toggleViewOption(0)">{{ i18n "byAlphabetical" }}</button>
+            <button class="option count" onclick="toggleViewOption(1)">{{ i18n "byCount" }}</button>
         </div>
         {{ $baseurl := .Site.BaseURL }}
         {{ $data := .Data }}
         <ul class="tags alphabetical">
             {{ range $key,$value := .Data.Terms.Alphabetical }}
-            <li>
+            <li class="curtainup">
                 <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
                     {{ $value.Name }} <small>({{ $value.Count }})</small>
                 </a>

@@ -145,3 +145,18 @@ other = "링크가 변경되었을 수 있습니다."
 
 [notFoundGoToHome]
 other = "첫 화면으로"
+
+###################
+# Sort
+###################
+[byAlphabetical]
+other = "알파벳"
+
+[byCount]
+other = "갯수별"
+
+[byNewer]
+other = "최신글부터"
+
+[byOlder]
+other = "오래된글부터"

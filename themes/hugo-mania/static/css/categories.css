@@ -24,8 +24,7 @@ main#category-term ul li.term{
     display:flex;
     flex-direction:row;
     list-style: none;
-    cursor: pointer;
-    margin-bottom:20px;
+    margin-bottom:10px;
 }
 main#category-term ul li.term a:hover{
     background-color:#cccccc;

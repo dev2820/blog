@@ -38,7 +38,7 @@ html,
 body {
     margin: 0;
     padding: 0;
-    color: #505050;
+    color: #343A40;
     font-family: 'Noto Sans KR', sans-serif;
     line-height: 1.73em;
 }
@@ -58,8 +58,7 @@ button {
     cursor:pointer;
 }
 button.toggle-on {
-    background-color:#333333;
-    color:#fafafa;
+    color:#3EB489;
 }
 a {
     color:#3EB489;
@@ -100,6 +99,12 @@ hr.summary-sep {
 .float:hover {
     /* animation: float 1s infinite; */
     transform:translateY(-5px);
+}
+.slide-left:hover {
+    transform:translateX(-5px);
+}
+.slide-right:hover {
+    transform:translateX(5px);
 }
 .hidden {
     display:none;
@@ -171,6 +176,20 @@ ul.contents li {
     margin-top:-50%;
     margin-left:-50%;
     color:black;
+}
+
+.curtainup {
+    transform-style: preserve-3d;
+}
+.curtainup:before,
+.curtainup:after{
+  transform-origin: center center;
+  transform: scale(1,0);
+}
+.curtainup:hover:before,
+.curtainup:hover:after{
+  transform: scale(1);
+  border-radius: 0;
 }
 @keyframes appear-top {
     0% {

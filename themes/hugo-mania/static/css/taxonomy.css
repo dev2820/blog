@@ -1,15 +1,19 @@
-/* Taxonomy */
-#taxonomies {
-    position:relative;
-    min-width:600px;
-    max-width:800px;
-    margin:0 auto;
-}
-.taxonomy {
+/* Taxonomies */
+header#taxonomies-header {
     display:flex;
     flex-direction:column;
 
 }
-.taxonomy h1{
+header#taxonomies-header h1{
     margin:2rem 0;
+}
+main#taxonomies-main .sort-options {
+    margin-bottom:10px;
+}
+
+main#taxonomies-main {
+    position:relative;
+    min-width:600px;
+    max-width:800px;
+    margin:0 auto;
 }

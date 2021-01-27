@@ -24,4 +24,4 @@ nickname: Dev2820
 
 front: +++++++++++++++  
 back: +++++  
-desine: ++++++++    
+design: ++++++++    

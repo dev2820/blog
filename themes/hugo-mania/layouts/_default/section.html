@@ -1,5 +1,5 @@
 {{ define "header" }}
-<header>
+<header id="sections-header">
     <div class="center">
         <h1 class="title">Section: {{.Title}}</h1>
         <div class="description">{{ .Content }}</div>
@@ -9,10 +9,10 @@
 {{ define "main" }}
 <script>
     function byDate() {
-        const elByDate = document.querySelector('main#sections div.by-date');
-        const elByDateReverse = document.querySelector('main#sections div.by-date-reverse');
-        const elByDateOption = document.querySelector('main#sections button.by-date');
-        const elByDateReverseOption = document.querySelector('main#sections button.by-date-reverse');
+        const elByDate = document.querySelector('main#sections-main div.by-date');
+        const elByDateReverse = document.querySelector('main#sections-main div.by-date-reverse');
+        const elByDateOption = document.querySelector('main#sections-main button.by-date');
+        const elByDateReverseOption = document.querySelector('main#sections-main button.by-date-reverse');
         if(elByDate.classList.contains('hidden')) {
             elByDate.classList.remove('hidden');
             elByDateOption.classList.add('toggle-on');
@@ -23,10 +23,10 @@
         }
     }
     function byDateReverse() {
-        const elByDate = document.querySelector('main#sections div.by-date');
-        const elByDateReverse = document.querySelector('main#sections div.by-date-reverse');
-        const elByDateOption = document.querySelector('main#sections button.by-date');
-        const elByDateReverseOption = document.querySelector('main#sections button.by-date-reverse');
+        const elByDate = document.querySelector('main#sections-main div.by-date');
+        const elByDateReverse = document.querySelector('main#sections-main div.by-date-reverse');
+        const elByDateOption = document.querySelector('main#sections-main button.by-date');
+        const elByDateReverseOption = document.querySelector('main#sections-main button.by-date-reverse');
         if(elByDateReverse.classList.contains('hidden')) {
             elByDateReverse.classList.remove('hidden');
             elByDateReverseOption.classList.add('toggle-on');
@@ -37,10 +37,12 @@
         }
     }
 </script>
-<main id="sections">
+<main id="sections-main">
     <div class="center">
-        <button class="by-date option" onclick="byDate()">오래된글부터</button>
-        <button class="by-date-reverse option toggle-on" onclick="byDateReverse()">최신글부터</button>
+        <div class="sort-options">
+            <button class="by-date option" onclick="byDate()">{{ i18n "byNewer" }}</button>
+            <button class="by-date-reverse option toggle-on" onclick="byDateReverse()">{{ i18n "byOlder" }}</button>    
+        </div>
         <div class="by-date hidden">
             {{ partial "by-date.html" . }}
         </div>

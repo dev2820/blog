@@ -6,8 +6,6 @@ aside#aside {
     right:0;
     top:0;
     z-index:60;
-    display:flex;
-    flex-direction:row-reverse;
     background-color:rgba(0,0,0,0.5);
     opacity:1;
     transition:all 0.3s;
@@ -20,18 +18,23 @@ aside#aside.hidden div.right-container {
     transform:translateX(100%);
 }
 aside#aside div.right-container {
-    width:800px;
+    position: absolute;
+    right:0;
+    top:0;
+    width:600px;
+    height:100%;
     display:flex;
     flex-direction:row-reverse;
     transform:translateX(0%);
     transition:all 1s;
 }
 aside#aside div.right-container div.profile-container {
+    position:relative;
     width:50%;
     background-color:#152238;
     display:flex;
     flex-direction:column;
-    position:relative;
+    
 }
 aside#aside div.right-container div.profile-container button.hide-aside {
     height:50px;
@@ -62,7 +65,8 @@ aside#aside div.right-container div.navigation-container ul.categories ul.subcat
     padding-left:20px;
 }
 aside#aside div.left-container {
-    width:60%;
+    width:100%;
+    height:100%;
 }
 aside#aside .container {
     overflow:auto;

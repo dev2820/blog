@@ -1,12 +1,20 @@
 /* Sections */
-#sections {
+header#sections-header h1 {
+    margin:0 0 2rem 0;
+}
+header#sections-main {
     position:relative;
-    top:70px;
+    margin-top:70px;
     width:100%;
     min-width:600px;
     max-width:800px;
-    margin:0 auto;
 }
-#sections h1 {
-    margin:0 0 2rem 0;
+
+main#sections-main .sort-options {
+    margin-bottom:10px;
+}
+
+main#sections-main .sort-options button {
+    padding:3px;
+    border-radius:4px;
 }

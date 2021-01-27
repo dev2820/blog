@@ -6,13 +6,22 @@ header#tag-header {
     margin:0 auto;
     margin-top:70px;
 }
+header#tag-header .center {
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
 header#tag-header .title {
-    font-weight:100;
+    font-weight:bolder;
     font-size:3rem;
     line-height:3rem;
     margin:30px 0;
 }
+header#tag-header .title .icon{
+    margin-right:0.5rem;
+}
 header#tag-header .description {
+    font-size:1.1rem;
     margin-bottom:30px;
 }
 header#tag-header .tag-list-head {
@@ -41,8 +50,11 @@ main#tag-term .sort-options span {
     margin-right:7px;
 }
 main#tag-term .sort-options button.option {
-    width:100px;
-    padding:2px 5px;
+    padding:3px;
+    border-radius: 4px;
+    margin-right:5px;
+    box-shadow: 3px 3px #e3e3e3;
+    background-color:#fafafa;
 }
 
 /* tag */
@@ -57,12 +69,12 @@ ul.tags li{
     align-self:center;
     list-style: none;
     text-align:center;
-    background-color:#eeeeee;
-    border:1px solid #eeeeee;
+    background-color:#fafafa;
     margin-right:8px;
-    margin-bottom:8px;
+    margin-bottom:12px;
     border-radius: 4px;
-    transition:3s;
+    box-shadow: 3px 3px #e3e3e3;
+    transition:0.3s ease-in-out;
 }
 ul.tags li a {
     height:100%;
@@ -72,16 +84,16 @@ ul.tags li a {
     padding-bottom:4px;
     font-weight:100;
     font-size:1rem;
-    color:#333333;
+    color:#343A40;
     cursor: pointer;
-    transition:3s;
+    transition:0.3s ease-in-out;
 }
 ul.tags li:hover {
-    border:1px solid #333333;
-    background-color: #333333;
-    transition:0.3s;
+    background-color: #1c1c1b;
+    box-shadow: 3px 3px #1c1c1b;
+    
 }
 ul.tags li:hover a {
-    color:#fafafa;
-    transition:0.3s;
+    color:#3EB489;
+    
 }

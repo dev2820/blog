@@ -13,7 +13,6 @@ nav.section-move .previous,
 nav.section-move .next {
     background-color:#efefef;
     border-radius:4px;
-    border:2px solid #cccccc;
     padding:0 5px;
     height:80px;
     width:40%;
@@ -26,9 +25,8 @@ nav.section-move .next {
 }
 nav.section-move .previous:hover,
 nav.section-move .next:hover {
-    border:2px solid #3EB489;
+    background-color:#c8f7e6;
     color:#3EB489;
-    transition:0.3s;
 }
 nav.section-move .previous .title,
 nav.section-move .next .title {
