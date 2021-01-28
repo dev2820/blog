@@ -126,7 +126,7 @@ other = "{{.Count}}개의 태그"
 # Subcategory
 ###################
 [subcategoriesTitle]
-other = "카테고리"
+other = "서브카테고리"
 
 ###################
 # Not found 404

@@ -5,6 +5,7 @@ Hugo-mania Theme CSS
 @import './aside.css';
 @import './breadcrumbnav.css';
 @import './categories.css';
+@import './category_breadcrumb.css';
 @import './footer.css';
 @import './homePage.css';
 @import './list.css';
@@ -99,6 +100,12 @@ hr.summary-sep {
 .float:hover {
     /* animation: float 1s infinite; */
     transform:translateY(-5px);
+}
+.solid {
+    border-radius:4px;
+    padding: 4px 12px;    
+    box-shadow: 3px 3px rgba(0,0,0,0.2),
+                -2px -2px rgba(255,255,255,0.3);
 }
 .slide-left:hover {
     transition:transform 0.3s;

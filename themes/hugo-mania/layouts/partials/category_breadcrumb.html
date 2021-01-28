@@ -1,0 +1,15 @@
+{{ $baseurl := .Site.BaseURL }}
+<div class="category_breadcrumb">
+    <a href="{{ $baseurl }}categories/{{ .Section}}" class="solid name">
+        <i class="fas fa-folder icon"></i>
+        {{ .Section }}
+    </a>
+    <i class="fas fa-angle-right icon"></i>
+    {{ range $key, $value := .Params.subcategories }}
+    <a href="{{ $baseurl }}subcategories/{{ $value | urlize }}" class="solid name">
+        <i class="fas fa-folder icon"></i>  
+        <span class="name">{{ humanize $value }}</span>     
+    </a>
+    {{ end }}
+</div>
+

@@ -4,14 +4,17 @@
 		{{ $baseurl := .Site.BaseURL }}
 		<a href="{{ $baseurl }}{{ .Section}}">more</a>
 	</div>
+	<hr/>
 	{{ $related := .Site.RegularPages.Related . | first 3 }}
 	{{ with $related }}
 	<ul class="container">
 		{{ range . }}
 		<li>
 			<a href="{{.Permalink}}">{{.Title}}</a>
+			<span>{{ i18n "postDatetime" .Date }}</span>
 		</li>
 		{{ end }}
 	</ul>
+	<hr/>
 	{{ end }}
 </div>

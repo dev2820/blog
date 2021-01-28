@@ -19,6 +19,10 @@
     display:flex;
     flex-direction:column;
 }
-.related-content ul li {
+div.related-content ul.container li {
     list-style: none;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    color:#999999;
 }

@@ -1,0 +1,22 @@
+.category_breadcrumb {
+    display:flex;
+    flex-direction:row;
+    margin-bottom:20px;
+}
+.category_breadcrumb > .icon{
+    margin:auto 0;
+    font-size:1.5rem;
+    padding:0px 8px 0px 11px;
+}
+.category_breadcrumb a.name {
+    background-color:#E3E3E3;
+    text-decoration: none;
+    color: #777777;
+    transition:0.3s ease-in-out;
+}
+.category_breadcrumb a.name:hover {
+    background-color:#1c1c1b;   
+    color:#3EB489;
+    box-shadow: 3px 3px #1c1c1b,
+                -2px -2px rgba(255,255,255,0.3);
+}

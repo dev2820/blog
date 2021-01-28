@@ -10,7 +10,9 @@ header#taxonomies-header h1{
 main#taxonomies-main .sort-options {
     margin-bottom:10px;
 }
-
+main#taxonomies-main .hidden {
+    display:none;
+}
 main#taxonomies-main {
     position:relative;
     min-width:600px;
