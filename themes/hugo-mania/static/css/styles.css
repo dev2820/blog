@@ -114,27 +114,27 @@ hr.summary-sep {
 }
 .appear-300ms {
     opacity:0;
-    animation: appear-top 0.5s linear 0.3s 1;
+    animation: appear-top 0.3s linear 0.3s 1;
     animation-fill-mode: forwards;
 }
 .appear-500ms {
     opacity:0;
-    animation: appear-top 0.5s linear 0.5s 1;
+    animation: appear-top 0.3s linear 0.5s 1;
     animation-fill-mode: forwards;
 }
 .appear-700ms {
     opacity:0;
-    animation: appear-top 0.5s linear 0.7s 1;
+    animation: appear-top 0.3s linear 0.7s 1;
     animation-fill-mode: forwards;
 }
 .appear-1000ms {
     opacity:0;
-    animation: appear-top 0.5s linear 1s 1;
+    animation: appear-top 0.3s linear 1s 1;
     animation-fill-mode: forwards;
 }
 .appear-1200ms {
     opacity:0;
-    animation: appear-top 0.5s linear 1.2s 1;
+    animation: appear-top 0.3s linear 1.2s 1;
     animation-fill-mode: forwards;
 }
 /* Section, List, Taxonomy */

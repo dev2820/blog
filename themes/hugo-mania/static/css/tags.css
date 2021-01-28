@@ -60,7 +60,6 @@ main#tag-term .sort-options button.option {
 ul.tags {
     margin:0;
     padding:0;
-
 }
 ul.tags.hidden {
     display:none;

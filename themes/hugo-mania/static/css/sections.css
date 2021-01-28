@@ -13,7 +13,9 @@ header#sections-main {
 main#sections-main .sort-options {
     margin-bottom:10px;
 }
-
+main#sections-main .hidden {
+    display:none;
+}
 main#sections-main .sort-options button {
     padding:3px;
     border-radius:4px;

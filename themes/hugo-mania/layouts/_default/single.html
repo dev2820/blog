@@ -16,13 +16,13 @@
   <div class="title">
     <h1 id="title" class="appear-300ms">{{ .Title }}</h1>
     <section class="appear-700ms">
-      <p id="date"> {{ i18n "postDatetime" .Date }} </p>
-      <p id="wordcount"> {{ .ReadingTime }} <i class="far fa-clock"></i>  </p>
+      <p id="date"> <i class="far fa-calendar"></i> {{ i18n "postDatetime" .Date }} </p>
+      <p id="wordcount"> <i class="far fa-clock"></i> {{ .ReadingTime }}</p>
     </section>
     {{ partial "breadcrumb.html" .}}
     {{ $author := .Site.Author.name }}
     {{with .Site.GetPage "/about"}}
-    <p class="author appear-1000ms">by <a href="{{.Permalink}}">{{ $author }}</a></p>
+    <p class="author appear-700ms"><i class="fas fa-feather-alt"></i> <a href="{{.Permalink}}">{{ $author }}</a></p>
     {{end}}
   </div>
 </header>
