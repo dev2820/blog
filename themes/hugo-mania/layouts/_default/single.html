@@ -13,16 +13,16 @@
 {{ else }}
 <header id="single-header" style="background-image:url({{"/images/default_banner.jpg"}});">
 {{ end }}
-  <div class="title appear-300ms">
-    <h1 id="title">{{ .Title }}</h1>
-    <section>
+  <div class="title">
+    <h1 id="title" class="appear-300ms">{{ .Title }}</h1>
+    <section class="appear-700ms">
       <p id="date"> {{ i18n "postDatetime" .Date }} </p>
       <p id="wordcount"> {{ .ReadingTime }} <i class="far fa-clock"></i>  </p>
     </section>
     {{ partial "breadcrumb.html" .}}
     {{ $author := .Site.Author.name }}
     {{with .Site.GetPage "/about"}}
-    <p class="author">by <a href="{{.Permalink}}">{{ $author }}</a></p>
+    <p class="author appear-1000ms">by <a href="{{.Permalink}}">{{ $author }}</a></p>
     {{end}}
   </div>
 </header>
@@ -33,7 +33,7 @@
     <div class="left">
       <!--좌측 공간 만들기용 div-->
     </div>
-    <div class="center appear-500ms">
+    <div class="center appear-1200ms">
       <div>
             <article class="content">
               {{ .Content }}
