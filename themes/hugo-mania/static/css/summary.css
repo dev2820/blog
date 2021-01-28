@@ -7,6 +7,7 @@ article.summary {
     display:flex;
     flex-direction:row;
     background-color:white;
+    border-radius:8px;
 }
 article.summary .cover-image {
     flex-grow:0;
