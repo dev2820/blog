@@ -8,14 +8,16 @@ aside#aside {
     z-index:60;
     background-color:rgba(0,0,0,0.5);
     opacity:1;
-    transition:all 0.3s;
+    transition:all 0.3s ease-out;
 }
 aside#aside.hidden {
     z-index:-1;
     opacity:0;
+    transition:all 0.3s 0.4s ease-in-out;
 }
 aside#aside.hidden div.right-container {
     transform:translateX(100%);
+    transition:transform 0.5s ease-in-out;
 }
 aside#aside div.right-container {
     position: absolute;
@@ -25,8 +27,8 @@ aside#aside div.right-container {
     height:100%;
     display:flex;
     flex-direction:row-reverse;
-    transform:translateX(0%);
-    transition:all 1s;
+    transform:translateX(0);
+    transition:transform 0.5s 0.2s ease-out;
 }
 aside#aside div.right-container div.profile-container {
     position:relative;

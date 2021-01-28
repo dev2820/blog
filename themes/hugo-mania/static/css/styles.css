@@ -109,8 +109,8 @@ hr.summary-sep {
     transform:translateX(5px);
 }
 .hidden {
-    display:none;
     z-index:-1;
+    opacity:0;
 }
 .appear-300ms {
     opacity:0;
