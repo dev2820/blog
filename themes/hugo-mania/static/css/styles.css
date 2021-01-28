@@ -101,9 +101,11 @@ hr.summary-sep {
     transform:translateY(-5px);
 }
 .slide-left:hover {
+    transition:transform 0.3s;
     transform:translateX(-5px);
 }
 .slide-right:hover {
+    transition:transform 0.3s;
     transform:translateX(5px);
 }
 .hidden {

@@ -22,6 +22,7 @@ nav.section-move .next {
     flex-direction:row;
     transition:0.3s;
     text-decoration: none;
+    box-shadow: 3px 3px #e3e3e3;
 }
 nav.section-move .previous:hover,
 nav.section-move .next:hover {
@@ -60,17 +61,23 @@ nav.section-move .next:hover .title span {
 nav.section-move .previous {
     justify-content: flex-start;
     text-align:left;
+    
+    transition:0.3s;
 }
 nav.section-move .previous small {
     left:0px;
+    transition:0.3s;
 }
 nav.section-move .previous .icon {
     margin:auto 20px auto 10px;
     font-size:1.7rem;
+    color:#999999;
+    transition:0.3s;
 }
 nav.section-move .next {
     justify-content: flex-end;
     text-align:right;
+    transition:0.3s;
 }
 nav.section-move .next small {
     right:0px;
@@ -78,4 +85,16 @@ nav.section-move .next small {
 nav.section-move .next .icon {
     margin:auto 10px auto 20px;
     font-size:1.7rem;
+    color:#999999;
+    transition:0.3s;
+}
+nav.section-move a:hover .icon.slide-right {
+    /* animation: slide-right-repeat 0.5s infinite; */
+    color:#3EB489;
+    transform:translateX(5px);
+}
+nav.section-move a:hover .icon.slide-left {
+    /* animation: slide-left-repeat 0.5s infinite; */
+    color:#3EB489;
+    transform:translateX(-5px);
 }
