@@ -42,12 +42,14 @@ function makeClockWork() {
     },1000)
 }
 window.onload = function () {
+    /*
     document.addEventListener('click', (event) => {
         toggleAside(false);
     });
     document.getElementById('aside').addEventListener('click', (event) => {
         event.stopPropagation();
     });
+    */
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -57,6 +59,7 @@ window.onload = function () {
             });
         });
     });
+/*
     // when scroll changed, progressbar in header active
     document.addEventListener('scroll',(event)=>{
         const scroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -66,9 +69,10 @@ window.onload = function () {
             progressbar.style.width = (scroll/height)*100+'%';
         }
     });
-
+*/
     //clock script
     makeClockWork();   
+    
     
 }
 document.onreadystatechange = function() { 

@@ -1,17 +1,12 @@
 /* single*/
 header#single-header {
-    margin:0;
-    position:fixed;
-    top:0;
-    height:450px;
-    width:100%;
     z-index:4;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-header#single-header .title {
+header#single-header .curtain {
     background-color:rgba(0,0,0,0.5);
     width: 100%;
     height:100%;
@@ -21,7 +16,7 @@ header#single-header .title {
     z-index:0;
     position:relative;
 }
-header#single-header .title  #title {
+header#single-header .curtain  h1.title {
     height:25%;
     width:100%;
     font-weight:100;
@@ -33,20 +28,20 @@ header#single-header .title  #title {
     text-align:center;
     overflow:hidden;
 }
-header#single-header .title section {
+header#single-header .curtain div.meta-data {
     position:absolute;
     text-align:center;
     width:100%;
     top:65%;
     margin:0 auto;
 }
-header#single-header .title .breadcrumbnav {
+header#single-header .curtain .breadcrumbnav {
     position:absolute;
     top:10%;
     display:block;
     width:100%;
 }
-header#single-header .title .author {
+header#single-header .curtain p.author {
     display:block;
     width:100%;
     text-align: center;
@@ -55,51 +50,19 @@ header#single-header .title .author {
     margin:0 auto;
     color: #eeeeee;
 }
-header#single-header .title .author a {
+header#single-header .curtain .author a {
     color:#3EB489;
 }
 main#single-main {
-    max-width:100%;
     display:flex;
     flex-direction:column;
     justify-content: center;
     z-index:5;
-    margin-top:450px;
 }
-main#single-main section#content {
-    background-color:white;
-    width:100%;
-    padding:30px 20px;
-    margin:0 auto;
-    position:relative;
-    display:flex;
-    flex-direction:row;
-    justify-content: center;
-    z-index:10;
+main#single-main section#content article.content{
+    padding:30px;
 }
-main#single-main section#content .center {
-    position:relative;
-    margin:0;
-    overflow:hidden;
-    display:flex;
-    flex-direction:column;
-}
-main#single-main section#content .right,
-main#single-main section#content .left {
-    width:250px;
-    display:flex;
-}
-main#single-main aside#meta {
-    background-color:white;
-    position:relative;
-    padding:100px 20px;
-    width:100%;
-    margin:0 auto;
-    z-index:10;
-}
-main#single-main aside#meta .center {
-    width:100%;
-    max-width:800px;
-    min-width:600px;
-    margin:0 auto;
+main#single-main section#meta .card {
+    background-color:var(--main-card-color);
+    padding:30px;
 }

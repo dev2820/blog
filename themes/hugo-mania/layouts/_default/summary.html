@@ -4,12 +4,12 @@
     {{ with .Resources.GetMatch (string .Params.cover) }}
     {{ $image := . }}
     {{ $image := $image.Fill "250x250 smart" }}
-    <div class="cover-image" onclick="goToUrl({{ $link }})" style="background-image: linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 251px),url({{ $image.RelPermalink }});"></div>
+    <div class="cover-image" onclick="goToUrl({{ $link }})" style="background-image: url({{ $image.RelPermalink }});"></div>
     {{ else }}
-    <div class="cover-image" onclick="goToUrl({{ $link }})" style="background-image: linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 251px),url({{ .Site.Params.defaultSummaryImage }});"></div>
+    <div class="cover-image" onclick="goToUrl({{ $link }})" style="background-image: url({{ .Site.Params.defaultSummaryImage }});"></div>
     {{ end }}
   {{ else }}
-  <div class="cover-image" onclick="goToUrl({{ $link }})" style="background-image: linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 251px),url({{ .Site.Params.defaultSummaryImage }});"></div>
+  <div class="cover-image" onclick="goToUrl({{ $link }})" style="background-image: url({{ .Site.Params.defaultSummaryImage }});"></div>
   {{ end }}
   <div class="cover-content">
     <a href="{{ .Permalink }}">

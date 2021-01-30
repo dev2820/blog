@@ -1,12 +1,6 @@
 /* tag page css */
-header#tag-header {
-    min-width:600px;
-    max-width:800px;
-    width:100%;
-    margin:0 auto;
-    margin-top:70px;
-}
 header#tag-header .center {
+    height:100%;
     background-position: right;
     background-repeat: no-repeat;
     background-size: contain;
@@ -31,14 +25,9 @@ header#tag-header .tag-list-head {
     justify-content: space-between;
 }
 main#tag-term {
-    position:relative;
     display:flex;
     flex-direction:column;
     justify-content: center;
-    min-width:600px;
-    max-width:800px;
-    margin:0 auto;
-    padding-bottom:70px;
 }
 main#tag-term .sort-options {
     display:flex;

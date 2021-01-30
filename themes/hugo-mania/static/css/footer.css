@@ -1,8 +1,8 @@
 /* Footer*/
 #footer {
     position:relative;
-    height:500px;
-    background-color:#cccccc;
+    height:450px;
+    background-color:transparent;
     display:flex;
     flex-direction:column;
     justify-content: center;

@@ -4,7 +4,11 @@
         <i class="fas fa-folder icon"></i>
         {{ .Section }}
     </a>
-    <i class="fas fa-angle-right icon"></i>
+    <!-- <i class="fas fa-angle-right icon"></i> -->
+    <span class="solid slash">
+        /
+    </span>
+
     {{ range $key, $value := .Params.subcategories }}
     <a href="{{ $baseurl }}subcategories/{{ $value | urlize }}" class="solid name">
         <i class="fas fa-folder icon"></i>  

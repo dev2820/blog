@@ -2,7 +2,7 @@
 .profile {
     display:flex;
     flex-direction:column;
-    color:#fefefe;
+    color:black;
 }
 .profile div.cover {
     display:flex;
@@ -15,10 +15,10 @@
 .profile div.cover img {
     height:200px;
     width: 200px;
-    border-radius:12px;
+    border-radius:50%;
 }
 .profile h2 {
-    color:#fefefe;
+    color:black;
     font-size:1.8rem;
     margin:0 auto;
 }

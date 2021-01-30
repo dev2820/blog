@@ -1,6 +1,5 @@
 /* Home Page Css */
 header#home-header {
-    height: 450px;
     background-attachment: fixed;
     background-position: top;
     background-repeat: no-repeat;
@@ -9,9 +8,10 @@ header#home-header {
     flex-direction:column;
     justify-content: center;
     z-index:1;
-    margin-top:0;
+    border-radius:8px;
+    overflow:hidden;
 }
-header#home-header .container {
+header#home-header .curtain {
     height:100%;
     display:flex;
     flex-direction:column;
@@ -19,72 +19,21 @@ header#home-header .container {
     box-sizing:content-box;
     backdrop-filter:brightness(30%);
 }
-header#home-header .container .title {
-    color:#cccccc;
+header#home-header .curtain .title {
+    color:#eeeeee;
     margin:30px 0;
     font-weight:100;
     font-size:3rem;
     text-align:center;
 }
-header#home-header .container .content {
-    color:#cccccc;
+header#home-header .curtain .content {
+    color:#eeeeee;
     font-size:1rem;
     text-align:center;
 }
 main#home-main {
-  width:100%;
-  z-index:10;
-  background-color:white;
-  position:relative;
-  margin-top:450px;
-}
-main#home-main .menu {
-    width:100%;
-    height:50px;
-    display:flex;
-    background-color:white;
-    position:relative;
     z-index:10;
-    margin-bottom:50px;
-}
-main#home-main .menu ul{
-      padding:0;
-      width:90%;
-      min-width:600px;
-      max-width:800px;
-      height:100%;
-      margin:0 auto;
-      display:flex;
-      flex-direction:row;
-}
-main#home-main .menu ul li {
-      height:100%;
-      list-style: none;
-      width:100px;
-      text-align:center;
-      font-weight:bold;
-      display:flex;
-      justify-content: center;
-      cursor:pointer;
-}
-main#home-main .menu ul li a {
-      margin:auto 0;
-      text-decoration: none;
-      color: #505050;
-}
-main#home-main .menu ul li a:visited {
-      color:#505050;
-      background-color:transparent;
-}
-main#home-main .menu ul li:hover {
-      background-color:#95cb44;
-}
-main#home-main .menu ul li:hover a{
-      color:#111111;
 }
 main#home-main .center {
-    max-width:800px;
-    min-width:600px;
-    width:100%;
-    margin:0 auto;
+    background-color:var(--main-bg-color);
 }

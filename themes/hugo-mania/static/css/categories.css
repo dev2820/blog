@@ -3,12 +3,6 @@ header#category-header {
     display:flex;
     flex-direction:column;
 }
-main#category-term {
-    position:relative;
-    min-width:600px;
-    max-width:800px;
-    margin:0 auto;
-}
 main#category-term ul li hr {
     margin:0;
     margin-bottom:3px;

@@ -1,0 +1,57 @@
+<aside id="left-aside">
+    <div class="profile-container">
+        {{ partial "profile.html" .}}
+    </div>
+    <div class="navigation-container">
+        <div class="aside-menu">
+            <ul>
+                <li>
+                    <i class="fas fa-home icon"></i>
+                    <a href="{{.Site.BaseURL}}">{{ i18n "menuHome" }}</a>
+                </li>
+                <li>
+                    <i class="fas fa-list icon"></i>
+                    <a href="{{.Site.BaseURL}}/categories">{{i18n "menuCategories"}}</a>
+                </li>
+                <li>
+                    <i class="fas fa-tags icon"></i>
+                    <a href="{{.Site.BaseURL}}/tags">{{i18n "menuTags"}}</a>
+                </li>
+                <li>
+                    <i class="fas fa-search icon"></i>
+                    <a href="{{.Site.BaseURL}}/search">{{i18n "menuSearch"}}</a>
+                </li>
+            </ul>
+        </div>
+        <!--
+        <nav class="sidebar-nav">
+            {{ $site := .Site }}
+            {{ $baseurl := .Site.BaseURL }}
+            {{ $data := .Data }}
+            <ul class="categories">
+                {{ range $key,$value := $site.Taxonomies.categories.Alphabetical }}
+                <li>
+                    <i class="fas fa-folder icon"></i>
+                    <a href="{{ $baseurl }}categories/{{ $value.Name | urlize }}">
+                        <p class="name">{{ humanize $value.Name }}<small class="num"> ({{ $value.Count }})</small></p> 
+                    </a>
+                </li>
+                {{ $list := ( index $site.Data.config.subCategoryList $value.Name ) }}
+                <ul class="subcategories">
+                    {{ range $key, $value := $site.Taxonomies.subcategories.Alphabetical }}
+                    {{ if in $list $value.Name }}
+                    <li>
+                        <i class="fas fa-folder icon"></i>
+                        <a href="{{ $baseurl }}subcategories/{{ $value.Name | urlize }}">
+                            <p class="name">{{ humanize $value.Name }}<small class="num"> ({{ $value.Count }})</small></p>     
+                        </a>
+                    </li>
+                    {{ end }}
+                    {{ end }}
+                </ul>
+                {{ end }}
+            </ul>
+        </nav>
+        -->
+    </div>
+</aside>

@@ -1,0 +1,70 @@
+/* Aside */
+aside#left-aside {
+    position:fixed;
+    top:0;
+    left:50%;
+    margin-left:-750px;
+    height:100%;
+    width:200px;
+
+    opacity:1;
+    transition:all 0.3s ease-out;
+
+    display:flex;
+    flex-direction:column;
+}
+aside#left-aside div.profile-container {
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    
+}
+aside#left-aside div.profile-container div.aside-image {
+    height:100%;
+    width:100%;
+    filter:blur(4px);
+    position:absolute;
+    top:0;
+}
+aside#left-aside div.profile-container div.profile {
+    width:100%;
+}
+aside#left-aside div.navigation-container {
+    padding:50px 30px;
+    overflow:auto;
+}
+aside#left-aside div.navigation-container ul.categories ul.subcategories li{
+    padding-left:20px;
+}
+aside#left-aside div.left-container {
+    width:100%;
+    height:100%;
+}
+aside#left-aside .container {
+    overflow:auto;
+    flex-grow:1;
+}
+aside#left-aside .aside-sep {
+    height:1px;
+    width:85%;
+    margin:0 auto;
+    color:#fefefe;
+}
+aside#left-aside .aside-menu ul li {
+    display:flex;
+    flex-direction:row;
+    margin-bottom:10px;
+}
+aside#left-aside .aside-menu ul li .icon {
+    margin:auto 0;
+    width:30px;
+}
+aside#left-aside .sidebar-nav ul li {
+    display:flex;
+    flex-direction:row;
+    margin-bottom:10px;
+}
+aside#left-aside .sidebar-nav ul li .icon {
+    margin:auto 0;
+    width:30px;
+}

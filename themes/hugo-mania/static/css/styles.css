@@ -3,6 +3,8 @@ Hugo-mania Theme CSS
 */
 @import './about.css';
 @import './aside.css';
+@import './left-aside.css';
+@import './right-aside.css';
 @import './breadcrumbnav.css';
 @import './categories.css';
 @import './category_breadcrumb.css';
@@ -34,6 +36,11 @@ Hugo-mania Theme CSS
     box-sizing:border-box;
     margin:0;
     padding:0;
+}
+:root {
+    --main-bg-color: #E9E9E9;
+    --main-card-color: white;
+    --main-width:1000px;
 }
 html,
 body {
@@ -72,17 +79,29 @@ a:visited {
     color:#999999;
 }
 header {
-    width:100%;
-    margin-top:70px;
+    position:fixed;
+    width:var(--main-width);
+    height: 450px;
+    left:50%;
+    margin-top:30px;
+    margin-bottom:30px;
+    margin-left:-500px;
+    border-radius:8px;
+    overflow:hidden;
 }
 main {
-    width:100%;
+    position:relative;
+    width:var(--main-width);
+    left:50%;
+    margin-left:-500px;
+    background-color:transparent;
+    margin-top:480px;
 }
-div.center {
-    margin:0 auto;
-    width:100%;
-    min-width:600px;
-    max-width:800px;
+section {
+    background-color:var(--main-bg-color);
+    padding-top:30px;
+    padding-bottom:10px;
+    position: relative;
 }
 hr.summary-sep {
     width:100%;
@@ -92,14 +111,40 @@ hr.summary-sep {
 .card {
     box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    border-radius:2px;
+    border-radius:8px;
+    background-color:var(--main-card-color);
 }
 .card:hover {
     box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2);
 }
+.card-inset {
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2) inset;
+    transition: 0.3s;
+    border-radius:8px;
+}
+.card-inset:hover {
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2) inset;
+}
 .float:hover {
     /* animation: float 1s infinite; */
     transform:translateY(-5px);
+}
+.roller {
+    height:30px;
+    background:
+            -webkit-radial-gradient(100% 0, circle, rgba(204,0,0,0) 7px,var(--main-bg-color) 8px),
+            -webkit-radial-gradient(0 0, circle, rgba(204,0,0,0) 7px, var(--main-bg-color) 8px);
+    background:
+            -webkit-radial-gradient(100% 0, circle, rgba(204,0,0,0) 7px,var(--main-bg-color) 8px),
+            -webkit-radial-gradient(0 0, circle, rgba(204,0,0,0) 7px, var(--main-bg-color) 8px);
+    background:
+            -webkit-radial-gradient(100% 0, circle, rgba(204,0,0,0) 7px,var(--main-bg-color) 8px),
+            -webkit-radial-gradient(0 0, circle, rgba(204,0,0,0) 7px, var(--main-bg-color) 8px);
+    background-position:top 24.5px right 992.5px, top 24.5px left 992.5px;
+    background-size:50% 50%;
+    background-repeat:no-repeat;
+    width:100%;
+    overflow:hidden;
 }
 .solid {
     border-radius:4px;

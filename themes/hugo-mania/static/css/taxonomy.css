@@ -13,9 +13,3 @@ main#taxonomies-main .sort-options {
 main#taxonomies-main .hidden {
     display:none;
 }
-main#taxonomies-main {
-    position:relative;
-    min-width:600px;
-    max-width:800px;
-    margin:0 auto;
-}
