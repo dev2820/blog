@@ -12,7 +12,6 @@
 
 .category_breadcrumb a.name {
     background-color:#E3E3E3;
-    text-decoration: none;
     color: #777777;
     transition:0.3s ease-in-out;
 }

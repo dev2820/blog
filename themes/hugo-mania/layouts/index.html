@@ -19,7 +19,9 @@
     {{ .Render "summary" }}
     <hr class="summary-sep" />
     {{ end }}
-    {{ partial "pagination.html" . }}
+    <div class="center">
+      {{ partial "pagination.html" . }}
+    </div>
   </section>
 </main>
 {{ end }}

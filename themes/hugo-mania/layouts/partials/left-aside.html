@@ -3,7 +3,7 @@
         {{ partial "profile.html" .}}
     </div>
     <div class="navigation-container">
-        <div class="aside-menu">
+        <nav class="aside-menu center">
             <ul>
                 <li>
                     <i class="fas fa-home icon"></i>
@@ -22,7 +22,7 @@
                     <a href="{{.Site.BaseURL}}/search">{{i18n "menuSearch"}}</a>
                 </li>
             </ul>
-        </div>
+        </nav>
         <!--
         <nav class="sidebar-nav">
             {{ $site := .Site }}

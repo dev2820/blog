@@ -1,12 +1,14 @@
 <div class="profile">
     <div class="cover">
         {{ if .Site.Author.cover }}
-        <img src="{{.Site.Author.cover | relURL }}">
+        <img src="{{.Site.Author.cover | relURL }}" class="round-card">
         {{ else }}
-        <img src="{{"/images/ocean.jpg" | relURL }}">
+        <img src="{{"/images/ocean.jpg" | relURL }}" class="round-card">
         {{ end }}
     </div>
     <h2><a href="{{.Site.BaseURL}}/about">{{.Site.Author.name}}</a></h2>
     <p>{{.Site.Author.introduce}}</p>
-    {{ partial "share.html" . }}
+    <div class="center">
+        {{ partial "share.html" . }}
+    </div>
 </div>

@@ -22,7 +22,6 @@ main#category-term ul li.term{
 }
 main#category-term ul li.term a:hover{
     background-color:#cccccc;
-    text-decoration: none;
 }
 main#category-term ul li.term div.content {
     flex-grow:1;

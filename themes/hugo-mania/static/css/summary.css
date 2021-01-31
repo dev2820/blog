@@ -21,7 +21,7 @@ article.summary .cover-image {
 article.summary .cover-content {
     box-sizing:content-box;
     flex:1;
-    margin:20px;
+    padding:20px;
     overflow:hidden;
     display:flex;
     flex-direction:column;
@@ -78,7 +78,6 @@ article.summary .cover-content .read-more {
 article.summary .cover-content .read-more .go-to-read {
     border:1px solid #3EB489;
     color:#3EB489;
-    text-decoration: none;
     background-color:#fefefe;
     border-radius:15px;
     padding:0 15px;

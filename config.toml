@@ -34,7 +34,7 @@ enableRobotsTXT = true
     notFound = "/images/404NotFound.png"
     logo = "/images/logo.png"
     siteLogo = "/images/site_logo_dark.png"
-    bannerBottom = "/images/banner_bottom.png"
+    bannerBottom = ""
     defaultSummaryImage = "/images/default_summary.png"
     asideBackgroundImage = "/images/space.jpg"
 

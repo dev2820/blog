@@ -21,7 +21,6 @@ nav.section-move .next {
     display:flex;
     flex-direction:row;
     transition:0.3s;
-    text-decoration: none;
     box-shadow: 3px 3px #e3e3e3;
 }
 nav.section-move .previous {
@@ -59,7 +58,6 @@ nav.section-move .title span {
 }
 nav.section-move .previous:hover .title span,
 nav.section-move .next:hover .title span {
-    text-decoration: none;
     color:#3EB489;
     transition:0.3s;
 

@@ -16,11 +16,11 @@
   <div class="curtain">
     <h1 class="title appear-300ms">{{ .Title }}</h1>
     <div class="meta-data appear-700ms">
-      <p class="date"> <i class="far fa-calendar"></i> {{ i18n "postDatetime" .Date }} </p>
-      <p class="wordcount"> <i class="far fa-clock"></i> {{ .ReadingTime }}</p>
+      <p class="date"> <i class="far fa-calendar icon"></i> {{ i18n "postDatetime" .Date }} </p>
+      <p class="wordcount"> <i class="far fa-clock icon"></i> {{ .ReadingTime }}</p>
       {{ $author := .Site.Author.name }}
       {{with .Site.GetPage "/about"}}
-      <p class="author"><i class="fas fa-feather-alt"></i> <a href="{{.Permalink}}">{{ $author }}</a></p>
+      <p class="author"><i class="fas fa-feather-alt icon"></i> <a href="{{.Permalink}}">{{ $author }}</a></p>
       {{end}}
     </div>
     <!-- {{ partial "breadcrumb.html" .}} -->
@@ -35,7 +35,7 @@
       {{ .Content }}
     </article>
     <aside id="right-aside">
-      {{ partial "table_of_content.html" . }}
+      {{ partial "post-toc.html" . }}
     </aside>
   </section>
   <section id="meta">
@@ -50,7 +50,7 @@
       {{ end }}
       {{ partial "category_breadcrumb.html" . }}
       {{ partial "tag_list.html" . }}
-      {{ partial "profile-in-article.html" . }}
+      <!-- {{ partial "profile-in-article.html" . }} -->
       <!-- {{ partial "relate-content.html" . }} -->
       {{ template "_internal/disqus.html" . }}
     </div>

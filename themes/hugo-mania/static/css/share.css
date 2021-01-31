@@ -3,4 +3,20 @@ footer .share {
 }
 aside .share {
     font-size:1.5rem;
+    display:inline-block;    
+}
+footer .share a.round-card {
+    display:inline-flex;
+    width:72px;
+    height:72px;
+    justify-content: center;
+}
+aside .share a.round-card {
+    display:inline-flex;
+    width:36px;
+    height:36px;
+    justify-content: center;
+}
+.share .icon {
+    margin:auto 0;
 }

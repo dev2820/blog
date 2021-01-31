@@ -22,36 +22,27 @@ header#single-header .curtain  h1.title {
     font-weight:100;
     font-size:3rem;
     padding:10px;
-    position: absolute;
+    position: relative;
     line-height:3rem;
     top:40%;
     text-align:center;
     overflow:hidden;
 }
 header#single-header .curtain div.meta-data {
-    position:absolute;
+    position:relative;
     text-align:center;
     width:100%;
-    top:65%;
+    top:40%;
     margin:0 auto;
+}
+header#single-header .curtain div.meta-data p .icon {
+    margin-right:5px;
 }
 header#single-header .curtain .breadcrumbnav {
     position:absolute;
     top:10%;
     display:block;
     width:100%;
-}
-header#single-header .curtain p.author {
-    display:block;
-    width:100%;
-    text-align: center;
-    position: absolute;
-    top:80%;
-    margin:0 auto;
-    color: #eeeeee;
-}
-header#single-header .curtain .author a {
-    color:#3EB489;
 }
 main#single-main {
     display:flex;
