@@ -5,16 +5,16 @@
 other = "About"
 
 [menuHome]
-other = "홈"
+other = "Home"
 
 [menuCategories]
-other = "카테고리"
+other = "Categories"
 
 [menuTags]
-other = "태그"
+other = "Tags"
 
 [menuSearch]
-other = "검색"
+other = "Search"
 
 [menuProjects]
 other = "프로젝트"

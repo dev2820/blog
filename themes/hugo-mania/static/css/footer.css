@@ -2,7 +2,10 @@
 #footer {
     position:relative;
     height:450px;
-    background-color:transparent;
+    width:1000px;
+    left:50%;
+    margin-left:-500px;
+    background-color:green;
     display:flex;
     flex-direction:column;
     justify-content: center;

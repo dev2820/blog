@@ -2,26 +2,22 @@
 {{ if .Params.cover }}
 {{ with .Resources.GetMatch (string .Params.cover) }}
   {{ $image := . }}
-  {{ $width := (div (mul 450 $image.Width) $image.Height) }}
-  {{ $ts := slice $width "450" }}
-  {{ $ts := string (delimit $ts "x") }}
-  {{ $ts := slice $ts "smart" }}
-  {{ $ts := string (delimit $ts " ") }}
-  {{ $image := $image.Fill $ts }}
-  <header id="single-header" style="background-image:url({{ $image.RelPermalink }});">
+  {{ $image := $image.Fill "1000x450 smart" }}
+  <header id="single-header" class="card-inset bg-cover" style="background-image:url({{ $image.RelPermalink }});">
 {{ end }}
 {{ else }}
-<header id="single-header" style="background-image:url({{"/images/default_banner.jpg"}});">
+<header id="single-header" class="card-inset bg-cover" style="background-image:url({{"/images/default_banner.jpg"}});">
 {{ end }}
-  <div class="curtain">
-    <h1 class="title appear-300ms">{{ .Title }}</h1>
+  <div class="curtain center appear-100ms">
+    <a class="go-back" href="javascript:history.back()"><i class="fas fa-arrow-left icon"></i></a>
+    <h1 class="title">{{ .Title }}</h1>
     <div class="meta-data appear-700ms">
       <p class="date"> <i class="far fa-calendar icon"></i> {{ i18n "postDatetime" .Date }} </p>
       <p class="wordcount"> <i class="far fa-clock icon"></i> {{ .ReadingTime }}</p>
-      {{ $author := .Site.Author.name }}
+      <!-- {{ $author := .Site.Author.name }}
       {{with .Site.GetPage "/about"}}
       <p class="author"><i class="fas fa-feather-alt icon"></i> <a href="{{.Permalink}}">{{ $author }}</a></p>
-      {{end}}
+      {{end}} -->
     </div>
     <!-- {{ partial "breadcrumb.html" .}} -->
   </div>
@@ -30,7 +26,7 @@
 {{ define "main" }}
 <main id="single-main">
   <div class="roller"></div>
-  <section id="content" class="appear-1200ms">
+  <section id="content" class="appear-1000ms">
     <article class="content card">
       {{ .Content }}
     </article>

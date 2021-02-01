@@ -1,28 +1,24 @@
 /* Error Page */
-#notFound {
-    max-width:800px;
-    min-width:600px;
-    height:600px;
-    margin:0 auto;
+main#notFound {
     display:flex;
     flex-direction:row;
     justify-content: center;
-    margin-top:55px;
+    margin-top:20vh;
 }
-#notFound .error-cover {
+main#notFound .error-cover {
     margin:auto 0;
     display:flex;
     justify-content: center;
     width:50%;
 }
-#notFound .error-content {
+main#notFound .error-content {
     width:50%;
     display:flex;
     flex-direction:column;
     justify-content: center;
     padding-left:10px;
 }
-#notFound .error-content .error-code {
+main#notFound .error-content .error-code {
     box-sizing:border-box;
     text-align:baseline;
     font-size:6rem;
@@ -30,42 +26,41 @@
     line-height:130%;
     text-align: center;
 }
-#notFound .error-content .error-message {
+main#notFound .error-content .error-message {
     font-size:2rem;
     line-height:130%;
     font-weight:300;
     margin-bottom:20px;
     text-align: center;
 }
-#notFound .error-content .error-description {
+main#notFound .error-content .error-description {
     font-size:1rem;
     font-weight:300;
     line-height:130%;
     text-align: center;
     margin-bottom:50px;
 }
-#notFound .error-content .go-other-page {
+main#notFound .error-content .go-other-page {
     width:100%;
     display:flex;
     flex-direction: row;
     justify-content: center;
 }
-#notFound .error-content .go-other-page button {
+main#notFound .error-content .go-other-page button {
     height:40px;
     width:150px;
     border-radius: 20px;
     margin:0 10px;
-    border:1px solid black;
 }
-#notFound .error-content .go-other-page button {
+main#notFound .error-content .go-other-page button {
     background-color:white;
 }
-#notFound .error-content .go-other-page button a{
+main#notFound .error-content .go-other-page button a{
     color:#333333;
 }
-#notFound .error-content .go-other-page button:first-child {
+main#notFound .error-content .go-other-page button:first-child {
     background-color:#333333;
 }
-#notFound .error-content .go-other-page button:first-child a{
+main#notFound .error-content .go-other-page button:first-child a{
     color:white;
 }

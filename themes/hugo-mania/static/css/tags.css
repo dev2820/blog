@@ -1,14 +1,15 @@
 /* tag page css */
+header#tag-header{
+    height:300px;
+}
 header#tag-header .center {
-    height:100%;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: contain;
+    flex-direction:column;
 }
 header#tag-header .title {
     font-weight:bolder;
     font-size:3rem;
     line-height:3rem;
+    padding-left:20px;
     margin:30px 0;
 }
 header#tag-header .title .icon{
@@ -17,29 +18,36 @@ header#tag-header .title .icon{
 header#tag-header .description {
     font-size:1.1rem;
     margin-bottom:30px;
+    padding-left:20px;
 }
-header#tag-header .tag-list-head {
+header#tag-header .tag-count {
     margin-bottom:20px;
     display:flex;
     flex-direction:row;
     justify-content: space-between;
+    padding-left:20px;
 }
-main#tag-term {
+main#tag-main {
     display:flex;
     flex-direction:column;
     justify-content: center;
+    margin-top:380px;
 }
-main#tag-term .sort-options {
+main#tag-main section#tag-term {
+    padding-left:20px;
+    padding-right:20px;
+}
+main#tag-main section#tag-term .sort-options {
     display:flex;
     flex-direction:row;
     margin-bottom:10px;
 }
-main#tag-term .sort-options span {
+main#tag-main section#tag-term .sort-options span {
     margin-right:7px;
 }
-main#tag-term .sort-options button.option {
+main#tag-main section#tag-term .sort-options button.option {
     padding:3px;
-    border-radius: 4px;
+    border-radius: 8px;
     margin-right:5px;
     box-shadow: 3px 3px #e3e3e3;
     background-color:#fafafa;
@@ -61,20 +69,14 @@ ul.tags li{
     list-style: none;
     text-align:center;
     background-color:#fafafa;
-    /* background-color:#E9E9E9; */
     margin-right:8px;
     margin-bottom:12px;
     border-radius: 4px;
-    /* box-shadow: 3px 3px #e3e3e3*/
-    box-shadow: 3px 3px rgba(0,0,0,0.2),
-                -2px -2px rgba(255,255,255,0.3);
     transition:0.3s ease-in-out;
 }
 ul.tags li a {
     height:100%;
     width:100%;
-    padding: 4px 12px;
-    padding-bottom:4px;
     font-weight:100;
     font-size:1rem;
     color:#777777;
@@ -84,7 +86,6 @@ ul.tags li a {
 ul.tags li:hover {
     background-color: #1c1c1b;
     box-shadow: 3px 3px #1c1c1b;
-    
 }
 ul.tags li:hover a {
     color:#3EB489;

@@ -1,9 +1,9 @@
 {{ define "header" }}
-<header id="tag-header">
-    <div class="center" style="background-image:url('/images/tag_banner.png')">
+<header id="tag-header" class="card-inset bg-cover" style="background-image:url('/images/tag_banner.png')">
+    <div class="center">
         <h1 class="title"><i class="fas fa-tags icon"></i>TAGS</h1>
         <p class="description">{{ i18n "tagsDescription" }}</p>
-        <div class="tag-list-head">
+        <div class="tag-count">
             <p class="counter">{{ i18n "tagsCount" (len .Data.Terms) }}</p>
         </div>
     </div>
@@ -40,8 +40,8 @@
         }
     }
 </script>
-<main id="tag-term">
-    <div class="center card appear-300ms">
+<main id="tag-main">
+    <section id="tag-term" class="card appear-300ms">
         <div class="sort-options">
             <span>sort by</span> 
             <button class="option alphabetical toggle-on" onclick="toggleViewOption(0)">{{ i18n "byAlphabetical" }}</button>
@@ -51,7 +51,7 @@
         {{ $data := .Data }}
         <ul class="tags alphabetical">
             {{ range $key,$value := .Data.Terms.Alphabetical }}
-            <li class="curtainup">
+            <li class="curtainup solid">
                 <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
                     {{ $value.Name }} <small>({{ $value.Count }})</small>
                 </a>
@@ -60,13 +60,13 @@
         </ul>
         <ul class="tags count hidden">
             {{ range $key,$value := .Data.Terms.ByCount }}
-            <li>
+            <li class="solid">
                 <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
                     {{ $value.Name }} <small>({{ $value.Count }})</small>
                 </a>
             </li>
             {{ end }}
         </ul>
-    </div>
+    </section>
 </main>
 {{ end }}
