@@ -1,64 +1,71 @@
 {{ define "header" }}
-<header id="category-header">
+<header id="category-header" class="card-inset bg-cover" style="background-image:url('/images/categories_banner.png');">
   <div class="center">
-    <h1 class="title">{{ i18n "categoriesTitle" }}</h1>
+    <h1 class="title"><i class="fas fa-list icon"></i>{{ i18n "categoriesTitle" }}</h1>
     <p class="description">{{ i18n "categoriesDescription" }}</p>
   </div>
 </header>
 {{ end }}
 {{ define "main" }}
-<main id="category-term">
-  <div class="center card">
+<main id="category-main">
+  <div class="roller"></div>
+  <section id="category-term">
     <ul>
       {{ $baseurl := .Site.BaseURL }}
       {{ $data := .Data }}
       {{ $site := .Site }}
       {{ range $key,$value := .Data.Terms.Alphabetical }}
-      <li class="term">
-        <div class="content">
-          <div class="title">
-            <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
-              {{ with $site.GetPage ($value.Name | relURL | string ) }}
-                {{if .Params.icon }}
-                  {{ with .Resources.GetMatch (string .Params.icon) }}
-                    <div class="cover" style="background-image:url({{ .RelPermalink }});"></div>
-                  {{ else }}
-                    <div class="cover" style="background-image:url('/static/cover-icon.png');"></div>
-                  {{ end }}
-                {{ else }}
-                  <div class="cover"></div>
-                {{ end }}
+      <li class="term card">
+        <div class="head">
+          <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
+          {{ with $site.GetPage ($value.Name | relURL | string ) }}
+            {{if .Params.icon }}
+              {{ with .Resources.GetMatch (string .Params.icon) }}
+                <img class="cover" src="{{ .RelPermalink }}"></img>
+              {{ else }}
+              <img class="cover" src="/images/cover-icon.png"></img>
               {{ end }}
-              <p class="name">{{ humanize $value.Name }}</p> 
-              <div class="count">
-                <span class="num">{{ $value.Count }}</span><span class="unit">{{ i18n "categoriesCount" }}</span>
-              </div>
-            </a>
-            <hr/>
-            <hr/>
-          </div>
-          <div class="subcategories">
-            {{ $list := ( index $site.Data.config.subCategoryList $value.Name ) }}
-            <ul>
-            {{ range $key, $value := $site.Taxonomies.subcategories.Alphabetical }}
-              {{ if in $list $value.Name }}
-                <li class="term">
-                  <a href="{{ $baseurl }}subcategories/{{ $value.Name | urlize }}">
-                    <div class="cover"></div>
-                    <p class="name">{{ humanize $value.Name }}</p>
-                    <div class="count">
-                      <span class="num">{{ $value.Count }}</span><span class="unit">{{ i18n "categoriesCount" }}</span>
-                    </div>
-                  </a>
-                </li>
-              {{ end }}
+            {{ else }}
+              <img class="cover" src="/images/cover-icon.png"></img>
             {{ end }}
-            </ul>
+            <span class="title">{{ humanize $value.Name }}</span> 
+          </a>
+          <div class="meta">
+            <span class="num">{{ $value.Count }}{{ i18n "categoriesCount" }}</span>
+            ㆍ
+            {{ range first 1 $value.Pages.ByDate.Reverse }} 
+            <span>{{ i18n "postDatetime" .Date }}</span>
+            {{ end }}
           </div>
+          <div class="description">
+            {{ .Content }}
+          </div>
+          {{ end }}
+        </div>
+        <hr/>
+        <div class="subcategories">
+          {{ $list := ( index $site.Data.config.subCategoryList $value.Name ) }}
+          <ul>
+          {{ range $key, $value := $site.Taxonomies.subcategories.Alphabetical }}
+            {{ if in $list $value.Name }}
+              <li class="term">
+                <a href="{{ $baseurl }}subcategories/{{ $value.Name | urlize }}">
+                  <div class="cover"></div>
+                  <p class="name">{{ humanize $value.Name }}</p>
+                  <div class="count">
+                    <small class="num">&nbsp;({{ $value.Count }})</small>
+                  </div>
+                </a>
+              </li>
+            {{ end }}
+          {{ end }}
+          </ul>
+        </div>
         </div>
       </li>
+      <hr/>
       {{ end }}
     </ul>
-  </div>
+  </section>
 </main>
 {{ end }}

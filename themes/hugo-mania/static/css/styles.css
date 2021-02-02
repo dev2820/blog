@@ -87,6 +87,7 @@ header {
     margin-bottom:30px;
     margin-left:-500px;
     overflow:hidden;
+    z-index:5;
 }
 .bg-cover {
     background-position: center;
@@ -100,6 +101,7 @@ main {
     margin-left:-500px;
     background-color:transparent;
     margin-top:450px;
+    z-index:10;
 }
 section {
     background-color:var(--main-bg-color);
@@ -110,7 +112,13 @@ section {
 section:last-child {
     padding-bottom:200px;
 }
-hr.summary-sep {
+aside {
+    z-index:10;
+}
+footer {
+    z-index:5;
+}
+hr {
     width:100%;
     border:0px dashed #bbb;
     margin:15px auto;
@@ -122,7 +130,7 @@ hr.summary-sep {
     background-color:var(--main-card-color);
 }
 .card:hover {
-    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
 }
 .card-inset {
     box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2) inset;
@@ -184,7 +192,6 @@ hr.summary-sep {
     box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2);
 }
 .center {
-    height:100%;
     width:100%;
     display:flex;
     justify-content: center;

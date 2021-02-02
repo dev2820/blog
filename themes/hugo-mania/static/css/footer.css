@@ -1,22 +1,24 @@
 /* Footer*/
-#footer {
+footer#footer {
     position:relative;
     height:450px;
-    width:1000px;
-    left:50%;
-    margin-left:-500px;
-    background-color:green;
-    display:flex;
-    flex-direction:column;
-    justify-content: center;
-    text-align:center;
-    z-index:10;
+    width:100%;
 }
-#footer span {
+footer#footer .center {
+    position:relative;
+    flex-direction:column;
+    top:15%;
+}
+footer#footer span {
+    margin: 0 auto;
+    display:inline-block;
     font-size:0.7rem;
     color: #999999;
 }
-#footer div.banner-bottom img {
+footer#footer .share {
+    margin: 0 auto;
+}
+footer#footer div.banner-bottom img {
     width:800px;
 }
 

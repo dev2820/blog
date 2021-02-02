@@ -3,89 +3,75 @@ header#category-header {
     display:flex;
     flex-direction:column;
 }
-main#category-term ul li hr {
-    margin:0;
-    margin-bottom:3px;
-    height:0px;
-    border:1px solid gainsboro;
+header#category-header {
+    height:300px;
 }
-main#category-term ul{
+header#category-header .center {
+    flex-direction:column;
+    height:100%;
+}
+header#category-header .title {
+    font-weight:bolder;
+    font-size:3rem;
+    line-height:3rem;
+    padding-left:20px;
+    margin:30px 0;
+}
+header#category-header .title .icon{
+    margin-right:0.5rem;
+}
+header#category-header .description {
+    font-size:1.1rem;
+    margin-bottom:30px;
+    padding-left:20px;
+}
+header#category-header .tag-count {
+    margin-bottom:20px;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding-left:20px;
+}
+main#category-main {
+    margin-top:300px;
+}
+main#category-main section#category-term ul li.card div.head{
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    width:100%;
+}
+main#category-main ul{
     display:inline-flex;
     flex-direction:column;
     width:100%;
 }
-main#category-term ul li.term{
+main#category-main ul li.term{
+    list-style:none;
+}
+main#category-main ul li.term .head a{
     display:flex;
     flex-direction:row;
-    list-style: none;
-    margin-bottom:10px;
+    line-height:2rem;
 }
-main#category-term ul li.term a:hover{
-    background-color:#cccccc;
-}
-main#category-term ul li.term div.content {
-    flex-grow:1;
-    padding-right:10px;
-}
-main#category-term ul li.term div.content div.title a{
-    display:flex;
-    flex-direction:row;
-    font-size:1.8rem;
-    line-height:200%;
-}
-main#category-term ul li.term div.content div.title a div.cover {
-    height:3.0rem;
-    width:3.0rem;
-    flex-shrink:0;
-    background-size: 3.0rem 3.0rem;
-    background-repeat: no-repeat;
-    background-position:center;
+main#category-main ul li.term .head a img.cover {
+    width:2rem;
+    height:2rem;
     margin:auto 0;
     margin-right:10px;
 }
-main#category-term ul li.term div.content div.title a p.name{
-    flex-grow:1;
+main#category-main ul li.term .head a span.title {
+    font-size:1.7rem;
+    margin:auto 0;
 }
-main#category-term ul li.term div.content div.title a div.count{
-    width:20%;
-    display:flex;
+main#category-main ul li.term hr{
+    margin:0;
+    border:1px solid #eeeeee;
+}
+main#category-main ul li.term .subcategories{
+    padding:20px;
+}
+main#category-main ul li.term .subcategories a{
+    display:inline-flex;
     flex-direction:row;
-}
-main#category-term ul li.term div.content div.title a div.count span.num{
-    text-align:right;   
-    padding-right:10px; 
-    width:50%;
-}
-main#category-term ul li.term div.content div.title a div.count span.unit{
-    text-align:left;   
-    width:50%;
-}
-main#category-term li.term div.content div.subcategories li.term a {
-    width:100%;
-    display:flex;
-    flex-direction:row;
-    justify-content: space-between;
-    font-size:1.4rem;
-    line-height:200%;
-}
-main#category-term li.term div.content div.subcategories li.term a div.cover {
-    width:3.0rem;
-    margin-right:10px;
-}
-main#category-term li.term div.content div.subcategories li.term a p.name {
-    flex-grow:1;
-}
-main#category-term li.term div.content div.subcategories li.term a div.count{
-    width:20%;
-    display:flex;
-    flex-direction:row;
-}
-main#category-term li.term div.content div.subcategories li.term a div.count span.num{
-    text-align:right;
-    padding-right:10px;
-    width:50%;
-}
-main#category-term li.term div.content div.subcategories li.term a div.count span.unit{
-    text-align:left;
-    width:50%;
 }

@@ -1,10 +1,4 @@
-{{ if .IsHome }}
-  <footer id="footer" style="background-image:url({{.Site.Params.bannerBottom | relURL }})">
-{{ else if .IsPage }}
-    <footer id="footer">
-{{ else }}
-    <footer id="footer" class="relative-small">
-{{ end }}
+  <footer id="footer" class="bg-cover" style="background-image:url({{.Site.Params.bannerBottom | relURL }})">
     <button onclick="scrollToTop()" class="scroll-to-top card">
       <i class="fas fa-angle-double-up icon"></i>
     </button>
@@ -14,9 +8,9 @@
     <!-- {{.Site.Copyright}} -->
     <div class="center">
       {{- partial "share.html" . -}}
+      <span>COPYRIGHT (C) <a href="https://dev2820.github.io"> GIJO YANG (DEV2820).</a></span>
+      <span>ALL RIGHTS RESERVED.</span>
     </div>
-    <span>COPYRIGHT (C) <a href="https://dev2820.github.io"> GIJO YANG (DEV2820).</a></span>
-    <span>ALL RIGHTS RESERVED.</span>
   </footer>
 </body>
 </html>

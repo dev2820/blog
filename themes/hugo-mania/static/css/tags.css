@@ -1,9 +1,11 @@
 /* tag page css */
 header#tag-header{
     height:300px;
+    background-color:white;
 }
 header#tag-header .center {
     flex-direction:column;
+    height:100%;
 }
 header#tag-header .title {
     font-weight:bolder;
@@ -31,21 +33,20 @@ main#tag-main {
     display:flex;
     flex-direction:column;
     justify-content: center;
-    margin-top:380px;
+    margin-top:300px;
 }
-main#tag-main section#tag-term {
-    padding-left:20px;
-    padding-right:20px;
+main#tag-main section#tag-term .card{
+    padding:20px;
 }
-main#tag-main section#tag-term .sort-options {
+main#tag-main section#tag-term .card .sort-options {
     display:flex;
     flex-direction:row;
     margin-bottom:10px;
 }
-main#tag-main section#tag-term .sort-options span {
+main#tag-main section#tag-term .card .sort-options span {
     margin-right:7px;
 }
-main#tag-main section#tag-term .sort-options button.option {
+main#tag-main section#tag-term .card .sort-options button.option {
     padding:3px;
     border-radius: 8px;
     margin-right:5px;
