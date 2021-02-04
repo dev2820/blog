@@ -43,12 +43,11 @@
 <main id="tag-main">
     <div class="roller"></div>
     <section id="tag-term" class="appear-300ms">
+        <div class="sort-options card">
+            <button class="option alphabetical solid toggle-on" onclick="toggleViewOption(0)">{{ i18n "byAlphabetical" }}</button>
+            <button class="option count solid" onclick="toggleViewOption(1)">{{ i18n "byCount" }}</button>
+        </div>
         <div class="card">
-            <div class="sort-options">
-                <span>sort by</span> 
-                <button class="option alphabetical toggle-on" onclick="toggleViewOption(0)">{{ i18n "byAlphabetical" }}</button>
-                <button class="option count" onclick="toggleViewOption(1)">{{ i18n "byCount" }}</button>
-            </div>
             {{ $baseurl := .Site.BaseURL }}
             {{ $data := .Data }}
             <ul class="tags alphabetical">

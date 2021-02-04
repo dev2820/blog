@@ -34,7 +34,7 @@
             <span class="num">{{ $value.Count }}{{ i18n "categoriesCount" }}</span>
             ㆍ
             {{ range first 1 $value.Pages.ByDate.Reverse }} 
-            <span>{{ i18n "postDatetime" .Date }}</span>
+            <span>Last Updated On {{ i18n "postDatetime" .Date }}</span>
             {{ end }}
           </div>
           <div class="description">
@@ -42,7 +42,7 @@
           </div>
           {{ end }}
         </div>
-        <hr/>
+        <hr class="line" />
         <div class="subcategories">
           {{ $list := ( index $site.Data.config.subCategoryList $value.Name ) }}
           <ul>
@@ -50,11 +50,9 @@
             {{ if in $list $value.Name }}
               <li class="term">
                 <a href="{{ $baseurl }}subcategories/{{ $value.Name | urlize }}">
-                  <div class="cover"></div>
-                  <p class="name">{{ humanize $value.Name }}</p>
-                  <div class="count">
-                    <small class="num">&nbsp;({{ $value.Count }})</small>
-                  </div>
+                  -
+                  <span class="name">{{ humanize $value.Name }}</span>
+                  <small class="num">&nbsp;({{ $value.Count }})</small>
                 </a>
               </li>
             {{ end }}
@@ -63,7 +61,6 @@
         </div>
         </div>
       </li>
-      <hr/>
       {{ end }}
     </ul>
   </section>

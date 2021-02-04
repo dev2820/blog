@@ -1,17 +1,17 @@
-/* Taxonomy */
-header#taxonomy-header {
+/* Section */
+header#section-header {
     display:flex;
     flex-direction:column;
     background-color:white;
     height:300px;
 }
-header#taxonomy-header .center {
+header#section-header .center {
     height:100%;
     flex-direction:column;
     padding:20px;
     position:relative;
 }
-header#taxonomy-header .title {
+header#section-header .title {
     position:absolute;
     font-weight:bolder;
     font-size:3rem;
@@ -19,21 +19,22 @@ header#taxonomy-header .title {
     margin:30px 0;
     top:20%;
 }
-header#taxonomy-header .title .icon{
+header#section-header .title .icon{
     margin-right:0.5rem;
 }
-header#taxonomy-header .taxonomy-count {
+header#section-header .description {
     position:relative;
     top:20%;
     font-size:1.1rem;
+    width:70%;
 }
-main#taxonomy-main {
+main#section-main {
     margin-top:300px;
 }
-main#taxonomy-main .sort-options {
+main#section-main .sort-options {
     margin-bottom:20px;
     padding:20px;
 }
-main#taxonomy-main .hidden {
+main#section-main .hidden {
     display:none;
 }

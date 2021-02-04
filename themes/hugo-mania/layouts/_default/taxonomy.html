@@ -1,25 +1,29 @@
 {{ define "header" }}
-<header id="taxonomies-header">
+<header id="taxonomy-header" class="card-inset bg-cover">
     <div class="center">
-        <h1>
-            {{if eq .Data.Plural "categories"}}{{ i18n "categoriesTitle" }} -
-            {{ else if eq .Data.Plural "subcategories"}}{{ i18n "subcategoriesTitle" }} -
-            {{ else if eq .Data.Plural "tags"}}{{ i18n "tagsTitle" }} -
-            {{ else }}
+        <h1 class="title">
+            {{if eq .Data.Plural "categories"}}
+                <i class="fas fa-folder-open"></i>
+            {{ else if eq .Data.Plural "subcategories"}}
+                <i class="fas fa-folder-open"></i>
+            {{ else if eq .Data.Plural "tags"}}
+                <i class="fas fa-tag"></i>
             {{ end }}
             {{ .Title }}
         </h1>
-        <p>{{ i18n "postCount" (len .Pages) }}</p>
+        <div class="taxonomy-count">
+            <p class="counter">{{ i18n "postCount" (len .Pages) }}</p>
+        </div>
     </div>
 </header>
 {{ end }}
 {{ define "main" }}
 <script>
     function byDate() {
-        const elByDate = document.querySelector('main#taxonomies-main div.by-date');
-        const elByDateReverse = document.querySelector('main#taxonomies-main div.by-date-reverse');
-        const elByDateOption = document.querySelector('main#taxonomies-main button.by-date');
-        const elByDateReverseOption = document.querySelector('main#taxonomies-main button.by-date-reverse');
+        const elByDate = document.querySelector('main#taxonomy-main div.by-date');
+        const elByDateReverse = document.querySelector('main#taxonomy-main div.by-date-reverse');
+        const elByDateOption = document.querySelector('main#taxonomy-main button.by-date');
+        const elByDateReverseOption = document.querySelector('main#taxonomy-main button.by-date-reverse');
         if(elByDate.classList.contains('hidden')) {
             elByDate.classList.remove('hidden');
             elByDateOption.classList.add('toggle-on');
@@ -30,10 +34,10 @@
         }
     }
     function byDateReverse() {
-        const elByDate = document.querySelector('main#taxonomies-main div.by-date');
-        const elByDateReverse = document.querySelector('main#taxonomies-main div.by-date-reverse');
-        const elByDateOption = document.querySelector('main#taxonomies-main button.by-date');
-        const elByDateReverseOption = document.querySelector('main#taxonomies-main button.by-date-reverse');
+        const elByDate = document.querySelector('main#taxonomy-main div.by-date');
+        const elByDateReverse = document.querySelector('main#taxonomy-main div.by-date-reverse');
+        const elByDateOption = document.querySelector('main#taxonomy-main button.by-date');
+        const elByDateReverseOption = document.querySelector('main#taxonomy-main button.by-date-reverse');
         if(elByDateReverse.classList.contains('hidden')) {
             elByDateReverse.classList.remove('hidden');
             elByDateReverseOption.classList.add('toggle-on');
@@ -44,11 +48,12 @@
         }
     }
 </script>
-<main id="taxonomies-main">
-    <div class="center card">   
-        <div class="sort-options">
-            <button class="by-date option" onclick="byDate()">{{ i18n "byNewer" }}</button>
-            <button class="by-date-reverse option toggle-on" onclick="byDateReverse()">{{ i18n "byOlder" }}</button>        
+<main id="taxonomy-main">
+    <div class="roller"></div>
+    <section id="taxonomy-list">   
+        <div class="sort-options card">
+            <button class="by-date option solid" onclick="byDate()">{{ i18n "byOlder" }}</button>
+            <button class="by-date-reverse option solid toggle-on" onclick="byDateReverse()">{{ i18n "byNewer" }}</button>        
         </div> 
         <div class="by-date hidden">
             {{ partial "by-date.html" . }}
@@ -56,7 +61,9 @@
         <div class="by-date-reverse">
             {{ partial "by-date-reverse.html" . }}
         </div>
-        {{ partial "pagination.html" . }}
-    </div>
+        <div class="center">
+            {{ partial "pagination.html" . }}
+        </div>
+    </section>
 </main>
 {{ end }}

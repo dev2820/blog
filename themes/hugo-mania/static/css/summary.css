@@ -8,6 +8,7 @@ article.summary {
     flex-direction:row;
     background-color:white;
     border-radius:8px;
+    margin-bottom:30px;
 }
 article.summary .cover-image {
     flex-grow:0;

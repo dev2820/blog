@@ -11,7 +11,7 @@
   <div class="curtain center appear-100ms">
     <a class="go-back" href="javascript:history.back()"><i class="fas fa-arrow-left icon"></i></a>
     <h1 class="title">{{ .Title }}</h1>
-    <div class="meta-data appear-700ms">
+    <div class="meta-data appear-300ms">
       <p class="date"> <i class="far fa-calendar icon"></i> {{ i18n "postDatetime" .Date }} </p>
       <p class="wordcount"> <i class="far fa-clock icon"></i> {{ .ReadingTime }}</p>
       <!-- {{ $author := .Site.Author.name }}
@@ -26,7 +26,7 @@
 {{ define "main" }}
 <main id="single-main">
   <div class="roller"></div>
-  <section id="content" class="appear-1000ms">
+  <section id="content" class="appear-700ms">
     <article class="content card">
       {{ .Content }}
     </article>

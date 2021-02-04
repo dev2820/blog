@@ -2,76 +2,83 @@
 header#category-header {
     display:flex;
     flex-direction:column;
-}
-header#category-header {
+    background-color:white;
     height:300px;
 }
 header#category-header .center {
     flex-direction:column;
     height:100%;
+    position:relative;
+    padding:20px;
 }
 header#category-header .title {
+    position:absolute;
     font-weight:bolder;
     font-size:3rem;
     line-height:3rem;
-    padding-left:20px;
     margin:30px 0;
+    top:20%;
 }
 header#category-header .title .icon{
     margin-right:0.5rem;
 }
 header#category-header .description {
+    position:relative;
     font-size:1.1rem;
     margin-bottom:30px;
-    padding-left:20px;
-}
-header#category-header .tag-count {
-    margin-bottom:20px;
-    display:flex;
-    flex-direction:row;
-    justify-content: space-between;
-    padding-left:20px;
+    top:20%;
+    width:70%;
 }
 main#category-main {
     margin-top:300px;
+}
+main#category-main section#category-term ul li {
+    margin-bottom:30px;
 }
 main#category-main section#category-term ul li.card div.head{
     padding:20px;
     display:flex;
     flex-direction:column;
     width:100%;
-}
-main#category-main ul{
-    display:inline-flex;
-    flex-direction:column;
-    width:100%;
-}
-main#category-main ul li.term{
-    list-style:none;
-}
-main#category-main ul li.term .head a{
-    display:flex;
-    flex-direction:row;
     line-height:2rem;
 }
-main#category-main ul li.term .head a img.cover {
+main#category-main section#category-term ul li.card div.head a {
+    display:flex;
+    flex-direction:row;
+}
+main#category-main section#category-term ul li.card div.head a img.cover{
     width:2rem;
     height:2rem;
     margin:auto 0;
     margin-right:10px;
 }
-main#category-main ul li.term .head a span.title {
+main#category-main section#category-term ul li.card div.head a span.title {
     font-size:1.7rem;
     margin:auto 0;
 }
-main#category-main ul li.term hr{
-    margin:0;
-    border:1px solid #eeeeee;
+main#category-main section#category-term ul li.card div.head div.meta {
+    margin-top:10px;
+    color:#cccccc;
+    font-weight:lighter;
+    font-size:1rem;
 }
-main#category-main ul li.term .subcategories{
+main#category-main section#category-term ul li.card div.head div.description {
+    margin-top:10px;
+}
+main#category-main section#category-term ul li.card div.subcategories {
+    font-weight:lighter;
     padding:20px;
 }
-main#category-main ul li.term .subcategories a{
-    display:inline-flex;
+
+main#category-main section#category-term ul li.card div.subcategories ul li.term {
+    margin-bottom:20px;
+}
+main#category-main section#category-term ul li.card div.subcategories ul li.term a {
+    display:flex;
     flex-direction:row;
+    width:100%;
+    font-size:1.5rem;
+}
+main#category-main section#category-term ul li.card div.subcategories ul li.term a span.name {
+    padding-left:10px;
 }

@@ -17,7 +17,6 @@
   <section id="summary">
     {{ range .Paginator.Pages }}
       {{ .Render "summary" }}
-      <hr/>
     {{ end }}
     <div class="center">
       {{ partial "pagination.html" . }}
