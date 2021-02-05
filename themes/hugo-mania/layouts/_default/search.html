@@ -1,23 +1,24 @@
 {{ define "header" }}
 {{ with .Site.GetPage "search"}}
-<header id="search-header">
+<header id="search-header" class="card-inset bg-cover">
     <div class="center">
-        <h1>{{ .Title }}</h1>
+        <h1 class="title">SEARCH</h1>
+        <div class="search-bar">
+            <input id="search-input" type="text" placeholder="search..." name="search">
+            <button>
+                <i class="fas fa-search icon"></i>
+            </button>
+            
+        </div>
     </div>
 </header>
 {{ end }}
 {{ end }}
 {{ define "main" }}
 <main id="search-main">
-    <div class="center">
-        <div class="search-bar">
-            <input id="search-input" type="text" placeholder="search..." name="search">
-            <i class="fas fa-search icon"></i>
-            <i class="fas fa-times icon hidden"></i>
-        </div>
-        <div id="search-result">
-        </div>
-    </div>
+    <section id="search-result" class="center">
+        
+    </section>
 </main>
 <script>
     let idx = null;
@@ -34,7 +35,15 @@
             }, this)
         })
     });
+    function search(keyword) {
+        if(idx){
+            const result = idx.search(event.target.value);
+            document.getElementById('search-result').innerHTML(result);
+            //and...
+        }
+    }
     document.getElementById('search-input').addEventListener('change',function (event){
+        console.log("?");
         if(idx){
             const result = idx.search(event.target.value);
             document.getElementById('search-result').innerHTML(result);

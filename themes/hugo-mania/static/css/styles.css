@@ -81,6 +81,7 @@ a:hover {
 a:visited {
     color:#999999;
 }
+input:focus { outline: none; }
 header {
     position:fixed;
     width:var(--main-width);

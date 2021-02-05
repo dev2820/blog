@@ -12,7 +12,7 @@ nav.section-move .previous,
 nav.section-move .next {
     position:absolute;
     background-color:#efefef;
-    border-radius:4px;
+    border-radius:8px;
     padding:0 5px;
     height:80px;
     width:40%;
@@ -21,7 +21,6 @@ nav.section-move .next {
     display:flex;
     flex-direction:row;
     transition:0.3s;
-    box-shadow: 3px 3px #e3e3e3;
 }
 nav.section-move .previous {
     left:0;

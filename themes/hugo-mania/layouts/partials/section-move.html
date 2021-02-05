@@ -1,6 +1,6 @@
 <nav class="section-move">
     {{ with .PrevInSection }}
-      <a href="{{.Permalink}}" class="previous"> 
+      <a href="{{.Permalink}}" class="previous solid"> 
         <i class="fas fa-angle-double-left icon slide-left"></i>
         <div class="title">
           <small>prev</small>
@@ -9,7 +9,7 @@
       </a>
     {{ end }}
     {{ with .NextInSection }}
-      <a href="{{.Permalink}}" class="next">
+      <a href="{{.Permalink}}" class="next solid">
         <div class="title">
           <small>next</small>  
           <span>{{.Title | truncate 20}}</span>
