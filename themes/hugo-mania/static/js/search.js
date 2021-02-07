@@ -3,8 +3,6 @@
         return str.replace(/\s/gi, '-');
     }
     function displaySearchResults(results, store) {
-        console.log(results);
-        console.log(store)
         var searchResults = document.getElementById('search-results');
         if (results.length) { // Are there any results?
             var appendString = `<li class="card green"><h3>${results.length} results are founded</h3></li>`;
