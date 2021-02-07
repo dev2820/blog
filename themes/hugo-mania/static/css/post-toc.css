@@ -35,6 +35,27 @@
     counter-increment: post-toc;
     content: counters(post-toc, ".") ". ";
 }
+/* .post-toc #table ul li a{
+    padding-left:15px;
+    transition:0.3s;
+    position:relative;
+}
+.post-toc #table ul li a::before {
+    content:'';
+    width:4px;
+    background-color:#3EB489;
+    height:1.7rem;
+    position:absolute;
+    left:0;
+    /* margin-left:-15px; */
+    transition:0.3s;
+}
+.post-toc #table ul li a:hover{
+    color:brown;
+}
+.post-toc #table ul li a:hover::before{
+    background-color:brown;
+} */
 .post-toc .title {
     display:flex;
     align-items:center;

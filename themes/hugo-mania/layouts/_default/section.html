@@ -44,10 +44,10 @@
             <button class="by-date option solid" onclick="byDate()">{{ i18n "byOlder" }}</button>
             <button class="by-date-reverse option solid toggle-on" onclick="byDateReverse()">{{ i18n "byNewer" }}</button>    
         </div>
-        <div class="by-date">
+        <div class="by-date hidden">
             {{ partial "by-date.html" . }}
         </div>
-        <div class="by-date-reverse hidden">
+        <div class="by-date-reverse">
             {{ partial "by-date-reverse.html" . }}
         </div>
         <div class="center">

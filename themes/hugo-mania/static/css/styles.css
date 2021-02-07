@@ -41,6 +41,8 @@ Hugo-mania Theme CSS
     --main-bg-color: #E9E9E9;
     --main-card-color: white;
     --main-width:1000px;
+    --green: #3EB489;
+    --red: #EE3E38;
 }
 html,
 body {
@@ -203,6 +205,14 @@ hr.line {
     z-index:-1;
     opacity:0;
 }
+.green {
+    background-color: var(--green);
+    color:white;
+}
+.red {
+    background-color: var(--red);
+    color:white;
+}
 .appear-100ms {
     opacity:0;
     animation: appear 0.3s linear 0.1s 1;
@@ -241,7 +251,6 @@ ul.contents li {
     list-style: none;
 }
 
-
 /* profile-in-article */
 .profile-in-article {
     display:flex;
@@ -268,6 +277,7 @@ ul.contents li {
 .profile-in-article .profile-introduce a{
     color:#272727;
 }
+
 /* loader */
 #loader {
     width:100vw;

@@ -101,7 +101,7 @@ other = "\"{{.}}\" 카테고리의 다른 글"
 other = "마지막 업데이트 날짜"
 
 [categoriesTitle]
-other = "카테고리"
+other = "CATEGORIES"
 
 [categoriesDescription]
 other = "카테고리 별 글을 볼 수 있습니다."
@@ -115,7 +115,7 @@ other ="총 {{.Count}} 개의 글"
 # Tag
 ###################
 [tagsTitle]
-other = "태그"
+other = "TAGS"
 
 [tagsDescription]
 other = "태그 별 글을 볼 수 있습니다."
@@ -160,3 +160,9 @@ other = "최신글부터"
 
 [byOlder]
 other = "오래된글부터"
+
+###################
+# Search
+###################
+[searchCount]
+other = "검색결과"

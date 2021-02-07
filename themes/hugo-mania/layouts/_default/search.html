@@ -3,51 +3,25 @@
 <header id="search-header" class="card-inset bg-cover">
     <div class="center">
         <h1 class="title">SEARCH</h1>
-        <div class="search-bar">
-            <input id="search-input" type="text" placeholder="search..." name="search">
-            <button>
-                <i class="fas fa-search icon"></i>
-            </button>
-            
-        </div>
+        <form action="/search" method="get" class="search-bar">
+            <input type="text" placeholder="search..." id="search-box" name="query">
+            <label for="search-button"><i class="fas fa-search icon"></i></label>
+            <input type="submit" id="search-button">
+        </form>
     </div>
 </header>
 {{ end }}
 {{ end }}
 {{ define "main" }}
 <main id="search-main">
-    <section id="search-result" class="center">
-        
+    <div class="roller"></div>
+    <section id="search-section">
+        <ul id="search-results"></ul>
     </section>
 </main>
-<script>
-    let idx = null;
-    readTextFile("/lunr.json", function(docs){
-        let documents = JSON.parse(docs);
-        idx = lunr(function () {
-            this.ref('uri')
-            this.field('title')
-            this.field('content')
-            this.field('tags')
-            
-            documents.forEach(function (doc) {
-                this.add(doc)
-            }, this)
-        })
-    });
-    function search(keyword) {
-        if(idx){
-            const result = idx.search(event.target.value);
-            document.getElementById('search-result').innerHTML(result);
-            //and...
-        }
-    }
-    document.getElementById('search-input').addEventListener('change',function (event){
-        console.log("?");
-        if(idx){
-            const result = idx.search(event.target.value);
-            document.getElementById('search-result').innerHTML(result);
-        }
-    })
-</script>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lunr-chinese@1.2.0/lunr-chinese.min.js" charset="utf-8"></script>
+<script src="/js/search.js" charset="utf-8"></script>
+
 {{ end }}

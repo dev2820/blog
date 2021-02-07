@@ -15,7 +15,7 @@
       {{ $data := .Data }}
       {{ $site := .Site }}
       {{ range $key,$value := .Data.Terms.Alphabetical }}
-      <li class="term card">
+      <li class="term card appear-500ms">
         <div class="head">
           <a href="{{ $baseurl }}{{ $data.Plural }}/{{ $value.Name | urlize }}">
           {{ with $site.GetPage ($value.Name | relURL | string ) }}
@@ -28,7 +28,7 @@
             {{ else }}
               <img class="cover" src="/images/cover-icon.png"></img>
             {{ end }}
-            <span class="title">{{ humanize $value.Name }}</span> 
+            <span class="title"><h4>{{ humanize $value.Name }}</h4></span> 
           </a>
           <div class="meta">
             <span class="num">{{ $value.Count }}{{ i18n "categoriesCount" }}</span>

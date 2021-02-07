@@ -16,12 +16,11 @@ header#search-header .title {
     font-size:3rem;
     line-height:3rem;
     position:relative;
-
 }
 header#search-header .title .icon{
     margin-right:0.5rem;
 }
-header#search-header div.search-bar {
+header#search-header form.search-bar {
     position:relative;
     top:15%;
     display:flex;
@@ -32,34 +31,35 @@ header#search-header div.search-bar {
     left:50%;
     margin-left:-300px;
 }
-header#search-header div.search-bar input#search-input {
+header#search-header form.search-bar input#search-box {
     border:none;
     width: 600px;
     height:60px;
     font-size:2rem;
     padding:10px;
 }
-header#search-header div.search-bar .icon {
+header#search-header form.search-bar input[type="submit"] {
+    display:none;
+}
+header#search-header form.search-bar label {
+    display:flex;
+    padding-right:10px;
+}
+header#search-header form.search-bar label .icon {
     position:relative;
     font-size:2rem;
     margin:auto 0;
 }
-header#search-header div.search-bar button {
-    display:flex;
-    background-color:transparent;
-    margin-right:10px;
-}
 main#search-main {
-
+    margin-top:300px;
 }
-main#search-main div.search-bar {
-    position:relative;
+main#search-main section#search-section {
+    min-height:230px;
 }
-main#search-main div.search-bar input#search-input {
-    border: 5px solid black;
-    width: 100%;
-    height:70px;
-    font-size:2rem;
-    padding:10px 40px;
-    border-radius:40px;
+main#search-main .card {
+    padding:20px;
+    margin-bottom:20px;
+}
+main#search-main .icon {
+    width:25px;
 }

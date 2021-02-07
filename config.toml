@@ -15,6 +15,7 @@ pygmentsStyle = "dracula"
 pygmentsOptions = "linenos=table,anchorlinenos=true,lineanchors=prefix"
 sectionPagesMenu = "main"
 enableRobotsTXT = true
+offlineSearch = true
 
 [outputs]
     home = ["HTML", "RSS", "JSON"]
