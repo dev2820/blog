@@ -14,12 +14,7 @@
     <div class="meta-data appear-300ms">
       <p class="date"> <i class="far fa-calendar icon"></i> {{ i18n "postDatetime" .Date }} </p>
       <p class="wordcount"> <i class="far fa-clock icon"></i> {{ .ReadingTime }}</p>
-      <!-- {{ $author := .Site.Author.name }}
-      {{with .Site.GetPage "/about"}}
-      <p class="author"><i class="fas fa-feather-alt icon"></i> <a href="{{.Permalink}}">{{ $author }}</a></p>
-      {{end}} -->
     </div>
-    <!-- {{ partial "breadcrumb.html" .}} -->
   </div>
 </header>
 {{ end }}
