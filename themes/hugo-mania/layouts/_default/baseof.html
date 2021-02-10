@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-    <div id="loader">
-        <span class="description">
-            loading...
-        </span>
-    </div>
+    
     {{- partial "head.html" . -}}
     <body id="body">
-        <!-- {{- partial "topbar.html" . -}} -->
+        <div id="loader">
+            <span class="description">
+                loading
+            </span>
+        </div>
         {{- partial "left-aside.html" . -}}
         {{- block "header" . }}{{- end }}
         {{- block "main" . }}{{- end }}

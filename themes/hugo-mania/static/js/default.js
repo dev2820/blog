@@ -42,14 +42,6 @@ function makeClockWork() {
     },1000)
 }
 window.onload = function () {
-    /*
-    document.addEventListener('click', (event) => {
-        toggleAside(false);
-    });
-    document.getElementById('aside').addEventListener('click', (event) => {
-        event.stopPropagation();
-    });
-    */
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -59,28 +51,15 @@ window.onload = function () {
             });
         });
     });
-/*
-    // when scroll changed, progressbar in header active
-    document.addEventListener('scroll',(event)=>{
-        const scroll = document.body.scrollTop || document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const progressbar = document.querySelector('#topbar.card .progress-bar .progress');
-        if(progressbar){
-            progressbar.style.width = (scroll/height)*100+'%';
-        }
-    });
-*/
     //clock script
-    makeClockWork();   
+    // makeClockWork();   
     
     
 }
 document.onreadystatechange = function() { 
     if (document.readyState !== "complete") { 
-        document.querySelector("#loader").style.visibility = "visible";
-        document.querySelector("body").style.visibility = "hidden";  
+        document.querySelector("#loader").classList.remove('hidden');
     } else { 
-        document.querySelector("#loader").style.display = "none"; 
-        document.querySelector("body").style.visibility = "visible"; 
+        document.querySelector("#loader").classList.add('hidden'); 
     } 
 }; 

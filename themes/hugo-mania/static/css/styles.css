@@ -243,6 +243,9 @@ hr.line {
     animation: appear 0.3s linear 1.2s 1;
     animation-fill-mode: forwards;
 }
+.bibe-100ms {
+    animation: bibe 0.2s linear 0.1s 1;
+}
 /* Section, List, Taxonomy */
 ul.contents {
     padding-left: 0;
@@ -280,20 +283,39 @@ ul.contents li {
 
 /* loader */
 #loader {
+    position:fixed;
     width:100vw;
     height:100vh;
     text-align:center;
     font-size:3rem;
-    background-color:white;
+    background-color:var(--main-bg-color);
     z-index:1000;
+    transition:0.3s;
 }
 #loader .description {
     position:absolute;
+    width:500px;
+    height:2rem;
     top:50%;
     left:50%;
-    margin-top:-50%;
-    margin-left:-50%;
+    margin-top:-1rem;
+    margin-left:-250px;
+    font-size:2rem;
     color:black;
+}
+#loader .description::after {
+    content: '';
+    margin-left:10px;
+    width:2rem;
+    height:2rem;
+    position:absolute;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    border-left:2px solid black;
+    animation:spin 1s linear infinite;
+}
+#loader.hidden {
+    z-index:-1;
 }
 @keyframes appear-top {
     0% {
@@ -311,5 +333,38 @@ ul.contents li {
     }
     100% {
         opacity:1;
+    }
+}
+@keyframes disappear {
+    0% {
+        opacity:1;
+    }
+    100% {
+        opacity:0;
+    }
+}
+@keyframes bibe {
+    0% {
+        transform:translateX(0px);
+    }
+    25% {
+        transform:translateX(2px);
+    }
+    50% {
+        transform:translateX(-2px);
+    }
+    75% {
+        transform:translateX(2px);
+    }
+    100% {
+        transform:translateX(0px);
+    }
+}
+@keyframes spin {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(360deg);
     }
 }

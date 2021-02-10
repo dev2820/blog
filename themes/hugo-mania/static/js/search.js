@@ -5,7 +5,7 @@
     function displaySearchResults(results, store) {
         var searchResults = document.getElementById('search-results');
         if (results.length) { // Are there any results?
-            var appendString = `<li class="card green"><h3>${results.length} results are founded</h3></li>`;
+            var appendString = `<li class="card green appear-100ms"><h3>${results.length} results are founded</h3></li>`;
 
             for (let i = 0; i < results.length; i++) {  // Iterate over the results
                 let item = store.find(doc => results[i].ref===doc.uri);
@@ -17,12 +17,12 @@
                         for(let i=0;i<addressList.length-1;i++)
                             sectionAddress += (addressList[i]+'/');
                         const uri = convertSpace2Minus(sectionAddress.toLowerCase());
-                        appendString += `<li class="card"><a href="${uri}"><h3><i class="fas fa-folder icon"></i>${item.title}</h3></a>`;
+                        appendString += `<li class="card appear-500ms"><a href="${uri}"><h3><i class="fas fa-folder icon"></i>${item.title}</h3></a>`;
                         appendString += `<p>${item.content.substring(0, 150)}...</p></li>`;
                     }
                     else { // post
                         const uri = convertSpace2Minus(item.uri.toLowerCase());
-                        appendString += `<li class="card"><a href="${uri}"><h3><i class="fas fa-file icon"></i>${item.title}</h3></a>`;
+                        appendString += `<li class="card appear-500ms"><a href="${uri}"><h3><i class="fas fa-file icon"></i>${item.title}</h3></a>`;
                         appendString += `<p>${item.content.substring(0, 150)}...</p></li>`;
                     }
                     
@@ -33,7 +33,7 @@
             searchResults.innerHTML = appendString;
         } 
         else {
-            searchResults.innerHTML = '<li class="card red"><h3>No results found</h3></li>';
+            searchResults.innerHTML = '<li class="card red appear-100ms"><h3>No results found</h3></li>';
         }
     }
 
