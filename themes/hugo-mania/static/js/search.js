@@ -33,7 +33,7 @@
             searchResults.innerHTML = appendString;
         } 
         else {
-            searchResults.innerHTML = '<li class="card red appear-100ms"><h3>No results found</h3></li>';
+            searchResults.innerHTML = '<li class="card error appear-100ms"><h3>No results found</h3></li>';
         }
     }
 

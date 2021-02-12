@@ -2,7 +2,6 @@
 Hugo-mania Theme CSS
 */
 @import './about.css';
-@import './aside.css';
 @import './left-aside.css';
 @import './right-aside.css';
 @import './breadcrumbnav.css';
@@ -38,19 +37,47 @@ Hugo-mania Theme CSS
     padding:0;
 }
 :root {
-    --main-bg-color: #E9E9E9;
-    --main-card-color: white;
+    --dark-purple:#1d1135;
+    --dark-blue:#0c164f;
+    --purple:#5643fd;
+    --light-purple:#7649fe;
+    --white:#fcfbfe;
+
+    --primary-color: #7649fe;
+    --primary-variant-color:#5643fd;
+    --secondary-color:#13ca91;
+    /* --secondary-variant: */
+
+
+    --background-color:#040c24;
+    --surface-color:#ffffff;
+    --error-color:#F56C6C;
+
+    --on-primary-color:#ffffff;
+    --on-secondary-color:#000000;
+    --on-background-color:#ffffff;
+    --on-surface-color:#121212;
+    --on-error-color:#ffffff;
+
+    --main-card-color: #fcfbfe;
+    --primary-text-color:#303133; 
+    --regular-text-color:#606266;
+    --secondary-text-color:#909399;
+    --placeholder-color:#C0C4CC;
+
     --main-width:1000px;
-    --green: #3EB489;
-    --red: #EE3E38;
+    --green: #13ca91;
+    --red: #ba1e88;
+
+
 }
 html,
 body {
     margin: 0;
     padding: 0;
-    color: #343A40;
+    color: var(--primary-text-color);
     font-family: 'Noto Sans KR', sans-serif;
-    background-color:#E9E9E9;
+    background-color:var(--background-color);
     line-height: 1.73em;
 }
 body {
@@ -68,13 +95,13 @@ button {
     cursor:pointer;
 }
 button.toggle-on {
-    color:#3EB489;
+    color:var(--primary-color);
 }
 ul {
     list-style:none;
 }
 a {
-    color:#3EB489;
+    color:var(--primary-color);
     text-decoration: none;
 }
 a:hover {
@@ -110,7 +137,7 @@ main {
     z-index:10;
 }
 section {
-    background-color:var(--main-bg-color);
+    background-color:var(--background-color);
     padding-top:30px;
     padding-bottom:10px;
     position: relative;
@@ -153,20 +180,20 @@ hr.line {
     height:100%;
     box-sizing:content-box;
     flex-direction:column;
-    backdrop-filter:brightness(30%);
+    backdrop-filter: brightness(60%);
     overflow:hidden;
 }
 .roller {
     height:32px;
     background:
-            -webkit-radial-gradient(100% 0, circle, rgba(204,0,0,0) 7px,var(--main-bg-color) 8px),
-            -webkit-radial-gradient(0 0, circle, rgba(204,0,0,0) 7px, var(--main-bg-color) 8px);
+            -webkit-radial-gradient(100% 0, circle, rgba(204,0,0,0) 7px,var(--background-color) 8px),
+            -webkit-radial-gradient(0 0, circle, rgba(204,0,0,0) 7px, var(--background-color) 8px);
     background:
-            -webkit-radial-gradient(100% 0, circle, rgba(204,0,0,0) 7px,var(--main-bg-color) 8px),
-            -webkit-radial-gradient(0 0, circle, rgba(204,0,0,0) 7px, var(--main-bg-color) 8px);
+            -webkit-radial-gradient(100% 0, circle, rgba(204,0,0,0) 7px,var(--background-color) 8px),
+            -webkit-radial-gradient(0 0, circle, rgba(204,0,0,0) 7px, var(--background-color) 8px);
     background:
-            -webkit-radial-gradient(100% 0, circle, rgba(204,0,0,0) 7px,var(--main-bg-color) 8px),
-            -webkit-radial-gradient(0 0, circle, rgba(204,0,0,0) 7px, var(--main-bg-color) 8px);
+            -webkit-radial-gradient(100% 0, circle, rgba(204,0,0,0) 7px,var(--background-color) 8px),
+            -webkit-radial-gradient(0 0, circle, rgba(204,0,0,0) 7px, var(--background-color) 8px);
     background-position:top 24.5px right 992.5px, top 24.5px left 992.5px;
     background-size:50% 50%;
     background-repeat:no-repeat;
@@ -175,9 +202,7 @@ hr.line {
 }
 .solid {
     border-radius:4px;
-    padding: 4px 12px;    
-    box-shadow: 0px 3px rgba(0,0,0,0.2),
-                -2px -2px rgba(255,255,255,0.3);
+    padding: 6px 12px;    
 }
 .slide-left:hover {
     transition:transform 0.3s;
@@ -191,7 +216,7 @@ hr.line {
     border-radius: 50%;
     box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    background-color:var(--main-card-color);
+    background-color:var(--primary-color);
 }
 .round-card:hover {
     box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2);
@@ -209,8 +234,8 @@ hr.line {
     background-color: var(--green);
     color:white;
 }
-.red {
-    background-color: var(--red);
+.error {
+    background-color: var(--error-color);
     color:white;
 }
 .appear-100ms {

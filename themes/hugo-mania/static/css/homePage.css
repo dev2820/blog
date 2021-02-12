@@ -1,19 +1,21 @@
 /* Home Page Css */
+header#home-header {
+    color:var(--on-background-color);
+    background-color:var(--surface-color);
+}
 header#home-header .curtain .title {
-    color:#eeeeee;
-    margin:30px 0;
+    margin:0 auto;
+    width:70%;
     font-weight:100;
     font-size:3rem;
+    line-height:3rem;
+    padding:20px 10px;
     text-align:center;
 }
-header#home-header .curtain .content {
-    color:#eeeeee;
+header#home-header .curtain .description {
+    margin:0 auto;
+    width:70%;
+    padding:20px 10px;
     font-size:1rem;
     text-align:center;
-}
-main#home-main {
-    z-index:10;
-}
-main#home-main .center {
-    background-color:var(--main-bg-color);
 }

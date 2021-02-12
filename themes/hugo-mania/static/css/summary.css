@@ -6,7 +6,8 @@ article.summary {
     overflow:hidden;
     display:flex;
     flex-direction:row;
-    background-color:white;
+    background-color:var(--main-card-color);
+    color:var(--primary-text-color);
     border-radius:8px;
     margin-bottom:30px;
 }
@@ -31,7 +32,7 @@ article.summary .cover-content a{
     display: flex;
     flex-direction: row;
     cursor: pointer;
-    color:#505050;
+    color:var(--primary-text-color);
 }
 article.summary .cover-content a img.icon {
     height:2rem;
@@ -53,7 +54,7 @@ article.summary .cover-content .post-meta {
     margin-bottom:17px;
     display:flex;
     flex-direction:row;
-    color:#cccccc;
+    color:var(--secondary-text-color);;
 }
 article.summary .cover-content .post-meta i{
     font-size:1rem;
@@ -65,7 +66,7 @@ article.summary .cover-content .post-meta span.date {
     margin-right:5px;
 }
 article.summary .cover-content .post-meta a {
-    color:#3EB489;
+    color:var(--secondary-text-color);
 }
 article.summary .cover-content .content {
     flex:1;
@@ -77,30 +78,34 @@ article.summary .cover-content .read-more {
     justify-content: flex-end;
 }
 article.summary .cover-content .read-more .go-to-read {
-    border:1px solid #3EB489;
-    color:#3EB489;
-    background-color:#fefefe;
-    border-radius:15px;
-    padding:0 15px;
+    /* border:1px solid var(--primary-variant-color); */
+    color:var(--primary-variant-color);
+    background-color:var(--main-card-color);
+    border-radius:16px;
+    padding:0 16px;
     position:relative;
     z-index:1;
     overflow: hidden;
 }
 article.summary .cover-content .read-more .go-to-read:hover {
-    color:#fefefe;
+    color:var(--main-card-color);
 }
-article.summary .cover-content .read-more .go-to-read:before {
+article.summary .cover-content .read-more .go-to-read:hover .icon  {
+    transform:translateX(5px);
+    transition:0.3s;
+}
+article.summary .cover-content .read-more .go-to-read::before {
     content:'';
     position: absolute;
     width:200px;
     left:-200px;
     top:-10px;
     height:150px;
-    background-color:#3EB489;
+    background-color:var(--primary-variant-color);
     z-index:-1;
     transition:transform 0.3s;
 }
-article.summary .cover-content .read-more .go-to-read:hover:before {
+article.summary .cover-content .read-more .go-to-read:hover::before {
     transform:translateX(200px);
 }
 article.summary .cover-content .read-more .go-to-read * {

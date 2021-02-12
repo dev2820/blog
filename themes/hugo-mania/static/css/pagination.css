@@ -11,6 +11,7 @@
 }
 .pagination a.round-card .icon {
     margin:auto 0;
+    color:var(--on-primary-color);
 }
 .pagination span.page {
     padding:0 10px;

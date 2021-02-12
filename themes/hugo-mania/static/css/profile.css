@@ -17,7 +17,7 @@
     z-index:5;
 }
 .profile h2 {
-    color:black;
+    color:var(--primary-color);
     font-size:1.8rem;
     margin:0 auto;
 }

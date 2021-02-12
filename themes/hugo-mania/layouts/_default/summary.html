@@ -22,16 +22,16 @@
     </a>
     {{$aboutPage := .Site.GetPage "/about" }}
     <div class="post-meta">
-      <i class="far fa-calendar" aria-hidden="true"></i>
+      <i class="far fa-calendar icon" aria-hidden="true"></i>
       <span class="date">{{ i18n "postDatetime" .Date }} | </span>
-      <i class="fas fa-comments" aria-hidden="true"></i>
+      <i class="fas fa-comments icon" aria-hidden="true"></i>
       <a href="{{.Permalink}}#disqus_thread"></a>
     </div>
     <div class="content">{{ .Summary | truncate 160}}</div>
     <div class="read-more">
       <a class="go-to-read" href="{{ .Permalink }}">
         <span>{{ i18n "readMore" }}</span>
-        <i class="fas fa-angle-right"></i>
+        <i class="fas fa-angle-right icon"></i>
       </a>
     </div>
   </div>

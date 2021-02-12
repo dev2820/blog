@@ -50,7 +50,6 @@
             {{ if in $list $value.Name }}
               <li class="term">
                 <a href="{{ $baseurl }}subcategories/{{ $value.Name | urlize }}">
-                  -
                   <span class="name">{{ humanize $value.Name }}</span>
                   <small class="num">&nbsp;({{ $value.Count }})</small>
                 </a>

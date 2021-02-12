@@ -1,7 +1,8 @@
 /* tag page css */
 header#tag-header{
     height:300px;
-    background-color:white;
+    background-color:var(--main-card-color);
+    color:var(--primary-text-color);
 }
 header#tag-header .center {
     flex-direction:column;
@@ -69,25 +70,26 @@ ul.tags li{
     align-self:center;
     list-style: none;
     text-align:center;
-    background-color:#fafafa;
+    background-color:#121212;
     margin-right:8px;
     margin-bottom:12px;
     border-radius: 4px;
     transition:0.3s ease-in-out;
+    overflow:hidden;
 }
 ul.tags li a {
     height:100%;
     width:100%;
     font-weight:100;
     font-size:1rem;
-    color:#777777;
+    color:var(--primary-color);
     cursor: pointer;
     transition:0.3s ease-in-out;
 }
 ul.tags li:hover {
-    background-color: #1c1c1b;
-    box-shadow: 0px 3px #1c1c1b;
+    background-color: var(--primary-color);
+    box-shadow:0;
 }
 ul.tags li:hover a {
-    color:#3EB489;
+    color:var(--on-primary-color);
 }
