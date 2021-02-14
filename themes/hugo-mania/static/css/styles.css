@@ -41,33 +41,38 @@ Hugo-mania Theme CSS
     --dark-blue:#0c164f;
     --purple:#5643fd;
     --light-purple:#7649fe;
-    --white:#fcfbfe;
-
-    --primary-color: #7649fe;
-    --primary-variant-color:#5643fd;
-    --secondary-color:#13ca91;
-    /* --secondary-variant: */
+    --white:#e8e8ea;
+    
 
 
-    --background-color:#040c24;
-    --surface-color:#ffffff;
-    --error-color:#F56C6C;
+/* 
+ */
 
-    --on-primary-color:#ffffff;
-    --on-secondary-color:#000000;
-    --on-background-color:#ffffff;
+    --primary-color: #e9e8ee;
+    --secondary-color:#6f6d72;
+    --secondary-variant-color:#333136;
+
+
+    --background-color:#101b39;
+    --surface-color:#e9e8ee;
+    --error-color:#d64b4b;
+
+    --on-primary-color:#333136;
+    --on-secondary-color:#e9e8ee;
+    --on-background-color:#e9e8ee;
     --on-surface-color:#121212;
     --on-error-color:#ffffff;
 
-    --main-card-color: #fcfbfe;
+    --main-card-color: #e9e8ee;
     --primary-text-color:#303133; 
     --regular-text-color:#606266;
     --secondary-text-color:#909399;
     --placeholder-color:#C0C4CC;
 
     --main-width:1000px;
-    --green: #13ca91;
-    --red: #ba1e88;
+    --green: #23a775;
+    --red: #d64b4b;
+    --blue: #3686a0;
 
 
 }
@@ -78,6 +83,7 @@ body {
     color: var(--primary-text-color);
     font-family: 'Noto Sans KR', sans-serif;
     background-color:var(--background-color);
+    /* background:var(--background); */
     line-height: 1.73em;
 }
 body {
@@ -156,13 +162,13 @@ hr.line {
     border:1px solid #eeeeee;
 }
 .card {
-    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px 0 rgba(232,232,234,0.2);
     transition: 0.3s;
     border-radius:8px;
     background-color:var(--main-card-color);
 }
 .card:hover {
-    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(232,232,234,0.2);
 }
 .card-inset {
     box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2) inset;

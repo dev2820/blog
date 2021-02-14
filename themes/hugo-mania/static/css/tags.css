@@ -63,6 +63,7 @@ ul.tags {
 ul.tags.hidden {
     display:none;
 }
+
 ul.tags li{
     display:inline-flex;
     flex-direction:row;
@@ -70,7 +71,7 @@ ul.tags li{
     align-self:center;
     list-style: none;
     text-align:center;
-    background-color:#121212;
+    background-color:var(--primary-color);
     margin-right:8px;
     margin-bottom:12px;
     border-radius: 4px;
@@ -82,14 +83,14 @@ ul.tags li a {
     width:100%;
     font-weight:100;
     font-size:1rem;
-    color:var(--primary-color);
+    color:var(--on-primary-color);
     cursor: pointer;
     transition:0.3s ease-in-out;
 }
 ul.tags li:hover {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-variant-color);
     box-shadow:0;
 }
 ul.tags li:hover a {
-    color:var(--on-primary-color);
+    color:var(--on-secondary-color);
 }

@@ -14,7 +14,10 @@ footer#footer span {
     margin: 0 auto;
     display:inline-block;
     font-size:0.7rem;
-    color: #999999;
+    color: var(--on-background-color);
+}
+footer#footer span a {
+    color: var(--on-background-color);
 }
 footer#footer .share {
     margin: 0 auto;
@@ -26,7 +29,7 @@ footer#footer div.banner-bottom img {
 /* Scroll To Top*/ 
 #footer button.scroll-to-top {
     border-radius:50%;
-    background-color:#cccccc;
+    background-color:var(--primary-color);
     font-size:1.2rem;
     width:60px;
     height:60px;
@@ -37,17 +40,18 @@ footer#footer div.banner-bottom img {
     flex-direction:column;
     justify-content: center;
     overflow:hidden;
+    z-index:110;
 }
 #footer button.scroll-to-top * {
-    color:#505050;
+    color:var(--on-primary-color);
     margin:0 auto;
 }
 #footer button.scroll-to-top:active {
-    background-color:red;
+    background-color:var(--red);
 }
 #footer button.scroll-to-bottom {
     border-radius:50%;
-    background-color:#cccccc;
+    background-color:var(--primary-color);
     font-size:1.2rem;
     width:60px;
     height:60px;
@@ -58,13 +62,14 @@ footer#footer div.banner-bottom img {
     flex-direction:column;
     justify-content: center;
     overflow:hidden;
+    z-index:110;
 }
 #footer button.scroll-to-bottom * {
-    color:#505050;
+    color:var(--on-primary-color);
     margin:0 auto;
 }
 #footer button.scroll-to-bottom:active {
-    background-color:blue;
+    background-color:var(--blue);
 }
 #footer.relative-small {
     top:70px;

@@ -5,13 +5,10 @@ nav.section-move {
     margin-bottom:50px;
     position:relative;
 }
-nav.section-move a {
-    color:#999999;
-}
 nav.section-move .previous,
 nav.section-move .next {
+    background-color:var(--primary-color);
     position:absolute;
-    background-color:#efefef;
     border-radius:8px;
     padding:0 5px;
     height:80px;
@@ -30,8 +27,7 @@ nav.section-move .next {
 }
 nav.section-move .previous:hover,
 nav.section-move .next:hover {
-    background-color:#c8f7e6;
-    color:#3EB489;
+    background-color:var(--background-color);
 }
 nav.section-move .previous .title,
 nav.section-move .next .title {
@@ -47,19 +43,23 @@ nav.section-move .next .title {
 }
 nav.section-move .title small {
     position:absolute;
-    color:#999999;
+    color:var(--on-primary-color);
     top:0px;
 }
 nav.section-move .title span {
     margin:auto 0;
-    color:#999999;
+    color:var(--on-primary-color);
     transition:0.3s;
 }
 nav.section-move .previous:hover .title span,
 nav.section-move .next:hover .title span {
-    color:#3EB489;
+    color:var(--green);
     transition:0.3s;
-
+}
+nav.section-move .previous:hover .title small,
+nav.section-move .next:hover .title small {
+    color:var(--green);
+    transition:0.3s;
 }
 nav.section-move .previous {
     justify-content: flex-start;
@@ -74,7 +74,7 @@ nav.section-move .previous small {
 nav.section-move .previous .icon {
     margin:auto 20px auto 10px;
     font-size:1.7rem;
-    color:#999999;
+    color:var(--on-primary-color);
     transition:0.3s;
 }
 nav.section-move .next {
@@ -88,16 +88,16 @@ nav.section-move .next small {
 nav.section-move .next .icon {
     margin:auto 10px auto 20px;
     font-size:1.7rem;
-    color:#999999;
+    color:var(--on-primary-color);
     transition:0.3s;
 }
 nav.section-move a:hover .icon.slide-right {
     /* animation: slide-right-repeat 0.5s infinite; */
-    color:#3EB489;
+    color:var(--green);
     transform:translateX(5px);
 }
 nav.section-move a:hover .icon.slide-left {
     /* animation: slide-left-repeat 0.5s infinite; */
-    color:#3EB489;
+    color:var(--green);
     transform:translateX(-5px);
 }

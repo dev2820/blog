@@ -79,7 +79,7 @@ article.summary .cover-content .read-more {
 }
 article.summary .cover-content .read-more .go-to-read {
     /* border:1px solid var(--primary-variant-color); */
-    color:var(--primary-variant-color);
+    color:var(--secondary-variant-color);
     background-color:var(--main-card-color);
     border-radius:16px;
     padding:0 16px;
@@ -101,7 +101,7 @@ article.summary .cover-content .read-more .go-to-read::before {
     left:-200px;
     top:-10px;
     height:150px;
-    background-color:var(--primary-variant-color);
+    background-color:var(--background-color);
     z-index:-1;
     transition:transform 0.3s;
 }
