@@ -37,21 +37,21 @@
     padding-top:7px;
 }
 .post-toc #table ul li a {
-    color:#999999;
+    color:var(--secondary-text-color);
     transition:0.3s;
 }
 .post-toc #table ul li a:hover{
-    color:#3EB489;
+    color:var(--green);
+    font-size:1.05rem;
 }
 
 .post-toc #table ul li a::before {
     counter-increment: post-toc;
     content: "[" counters(post-toc, ".") "] ";
-    color:#999999;
-    transition:0.3s;
+    color:var(--secondary-text-color);
 }
 .post-toc #table ul li a:hover::before {
-    color:#3EB489;
+    color:var(--secondary-color);
 }
 .post-toc .title {
     display:flex;

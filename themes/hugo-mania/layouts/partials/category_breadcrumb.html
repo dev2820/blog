@@ -1,17 +1,14 @@
 {{ $baseurl := .Site.BaseURL }}
+<div class="category_breadcrumb_title"><h3 class="title"><i class="fas fa-folder icon"></i>Categories</h3></div>
 <div class="category_breadcrumb">
-    <a href="{{ $baseurl }}categories/{{ .Section}}" class="solid name">
-        <i class="fas fa-folder icon"></i>
+    <a href="{{ $baseurl }}categories/{{ .Section}}" class="action name">
+        <!-- <i class="fas fa-folder icon"></i> -->
         {{ .Section }}
     </a>
-    <!-- <i class="fas fa-angle-right icon"></i> -->
-    <span class="solid slash">
-        /
-    </span>
-
+    <span class="action slash">/</span>
     {{ range $key, $value := .Params.subcategories }}
-    <a href="{{ $baseurl }}subcategories/{{ $value | urlize }}" class="solid name">
-        <i class="fas fa-folder icon"></i>  
+    <a href="{{ $baseurl }}subcategories/{{ $value | urlize }}" class="action name">
+        <!-- <i class="fas fa-folder icon"></i>   -->
         <span class="name">{{ humanize $value }}</span>     
     </a>
     {{ end }}

@@ -135,7 +135,7 @@ article.content input {
 }
 
 article.content a {
-  color: #0366d6;
+  color: var(--green);
   text-decoration: none;
 }
 

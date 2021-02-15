@@ -7,13 +7,13 @@ nav.section-move {
 }
 nav.section-move .previous,
 nav.section-move .next {
-    background-color:var(--primary-color);
+    background-color:var(--dark-gray);
     position:absolute;
     border-radius:8px;
     padding:0 5px;
     height:80px;
     width:40%;
-    font-size:1rem;
+    font-size:1.1rem;
     font-weight:bold;
     display:flex;
     flex-direction:row;
@@ -27,7 +27,7 @@ nav.section-move .next {
 }
 nav.section-move .previous:hover,
 nav.section-move .next:hover {
-    background-color:var(--background-color);
+    background-color:var(--primary-color);
 }
 nav.section-move .previous .title,
 nav.section-move .next .title {
@@ -43,12 +43,12 @@ nav.section-move .next .title {
 }
 nav.section-move .title small {
     position:absolute;
-    color:var(--on-primary-color);
+    color:var(--regular-text-color);
     top:0px;
 }
 nav.section-move .title span {
     margin:auto 0;
-    color:var(--on-primary-color);
+    color:var(--regular-text-color);
     transition:0.3s;
 }
 nav.section-move .previous:hover .title span,
@@ -74,7 +74,7 @@ nav.section-move .previous small {
 nav.section-move .previous .icon {
     margin:auto 20px auto 10px;
     font-size:1.7rem;
-    color:var(--on-primary-color);
+    color:var(--regular-text-color);
     transition:0.3s;
 }
 nav.section-move .next {
@@ -88,16 +88,14 @@ nav.section-move .next small {
 nav.section-move .next .icon {
     margin:auto 10px auto 20px;
     font-size:1.7rem;
-    color:var(--on-primary-color);
+    color:var(--regular-text-color);
     transition:0.3s;
 }
 nav.section-move a:hover .icon.slide-right {
-    /* animation: slide-right-repeat 0.5s infinite; */
     color:var(--green);
     transform:translateX(5px);
 }
 nav.section-move a:hover .icon.slide-left {
-    /* animation: slide-left-repeat 0.5s infinite; */
     color:var(--green);
     transform:translateX(-5px);
 }

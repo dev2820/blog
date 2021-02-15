@@ -11,22 +11,8 @@
 }
 .pagination a.round-card .icon {
     margin:auto 0;
-    color:var(--on-primary-color);
+    color:var(--primary-color);
 }
 .pagination span.page {
     padding:0 10px;
 }
-/*
-.pagination a.first {
-    
-}
-.pagination a.prev {
-    
-}
-.pagination a.next {
-    
-}
-.pagination a.last {
-    
-}
-*/

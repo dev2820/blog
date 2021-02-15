@@ -1,7 +1,7 @@
 /* Home Page Css */
 header#home-header {
-    color:var(--on-background-color);
-    background-color:var(--surface-color);
+    color:var(--main-card-color);
+    background-color:var(--main-card-color);
 }
 header#home-header .curtain .title {
     margin:0 auto;

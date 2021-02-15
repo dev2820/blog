@@ -22,6 +22,7 @@ header#category-header .title {
     top:20%;
 }
 header#category-header .title .icon{
+    width:3rem;
     margin-right:0.5rem;
 }
 header#category-header .description {

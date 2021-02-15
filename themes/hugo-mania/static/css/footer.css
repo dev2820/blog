@@ -14,13 +14,11 @@ footer#footer span {
     margin: 0 auto;
     display:inline-block;
     font-size:0.7rem;
-    color: var(--on-background-color);
-}
-footer#footer span a {
-    color: var(--on-background-color);
+    color: var(--on-primary-color);
 }
 footer#footer .share {
     margin: 0 auto;
+    margin-bottom:15px;
 }
 footer#footer div.banner-bottom img {
     width:800px;
@@ -29,7 +27,6 @@ footer#footer div.banner-bottom img {
 /* Scroll To Top*/ 
 #footer button.scroll-to-top {
     border-radius:50%;
-    background-color:var(--primary-color);
     font-size:1.2rem;
     width:60px;
     height:60px;
@@ -43,7 +40,7 @@ footer#footer div.banner-bottom img {
     z-index:110;
 }
 #footer button.scroll-to-top * {
-    color:var(--on-primary-color);
+    color:var(--primary-color);
     margin:0 auto;
 }
 #footer button.scroll-to-top:active {
@@ -51,7 +48,6 @@ footer#footer div.banner-bottom img {
 }
 #footer button.scroll-to-bottom {
     border-radius:50%;
-    background-color:var(--primary-color);
     font-size:1.2rem;
     width:60px;
     height:60px;
@@ -65,7 +61,7 @@ footer#footer div.banner-bottom img {
     z-index:110;
 }
 #footer button.scroll-to-bottom * {
-    color:var(--on-primary-color);
+    color:var(--primary-color);
     margin:0 auto;
 }
 #footer button.scroll-to-bottom:active {

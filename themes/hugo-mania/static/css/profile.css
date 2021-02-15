@@ -17,9 +17,10 @@
     z-index:5;
 }
 .profile h2 {
-    color:var(--primary-color);
+    color:var(--on-background-color);
     font-size:1.8rem;
     margin:0 auto;
+    margin-bottom:10px;
 }
 .profile p {
     margin:5px 5px;

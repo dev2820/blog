@@ -54,7 +54,7 @@ article.summary .cover-content .post-meta {
     margin-bottom:17px;
     display:flex;
     flex-direction:row;
-    color:var(--secondary-text-color);;
+    color:var(--secondary-text-color);
 }
 article.summary .cover-content .post-meta i{
     font-size:1rem;
@@ -101,7 +101,7 @@ article.summary .cover-content .read-more .go-to-read::before {
     left:-200px;
     top:-10px;
     height:150px;
-    background-color:var(--background-color);
+    background-color:var(--primary-color);
     z-index:-1;
     transition:transform 0.3s;
 }

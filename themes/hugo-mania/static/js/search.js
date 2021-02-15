@@ -17,12 +17,12 @@
                         for(let i=0;i<addressList.length-1;i++)
                             sectionAddress += (addressList[i]+'/');
                         const uri = convertSpace2Minus(sectionAddress.toLowerCase());
-                        appendString += `<li class="card appear-500ms"><a href="${uri}"><h3><i class="fas fa-folder icon"></i>${item.title}</h3></a>`;
+                        appendString += `<li class="card appear-500ms"><a href="${uri}" style="color:var(--green)"><h3><i class="fas fa-folder icon"></i>${item.title}</h3></a>`;
                         appendString += `<p>${item.content.substring(0, 150)}...</p></li>`;
                     }
                     else { // post
                         const uri = convertSpace2Minus(item.uri.toLowerCase());
-                        appendString += `<li class="card appear-500ms"><a href="${uri}"><h3><i class="fas fa-file icon"></i>${item.title}</h3></a>`;
+                        appendString += `<li class="card appear-500ms"><a href="${uri}" style="color:var(--green)"><h3><i class="fas fa-file icon"></i>${item.title}</h3></a>`;
                         appendString += `<p>${item.content.substring(0, 150)}...</p></li>`;
                     }
                     

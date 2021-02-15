@@ -1,6 +1,6 @@
 /* single*/
 header#single-header {
-    color:#eeeeee;
+    color:var(--main-card-color);
 }
 header#single-header .curtain {
     position:relative;
@@ -13,7 +13,7 @@ header#single-header .curtain a.go-back {
 header#single-header .curtain a.go-back .icon {
     font-size:2rem;
     font: weight lighter;
-    color:#eeeeee;
+    color:var(--main-card-color);
 }
 header#single-header .curtain  h1.title {
     width:100%;

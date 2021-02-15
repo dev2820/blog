@@ -1,5 +1,6 @@
-<ul class="tags">
+<div><h3 class="title"><i class="fas fa-hashtag icon"></i>Tags</h3></div>
+<ul class="tags tag_list">
     {{ range (.GetTerms "tags") }}
-        <li class="solid"><a href="{{ .Permalink }}"># {{ .LinkTitle }}</a></li>
+        <li><a href="{{ .Permalink }}" class="action"><i class="fas fa-hashtag icon"></i>{{ .LinkTitle }}</a></li>
     {{ end }}
 </ul>

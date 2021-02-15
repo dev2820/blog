@@ -34,6 +34,12 @@ main#taxonomy-main .sort-options {
     margin-bottom:20px;
     padding:20px;
 }
+main#taxonomy-main .sort-options .option {
+    padding:5px;
+    margin-right:7px;
+    border-radius: 8px;
+}
+
 main#taxonomy-main .hidden {
     display:none;
 }

@@ -42,28 +42,24 @@ Hugo-mania Theme CSS
     --purple:#5643fd;
     --light-purple:#7649fe;
     --white:#e8e8ea;
-    
 
-
-/* 
- */
-
-    --primary-color: #e9e8ee;
-    --secondary-color:#6f6d72;
+    --primary-color: #101b39;
+    --secondary-color:#23a775;
+    --thirdary-color:#dad9d7;
     --secondary-variant-color:#333136;
 
-
-    --background-color:#101b39;
-    --surface-color:#e9e8ee;
+    /* c5b385 */
+    --background-color:#3a4c7a;
+    --surface-color:#e8d7bc;
     --error-color:#d64b4b;
 
-    --on-primary-color:#333136;
-    --on-secondary-color:#e9e8ee;
-    --on-background-color:#e9e8ee;
+    --on-primary-color:#e9e8ee;
+    --on-secondary-color:#121212;
+    --on-background-color:#e8d7bc;
     --on-surface-color:#121212;
     --on-error-color:#ffffff;
 
-    --main-card-color: #e9e8ee;
+    --main-card-color: #fefefd;
     --primary-text-color:#303133; 
     --regular-text-color:#606266;
     --secondary-text-color:#909399;
@@ -73,6 +69,9 @@ Hugo-mania Theme CSS
     --green: #23a775;
     --red: #d64b4b;
     --blue: #3686a0;
+    --light-gray: #ECECEC;
+    --gray: #DEDEDE;
+    --dark-gray:#CCCCCC;
 
 
 }
@@ -101,20 +100,20 @@ button {
     cursor:pointer;
 }
 button.toggle-on {
-    color:var(--primary-color);
+    background-color:var(--secondary-color);
 }
 ul {
     list-style:none;
 }
 a {
-    color:var(--primary-color);
+    color:var(--on-background-color);
     text-decoration: none;
 }
 a:hover {
     text-decoration: none;
 }
 a:visited {
-    color:#999999;
+    color:var(--on-background-color);
 }
 input:focus { outline: none; }
 header {
@@ -206,9 +205,9 @@ hr.line {
     width:100%;
     overflow:hidden;
 }
-.solid {
-    border-radius:4px;
-    padding: 6px 12px;    
+.action {
+    border-radius:8px;
+    padding: 6px 6px;    
 }
 .slide-left:hover {
     transition:transform 0.3s;
@@ -222,7 +221,7 @@ hr.line {
     border-radius: 50%;
     box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    background-color:var(--primary-color);
+    background-color:var(--main-card-color);
 }
 .round-card:hover {
     box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2);
@@ -243,6 +242,9 @@ hr.line {
 .error {
     background-color: var(--error-color);
     color:white;
+}
+.icon {
+    margin-right:5px;
 }
 .appear-100ms {
     opacity:0;

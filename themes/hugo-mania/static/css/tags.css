@@ -53,17 +53,21 @@ main#tag-main section#tag-term .sort-options.card {
 }
 main#tag-main section#tag-term .sort-options.card button {
     margin-right:7px;
+    padding:5px;
+    border-radius: 8px;
 }
 
 /* tag */
 ul.tags {
     margin:0;
     padding:0;
+    margin-top:3px;
+    display:flex;
+    flex-direction:column;
 }
 ul.tags.hidden {
     display:none;
 }
-
 ul.tags li{
     display:inline-flex;
     flex-direction:row;
@@ -71,10 +75,9 @@ ul.tags li{
     align-self:center;
     list-style: none;
     text-align:center;
-    background-color:var(--primary-color);
     margin-right:8px;
     margin-bottom:12px;
-    border-radius: 4px;
+    border-radius: 8px;
     transition:0.3s ease-in-out;
     overflow:hidden;
 }
@@ -83,14 +86,15 @@ ul.tags li a {
     width:100%;
     font-weight:100;
     font-size:1rem;
-    color:var(--on-primary-color);
+    font-weight:bold;
+    color:var(--primary-text-color);
     cursor: pointer;
     transition:0.3s ease-in-out;
 }
-ul.tags li:hover {
-    background-color: var(--secondary-variant-color);
-    box-shadow:0;
-}
 ul.tags li:hover a {
-    color:var(--on-secondary-color);
+    color:var(--green);
+}
+
+ul.tags.tag_list {
+    display:block;
 }

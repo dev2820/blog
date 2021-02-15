@@ -31,7 +31,6 @@
   </section>
   <section id="meta">
     <div class="card">
-      {{ partial "section-move.html" . }}
       {{ with .Params.topics }}
       <ul id="topics">
         {{ range . }}
@@ -41,8 +40,7 @@
       {{ end }}
       {{ partial "category_breadcrumb.html" . }}
       {{ partial "tag_list.html" . }}
-      <!-- {{ partial "profile-in-article.html" . }} -->
-      <!-- {{ partial "relate-content.html" . }} -->
+      {{ partial "section-move.html" . }}
       {{ template "_internal/disqus.html" . }}
     </div>
   </section>

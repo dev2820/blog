@@ -45,6 +45,7 @@ header#search-header form.search-bar input[type="submit"] {
 header#search-header form.search-bar label {
     display:flex;
     padding-right:10px;
+    cursor:pointer;
 }
 header#search-header form.search-bar label .icon {
     position:relative;
