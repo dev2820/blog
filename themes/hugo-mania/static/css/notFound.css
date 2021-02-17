@@ -4,6 +4,7 @@ main#notFound {
     flex-direction:row;
     justify-content: center;
     margin-top:20vh;
+    color:var(--white);
 }
 main#notFound .error-cover {
     margin:auto 0;
@@ -53,14 +54,14 @@ main#notFound .error-content .go-other-page button {
     margin:0 10px;
 }
 main#notFound .error-content .go-other-page button {
-    background-color:white;
+    background-color:var(--white);
 }
 main#notFound .error-content .go-other-page button a{
-    color:#333333;
+    color:var(--primary-color);
 }
 main#notFound .error-content .go-other-page button:first-child {
-    background-color:#333333;
+    background-color:var(--primary-color);
 }
 main#notFound .error-content .go-other-page button:first-child a{
-    color:white;
+    color:var(--white);
 }

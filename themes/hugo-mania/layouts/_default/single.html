@@ -29,6 +29,9 @@
       {{ partial "post-toc.html" . }}
     </aside>
   </section>
+  <section id="sectioin-move">
+    {{ partial "section-move.html" . }}
+  </section>
   <section id="meta">
     <div class="card">
       {{ with .Params.topics }}
@@ -40,7 +43,6 @@
       {{ end }}
       {{ partial "category_breadcrumb.html" . }}
       {{ partial "tag_list.html" . }}
-      {{ partial "section-move.html" . }}
       {{ template "_internal/disqus.html" . }}
     </div>
   </section>

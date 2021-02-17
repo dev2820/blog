@@ -39,15 +39,18 @@
 .post-toc #table ul li a {
     color:var(--secondary-text-color);
     transition:0.3s;
+    font-size:0.9rem;
+    line-height:1.1rem;
 }
 .post-toc #table ul li a:hover{
     color:var(--green);
-    font-size:1.05rem;
+    font-size:0.95rem;
 }
 
 .post-toc #table ul li a::before {
     counter-increment: post-toc;
-    content: "[" counters(post-toc, ".") "] ";
+    /* content: "[" counters(post-toc, ".") "] "; */
+    content:'';
     color:var(--secondary-text-color);
 }
 .post-toc #table ul li a:hover::before {

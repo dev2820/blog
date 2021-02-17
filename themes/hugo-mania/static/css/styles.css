@@ -102,9 +102,7 @@ button {
 button.toggle-on {
     background-color:var(--secondary-color);
 }
-ul {
-    list-style:none;
-}
+
 a {
     color:var(--on-background-color);
     text-decoration: none;

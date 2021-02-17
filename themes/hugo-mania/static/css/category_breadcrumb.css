@@ -8,12 +8,10 @@
     font-weight:bold;
 }
 .category_breadcrumb a.name {
-    /* background-color:var(--light-gray); */
     font-weight:bold;
     color:var(--primary-text-color);
     transition:0.3s ease-in-out;
 }
 .category_breadcrumb a.name:hover {
-    /* background-color:var(--primary-color);    */
     color:var(--green);
 }

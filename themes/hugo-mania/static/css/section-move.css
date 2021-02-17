@@ -1,23 +1,21 @@
 /* section-move */
 nav.section-move {
     width:100%;
-    height:80px;
-    margin-bottom:50px;
+    height:90px;
     position:relative;
 }
 nav.section-move .previous,
 nav.section-move .next {
-    background-color:var(--dark-gray);
     position:absolute;
     border-radius:8px;
-    padding:0 5px;
-    height:80px;
-    width:40%;
+    padding:10px 20px;
+    height:90px;
+    width:48%;
     font-size:1.1rem;
     font-weight:bold;
     display:flex;
     flex-direction:row;
-    transition:0.3s;
+    transition:1s;
 }
 nav.section-move .previous {
     left:0;
@@ -33,23 +31,17 @@ nav.section-move .previous .title,
 nav.section-move .next .title {
     position:relative;
     display:flex;
+    flex-direction:column;
     flex-grow:1;
 }
-nav.section-move .previous .title {
-    justify-content: flex-start;
-}
-nav.section-move .next .title {
-    justify-content: flex-end;
-}
 nav.section-move .title small {
-    position:absolute;
     color:var(--regular-text-color);
-    top:0px;
+    line-height:1.5rem;
 }
 nav.section-move .title span {
-    margin:auto 0;
     color:var(--regular-text-color);
     transition:0.3s;
+    line-height:1.3rem;
 }
 nav.section-move .previous:hover .title span,
 nav.section-move .next:hover .title span {
