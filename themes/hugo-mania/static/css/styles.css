@@ -277,6 +277,10 @@ hr.line {
 .bibe-100ms {
     animation: bibe 0.2s linear 0.1s 1;
 }
+.for-belt {
+    animation: for-belt 0.5s ease-out 1;
+    animation-fill-mode: forwards;
+}
 /* Section, List, Taxonomy */
 ul.contents {
     padding-left: 0;
@@ -397,5 +401,16 @@ ul.contents li {
     }
     100% {
         transform:rotate(360deg);
+    }
+}
+@keyframes for-belt {
+    0% {
+        transform:scale(0);
+    }
+    70% {
+        transform:scale(1.05);
+    }
+    100% {
+        transform:scale(1);
     }
 }

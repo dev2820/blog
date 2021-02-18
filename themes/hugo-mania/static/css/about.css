@@ -1,9 +1,42 @@
 /* about */
-#about {
-    position:relative;
-    margin:0 auto;
-    margin-top:70px;
+main#about-main {
+    margin-top:100px;
+}
+main#about-main section {
+    padding-top:0;
+    overflow:hidden;
+}
+main#about-main section#about div.cover{
     width:100%;
-    min-width:800px;
-    max-width:1000px;
+    height:600px;
+    background-size:100% 100%;
+}
+main#about-main section#about div.cover a.go-back {
+    position:absolute;
+    top: 20px;
+    left: 20px;
+    font-size:2rem;
+}
+main#about-main section#about img.profile{
+    border-radius: 50%;
+    width:300px;
+    height:300px;
+    position:absolute;
+    left:50%;
+    margin-left:-150px;
+    margin-top:-200px;
+    background-size:100% 100%;
+}
+main#about-main section#about article.content {
+    padding:20px;
+    margin-top:150px;
+}
+main#about-main section#about article.content .share {
+    font-size:2rem;
+}
+main#about-main section#about article.content .share a {
+    text-decoration: none;
+}
+main#about-main section#about article.content .share .icon{
+    margin:0 1rem;
 }

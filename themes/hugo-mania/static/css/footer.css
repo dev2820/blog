@@ -13,7 +13,7 @@ footer#footer .center {
 footer#footer span {
     margin: 0 auto;
     display:inline-block;
-    font-size:0.7rem;
+    font-size:0.75rem;
     color: var(--on-primary-color);
 }
 footer#footer .share {

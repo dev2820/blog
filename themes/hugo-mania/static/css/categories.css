@@ -35,6 +35,9 @@ header#category-header .description {
 main#category-main {
     margin-top:300px;
 }
+main#category-main ul {
+    list-style: none;
+}
 main#category-main section#category-term ul li {
     margin-bottom:30px;
 }

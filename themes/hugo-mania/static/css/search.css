@@ -55,6 +55,9 @@ header#search-header form.search-bar label .icon {
 main#search-main {
     margin-top:300px;
 }
+main#search-main ul {
+    list-style: none;
+}
 main#search-main section#search-section {
     min-height:230px;
 }

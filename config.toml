@@ -25,9 +25,10 @@ offlineSearch = true
     filename = "sitemap.xml"
 
 [author]
-    name = "dev2820"
+    name = "YANG GI JO "
+    nickname="dev2820"
     email = "second28200@gmail.com"
-    cover = "/images/ocean.jpg"
+    profile = "/images/space.jpg"
     introduce = "풀스텍 웹개발을 지향합니다"
  
 [params]
@@ -37,7 +38,6 @@ offlineSearch = true
     siteLogo = "/images/site_logo_dark.png"
     bannerBottom = "/images/footer.png"
     defaultSummaryImage = "/images/default_summary.png"
-    asideBackgroundImage = "/images/space.jpg"
 
 [taxonomies]
     category = "categories"

@@ -1,9 +1,26 @@
 {{ define "main" }}
-<div id="about">
-    {{ partial "breadcrumb.html" .}}
-    {{ with .Site.GetPage "about"}}
-        <h1>{{ .Title }}</h1>
-        {{ .Content }}
-    {{ end }}
-</div>
+<main id="about-main" >
+    <!-- {{ partial "breadcrumb.html" .}} -->
+    <section id="about" class="card">
+        {{ with .Site.GetPage "about"}}
+            {{ if .Params.cover }}
+            <div class="cover" style="background-image:url({{ .Params.cover }}">
+                <a class="go-back" href="javascript:history.back()"><i class="fas fa-arrow-left icon"></i></a>
+            </div>
+            {{ end }}
+            {{ if .Params.profile }}
+                <img class="profile for-belt" src="{{ .Params.profile }}"/>
+            {{ else if .Site.Author.profile }}
+                <img class="profile for-belt" src="{{ .Site.Author.profile }}"/>
+            {{ end }}
+            <article class="content">
+                <h1 class="title center">{{ .Title }}</h1>
+                <div class="center">
+                    {{ partial "share.html" . }}
+                </div>
+                {{ .Content }}
+            </article>
+        {{ end }}
+    </section>
+</main>
 {{ end }}

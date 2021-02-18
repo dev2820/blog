@@ -8,8 +8,10 @@
     <!-- {{.Site.Copyright}} -->
     <div class="center">
       {{- partial "share.html" . -}}
-      <span>COPYRIGHT (C) <a href="https://dev2820.github.io"> GIJO YANG (DEV2820).</a></span>
-      <span>ALL RIGHTS RESERVED.</span>
+      <div class="copyright center">
+        <span>{{replace "COPYRIGHT 2021-{year}." "{year}" now.Year}} <a href="https://dev2820.github.io"> GIJO YANG (DEV2820).</a></span>
+        <span>ALL RIGHTS RESERVED.</span>
+      </div>
     </div>
   </footer>
 </body>
