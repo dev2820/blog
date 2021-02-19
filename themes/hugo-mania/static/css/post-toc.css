@@ -43,7 +43,7 @@
     line-height:1.1rem;
 }
 .post-toc #table ul li a:hover{
-    color:var(--green);
+    color:var(--purple);
     font-size:0.95rem;
 }
 

@@ -40,7 +40,7 @@ footer#footer div.banner-bottom img {
     z-index:110;
 }
 #footer button.scroll-to-top * {
-    color:var(--primary-color);
+    color:var(--purple);
     margin:0 auto;
 }
 #footer button.scroll-to-top:active {
@@ -61,7 +61,7 @@ footer#footer div.banner-bottom img {
     z-index:110;
 }
 #footer button.scroll-to-bottom * {
-    color:var(--primary-color);
+    color:var(--purple);
     margin:0 auto;
 }
 #footer button.scroll-to-bottom:active {

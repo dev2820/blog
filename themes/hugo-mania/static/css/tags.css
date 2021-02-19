@@ -49,6 +49,7 @@ main#tag-main section#tag-term .card{
 main#tag-main section#tag-term .sort-options.card {
     display:flex;
     flex-direction:row;
+    padding:10px 20px;
     margin-bottom:20px;
 }
 main#tag-main section#tag-term .sort-options.card button {
@@ -92,7 +93,7 @@ ul.tags li a {
     transition:0.3s ease-in-out;
 }
 ul.tags li:hover a {
-    color:var(--green);
+    color:var(--purple);
 }
 
 ul.tags.tag_list {

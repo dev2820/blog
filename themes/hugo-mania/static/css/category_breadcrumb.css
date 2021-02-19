@@ -13,5 +13,5 @@
     transition:0.3s ease-in-out;
 }
 .category_breadcrumb a.name:hover {
-    color:var(--green);
+    color:var(--purple);
 }
