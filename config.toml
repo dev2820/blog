@@ -25,7 +25,7 @@ offlineSearch = true
     filename = "sitemap.xml"
 
 [author]
-    name = "YANG GI JO "
+    name = "YANG GI JO"
     nickname="dev2820"
     email = "second28200@gmail.com"
     profile = "/images/space.jpg"
@@ -38,8 +38,13 @@ offlineSearch = true
     siteLogo = "/images/site_logo_dark.png"
     bannerBottom = "/images/footer.png"
     defaultSummaryImage = "/images/default_summary.png"
+    tagBannerImage = "/images/tags_banner.png"
+    categoriesBannerImage = ""
 
 [taxonomies]
     category = "categories"
     tag = "tags"
     subcategory = "subcategories"
+
+[adsense]
+    client = "ca-pub-2663364582943679"

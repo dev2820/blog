@@ -80,20 +80,20 @@ ul.tags li{
     margin-bottom:12px;
     border-radius: 8px;
     transition:0.3s ease-in-out;
-    overflow:hidden;
 }
 ul.tags li a {
     height:100%;
     width:100%;
     font-weight:100;
-    font-size:1rem;
+    font-size:1.1rem;
     font-weight:bold;
     color:var(--primary-text-color);
     cursor: pointer;
-    transition:0.3s ease-in-out;
+    transition:0.2s ease-in-out;
 }
 ul.tags li:hover a {
     color:var(--purple);
+    transform:scale(1.2);
 }
 
 ul.tags.tag_list {

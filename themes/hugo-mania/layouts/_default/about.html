@@ -14,10 +14,12 @@
                 <img class="profile for-belt" src="{{ .Site.Author.profile }}"/>
             {{ end }}
             <article class="content">
-                <h1 class="title center">{{ .Title }}</h1>
-                <div class="center">
+                <h3 class="title center">{{ .Title }}</h3>
+                <h1 class="name center">{{.Site.Author.name}}</h1>
+                <div class="share-container center">
                     {{ partial "share.html" . }}
                 </div>
+                <hr/>
                 {{ .Content }}
             </article>
         {{ end }}

@@ -1,5 +1,5 @@
 {{ define "header" }}
-<header id="tag-header" class="card-inset bg-cover" style="background-image:url('/images/tags_banner.png');">
+<header id="tag-header" class="card-inset bg-cover" style="background-image:url({{.Site.Params.tagBannerImage | relURL }});">
     <div class="center">
         <h1 class="title"><i class="fas fa-tags icon"></i>{{ i18n "tagsTitle"}}</h1>
         <p class="description">{{ i18n "tagsDescription" }}</p>

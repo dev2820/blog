@@ -1,6 +1,7 @@
 /* Pagination */
 .pagination {
     display:inline-block;
+    color:var(--white);
 }
 .pagination a.round-card {
     display:inline-flex;

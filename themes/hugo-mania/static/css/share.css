@@ -1,6 +1,12 @@
+.share {
+    display:flex;
+    justify-content: space-between;
+}
 footer .share {
     font-size:3rem;
     margin-bottom:15px;
+    width:200px;
+
 }
 aside .share {
     font-size:1.5rem;
@@ -21,8 +27,4 @@ aside .share a.round-card {
 .share .icon {
     margin:auto 0;
     width:1.5rem;
-}
-footer .share .icon {
-    width:3rem;
-    margin:0 10px;
 }

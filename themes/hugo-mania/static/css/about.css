@@ -9,7 +9,8 @@ main#about-main section {
 main#about-main section#about div.cover{
     width:100%;
     height:600px;
-    background-size:100% 100%;
+    background-size:100% 600px;
+    overflow:hidden;
 }
 main#about-main section#about div.cover a.go-back {
     position:absolute;
@@ -24,19 +25,21 @@ main#about-main section#about img.profile{
     position:absolute;
     left:50%;
     margin-left:-150px;
-    margin-top:-200px;
+    margin-top:-150px;
     background-size:100% 100%;
 }
 main#about-main section#about article.content {
-    padding:20px;
-    margin-top:150px;
+    padding:10px 30px;
+    margin-top:200px;
+}
+main#about-main section#about article.content .name {
+    font-size:4rem;
 }
 main#about-main section#about article.content .share {
     font-size:2rem;
+    width:150px;
+    margin-bottom:50px;
 }
 main#about-main section#about article.content .share a {
     text-decoration: none;
-}
-main#about-main section#about article.content .share .icon{
-    margin:0 1rem;
 }

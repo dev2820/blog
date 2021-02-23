@@ -11,7 +11,9 @@
     font-weight:bold;
     color:var(--primary-text-color);
     transition:0.3s ease-in-out;
+    font-size:1.1rem;
 }
 .category_breadcrumb a.name:hover {
     color:var(--purple);
+    transform: scale(1.2);
 }

@@ -2,7 +2,7 @@
   {{ if .Params.cover }}
   <header id="home-header" class="card-inset bg-cover" style="background-image:url({{.Params.cover}});">
   {{ else }}
-  <header id="home-header" class="card-inset bg-cover" style="background-image:url('/images/default_background.jpg');">
+  <header id="home-header" class="card-inset bg-cover">
   {{ end }}
     <div class="curtain center">
       <h1 class="title">{{.Title}}</h1>

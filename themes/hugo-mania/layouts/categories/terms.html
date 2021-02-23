@@ -1,6 +1,10 @@
 {{ define "header" }}
-<header id="category-header" class="card-inset bg-cover" style="background-image:url('/images/categories_banner.png');">
-  <div class="center">
+{{ if .Params.banner }}
+<header id="category-header" class="card-inset bg-cover" style="background-image: url({{ .Site.Params.categoriesBannerImage }});">
+{{ else }}
+<header id="category-header" class="card-inset bg-cover">
+{{ end }}
+<div class="center">
     <h1 class="title"><i class="fas fa-list icon"></i>{{ i18n "categoriesTitle" }}</h1>
     <p class="description">{{ i18n "categoriesDescription" }}</p>
   </div>
@@ -23,7 +27,7 @@
               {{ with .Resources.GetMatch (string .Params.icon) }}
                 <img class="cover" src="{{ .RelPermalink }}"></img>
               {{ else }}
-              <img class="cover" src="/images/cover-icon.png"></img>
+                <img class="cover" src="/images/cover-icon.png"></img>
               {{ end }}
             {{ else }}
               <img class="cover" src="/images/cover-icon.png"></img>
