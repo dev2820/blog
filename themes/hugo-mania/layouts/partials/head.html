@@ -52,7 +52,7 @@
     </script>
     {{ end }}
     {{ end }}
-    <script data-ad-client="{{.Site.Adsense.client}}" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script data-ad-client={{ .Site.Params.adsensClient }} async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script src="/js/default.js"></script>
     
 </head>
