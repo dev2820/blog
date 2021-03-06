@@ -15,5 +15,5 @@
 }
 .category_breadcrumb a.name:hover {
     color:var(--purple);
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
