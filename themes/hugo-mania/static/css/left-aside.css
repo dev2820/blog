@@ -10,7 +10,6 @@ aside#left-aside {
     padding-top:100px;
     opacity:1;
     transition:all 0.3s ease-out;
-
     display:flex;
     flex-direction:column;
 }
@@ -36,3 +35,4 @@ aside#left-aside nav.aside-menu ul li .icon {
 aside#left-aside nav.aside-menu a {
     color:var(--on-background-color);
 }
+

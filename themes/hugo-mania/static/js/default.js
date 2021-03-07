@@ -1,9 +1,9 @@
 function toggleAside(bool) {
-    const e = document.getElementById('aside');
-    if (e.classList.contains('hidden') && bool)
-        e.classList.remove('hidden');
+    const e = document.querySelector('aside#left-aside');
+    if (e.classList.contains('show') && bool)
+        e.classList.remove('show');
     else
-        e.classList.add('hidden');
+        e.classList.add('show');
 }
 //read json file
 function readTextFile(file, callback) {
@@ -51,10 +51,6 @@ window.onload = function () {
             });
         });
     });
-    //clock script
-    // makeClockWork();   
-    
-    
 }
 document.onreadystatechange = function() { 
     if (document.readyState !== "complete") { 

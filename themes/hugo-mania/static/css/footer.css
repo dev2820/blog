@@ -1,9 +1,11 @@
 /* Footer*/
 footer#footer {
+    background-color:var(--background-color);
     position:relative;
     height:450px;
     width:100%;
     bottom:0;
+    z-index:10;
 }
 footer#footer .center {
     position:relative;

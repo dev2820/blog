@@ -28,7 +28,7 @@ Hugo-mania Theme CSS
 @import './taxonomy.css';
 @import './topbar.css';
 
-@import './clock.css';
+@import './media_query.css';
 
 
 * {
@@ -136,7 +136,8 @@ main {
     left:50%;
     margin-left:-500px;
     background-color:transparent;
-    margin-top:450px;
+    margin-top:448px;
+    /*roller 2px 차이 감안*/
     z-index:10;
 }
 section {
@@ -149,7 +150,7 @@ section:last-child {
     padding-bottom:100px;
 }
 aside {
-    z-index:10;
+    z-index:11;
 }
 footer {
     z-index:5;
@@ -159,13 +160,15 @@ hr.line {
     border:1px solid #eeeeee;
 }
 .card {
-    box-shadow: 0 2px 4px 0 rgba(232,232,234,0.2);
+    /* box-shadow: 0 2px 4px 0 rgba(232,232,234,0.2); */
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius:8px;
     background-color:var(--main-card-color);
 }
 .card:hover {
-    box-shadow: 0 4px 8px 0 rgba(232,232,234,0.2);
+    /* box-shadow: 0 4px 8px 0 rgba(232,232,234,0.2); */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 .card-inset {
     box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2) inset;
@@ -180,7 +183,7 @@ hr.line {
     transform:translateY(-5px);
 }
 .curtain {
-    height:100%;
+    height:101%;
     box-sizing:content-box;
     flex-direction:column;
     backdrop-filter: brightness(60%);
@@ -188,12 +191,6 @@ hr.line {
 }
 .roller {
     height:32px;
-    background:
-            -webkit-radial-gradient(100% 0, circle, rgba(204,0,0,0) 7px,var(--background-color) 8px),
-            -webkit-radial-gradient(0 0, circle, rgba(204,0,0,0) 7px, var(--background-color) 8px);
-    background:
-            -webkit-radial-gradient(100% 0, circle, rgba(204,0,0,0) 7px,var(--background-color) 8px),
-            -webkit-radial-gradient(0 0, circle, rgba(204,0,0,0) 7px, var(--background-color) 8px);
     background:
             -webkit-radial-gradient(100% 0, circle, rgba(204,0,0,0) 7px,var(--background-color) 8px),
             -webkit-radial-gradient(0 0, circle, rgba(204,0,0,0) 7px, var(--background-color) 8px);
@@ -301,7 +298,6 @@ ul.contents li {
     flex-direction:row;
     justify-content: flex-end;
     padding:0 20px;
-    /* background:linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgb(200, 200, 200) 50%, rgb(200, 200, 200) 100%); */
 }
 .profile-in-article .profile-image img{
     width:100px;
