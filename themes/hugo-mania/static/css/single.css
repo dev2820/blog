@@ -44,7 +44,7 @@ main#single-main {
     z-index:5;
 }
 main#single-main section#content article.content{
-    padding:30px 50px;
+    padding:50px 50px 150px 50px;
 }
 main#single-main section#meta .card {
     background-color:var(--main-card-color);
