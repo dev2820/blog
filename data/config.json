@@ -21,6 +21,6 @@
         "what_is_hugo":["hugo"],
         "일상":["test","추천","일상"],
         "projects":["nas_project"],
-        "computer_science":["programming_language"]
+        "computer_science":["programming_language","파일처리"]
     }   
 }
