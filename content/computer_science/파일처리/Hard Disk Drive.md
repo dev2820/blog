@@ -106,3 +106,4 @@ rotational delay는 평균적으로 한 바퀴 회전하는데 드는 시간의 
 
 한 하드웨어가 위와 같은 스펙을 가진다고 하면 이 하드디스크가 1byte를 Input/Output에 걸리는 속도는 8ms(seek time) + 3ms(rotational delay) + 1/(512*170)*6ms 가 됩니다.
 
+
