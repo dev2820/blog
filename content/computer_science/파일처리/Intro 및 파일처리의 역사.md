@@ -65,14 +65,14 @@ bool delete() {}
 
 하지만 단점도 있었습니다. 한 데이터의 크기가 바뀌면 뒤따라오는 다른 데이터들의 주소도 바뀌어 Index File을 관리하기 어려웠습니다.  
 
-![Simple Index](../index_file.png)
+![Simple Index](../images/index_file.png)
 
 ### Binary Search Tree
 Index File을 더 빠르게 탐색하기위해 이진트리를 이용해 키와 주소를 저장하기 시작했습니다. 가장 이상적인 경우 logN의 시간이 걸리게되죠.
 
 하지만 한쪽으로만 자라는 기형의 이진트리가 생기게되면(최악의 경우) 속도는 기존과 같게됩니다.
 
-![Binary Search Tree](../binary_tree.png)
+![Binary Search Tree](../images/binary_tree.png)
 
 ### Balanced Binary Tree
 트리가 한쪽으로만 자라는 기형적인 이진트리 (skewed binary tree,사향 트리라고 합니다.)를 막기 위해서 Balanced Binary Tree를 사용하기 시작합니다.  
@@ -82,7 +82,7 @@ Balanced Binary Tree는 N개의 원소가 주어지면 항상 logN+1의 높이�
 ### AVL tree
 Balanced Binary Tree의 한 종류로, AVL tree는 같은 root를 가지는 두 서브트리간의 높이 차이가 1 이하인 이진검색트리를 말합니다. 원소를 추가,변경할 때마다 트리가 AVL 트리가 아니게 될 경우 원소를 재배치해 AVL tree를 유지하는 방식입니다. 이 방식대로면 이상적인 형태의 이진검색트리만 계속 유지되겠죠?
   
-![avltree](../220px-AVL_Tree_Example.gif)  
+![avltree](../images/220px-AVL_Tree_Example.gif)  
 
 (출처: https://en.wikipedia.org/wiki/AVL_tree)
 

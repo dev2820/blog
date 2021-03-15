@@ -121,7 +121,7 @@ other = "TAGS"
 other = "태그 별 글을 볼 수 있습니다."
 
 [tagsCount]
-other = "{{.Count}}개의 태그가 있습니다."
+other = "{{.Count}} 개의 태그가 있습니다."
 ###################
 # Subcategory
 ###################

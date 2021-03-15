@@ -28,7 +28,7 @@ offlineSearch = true
     name = "YANG GI JO"
     nickname="dev2820"
     email = "second28200@gmail.com"
-    profile = "/images/space.jpg"
+    profile = "/images/cover.jpg"
     introduce = "풀스텍 웹개발을 지향합니다"
 
 [params]

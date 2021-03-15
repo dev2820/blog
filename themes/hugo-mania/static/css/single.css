@@ -1,6 +1,7 @@
 /* single*/
 header#single-header {
     color:var(--main-card-color);
+    background-color:var(--main-card-color);
 }
 header#single-header .curtain {
     position:relative;
