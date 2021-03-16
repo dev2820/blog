@@ -1,4 +1,4 @@
-baseurl = "http://dev2820.github.io/"
+baseurl = "https://dev2820.github.io/"
 title = "dev2820 개발일지"
 
 languageCode = "ko-KR"
