@@ -28,4 +28,8 @@ draft = false
  - sub title2
   - sub sub title
 
+```c
+printf("Hello");
+```
+
 

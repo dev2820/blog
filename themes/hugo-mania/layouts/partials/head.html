@@ -30,17 +30,12 @@
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
-    <!-- {{- if .Site.Params.useHLJS }}
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/agate.min.css">
-    {{- else -}}
-    <link rel="stylesheet" href="{{ "css/syntax.css" | absURL }}" />
-    {{- end -}} -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap">
     <link rel="stylesheet" href="{{ "/css/styles.css" | relURL }}">
     
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script> -->
     
-    <script>hljs.initHighlightingOnLoad();</script>
+    <!-- <script>hljs.initHighlightingOnLoad();</script> -->
     {{ if not .Site.BuildDrafts }}
     {{ if .Site.GoogleAnalytics }}
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
