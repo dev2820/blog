@@ -3,7 +3,7 @@
     <div class="logo">
       <a href="{{ "/" | relURL }}">
         {{ if .Site.Params.siteLogo }}
-        <img src="{{ .Site.Params.siteLogo | relURL }}" height="32px" />
+        <img src="{{ .Site.Params.siteLogo | relURL }}" height="32px" width=""/>
         {{ else }}
         <img src="{{ "/images/logo.png" | relURL }}" height="32px" />
         {{ end }}
