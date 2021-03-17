@@ -1,7 +1,7 @@
 +++
 title= "{{ replace .Name "-" " " | title }}"
 date= {{ .Date }}
-categories= ["computer science"]
+categories= ["computer_science"]
 tags= ["프로그래밍언어","PL","공부"]
 subcategories = ["programming language"]
 cover= ""

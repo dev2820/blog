@@ -1,7 +1,7 @@
 +++
 title= "SIC-XE란"
 date= 2021-03-17T23:46:25+09:00
-categories= ["computer science"]
+categories= ["computer_science"]
 tags= ["시스템_프로그래밍","공부"]
 subcategories = ["시스템_프로그래밍"]
 cover = ""

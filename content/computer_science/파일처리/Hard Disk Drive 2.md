@@ -1,7 +1,7 @@
 +++
 title= "Hard Disk Drive 2"
 date= 2021-03-16T22:59:00+09:00
-categories= ["computer science"]
+categories= ["computer_science"]
 tags= ["파일처리","공부"]
 subcategories = ["파일처리"]
 cover = ""
