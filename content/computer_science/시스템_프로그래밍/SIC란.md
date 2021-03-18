@@ -6,7 +6,7 @@ tags= ["시스템_프로그래밍","공부"]
 subcategories = ["시스템_프로그래밍"]
 cover = ""
 icon = "computer_science/computer_science_icon.png"
-draft= false
+draft= true
 +++
 
 ## SIC 머신이란

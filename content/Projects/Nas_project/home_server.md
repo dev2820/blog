@@ -6,7 +6,7 @@ tags= ["projects","DIY"]
 subcategories= ["Nas_project"]
 
 cover= ""
-draft= false
+draft= true
 +++
 
 ## 글머리

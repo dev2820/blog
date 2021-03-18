@@ -6,7 +6,7 @@ tags= ["파일처리","공부"]
 subcategories = ["파일처리"]
 cover = ""
 icon = "computer_science/computer_science_icon.png"
-draft= false
+draft= true
 +++
 
 ## record를 읽는 순서
