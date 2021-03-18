@@ -12,7 +12,8 @@
             {{ .Title }}
         </h1>
         <div class="taxonomy-count">
-            <p class="counter">{{ i18n "postCount" (len .Pages) }}</p>
+            {{ $count := (len .Pages) }}
+            <p class="counter">{{ i18n "postsCount" $count }}</p>
         </div>
     </div>
 </header>

@@ -1,7 +1,7 @@
 +++
 title= "NAND Flash Memory"
 date= 2021-03-17T01:24:12+09:00
-categories= ["computer science"]
+categories= ["computer_science"]
 tags= ["파일처리","공부"]
 subcategories = ["파일처리"]
 cover = ""

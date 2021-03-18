@@ -111,19 +111,19 @@ b=0, p=0, e=1 -> 직접주소지정방식(20bits)
 
 ## 명령어들
 
-**Load&Store**
+**Load&Store**  
 레지스터가 추가됨에 따라 Load, Store 명령어들이 추가됐습니다.
 LDB, STB 등등
 
-**Floating Point Arithmetic**
+**Floating Point Arithmetic**  
 float 연산이 가능해지면서 float의 사칙연산 명령어가 추가됐습니다.
 ADDF,SUBF, MULF,DIVF
 
-**Register instruction**
+**Register instruction**  
 범용 레지스터가 생기면서 레지스터 간의 연산이 가능해졌습니다.
 RMO, ADDR, SUBR, MULR, DIVR
 
-**I/O**
+**I/O**  
 SIC/XE가 되면서 I/O Device에서 값을 입력받거나 입력하면서 동시에 연산도 진행하는 기술이 추가되었습니다. 따라서 SIO, TIO, HIO의 명령어가 생겼습니다.
 
 

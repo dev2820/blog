@@ -17,9 +17,6 @@ sectionPagesMenu = "main"
 enableRobotsTXT = true
 offlineSearch = true
 
-[outputs]
-    home = ["HTML", "RSS", "JSON"]
-
 [sitemap]
     changefreq = "weekly"
     filename = "sitemap.xml"
