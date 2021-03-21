@@ -9,17 +9,6 @@ icon = "projects/project-icon.png"
 draft= false
 +++
 
-+++
-title= "아주 기초적인 git"
-date= 2021-03-20T11:23:58+09:00
-categories= ["projects"]
-tags= ["프로젝트","게임","똥 피하기","로그인폼","git"]
-subcategories = ["holy_shit"]
-cover = ""
-icon = "projects/project-icon.png"
-draft= false
-+++
-
 페이지들을 만들기 전, 프로젝트를 시작하기 위한 아주아주아주 간단한 git 강의입니다. 오타, 오류 지적 환영입니다.
 
 ## Git?
