@@ -27,7 +27,7 @@ staging된 파일이 3개라면 3개의 Blob이 생기겠죠.
 
 최초의 commit을 제외하면, 이후 생성되는 commit들은 부모 commit의 주소값을 기록합니다. 어떤 commit에서 바뀌었는지 알기 위해서죠. 이렇게 commit들을 만들다보면 방향성 그래프가 생성되겠죠?
 
-branch는 이 방향성 그래프의 한 노드(commit)을 가리키는 포인터, HEAD는 branch를 가리키는 포인터입니다.
+branch는 이 방향성 그래프의 한 노드(commit)을 가리키는 포인터, HEAD는 현재 작업중인 branch를 가리키는 포인터입니다. 
 
 ![git branch](../images/git-branch.png)  
 [git commit과 master-branch]
@@ -133,7 +133,7 @@ git branch -D test_branch
 
 ### 주의할 점
 변경된 사항들을 commit으로 만들지 않고 브랜치를 checkout해서 이동하면 
-이동한 브랜치에 변경된 사항들이 적용되어 버립니다. 반드시 변경하상들을 commit으로 만들어주고 checkout 해줍시다.
+이동한 브랜치에 변경된 사항들이 적용되어 버립니다. 반드시 변경사항들을 commit으로 만들어주고 checkout 해줍시다.
 
 ## 마치며
 
