@@ -118,10 +118,11 @@ git diff
 git diff good-idea
 
 # git diff [브랜치] [브랜치2]
+git diff master good-idea
 ```
-`git diff`는 HEAD와 다른 수정사항들을 보여줍니다.
-`git diff [브랜치]`는 HEAD가 아닌 가리키는 브랜치와 비교합니다.
-`git diff [브랜치] [브랜치2]`는 두 브랜치를 비교해 다른 점을 알려줍니다.
+`git diff`는 HEAD와 다른 수정사항들을 보여줍니다.  
+`git diff [브랜치]`는 HEAD가 아닌 가리키는 브랜치와 비교합니다.  
+`git diff [브랜치] [브랜치2]`는 두 브랜치를 비교해 다른 점을 알려줍니다.  
 
 ### clone vs fork
 fork는 다른 사람의 repository를 복사해 나의 repository를 만드는 행위입니다.

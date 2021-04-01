@@ -170,6 +170,8 @@ git push origin good-idea:origin-good-idea
 
 ![github 7](../images/github-7.png)
 [↑ 원격저장소의 브랜치가 2개에서 3개로 늘었고, merge pull request를 보낼 수 있다.]
+
+
 이제 github에 새로 들어온 브랜치를 brances를 클릭해 확인할 수 있습니다. 그리고 pull request를 보낼 수 있게 되었습니다. pull request는 원격저장소에 commit 또는 branch를 올리기 전 최종관문입니다. 원격저장소를 관리하는 관리자에게 pull request를 승낙/거절할 권리가 있습니다. 관리자의 승낙까지 받아야 원격저장소에 정식으로 branch가 올라가게 됩니다.
 
 ### 코드를 받아오지 않고 원격저장소 commit 보기
