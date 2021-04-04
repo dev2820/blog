@@ -348,6 +348,12 @@ ul.contents li {
 #loader.hidden {
     z-index:-1;
 }
+figure figcaption {
+    text-align:center;
+    color:#999999;
+    font-size:0.98rem;
+}
+/* animations */
 @keyframes appear-top {
     0% {
         opacity:0;
