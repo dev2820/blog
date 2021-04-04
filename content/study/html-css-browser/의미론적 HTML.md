@@ -6,7 +6,7 @@ subcategories = ["html"]
 tags= ["study","컴퓨터 기술","공부정리","HTML","web"]
 cover= ""
 icon = "study/computer_science_icon.png"
-draft= true
+draft= false
 +++
 
 오타,오류 지적 환영입니다.
