@@ -348,6 +348,13 @@ ul.contents li {
 #loader.hidden {
     z-index:-1;
 }
+figure {
+    display:flex;
+    flex-direction:column;
+}
+figure img {
+    margin:0 auto;
+}
 figure figcaption {
     text-align:center;
     color:#999999;
