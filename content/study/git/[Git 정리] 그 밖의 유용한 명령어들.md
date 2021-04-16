@@ -6,7 +6,7 @@ subcategories = ["git"]
 tags= ["study","컴퓨터 기술","공부정리","Git","버전관리"]
 cover= ""
 icon = "study/computer_science_icon.png"
-draft= true
+draft= false
 +++
 
 ## `.gitignore`: 무시할 파일
