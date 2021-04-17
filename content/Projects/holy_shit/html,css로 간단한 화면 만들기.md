@@ -1,5 +1,5 @@
 +++
-title= "Html,css,js로 간단한 화면 만들기 1"
+title= "Html,css로 간단한 화면 만들기 1"
 date= 2021-04-17T00:53:40+09:00
 categories= ["projects"]
 tags= ["프로젝트","게임","똥피하기","로그인폼"]
