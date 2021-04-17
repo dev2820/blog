@@ -18,7 +18,7 @@ HTML,CSS를 공부하고 사용해 간단한 로그인 페이지, 회원가입 �
 서버를 구축하고 웹을 서비스하기 전, 간단한 로그인 폼과 회원가입 폼을 지닌 HTML,CSS로 구성된 로그인 페이지, 회원가입 페이지를 만들어 보기로 했습니다. react나 vue같은 frame work 없이 순수 html,css로 화면을 구성할 것입니다.
 
 form을 사용하고 http로 login request를 보내기 전, 정말정말 간단하게 화면을 구성하고 정말정말 간단한 CSS를 적용해 보는 것을 목적으로 했습니다. 
-
+  
 {{<figure-img src="../images/로그인화면.png" alt="semantic struct">}}
 login page 목업
 {{</figure-img>}}
@@ -94,7 +94,8 @@ input을 클릭하면 생기는 검은 태두리는 `:focus` 의사 클래스가
 적용하고 싶은 effect, css가 있는데 뭘 써야하는지 모르겠다면, 남들이 잘 만들어놓은 코드를 참고하면 됩니다. 대충 **만들어 보고싶은 effect or element + css**로 검색하면 다른 사람들이 만들어놓은 코드들을 볼 수 있습니다. 예를 들어 구글에 `searchbar css`,`button hover effect css`를 검색해보면 사람들이 만들어 놓은 예쁘고 훌륭한 결과물들이 많습니다. codepen으로 만드는 법을 같이 올려놓는 경우도 많은데 이런 코드를 긁어다 쓰지 말고 css를 조금씩 변경해보며 어떻게 해서 이런 effect가 만들어졌는지 연구해보세요. css실력이 빠르게 늘겁니다. 남들이 짜놓은 코드에서 알게되는 속성들도 많구요.
 
 ## 의미론적 html, css 선택자
-읽어보면 좋을 내용을 정리해서 올려놨습니다. 한번 읽어보세요.
+읽어보면 좋을 내용을 정리해서 올려놨습니다. 한번 읽어보세요.  
+
 {{<a_blank href="https://dev2820.github.io/study/html-css-browser/%EC%9D%98%EB%AF%B8%EB%A1%A0%EC%A0%81-html/">}}의미론적 html{{</a_blank>}}
 
 {{<a_blank href="https://dev2820.github.io/study/html-css-browser/css-%EC%84%A0%ED%83%9D%EC%9E%90/">}}css 선택자{{</a_blank>}}
