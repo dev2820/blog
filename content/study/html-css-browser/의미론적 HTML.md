@@ -39,7 +39,7 @@ non-semantic하게 짠 코드
 semantic하게 짠 코드
 {{</figure-img>}}
 
-non-semantic 한 코드와 semantic 한 코드 둘 중 어느 코드가 더 나은가요? non-semantic 한 코드도 class를 달아놔서 무슨 코드인지는 알아볼 법하지만 자세히 들여다보아야 하고 무수한 `<div>`들 때문에 코드 간 구별이 잘 되지도 않습니다.
+non-semantic 한 코드와 semantic 한 코드 둘 중 어느 코드가 더 나은가요? 구조가 단순해서 non-semantic 한 코드도 무슨 코드인지는 알아볼 법하지만 자세히 들여다보아야 하고 무수한 `<div>`들 때문에 코드 간 구별이 잘 되지도 않습니다.
 
 반면 semantic 하게 짠 코드는 태그만 봐도 무슨 역할인지 알 수 있기 때문에 자세히 보지 않아도 무슨 코드인지 짐작이 갑니다. 
 
@@ -48,7 +48,7 @@ non-semantic 한 코드와 semantic 한 코드 둘 중 어느 코드가 더 나�
 ... 여튼 그러한 장점이 있습니다.
 
 ### 모바일 환경에서 유리하다
-semantic 하게 짠 HTML은 상대적으로 non-semantic 한 HTML보다 파일 사이즈가 가볍습니다. 코드가 짧아지니까요. 또한 반응형 페이지 작성을 더 쉽게 할 수 있게 해줍니다. 코드를 짜는 사람에게도 이점이 있는 것이죠.
+semantic하게 짠 HTML은 상대적으로 non-semantic한 HTML보다 파일 사이즈가 가볍습니다. 코드가 짧아지니까요. 또한 반응형 페이지 작성을 더 쉽게 할 수 있게 해줍니다. 코드를 짜는 사람에게도 이점이 있는 것이죠.
 
 ### SEO를 위한 Semantic HTML
 SEO(search engine optimization)은 검색 엔진이 내 페이지를 찾을 수 있도록 페이지를 최적화하는 것을 말합니다. 검색 결과와 내가 만든 페이지가 부합할수록 검색엔진의 상단에 페이지가 노출됩니다. 블로그나 상업적으로 이용할 페이지를 만든다면 검색엔진에 잘 노출될 수 있도록 SEO 작업을 해줘야합니다. 
@@ -58,13 +58,13 @@ Semantic한 HTML은 마냥 `div`만 쓴 코드보다 search engine에 내 페이
 ## 무슨 태그를 써야 하는가?
 
 자 그러면 무슨 코드가 있으며, 어떤 의미를 가지는지 알아봅시다.
-{{<figure-img src="../images/semantic-struct.png" alt="semantic struct">}}
+{{<figure-img src="../images/semantic.png" alt="semantic struct">}}
 sementic한 HTML 구성
 {{</figure-img>}}
 
 일반적인 구조의 웹페이지를 작성할 때 위와 같은 구조의 html을 작성하게 됩니다.
 
-이렇게 짜라고 정해진 것은 아닙니다. semantic 한 HTML에 정답은 없습니다. 다만 디자인은 취향 차이지만 좋은 디자인이 있고 나쁜 디자인이 있듯, HTML도 semantic과 non-semantic이 있는 것입니다.
+이렇게 짜라고 정해진 것은 아닙니다. semantic한 HTML에 정답은 없습니다. 다만 디자인도 취향 차이지만 좋은 디자인이 있고 나쁜 디자인이 있듯, HTML도 semantic과 non-semantic이 있는 것입니다.
 
 ### 구획을 나누는 태그
 화면의 전체적인 구성을 나눌 때 사용하는 태그들 입니다.
@@ -80,11 +80,7 @@ sementic한 HTML 구성
 |`<main>`|body의 주요 콘텐츠를 나타낸다. 문서의 핵심주제나 앱의 핵심 기능에 직접적으로 연결되거나 확장하는 콘텐츠로 이루어진다.|
 |`<nav>`|네비게이션바 태그입니다. 다른 페이지로 이동하는 링크를 담는 메뉴,목차 등에 사용된다.|
 
-`<section>`을 여러 개 쓰거나 안쓰거나  `<main>`을 쓰지 않거나,`<footer>`에 `<address>`를 넣거나 등등은 작성하려는 웹에 맞게 적절히 작성하면 됩니다. 아래는 제가 주로 사용하는 화면 구성입니다.
-
-{{<figure-img src="../images/my-struct.png" alt="my semantic struct">}}
-주로 사용하는 semantic html 구성
-{{</figure-img>}}
+`<section>`을 여러 개 쓰거나 안쓰거나  `<main>`을 쓰지 않거나,`<footer>`에 `<address>`를 넣거나 등등은 작성하려는 웹에 맞게 적절히 작성하면 됩니다.
 
 ### 콘텐츠 구성에 사용하는 태그
 
