@@ -20,7 +20,7 @@
     "subCategoryList": {
         "what_is_hugo":["hugo"],
         "일상":["test","추천","일상"],
-        "projects":["nas_project","holy_shit"],
+        "projects":["nas_project","holy_shit","my-little-raspi"],
         "study":["git","nodejs","html,css,browser"]
     }   
 }
