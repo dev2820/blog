@@ -10,17 +10,17 @@ draft= true
 
 [[resources]]
   name= "cover"
-  src= "/images/my-little-raspi-banner.png"
+  src= "images/my-little-raspi-banner.png"
 +++
 
 ## 라즈베리파이?
-{{<figure-img src="../images/raspi-logo.png" alt="raspberry-pi icon">}}
+{{<figure-img src="./images/raspi-logo.png" alt="raspberry-pi icon">}}
 라즈베리파이 로고
 {{</figure-img>}}
 
 라즈베리파이 재단에서 만든 교육용 초소형 컴퓨터입니다. 핸드폰이 들고다니는 초소형 컴퓨터라면 이해가 빠를 겁니다. 제가 사용할 모델은 라즈베리파이4B 4GB모델입니다.
 
-{{<figure-img src="../images/라즈베리파이4-1.jpg" alt="raspberry-pi icon">}}
+{{<figure-img src="./images/라즈베리파이4-1.jpg" alt="raspberry-pi icon">}}
 라즈베리파이4B (4GB)
 {{</figure-img>}}
 
@@ -44,14 +44,14 @@ ROM이 미제공이기 때문에 사용자가 직접 저장장치를 달아줘�
 
 최근에 알았는데 일반 microSD는 OS를 깔기 적합하지 않다네요. A1로고가 붙은 microSD를 사용하면 병목없이 사용한다 합니다. 어쩐지 디스플레이를 연결하면 프리징현상이 있더라구요.
 
-{{<figure-img src="../images/라즈베리파이4-3.jpg" alt="raspberry-pi icon">}}
+{{<figure-img src="./images/라즈베리파이4-3.jpg" alt="raspberry-pi icon">}}
 라즈베리파이 뒷면의 microSD 슬롯
 {{</figure-img>}}
 그리고 전력을 5V, 3A 먹기 때문에 3A 충전기를 따로 구입해야합니다. (보통 쓰는 충전기가 2A)
 
 CPU 스펙은 왤케 느려 소리 안나올 정도로 쓸만합니다. 전에 벤치마크점수 뒤적이다 봤었는데 갤럭시 s6와 비슷한 성능이었던거 같습니다.(정확하진 않습니다) 
 ### 발열 이슈
-{{<figure-img src="../images/라즈베리파이4-4.jpg" alt="raspberry-pi icon">}}
+{{<figure-img src="./images/라즈베리파이4-4.jpg" alt="raspberry-pi icon">}}
 라즈베리파이 + 쿨러
 {{</figure-img>}}
 발열이 어쩌구 저쩌구 해서 예쁜 쿨러도 하나 같이 사서 달아줬습니다.

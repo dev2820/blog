@@ -1,7 +1,6 @@
 {{ define "header" }}
 {{ if .Params.cover }}
-{{ .Resources.Match "*" }}
-{{ with .Resources.Match (string .Params.cover) }}
+{{ with .Resources.GetMatch .Params.cover }}
   {{ $image := . }}
   {{ $image := $image.Fill "1000x450 smart" }}
   <header id="single-header" class="card-inset bg-cover" style="background-image:url({{ $image.RelPermalink }});">
