@@ -1,8 +1,8 @@
 +++
 title = "my-little-raspi"
 date = 2021-04-18T16:56:35+09:00
-icon = "projects/project-icon.png"
 publishdate= 2021-04-18T16:56:35+09:00
+icon = "project-icon.png"
 cover = ""
 +++
 

@@ -4,7 +4,7 @@
     <section id="about" class="card">
         {{ with .Site.GetPage "about"}}
             {{ if .Params.cover }}
-            <div class="cover" style="background-image:url({{ .Params.cover }}">
+            <div class="cover" style="background-image:url({{ .Params.cover }});">
                 <a class="go-back" href="javascript:history.back()"><i class="fas fa-arrow-left icon"></i></a>
             </div>
             {{ end }}

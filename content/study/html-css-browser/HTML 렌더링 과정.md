@@ -2,11 +2,11 @@
 title= "HTML 렌더링 과정"
 date= 2021-04-03T14:35:24+09:00
 categories= ["study"]
-subcategories = ["html"]
+subcategories = ["html-css-browser"]
 tags= ["study","컴퓨터 기술","공부정리","HTML","web"]
 cover= ""
 icon = "study/computer_science_icon.png"
-draft= true
+draft= false
 +++
 
 팀프로젝트를 진행하던 중 갑자기 html 렌더링 과정이 궁금해졌습니다. 인터넷 뒤적이며 조사한 내용을 바탕으로 작성한 글이니 부정확할 수 있습니다. 오타, 오류 지적 환영입니다.
