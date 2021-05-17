@@ -3,7 +3,7 @@ title= "라즈베리파이4와 우분투 설치"
 date= 2021-04-18T17:27:37+09:00
 categories= ["projects"]
 subcategories = ["my-little-raspi"]
-tags= ["라즈베리파이4","웹서버","nodejs","vue.js","mariadb","express"]
+tags= ["라즈베리파이4","웹앱","nodejs","vue.js","mariadb","express"]
 cover= "cover"
 icon = "projects/project-icon.png"
 draft= true
@@ -38,7 +38,7 @@ draft= true
 |소비전력|5V 3A|
 |포트|2개의 USB 3.0포트, 2개의 USB 2.0포트,1개의 microSD 슬롯, micro HDMI 포트 2개(4K까지 이용 가능하다 하네요),1개의 이더넷 포트| 
 
-{{<comment>}}출처: 나무위키{{</comment>}}
+{{<comment>}}출처: 나무위키( https://namu.wiki/w/%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%20%ED%8C%8C%EC%9D%B4(%EC%BB%B4%ED%93%A8%ED%84%B0) ){{</comment>}}
 
 ROM이 미제공이기 때문에 사용자가 직접 저장장치를 달아줘야합니다. 보통 운영체제가 올라갈 microSD에 USB 메모리나 HDD를 달아서 사용하더라구요. 물론 정말 하드하게 쓰는 유저는 외장SSD를 다는 경우도 있습니다. 저는 samsung microSD 128gb 하나를 달아줬습니다.
 
@@ -50,6 +50,7 @@ ROM이 미제공이기 때문에 사용자가 직접 저장장치를 달아줘�
 그리고 전력을 5V, 3A 먹기 때문에 3A 충전기를 따로 구입해야합니다. (보통 쓰는 충전기가 2A)
 
 CPU 스펙은 왤케 느려 소리 안나올 정도로 쓸만합니다. 전에 벤치마크점수 뒤적이다 봤었는데 갤럭시 s6와 비슷한 성능이었던거 같습니다.(정확하진 않습니다) 
+
 ### 발열 이슈
 {{<figure-img src="./images/라즈베리파이4-4.jpg" alt="raspberry-pi icon">}}
 라즈베리파이 + 쿨러
@@ -63,9 +64,9 @@ CPU 스펙은 왤케 느려 소리 안나올 정도로 쓸만합니다. 전에 �
 
 {{<a_blank href="https://ubuntu.com/download/raspberry-pi">}}라즈베리파이용 우분투 설치 페이지{{</a_blank>}}
 
-ubuntu-server 20.04 lts (64bit)를 클릭하면 ubuntu Image 다운이 진행되며 설치방법을 알려줍니다. 라즈베리파이가 ARM 아키텍쳐이기 때문에 ARM기반 Ubuntu인지 확인해줘야합니다.
+ubuntu-server 20.04 LTS (64bit)를 클릭하면 ubuntu Image 다운이 진행되며 설치방법을 알려줍니다. 라즈베리파이가 ARM 아키텍처이기 때문에 ARM기반 Ubuntu인지 확인해줘야합니다.
 
-우분투 설치가 주내용은 아니니까 설치관련 내용은 패스하겠습니다. 혹시 나중에 더 좋은 microSD랑 HDD를 구해서 라즈베리파이를 업그레이드 해준다면 그때 설치에 관한 내용 자세히 다루겠습니다.
+우분투 설치가 주내용은 아니니까 설치관련 내용은 패스하겠습니다. 나중에 더 좋은 microSD랑 HDD를 구해서 라즈베리파이를 업그레이드 해준다면 그때 설치에 관한 내용 자세히 다루겠습니다.
 
 잘 구워진 microSD를 sd슬롯에 꽂아주세요.
 
