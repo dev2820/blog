@@ -2,7 +2,7 @@
 title= "의미론적 HTML"
 date= 2021-04-03T14:35:32+09:00
 categories= ["study"]
-subcategories = ["html-css-browser"]
+subcategories = ["web"]
 tags= ["study","컴퓨터 기술","공부정리","HTML","web"]
 cover= ""
 icon = "study/computer_science_icon.png"
@@ -32,10 +32,10 @@ semantic 하게 코드를 짜면 다음과 같은 이점이 있습니다.
 ### 다른 사람을 위한 Semantic HTML
 
 사실 뭐 혼자 볼 코드면 semantic 하지 않아도 됩니다. 문제는 다른 사람이 내 코드를 볼 때 일어나죠. 
-{{<figure-img src="../images/non-semantic-code.png" alt="non semantic code">}}
+{{<figure-img src="images/non-semantic-code.png" alt="non semantic code">}}
 non-semantic하게 짠 코드
 {{</figure-img>}}
-{{<figure-img src="../images/semantic-code.png" alt="semantic code">}}
+{{<figure-img src="images/semantic-code.png" alt="semantic code">}}
 semantic하게 짠 코드
 {{</figure-img>}}
 
@@ -58,7 +58,7 @@ Semantic한 HTML은 마냥 `div`만 쓴 코드보다 search engine에 내 페이
 ## 무슨 태그를 써야 하는가?
 
 자 그러면 무슨 코드가 있으며, 어떤 의미를 가지는지 알아봅시다.
-{{<figure-img src="../images/semantic.png" alt="semantic struct">}}
+{{<figure-img src="images/semantic.png" alt="semantic struct">}}
 sementic한 HTML 구성
 {{</figure-img>}}
 

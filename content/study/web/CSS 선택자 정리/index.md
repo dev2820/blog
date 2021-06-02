@@ -2,7 +2,7 @@
 title= "CSS 선택자"
 date= 2021-04-13T00:15:14+09:00
 categories= ["study"]
-subcategories = ["html-css-browser"]
+subcategories = ["web"]
 tags= ["study","컴퓨터 기술","공부정리","CSS","web"]
 cover= ""
 icon = "study/computer_science_icon.png"

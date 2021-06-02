@@ -2,7 +2,7 @@
 title= "HTML 렌더링 과정"
 date= 2021-04-03T14:35:24+09:00
 categories= ["study"]
-subcategories = ["html-css-browser"]
+subcategories = ["web"]
 tags= ["study","컴퓨터 기술","공부정리","HTML","web"]
 cover= ""
 icon = "study/computer_science_icon.png"

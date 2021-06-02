@@ -9,7 +9,7 @@ icon = "projects/project-icon.png"
 draft= false
 +++
 ## 준비사항
-HTML,CSS관련 책을 읽고 (아니면 생활코딩인강이라도 듣고) 아주 간단한 HTML파일, CSS파일을 작성할 수 있는 능력은 갖춰야합니다. (하루면 준비 완료합니다.)
+HTML,CSS관련 책을 읽고 (아니면 생활코딩인강이라도 듣고) 아주 간단한 HTML파일, CSS파일을 작성할 수 있는 능력은 갖춰야합니다. (하루만 투자하면 됩니다.)
 
 ## 학습 목표
 HTML,CSS를 공부하고 사용해 간단한 로그인 페이지, 회원가입 페이지를 만들어본다.
@@ -19,10 +19,10 @@ HTML,CSS를 공부하고 사용해 간단한 로그인 페이지, 회원가입 �
 
 form을 사용하고 http로 login request를 보내기 전, 정말정말 간단하게 화면을 구성하고 정말정말 간단한 CSS를 적용해 보는 것을 목적으로 했습니다. 
   
-{{<figure-img src="../images/로그인화면.png" alt="semantic struct">}}
+{{<figure-img src="images/로그인화면.png" alt="semantic struct">}}
 login page 목업
 {{</figure-img>}}
-{{<figure-img src="../images/회원가입화면.png" alt="semantic struct">}}
+{{<figure-img src="images/회원가입화면.png" alt="semantic struct">}}
 signup page 목업
 {{</figure-img>}}
 
@@ -30,11 +30,11 @@ signup page 목업
 
 팀원들에게 HTML,CSS 책을 읽고(또는 인강을 듣고) html,css를 만들 준비가 된 상태에서 이 화면을 팀원들에게 각각 html과 css로 구현해 보는 것을 요청했습니다.
 
-{{<figure-img src="../images/html-css-login.png" alt="semantic struct">}}
+{{<figure-img src="images/html-css-login.png" alt="semantic struct">}}
 만들어진 login page 결과물
 {{</figure-img>}}
 
-{{<figure-img src="../images/html-css-signup.png" alt="semantic struct">}}
+{{<figure-img src="images/html-css-signup.png" alt="semantic struct">}}
 만들어진 signup page 결과물
 {{</figure-img>}}
 
@@ -89,9 +89,9 @@ mdn,w3schools의 다른 컨텐츠들도 너무 좋으니 초보라면 읽어보�
 좀 개인적인 견해입니다만, CSS 실력은 얼마나 많은 css keyword를 기억하는지가 결정하는 것 같습니다. 너무나 많은 css 속성들이 있고, 속성값이 있습니다. 다들 유용하고 잘 사용하면 JavaScript를 사용하지 않아도 될 정도로 강력한 기능들도 있습니다. 근데 너무 많아요. 외울 수 없습니다. 따라서 우리는 css keyword들을 잘 기억해야합니다. 
 
 예를 들면 특정 요소 위에서 커서 모양은 `cursor`속성이 결정합니다.
-input을 클릭하면 생기는 검은 태두리는 `:focus` 의사 클래스가 작동한 결과입니다. 이런 `cursor`, `:focus`같은 keyword를 기억해야합니다. 많이 써보고 익숙해져야 하는 부분입니다. 저는 두꺼운 순수 CSS책 한권을 읽어서 공부했습니다. (책 이름이 기억 안나는데 매우 두꺼웠습니다.) 다 이해할 필요 없고 1회독으로도 충분합니다. 다 읽고 나면 적어도 '아 이런 효과를 내는 css가 있었는데?'라는 생각 정도는 할 수 있거든요. 다들 웹공부 시작을 어떻게 하는지는 모르겠지만, 보통 html,css,javascript가 묶여있는 라이트한 책으로 시작한다면, css나 js만 다루는 책을 한 권 읽어보는 것을 추천드립니다. js는 특히 더더더욱요.
+input을 클릭하면 생기는 검은 태두리는 `:focus` 의사 클래스가 작동한 결과입니다. 이런 `cursor`, `:focus`같은 keyword를 기억해야합니다. 많이 써보고 익숙해져야 하는 부분입니다. 저는 두꺼운 순수 CSS책 한권을 읽어서 공부했습니다. (책 이름이 기억 안나는데 매우 두꺼웠습니다.) 다 이해할 필요 없고 1회 훑는 것만으로도 충분합니다. 다 읽고 나면 적어도 '아 이런 효과를 내는 css가 있었는데?'라는 생각 정도는 할 수 있거든요. 다들 웹공부 시작을 어떻게 하는지는 모르겠지만, 보통 html,css,javascript가 묶여있는 라이트한 책으로 시작한다면, 나중에 추가적으로 css나 js만 다루는 책을 한 권 읽어보는 것을 추천드립니다. js는 특히 더더더욱요.
 
-적용하고 싶은 effect, css가 있는데 뭘 써야하는지 모르겠다면, 남들이 잘 만들어놓은 코드를 참고하면 됩니다. 대충 **만들어 보고싶은 effect or element + css**로 검색하면 다른 사람들이 만들어놓은 코드들을 볼 수 있습니다. 예를 들어 구글에 `searchbar css`,`button hover effect css`를 검색해보면 사람들이 만들어 놓은 예쁘고 훌륭한 결과물들이 많습니다. codepen으로 만드는 법을 같이 올려놓는 경우도 많은데 이런 코드를 긁어다 쓰지 말고 css를 조금씩 변경해보며 어떻게 해서 이런 effect가 만들어졌는지 연구해보세요. css실력이 빠르게 늘겁니다. 남들이 짜놓은 코드에서 알게되는 속성들도 많구요.
+적용하고 싶은 effect, css가 있는데 뭘 써야하는지 모르겠다면, 남들이 잘 만들어놓은 코드를 참고하면 됩니다. 대충 **[만들어 보고싶은 effect or element] + css**로 검색하면 다른 사람들이 만들어놓은 코드들을 볼 수 있습니다. 예를 들어 구글에 `searchbar css`,`button hover effect css`를 검색해보면 사람들이 만들어 놓은 예쁘고 훌륭한 결과물들이 많습니다. codepen으로 만드는 법을 같이 올려놓는 경우도 많은데 이런 코드를 긁어다 쓰지 말고 css를 조금씩 변경해보며 어떻게 해서 이런 effect가 만들어졌는지 연구해보세요. css실력이 빠르게 늘겁니다. 남들이 짜놓은 코드에서 알게되는 속성들도 많구요.
 
 ## 의미론적 html, css 선택자
 읽어보면 좋을 내용을 정리해서 올려놨습니다. 한번 읽어보세요.  

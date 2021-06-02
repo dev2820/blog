@@ -30,7 +30,7 @@ git은 **형성 관리 시스템**중 하나입니다. 소스 코드 버전 관�
 
 시작하기에 앞서 간단한 git의 동작 원리를 알아보겠습니다.
 
-![git의 기본 시스템](../images/git의-기본-시스템.jpg)
+![git의 기본 시스템](images/git의-기본-시스템.jpg)
 
 ### 1. staging
 
@@ -69,10 +69,10 @@ dev2820 - 프로그램이 멈추는 버그가 일어나던 issue를 해결했다
 - 빈 디렉토리부터 시작한다.
 - 다른 사람이 짜놓은 프로젝트를 다운받는다.
 ### new repository
-![new-repository 1](../images/new-repository-1.png)
+![new-repository 1](images/new-repository-1.png)
 github 페이지 우측 상단에 `+` 버튼을 클릭하면 새로운 저장소 생성하기가 나옵니다.
 
-![new repository 2](../images/new-repository-2.png)
+![new repository 2](images/new-repository-2.png)
 저장소 이름을 입력하고 대충 넘기면 저장소가 만들어집니다.
 그럼 다음과 같은 코드를 입력하라고 나옵니다.
 
@@ -166,7 +166,7 @@ a=c;
 ### git remote
 원격저장소에 commit들을 업로드할 때 어디로 branch를 보낼지 주소를 알아야합니다.
 
-![cloning](../images/cloning-1.png)
+![cloning](images/cloning-1.png)
 
 초록색 code버튼을 누르면 나오는 HTTPS 주소가 이 프로젝트 저장소의 주소입니다.
 그리고 repository의 주소를 저장하는 명령을 입력합니다.
@@ -212,7 +212,7 @@ git pull
 
 `pull`은 `fetch`+`merge`라 생각하면 됩니다. 자동으로 merge까지 진행해줘 main branch를 최신으로 갱신해줍니다. 
 
-## 다른사람의 프로젝트를 받는 경우
+## 다른 사람의 프로젝트를 받는 경우
 다른 사람의 프로젝트 코드를 내 프로젝트에 받아오는 방법도 있습니다. 다른 사람의 원격저장소에 내 원격저장소를 연결하는 경우를 **forking**, 원격저장소에서 로컬 저장소로 소스코드를 복사하는 경우를 **cloning**이라고 합니다. 
 
 ```bash

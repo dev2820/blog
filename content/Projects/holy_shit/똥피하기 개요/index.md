@@ -27,36 +27,33 @@ draft= false
     - 자바스크립트를 통한 똥피하기 게임 구현
     - FrontEnd에서 BackEnd와 통신하는 방법을 알아본다.
 2. Nodejs와 Express를 통해 애플리케이션 서버를 만들고 만든 페이지를 연동한다.
-    - Nodejs와 Express를 학습하고 웹페이지를 호스팅해본다.
-3. MariaDB를 통해 DataBase를 만들고 유저의 정보를 저장,연동하는 시스템을 구현한다.
-    - nodejs에서 mariaDB와 연동하는 방법을 알아본다.
-    - 회원가입과 로그인시 DB와 데이터를 주고받는 방법을 알아본다.
+    - Nodejs와 Express를 학습하고 웹페이지를 호스팅해본다.구현한다.
 
 저와 2명의 팀원들의 웹 기반을 다지는 것을 목표로 하고 있으며, 제가 로드맵을 정해주면 팀원들이 각자 공부해 프로젝트에 적용해보고 저는 코드리뷰를 하는 식으로 프로젝트를 진행하려합니다. 
 
 복잡한 서비스 로직을 만들거나 하지 않을 것이기 때문에 전체적으로 찍먹해보는 프로젝트라고 할 수 있습니다.
 
 ## 기술 스텍
-Vanila JS, nodejs, express, mariaDB(mysql) 
+Vanila JS, nodejs, express
 
 ## 동작 모델
 로그인 동작 모델입니다.
-![login model](../images/login.png)
+![login model](images/login.png)
 
 회원가입 동작 모델입니다.
-![sign up model](../images/sign-up.png)
+![sign up model](images/sign-up.png)
 
 ## 화면구성 및 인터페이스
 
 화면은 로그인화면, 회원가입화면, 메인화면으로 이루어집니다.
 
 ### 로그인화면
-![login](../images/로그인화면.png)
+![login](images/로그인화면.png)
 
 ### 회원가입화면
-![sign up](../images/회원가입화면.png)
+![sign up](images/회원가입화면.png)
 
 ### 메인화면
-![main](../images/메인화면.png)
+![main](images/메인화면.png)
 
 다음장에선 프로젝트를 시작하기 전 간단한 Git 사용법을 다루어보겠습니다.
