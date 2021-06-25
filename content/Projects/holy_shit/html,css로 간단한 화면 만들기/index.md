@@ -6,7 +6,7 @@ tags= ["프로젝트","게임","똥피하기","로그인폼"]
 subcategories = ["holy_shit"]
 cover = ""
 icon = "projects/project-icon.png"
-draft= false
+draft= true
 +++
 ## 준비사항
 HTML,CSS관련 책을 읽고 (아니면 생활코딩인강이라도 듣고) 아주 간단한 HTML파일, CSS파일을 작성할 수 있는 능력은 갖춰야합니다. (하루만 투자하면 됩니다.)

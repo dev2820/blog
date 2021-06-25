@@ -20,7 +20,7 @@ draft= false
 아니, 콘솔창에 저런 문구가 있는 겁니다. 처음엔 이미지를 콘솔창에 띄우는 방법이 있나? 라고 생각했는데, 다시보니 Text를 출력한 거였습니다. Text여도 이쁘게 색을 입혀서 출력된 문구가 너무 탐스러웠습니다. 알아보니 상당히 생소한 방법으로 문구를 넣더라구요.
 
 ## 문구 넣는 방법
-`<head></head>`사이에 script를 집어넣어서 만들더라구요.
+`<head></head>`사이에 script를 집어넣어서 만듦니다.
 
 [참고한 블로그](https://webmini.tistory.com/m/996)
 
@@ -140,27 +140,6 @@ A
 ```
 가 됩니다. 이렇게 현재 수행중인 태스크가 완료되고 콜백함수를 실행시키고 싶다면 `setTimeout(~,0)`을 사용합니다.
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script>
-        setTimeout(console.log('B'),0);
-    </script>
-</head>
-<body>
-    <script>
-        console.log('A');
-    </script>
-</body>
-</html>
-```
-이제 위 페이지의 콘솔에는 A,B가 찍힐까요?
-
 ## 코드 해석
 
 다시 처음으로 돌아와서 코드를 해석해봅시다.
@@ -190,6 +169,6 @@ setTimeout(()=>{
 마지막으로 setTimeout을 쓰는 이유는 랜더링이 끝난 뒤에 콘솔창에 문구를 띄우기 위함인 것 같습니다. head에 들어가는 코드는 dom 렌더링이 끝나기 전에 실행되기 때문에 console.log가 리소스를 잡아먹지 않게 렌더링이 끝나고 실행되도록 한 것 같네요.
 
 ### 참고한 사이트
-https://developer.mozilla.org/ko/docs/Web/API/Console/log
-https://webmini.tistory.com/m/996
+https://developer.mozilla.org/ko/docs/Web/API/Console/log  
+https://webmini.tistory.com/m/996  
 https://stackoverflow.com/questions/28668759/what-does-this-statement-do-console-log-bindconsole

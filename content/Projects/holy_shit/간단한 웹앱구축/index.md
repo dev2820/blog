@@ -6,7 +6,7 @@ tags= ["프로젝트","게임","똥피하기","로그인폼"]
 subcategories = ["holy_shit"]
 cover = ""
 icon = "projects/project-icon.png"
-draft= false
+draft= true
 +++
 
 만들어진 html,css,js 파일들을 호스팅할 웹앱을 만들어봅시다.

@@ -6,7 +6,7 @@ tags= ["프로젝트","게임","똥피하기","로그인폼","js","css","html"]
 subcategories = ["holy_shit"]
 cover = ""
 icon = "projects/project-icon.png"
-draft= false
+draft= true
 +++
 
 똥피하기 웹게임 프로젝트입니다. 학습용 프로젝트이며 HTML, CSS, JS과 **웹페이지 서비스의 전반적인 내용을 공부,적용**해보는 것을 목적으로 하고있습니다. 
