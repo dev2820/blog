@@ -92,32 +92,32 @@ SID 쿠키에 대한 설정입니다. cookie 옵션은 객체 형식으로 줄 �
 
 쿠키 옵션에 대해 더 알고 싶다면 제 블로그의 {{<a_blank href="/study/web/nodejs의-쿠키/">}}쿠키 정리 글{{</a_blank>}}을 보셔도 좋고, {{<a_blank href="https://www.npmjs.com/package/express-session">}}express-session npm 공식 페이지{{</a_blank>}}를 직접 읽어보셔도 좋습니다.
 
-- genid
+- genid  
 SID로 사용할 로직을 정의하는 옵션입니다. `genid: function(req){}`형식으로 사용하면 되고, SID로 사용할 String을 return 하면 됩니다. default로 uid-safe 라이브러리를 통한 SID 생성 함수를 사용합니다.
 
-- name
+- name  
 SID 쿠키의 이름을 설정합니다. default는 `connect.sid`입니다.
 
-- proxy
+- proxy  
 리버스 프록시를 사용하는 경우 설정하는 옵션입니다. `true`로 설정하면 `X-Forwarded-Proto` 헤더가 사용됩니다. default는 `undefined`로, express에 `trust proxy`로 등록된 주소에 대해서만 세션이 동작합니다.
 
-- resave
+- resave  
 express-session은 기본적으로 세션에 변경이 있을 때만 세션을 저장합니다. `resave:true`로 설정한다면 변경사항이 없어도 session을 다시 저장합니다. default는 `true`입니다. `false`로 설정하면 불필요한 session 저장을 막아주기 때문에 보통 `false`로 설정합니다.  
 
-- saveUninitialized
+- saveUninitialized  
 세션이 생성되었지만 어떠한 데이터도 추가되거나 변경되지 않은 상태를 **uninitialized** 라고 합니다. `saveUninitialized:true`로 설정한다면 uninitialized session도 저장합니다. `false`로 설정하면 uninitialized session은 저장하지 않으므로 리소스 활용 측면에서 조금 더 유리합니다.
 
 default값은 `true`이지만 개발자가 이후에 default를 바꿀 수도 있다고 합니다.
 
-- rolling
+- rolling  
 세션이 만료되기 전, 새로 고침 또는 페이지 이동이 일어나면 세션 만료를 갱신하는 옵션입니다. default는 `rolling:false`입니다. 
 
 한 가지 주의할 점은, `saveUninitialized` 옵션이 `false`인 경우 uninitialized 세션에 대해선 rolling이 작동하지 않습니다. 따라서 단순히 로그인 여부 확인을 위해 session을 사용한다면(즉, uninitialized 세션을 사용하는 경우) saveUninitialized 옵션을 `true`로 설정해 줘야합니다. 
 
-- secret
+- secret  
 **필수적으로 설정해줘야 하는 옵션**입니다. SID를 생성할 때 사용되는 비밀키로 String 또는 Array를 사용할 수 있습니다. Array를 사용하는 경우, 첫 번째 요소를 비밀키로 사용합니다.
 
-- store
+- store  
 세션을 어디에 저장할지 결정하는 옵션입니다. default는 MemoryStore로 메모리에 저장됩니다. 따라서 프로세스가 종료되면 세션이 없어집니다. 프로세스가 예상치 못하게 종료되어도 세션을 유지하기 위해 세션을 저장하는 방법을 알아야겠죠? express-session은 store 옵션을 통해 session을 저장할 곳을 결정할 수 있습니다.
 
 {{<a_blank href="https://www.npmjs.com/package/express-session#compatible-session-stores">}}compatible-session-stores{{</a_blank>}}
@@ -126,7 +126,7 @@ express-session에 연동되어 session을 저장할 수 있는 모듈들은 위
 
 보통은 file, redis, mongoDB 등을 사용하는데, 여기까지 다루면 글이 길어지니 다음에 다뤄보겠습니다.
 
-- unset
+- unset  
 삭제된 session을 어떻게 관리할지 결정하는 옵션입니다. `destroy`와 `keep`을 사용할 수 있는데, `destroy`는 response가 끝날 때 store에서 삭제하는 옵션, `keep`은 store에선 삭제하지 않지만 더 이상 변경할 수 없게 하는 옵션입니다. default는 `keep`입니다.
 
 ## session 메소드들
