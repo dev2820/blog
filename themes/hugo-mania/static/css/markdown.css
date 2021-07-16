@@ -145,7 +145,7 @@ article.content a:hover {
 
 article.content strong {
   font-weight: 600;
-  color:#23a775;
+  color:var(--purple);
 }
 
 article.content hr {
